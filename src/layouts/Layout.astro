@@ -19,8 +19,9 @@ const { title, description } = Astro.props;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://infinoradental.com" />
     
-    <!-- Tailwind CSS (is:inline prevents Vite from stripping external CDN execution) -->
+    <!-- Tailwind CSS (is:inline ensures CDN executes in Astro) -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Fonts -->
@@ -28,22 +29,25 @@ const { title, description } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Local Business & Medical Clinic JSON-LD Schema for AEO/SEO -->
+    <!-- Local Business & Medical Clinic JSON-LD Schema for AEO & Google Maps SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Dentist",
-      "name": "Infinora Dental Care",
+      "@type": ["Dentist", "MedicalBusiness"],
+      "name": "Infinora Dental Care - Dr. Riddhi Patel Shah (Dentist & Braces Clinic)",
       "image": "https://infinoradental.com/logo.png",
       "@id": "https://infinoradental.com",
       "url": "https://infinoradental.com",
-      "telephone": "+91-9820000000",
+      "telephone": "+91-7304432681",
       "priceRange": "₹₹",
+      "hasMap": "https://maps.app.goo.gl/3sKwKPjG43PNeN6y7",
+      "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Google Pay",
+      "currenciesAccepted": "INR",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West",
         "addressLocality": "Mumbai",
-        "addressRegion": "MH",
+        "addressRegion": "Maharashtra",
         "postalCode": "400067",
         "addressCountry": "IN"
       },
@@ -56,32 +60,41 @@ const { title, description } = Astro.props;
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "10:00",
-          "closes": "13:30"
+          "opens": "09:00",
+          "closes": "21:00"
         },
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "17:00",
-          "closes": "21:00"
+          "dayOfWeek": ["Sunday"],
+          "opens": "10:00",
+          "closes": "13:00"
         }
       ],
-      "medicalSpecialty": "Dentistry",
+      "medicalSpecialty": [
+        "Orthodontics",
+        "Endodontics",
+        "Dentistry",
+        "PediatricDentistry",
+        "Periodontics",
+        "Prosthodontics",
+        "OralSurgery"
+      ],
       "founder": {
         "@type": "Person",
-        "name": "Dr. Riddhi Patel"
+        "name": "Dr. Riddhi Patel Shah",
+        "jobTitle": "Orthodontist & Dental Surgeon (MDS)"
       }
     }
     </script>
 </head>
-<body class="bg-slate-50 text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-teal-500 selection:text-white">
+<body class="bg-slate-50 text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-teal-600 selection:text-white">
     <slot />
 </body>
 </html>
 
 <style is:global>
     :root {
-        --primary: #0d9488;
-        --primary-dark: #0f766e;
+        --primary: #0f766e;
+        --primary-dark: #115e59;
     }
 </style>
