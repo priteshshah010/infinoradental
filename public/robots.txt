@@ -1,0 +1,69 @@
+# ==============================================================================
+# Robots.txt for Infinora Dental Care (https://infinoradental.com)
+# ==============================================================================
+
+# Standard Web Search Engine Crawlers
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_astro/
+
+# ==============================================================================
+# AI Search Engines & Answer Engine Optimization (AEO) Agents
+# ==============================================================================
+
+# OpenAI / ChatGPT / SearchGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic Claude & Search Crawlers
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI Engine
+User-agent: PerplexityBot
+Allow: /
+
+# Google Gemini / Extended AI Training & Search
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl & Open Web Datasets
+User-agent: CCBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# ==============================================================================
+# Sitemaps & Structured AI Knowledge Files
+# ==============================================================================
+Sitemap: https://infinoradental.com/sitemap-index.xml
+
+# LLMs Structured Knowledge Base:
+# https://infinoradental.com/llms.txt
