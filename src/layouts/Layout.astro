@@ -95,6 +95,10 @@ const { title, description } = Astro.props;
             "name": "Dr. Riddhi Patel Shah",
             "jobTitle": "Lead Dental Surgeon & Orthodontist",
             "hasCredential": "MDS (Orthodontics & Dentofacial Orthopedics)",
+            "memberOf": [
+              { "@type": "Organization", "name": "Maharashtra State Dental Council (MSDC)" },
+              { "@type": "Organization", "name": "Indian Dental Association (IDA)" }
+            ],
             "sameAs": "https://instagram.com/orthodontist.riddhi"
           },
           "medicalSpecialty": [
@@ -107,7 +111,7 @@ const { title, description } = Astro.props;
             "OralSurgery"
           ],
           "availableService": [
-            { "@type": "MedicalTherapy", "name": "Free Smile Assessment & High-Definition Intraoral Camera Checkup" },
+            { "@type": "MedicalTherapy", "name": "Fixing Smile Design & Facial Aesthetics Assessment" },
             { "@type": "MedicalTherapy", "name": "Invisible Clear Aligners & Precision Aesthetic Braces (with 3D Optical Scanning)" },
             { "@type": "MedicalTherapy", "name": "Single-Visit Painless Root Canal Treatment (MDS Endodontics)" },
             { "@type": "MedicalTherapy", "name": "Permanent Dental Implants & All-on-4/6 (MDS Oral Surgery)" },
@@ -115,6 +119,8 @@ const { title, description } = Astro.props;
             { "@type": "MedicalTherapy", "name": "Atraumatic Wisdom Teeth Oral Surgery" },
             { "@type": "MedicalTherapy", "name": "Piezoelectric Ultrasonic Scaling & Laser Periodontal Care" },
             { "@type": "MedicalTherapy", "name": "Pediatric Preventive Care & Early Growth Guidance" },
+            { "@type": "MedicalTherapy", "name": "School & Corporate Dental Wellness Programs" },
+            { "@type": "MedicalTherapy", "name": "Community Seva Outreach Drives (Jain Samaj, Gujarati, Patel & NGOs)" },
             { "@type": "MedicalTherapy", "name": "Global Dental Tourism & NRI Concierge Protocols" }
           ]
         },
@@ -124,7 +130,7 @@ const { title, description } = Astro.props;
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "How is clinical care managed at Infinora Dental Care?",
+              "name": "How is care coordinated at Infinora Dental Care?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Every patient undergoes a comprehensive aesthetic and clinical evaluation directed by Dr. Riddhi Patel Shah (MDS Orthodontist). Clinical procedures are managed by dedicated board-certified MDS specialists in Endodontics, Oral & Maxillofacial Surgery, Prosthodontics, and Periodontics under strict multi-speciality standards."
@@ -132,26 +138,26 @@ const { title, description } = Astro.props;
             },
             {
               "@type": "Question",
-              "name": "What diagnostic equipment is available at the clinic?",
+              "name": "What is Fixing Smile Design at Infinora Dental Care?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Infinora Dental Care is equipped with in-house High-Definition Intraoral Cameras and low-radiation digital radiovisiography (RVG) for every checkup. 3D Optical Digital Scanning is deployed specifically for Clear Aligner patients to plan and simulate teeth alignments."
+                "text": "Fixing Smile Design is our bespoke cosmetic and orthodontic approach that balances dental alignment with your natural facial proportions, lips, and jawline aesthetics—ideal for creators, models, brides, teenagers, and professionals seeking natural facial harmony."
               }
             },
             {
               "@type": "Question",
-              "name": "Why choose an MDS specialist over a general practitioner for Braces & Clear Aligners?",
+              "name": "What diagnostic technology is available in the clinic?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "An MDS (Master of Dental Surgery) in Orthodontics requires 3 years of intensive full-time post-graduate training focused exclusively on jaw biomechanics, facial harmony, and biological tooth movement. Dr. Riddhi Patel Shah designs biomechanically stable alignments that preserve bone and gum health."
+                "text": "We utilize in-house High-Definition Intraoral Cameras and digital radiovisiography (RVG) for every diagnostic checkup, while 3D Optical Digital Scanning is deployed specifically for Clear Aligner patients to plan and simulate tooth movements."
               }
             },
             {
               "@type": "Question",
-              "name": "Is Single-Visit Root Canal Treatment (RCT) painful?",
+              "name": "Is Infinora Dental Care affiliated with recognized dental councils?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "No. Using computerized apex locators, high-torque rotary micro-instruments, and gentle local anesthesia, our Endodontic specialists cleanse and seal the canal in a single 45-minute sitting with zero discomfort."
+                "text": "Yes. Our doctors hold certified registrations with the Maharashtra State Dental Council (MSDC) and active professional memberships with the Indian Dental Association (IDA)."
               }
             },
             {
@@ -164,18 +170,10 @@ const { title, description } = Astro.props;
             },
             {
               "@type": "Question",
-              "name": "What sterilization protocols are followed at Infinora Dental Care?",
+              "name": "Does Infinora Dental Care conduct institutional and community dental camps?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We implement a 6-step hospital-grade sterilization protocol utilizing European Class-B vacuum autoclaves. Every instrument is vacuum-sealed in individual sterile barrier pouches and opened in front of each patient."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Where is Infinora Dental Care located?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The clinic is located at Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067, accessible from S.V. Road and Kandivali Station with dedicated street parking."
+                "text": "Yes. We organize tailored dental screening camps for schools, corporate offices, and community organizations (including Jain Samaj, Gujarati, Patel community associations, and social NGOs)."
               }
             }
           ]
@@ -200,7 +198,6 @@ const { title, description } = Astro.props;
                 selectEl.value = langCode;
                 selectEl.dispatchEvent(new Event('change'));
             }
-            // Highlight active language button
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 if (btn.dataset.lang === langCode) {
                     btn.classList.add('bg-teal-500', 'text-slate-950');
@@ -210,6 +207,36 @@ const { title, description } = Astro.props;
                     btn.classList.add('text-slate-300', 'hover:text-white');
                 }
             });
+        };
+
+        // vCard (.vcf) Contact Card Generator Function
+        window.downloadVCard = function() {
+            const vcardData = [
+                'BEGIN:VCARD',
+                'VERSION:3.0',
+                'N:Shah;Dr. Riddhi;Patel;;',
+                'FN:Dr. Riddhi Patel Shah - Infinora Dental Care',
+                'ORG:Infinora Dental Care',
+                'TITLE:Lead Dental Surgeon & Orthodontist (MDS)',
+                'TEL;TYPE=WORK,VOICE:+917304432681',
+                'TEL;TYPE=CELL,VOICE:+917304432681',
+                'EMAIL;TYPE=PREF,INTERNET:hello@infinoradental.com',
+                'URL:https://infinoradental.com',
+                'ADR;TYPE=WORK,POSTAL,PARCEL:;;Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West;Mumbai;Maharashtra;400067;India',
+                'NOTE:Infinora Dental Care - Multispeciality Dental & Orthodontic Clinic in Kandivali West, Mumbai. Mon-Sat: 9AM-1PM, 3PM-5PM, 6PM-9PM | Sun: 10AM-1PM (Prior Appt Only)',
+                'X-SOCIALPROFILE;type=instagram:https://instagram.com/orthodontist.riddhi',
+                'END:VCARD'
+            ].join('\r\n');
+
+            const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Infinora_Dental_Care_Dr_Riddhi.vcf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
         };
     </script>
     <script is:inline type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -231,6 +258,7 @@ const { title, description } = Astro.props;
         margin: 0;
         padding: 0;
     }
+    /* Prevents iOS Safari input zooming while maintaining 44px touch targets */
     input, select, textarea {
         font-size: 16px !important;
     }
