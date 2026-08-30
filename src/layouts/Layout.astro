@@ -47,6 +47,11 @@ const { title, description } = Astro.props;
           "email": "hello@infinoradental.com",
           "priceRange": "₹₹",
           "hasMap": "https://maps.app.goo.gl/3sKwKPjG43PNeN6y7",
+          "sameAs": [
+            "https://instagram.com/orthodontist.riddhi",
+            "https://share.google/pcuutYXTurrftQRyt",
+            "https://maps.app.goo.gl/3sKwKPjG43PNeN6y7"
+          ],
           "currenciesAccepted": "INR, USD, AUD, GBP, EUR, AED",
           "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Google Pay, Bank Transfer",
           "address": {
@@ -80,8 +85,9 @@ const { title, description } = Astro.props;
           "founder": {
             "@type": "Person",
             "name": "Dr. Riddhi Patel Shah",
-            "jobTitle": "Orthodontist & Dental Surgeon",
-            "hasCredential": "MDS (Orthodontics & Dentofacial Orthopedics)"
+            "jobTitle": "Lead Dental Surgeon & Orthodontist",
+            "hasCredential": "MDS (Orthodontics & Dentofacial Orthopedics)",
+            "sameAs": "https://instagram.com/orthodontist.riddhi"
           },
           "medicalSpecialty": [
             "Orthodontics",
@@ -93,14 +99,15 @@ const { title, description } = Astro.props;
             "OralSurgery"
           ],
           "availableService": [
-            { "@type": "MedicalTherapy", "name": "Invisible Clear Aligners & Precision Braces" },
-            { "@type": "MedicalTherapy", "name": "Single-Visit Painless Root Canal Treatment (RCT)" },
-            { "@type": "MedicalTherapy", "name": "Permanent Dental Implants & All-on-4/6" },
+            { "@type": "MedicalTherapy", "name": "Primary Comprehensive Dental Consultation by Dr. Riddhi Patel Shah (MDS)" },
+            { "@type": "MedicalTherapy", "name": "Invisible Clear Aligners & Precision Aesthetic Braces" },
+            { "@type": "MedicalTherapy", "name": "Single-Visit Painless Root Canal Treatment (MDS Endodontist On-Call)" },
+            { "@type": "MedicalTherapy", "name": "Permanent Dental Implants & All-on-4/6 (MDS Oral Surgeon On-Call)" },
             { "@type": "MedicalTherapy", "name": "Cosmetic Smile Makeovers & E.max Porcelain Veneers" },
-            { "@type": "MedicalTherapy", "name": "Wisdom Teeth Oral Surgery" },
+            { "@type": "MedicalTherapy", "name": "Wisdom Teeth Atraumatic Oral Surgery" },
             { "@type": "MedicalTherapy", "name": "Ultrasonic Scaling & Laser Periodontal Therapy" },
-            { "@type": "MedicalTherapy", "name": "Pediatric Preventive Care & Growth Guidance" },
-            { "@type": "MedicalTherapy", "name": "Global Dental Tourism & NRI Fast-Track Treatments" }
+            { "@type": "MedicalTherapy", "name": "Pediatric Preventive Dental Care" },
+            { "@type": "MedicalTherapy", "name": "Global Dental Tourism & NRI Concierge Protocols" }
           ]
         },
         {
@@ -109,18 +116,18 @@ const { title, description } = Astro.props;
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Why choose an MDS Orthodontist for Braces & Clear Aligners?",
+              "name": "Who examines patients at Infinora Dental Care?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "An MDS in Orthodontics requires 3 years of rigorous full-time clinical specialization dedicated to tooth movement, jaw biomechanics, and facial aesthetics. Dr. Riddhi Patel Shah designs biomechanically stable alignments that protect roots and prevent relapse."
+                "text": "Every patient is personally evaluated and diagnosed first by Chief Dental Surgeon Dr. Riddhi Patel Shah (MDS Orthodontist). If specialized advanced surgery or root canal intervention is required, our panel of on-call MDS specialists (Endodontists, Maxillofacial Surgeons, Prosthodontists) are brought in under Dr. Riddhi's direct clinical supervision."
               }
             },
             {
               "@type": "Question",
-              "name": "How does Dental Tourism & NRI Treatment planning work at Infinora Dental Care?",
+              "name": "Why choose an MDS specialist over a general dentist for Braces & Aligners?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "International patients and NRIs from the UK, USA, Australia, and UAE can share their dental X-rays/CBCT scans via WhatsApp (+91 73044 32681) for a virtual assessment, fixed upfront quote, and fast-tracked appointment scheduling before traveling to Mumbai."
+                "text": "An MDS (Master of Dental Surgery) in Orthodontics requires 3 years of full-time master's-level clinical training dedicated exclusively to facial aesthetics, jaw mechanics, and tooth movement. Dr. Riddhi Patel Shah designs biomechanically stable alignments that protect roots and prevent relapse."
               }
             },
             {
@@ -176,6 +183,19 @@ const { title, description } = Astro.props;
       ]
     }
     </script>
+
+    <!-- Automated Google Website Translator Script -->
+    <script is:inline type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,gu,hi,mr',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script is:inline type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body class="bg-slate-50 text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-teal-600 selection:text-white overflow-x-hidden w-full m-0 p-0 relative min-h-screen">
     <slot />
@@ -197,9 +217,37 @@ const { title, description } = Astro.props;
     input, select, textarea {
         font-size: 16px !important;
     }
-    /* Restrict SVGs from expanding before stylesheet execution */
     svg {
         display: inline-block;
         vertical-align: middle;
+    }
+    /* Google Translate Widget Custom Styling */
+    .goog-te-gadget-simple {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        border: 1px solid rgba(20, 184, 166, 0.4) !important;
+        padding: 3px 8px !important;
+        border-radius: 8px !important;
+        font-size: 11px !important;
+        line-height: 1.4 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        cursor: pointer !important;
+    }
+    .goog-te-gadget-simple .goog-te-menu-value {
+        color: #5eead4 !important;
+        font-weight: 700 !important;
+    }
+    .goog-te-gadget-simple .goog-te-menu-value span {
+        border-left: none !important;
+        color: #5eead4 !important;
+    }
+    .goog-te-gadget-icon {
+        display: none !important;
+    }
+    .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+    }
+    body {
+        top: 0px !important;
     }
 </style>
