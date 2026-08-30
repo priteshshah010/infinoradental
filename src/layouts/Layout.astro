@@ -15,7 +15,7 @@ const { title, description } = Astro.props;
     <title>{title}</title>
     <meta name="description" content={description} />
     
-    <!-- Canonical & Open Graph -->
+    <!-- Canonical & Open Graph Metadata -->
     <link rel="canonical" href="https://infinoradental.com/" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -24,7 +24,7 @@ const { title, description } = Astro.props;
     <meta property="og:locale" content="en_IN" />
     <meta property="og:site_name" content="Infinora Dental Care" />
     
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS Engine -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
     <script is:inline>
         tailwind.config = {
@@ -55,7 +55,7 @@ const { title, description } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Comprehensive Medical Clinic, Specialist & Dental Tourism Schema (JSON-LD) -->
+    <!-- Verified Medical Clinic, Specialist Board & AEO Schema (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -96,7 +96,8 @@ const { title, description } = Astro.props;
               "@type": "OpeningHoursSpecification",
               "dayOfWeek": ["Sunday"],
               "opens": "10:00",
-              "closes": "13:00"
+              "closes": "13:00",
+              "description": "Strictly Prior Appointment Basis Only"
             }
           ],
           "founder": {
@@ -113,6 +114,16 @@ const { title, description } = Astro.props;
             "Prosthodontics",
             "PediatricDentistry",
             "OralSurgery"
+          ],
+          "availableService": [
+            { "@type": "MedicalTherapy", "name": "Invisible Clear Aligners & Precision Braces" },
+            { "@type": "MedicalTherapy", "name": "Single-Visit Painless Root Canal Treatment (RCT)" },
+            { "@type": "MedicalTherapy", "name": "Permanent Dental Implants & All-on-4/6" },
+            { "@type": "MedicalTherapy", "name": "Cosmetic Smile Makeovers & E.max Porcelain Veneers" },
+            { "@type": "MedicalTherapy", "name": "Wisdom Teeth Oral Surgery" },
+            { "@type": "MedicalTherapy", "name": "Ultrasonic Scaling & Laser Periodontal Therapy" },
+            { "@type": "MedicalTherapy", "name": "Pediatric Preventive Care & Growth Guidance" },
+            { "@type": "MedicalTherapy", "name": "Global Dental Tourism & NRI Fast-Track Treatments" }
           ]
         },
         {
@@ -121,10 +132,10 @@ const { title, description } = Astro.props;
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Why is an MDS Orthodontist essential for Clear Aligners & Braces?",
+              "name": "Why choose an MDS Orthodontist for Braces & Clear Aligners?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "An MDS (Master of Dental Surgery) in Orthodontics requires 3 years of rigorous full-time post-graduate training focused entirely on jaw biomechanics and tooth movements. Unlike non-specialist certifications, an MDS specialist like Dr. Riddhi Patel Shah guarantees predictable, biologically safe alignments that protect roots and prevent relapse."
+                "text": "An MDS in Orthodontics requires 3 years of rigorous full-time clinical specialization dedicated to tooth movement, jaw biomechanics, and facial aesthetics. Dr. Riddhi Patel Shah designs biomechanically stable alignments that protect roots and prevent relapse."
               }
             },
             {
@@ -137,18 +148,50 @@ const { title, description } = Astro.props;
             },
             {
               "@type": "Question",
-              "name": "Is Root Canal Treatment (RCT) completely painless?",
+              "name": "Is Single-Visit Root Canal Treatment (RCT) painful?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. With computerized apex locators, high-torque rotary endodontics, and gentle local anesthesia, our Endodontists complete root canal treatments in a single 45-minute sitting with zero pain."
+                "text": "No. Using computerized apex locators, high-torque rotary endodontics, and gentle micro-anesthesia, our Endodontists cleanse and seal the canal in a single 45-minute sitting with zero pain."
               }
             },
             {
               "@type": "Question",
-              "name": "What sterilization standards are followed at the clinic?",
+              "name": "What are the clinic timings on Sundays?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We operate a strict hospital-grade 6-step sterilization protocol featuring European Class-B vacuum autoclaving. Every instrument is sealed in sterile barrier pouches and opened in front of the patient."
+                "text": "On Sundays, Infinora Dental Care is open from 10:00 AM to 1:00 PM strictly on a prior appointment basis only. Walk-ins are not accommodated on Sundays."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What sterilization standards are followed at Infinora Dental Care?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We adhere to a hospital-grade 6-step sterilization protocol featuring Class-B fractionated vacuum autoclaving. All instruments are sealed in individual sterile barrier pouches and unsealed exclusively in front of the patient."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long do Dental Implants last compared to Dental Bridges?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dental implants are titanium fixtures fused permanently into your jawbone that can last a lifetime with proper hygiene. Unlike traditional bridges, dental implants do not require grinding down adjacent healthy natural teeth."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are payment plans and digital payment options available for major treatments?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We offer transparent upfront treatment pricing with zero hidden charges. We accept Google Pay, UPI, all major credit/debit cards, and structured installment/EMI payment plans for comprehensive orthodontic and implant treatments."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is the clinic located in Kandivali West?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Infinora Dental Care is located at Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067, with free street parking available nearby."
               }
             }
           ]
