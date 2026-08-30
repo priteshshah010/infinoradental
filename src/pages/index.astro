@@ -183,7 +183,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </section>
 
-    <!-- INTERACTIVE & FOOLPROOF ON-PAGE APPOINTMENT BOOKING SECTION -->
+    <!-- FOOLPROOF ON-PAGE APPOINTMENT BOOKING SECTION -->
     <section id="book" class="py-16 bg-slate-900 text-white w-full border-t border-slate-800 relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
             
@@ -231,7 +231,7 @@ import Layout from '../layouts/Layout.astro';
                                 placeholder="e.g. 9820000000" 
                                 class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-transparent text-sm text-slate-900 outline-none transition-all"
                             />
-                            <p id="phoneError" class="hidden text-xs text-rose-600 font-semibold mt-1">Please enter a valid 10-digit mobile number.</p>
+                            <p id="phoneError" class="hidden text-xs text-rose-600 font-semibold mt-1">Please enter a valid mobile number.</p>
                         </div>
                     </div>
 
@@ -280,7 +280,6 @@ import Layout from '../layouts/Layout.astro';
                             required 
                             class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-transparent text-sm text-slate-900 outline-none transition-all bg-white"
                         >
-                            <!-- Dynamically populated based on day of week -->
                             <option value="Morning Session (10:00 AM – 1:30 PM)">Morning Session (10:00 AM – 1:30 PM)</option>
                             <option value="Evening Session (5:00 PM – 9:00 PM)">Evening Session (5:00 PM – 9:00 PM)</option>
                         </select>
@@ -330,7 +329,6 @@ import Layout from '../layouts/Layout.astro';
             const day = String(now.getDate()).padStart(2, '0');
             const todayStr = `${year}-${month}-${day}`;
             
-            // Set min attribute to today (disables all previous dates in calendar)
             if (dateInput) {
                 dateInput.min = todayStr;
                 
@@ -342,11 +340,9 @@ import Layout from '../layouts/Layout.astro';
                 const maxDay = String(maxDate.getDate()).padStart(2, '0');
                 dateInput.max = `${maxYear}-${maxMonth}-${maxDay}`;
 
-                // Set default date to today
                 dateInput.value = todayStr;
                 updateTimeSlotsForDate(todayStr);
 
-                // Listen for date changes to auto-adjust Sunday logic
                 dateInput.addEventListener('change', (e) => {
                     updateTimeSlotsForDate(e.target.value);
                 });
@@ -355,13 +351,11 @@ import Layout from '../layouts/Layout.astro';
             function updateTimeSlotsForDate(dateString) {
                 if (!dateString) return;
                 
-                // Parse date safely with local offset
                 const parts = dateString.split('-');
                 const selectedDate = new Date(parts[0], parts[1] - 1, parts[2]);
-                const dayOfWeek = selectedDate.getDay(); // 0 is Sunday
+                const dayOfWeek = selectedDate.getDay();
 
                 if (dayOfWeek === 0) {
-                    // Sunday selected: limit to Sunday 10am - 1pm
                     timeSlot.innerHTML = `
                         <option value="Sunday Slot (10:00 AM – 1:00 PM · Strictly Prior Appt Only)">
                             Sunday Slot: 10:00 AM – 1:00 PM (Strictly Prior Appointment Only)
@@ -369,7 +363,6 @@ import Layout from '../layouts/Layout.astro';
                     `;
                     sundayAlert.classList.remove('hidden');
                 } else {
-                    // Mon - Sat selected: regular morning and evening sessions
                     timeSlot.innerHTML = `
                         <option value="Morning Session (10:00 AM – 1:30 PM)">Morning Session (10:00 AM – 1:30 PM)</option>
                         <option value="Evening Session (5:00 PM – 9:00 PM)">Evening Session (5:00 PM – 9:00 PM)</option>
@@ -378,7 +371,7 @@ import Layout from '../layouts/Layout.astro';
                 }
             }
 
-            // 2. Foolproof Submission Validation
+            // 2. Submission Validation
             if (form) {
                 form.addEventListener('submit', (e) => {
                     e.preventDefault();
@@ -393,7 +386,6 @@ import Layout from '../layouts/Layout.astro';
 
                     let isValid = true;
 
-                    // Name validation
                     if (!nameInput.value.trim()) {
                         nameError.classList.remove('hidden');
                         nameInput.classList.add('border-rose-500');
@@ -403,7 +395,6 @@ import Layout from '../layouts/Layout.astro';
                         nameInput.classList.remove('border-rose-500');
                     }
 
-                    // Phone validation (accepts 10 digits or international formats >= 8 digits)
                     const cleanPhone = phoneInput.value.replace(/[\s\-\+]/g, '');
                     if (!cleanPhone || cleanPhone.length < 8 || isNaN(cleanPhone)) {
                         phoneError.classList.remove('hidden');
@@ -414,7 +405,6 @@ import Layout from '../layouts/Layout.astro';
                         phoneInput.classList.remove('border-rose-500');
                     }
 
-                    // Date validation (must not be empty or in the past)
                     if (!dateInput.value || dateInput.value < todayStr) {
                         dateError.classList.remove('hidden');
                         dateInput.classList.add('border-rose-500');
@@ -426,7 +416,6 @@ import Layout from '../layouts/Layout.astro';
 
                     if (!isValid) return;
 
-                    // Construct structured WhatsApp dispatch
                     const name = nameInput.value.trim();
                     const phone = phoneInput.value.trim();
                     const service = serviceInput.value;
