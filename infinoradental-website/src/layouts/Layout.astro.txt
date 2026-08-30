@@ -1,0 +1,84 @@
+---
+export interface Props {
+    title: string;
+    description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Local Business & Medical Clinic JSON-LD Schema for AEO/SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Infinora Dental Care",
+      "image": "https://infinoradental.com/logo.png",
+      "@id": "https://infinoradental.com",
+      "url": "https://infinoradental.com",
+      "telephone": "+91-9820000000",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West",
+        "addressLocality": "Mumbai",
+        "addressRegion": "MH",
+        "postalCode": "400067",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.2056,
+        "longitude": 72.8424
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "10:00",
+          "closes": "13:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "17:00",
+          "closes": "21:00"
+        }
+      ],
+      "medicalSpecialty": "Dentistry",
+      "founder": {
+        "@type": "Person",
+        "name": "Dr. Riddhi Patel"
+      }
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-teal-500 selection:text-white">
+    <slot />
+</body>
+</html>
+
+<style is:global>
+    :root {
+        --primary: #0d9488;
+        --primary-dark: #0f766e;
+    }
+</style>
