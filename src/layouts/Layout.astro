@@ -11,90 +11,191 @@ const { title, description } = Astro.props;
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
     
-    <!-- Open Graph / Social Media -->
+    <!-- Canonical & Open Graph -->
+    <link rel="canonical" href="https://infinoradental.com/" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://infinoradental.com" />
+    <meta property="og:url" content="https://infinoradental.com/" />
+    <meta property="og:locale" content="en_IN" />
     
-    <!-- Tailwind CSS (is:inline ensures CDN executes in Astro) -->
+    <!-- Tailwind CSS (Inline Execution) -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
+    <script is:inline>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                            950: '#042f2e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Local Business & Medical Clinic JSON-LD Schema for AEO & Google Maps SEO -->
+    <!-- Medical Clinic & High-Impact AEO FAQ Schema (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["Dentist", "MedicalBusiness"],
-      "name": "Infinora Dental Care - Dr. Riddhi Patel Shah (Dentist & Braces Clinic)",
-      "image": "https://infinoradental.com/logo.png",
-      "@id": "https://infinoradental.com",
-      "url": "https://infinoradental.com",
-      "telephone": "+91-7304432681",
-      "priceRange": "₹₹",
-      "hasMap": "https://maps.app.goo.gl/3sKwKPjG43PNeN6y7",
-      "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Google Pay",
-      "currenciesAccepted": "INR",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West",
-        "addressLocality": "Mumbai",
-        "addressRegion": "Maharashtra",
-        "postalCode": "400067",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 19.2056,
-        "longitude": 72.8424
-      },
-      "openingHoursSpecification": [
+      "@graph": [
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "09:00",
-          "closes": "21:00"
+          "@type": ["Dentist", "MedicalBusiness"],
+          "@id": "https://infinoradental.com/#clinic",
+          "name": "Infinora Dental Care - Dr. Riddhi Patel Shah (Dentist & Braces Clinic)",
+          "alternateName": "Infinora Dental Care",
+          "url": "https://infinoradental.com/",
+          "telephone": "+91-7304432681",
+          "email": "hello@infinoradental.com",
+          "priceRange": "₹₹",
+          "hasMap": "https://maps.app.goo.gl/3sKwKPjG43PNeN6y7",
+          "currenciesAccepted": "INR",
+          "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Google Pay, Net Banking",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West",
+            "addressLocality": "Mumbai",
+            "addressRegion": "Maharashtra",
+            "postalCode": "400067",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 19.205511,
+            "longitude": 72.840393
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "09:00",
+              "closes": "21:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Sunday"],
+              "opens": "10:00",
+              "closes": "13:00"
+            }
+          ],
+          "founder": {
+            "@type": "Person",
+            "name": "Dr. Riddhi Patel Shah",
+            "jobTitle": "Orthodontist & Dental Surgeon",
+            "hasCredential": "MDS (Orthodontics & Dentofacial Orthopedics)"
+          },
+          "medicalSpecialty": [
+            "Orthodontics",
+            "Dentistry",
+            "Endodontics",
+            "Periodontics",
+            "Prosthodontics",
+            "PediatricDentistry",
+            "OralSurgery"
+          ]
         },
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Sunday"],
-          "opens": "10:00",
-          "closes": "13:00"
+          "@type": "FAQPage",
+          "@id": "https://infinoradental.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Why should I choose an MDS Orthodontist for Braces & Clear Aligners?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An MDS in Orthodontics requires 3 years of rigorous, master's-level clinical specialization exclusively dedicated to facial aesthetics, jaw bone mechanics, and tooth repositioning. Unlike general dentists who take short weekend courses, an MDS Orthodontist like Dr. Riddhi Patel Shah designs biomechanically stable alignment plans that protect your roots and gums."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does Single-Visit Root Canal Treatment (RCT) work and is it painful?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Using computerized apex locators and high-torque rotary endodontic instruments, infected pulp is cleansed and sealed in a single 45-minute sitting. Coupled with advanced local anesthesia, the procedure is completely pain-free and eliminates the need for multiple painful injection appointments."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long do Dental Implants last compared to Dental Bridges?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dental implants are titanium biocompatible fixtures anchored permanently into your jawbone that can last a lifetime with proper hygiene. Unlike traditional bridges, dental implants do not require grinding down or weakening adjacent healthy natural teeth."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "When is the grand opening of Infinora Dental Care in Kandivali West?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Infinora Dental Care opens in September 2026. Pre-registration is currently active via WhatsApp at +91 73044 32681 to claim inaugural launch offers including free comprehensive consultations and digital scans."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What sterilization standards are followed at Infinora Dental Care?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We adhere to a hospital-grade 6-step sterilization protocol featuring Class-B fractionated vacuum autoclaving. All surgical and diagnostic instruments are sealed in individual sterile barrier pouches and unsealed exclusively in front of the patient."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are payment plans and digital payment options available for major treatments?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We offer transparent upfront treatment pricing with zero hidden charges. We accept Google Pay, UPI, all major credit/debit cards, and structured installment/EMI payment plans for comprehensive orthodontic and implant treatments."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you treat dental emergencies and sudden acute toothaches?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We reserve daily priority slots for emergency toothaches, cracked teeth, acute swelling, and pediatric dental trauma to provide immediate pain relief."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are the clinic timings and how can I reach the clinic?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We are open Monday to Saturday from 9:00 AM to 9:00 PM and Sundays from 10:00 AM to 1:00 PM. The clinic is located at Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067, with free street parking available."
+              }
+            }
+          ]
         }
-      ],
-      "medicalSpecialty": [
-        "Orthodontics",
-        "Endodontics",
-        "Dentistry",
-        "PediatricDentistry",
-        "Periodontics",
-        "Prosthodontics",
-        "OralSurgery"
-      ],
-      "founder": {
-        "@type": "Person",
-        "name": "Dr. Riddhi Patel Shah",
-        "jobTitle": "Orthodontist & Dental Surgeon (MDS)"
-      }
+      ]
     }
     </script>
 </head>
-<body class="bg-slate-50 text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-teal-600 selection:text-white">
+<body class="bg-slate-50 text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-teal-600 selection:text-white overflow-x-hidden w-full">
     <slot />
 </body>
 </html>
 
 <style is:global>
-    :root {
-        --primary: #0f766e;
-        --primary-dark: #115e59;
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
     }
 </style>
