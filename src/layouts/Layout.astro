@@ -5,6 +5,9 @@ export interface Props {
 }
 
 const { title, description } = Astro.props;
+
+// GA4 Measurement ID
+const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
 ---
 
 <!DOCTYPE html>
@@ -15,6 +18,7 @@ const { title, description } = Astro.props;
     <title>{title}</title>
     <meta name="description" content={description} />
     
+    <!-- Canonical & Open Graph Metadata -->
     <link rel="canonical" href="https://infinoradental.com/" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -23,12 +27,38 @@ const { title, description } = Astro.props;
     <meta property="og:locale" content="en_IN" />
     <meta property="og:site_name" content="Infinora Dental Care" />
     
+    <!-- Google Analytics 4 (gtag.js) - G-Z41QK7SPBW -->
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+    <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', GA_MEASUREMENT_ID, {
+            send_page_view: true,
+            anonymize_ip: true
+        });
+
+        // Global Event Tracking Helper Function
+        window.trackEvent = function(eventName, eventParams = {}) {
+            if (typeof window.gtag === 'function') {
+                window.gtag('event', eventName, {
+                    ...eventParams,
+                    clinic_name: 'Infinora Dental Care',
+                    location: 'Kandivali West'
+                });
+            }
+        };
+    </script>
+
+    <!-- Google Fonts Preconnect & Load -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Tailwind Play CDN -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Comprehensive Medical Clinic, Specialist Board & AEO Schema (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -120,7 +150,7 @@ const { title, description } = Astro.props;
             { "@type": "MedicalTherapy", "name": "Piezoelectric Ultrasonic Scaling & Laser Periodontal Care" },
             { "@type": "MedicalTherapy", "name": "Pediatric Preventive Care & Early Growth Guidance" },
             { "@type": "MedicalTherapy", "name": "School & Corporate Dental Wellness Programs" },
-            { "@type": "MedicalTherapy", "name": "Community Seva Outreach Drives (Jain Samaj, Gujarati, Patel & NGOs)" },
+            { "@type": "MedicalTherapy", "name": "Community Seva Outreach Drives" },
             { "@type": "MedicalTherapy", "name": "Global Dental Tourism & NRI Concierge Protocols" }
           ]
         },
@@ -182,6 +212,7 @@ const { title, description } = Astro.props;
     }
     </script>
 
+    <!-- Google Website Translator Hidden Core Script -->
     <script is:inline type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -191,7 +222,6 @@ const { title, description } = Astro.props;
             }, 'google_translate_hidden_element');
         }
 
-        // Custom Seamless Language Switcher Trigger
         window.changeLanguage = function(langCode) {
             const selectEl = document.querySelector('.goog-te-combo');
             if (selectEl) {
@@ -207,10 +237,18 @@ const { title, description } = Astro.props;
                     btn.classList.add('text-slate-300', 'hover:text-white');
                 }
             });
+            // Track language switch event in GA4
+            if (window.trackEvent) {
+                window.trackEvent('change_language', { selected_language: langCode });
+            }
         };
 
-        // vCard (.vcf) Contact Card Generator Function
         window.downloadVCard = function() {
+            // Track vCard download event in GA4
+            if (window.trackEvent) {
+                window.trackEvent('download_vcard', { method: 'direct_button' });
+            }
+
             const vcardData = [
                 'BEGIN:VCARD',
                 'VERSION:3.0',
@@ -244,6 +282,51 @@ const { title, description } = Astro.props;
 <body class="bg-slate-50 text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-teal-600 selection:text-white overflow-x-hidden w-full m-0 p-0 relative min-h-screen">
     <div id="google_translate_hidden_element" class="hidden"></div>
     <slot />
+
+    <!-- Global Automatic Click Event Tracker for GA4 -->
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.addEventListener('click', (e) => {
+                const target = e.target.closest('a');
+                if (!target || !window.trackEvent) return;
+
+                const href = target.getAttribute('href') || '';
+
+                // Track Phone Clicks
+                if (href.startsWith('tel:')) {
+                    window.trackEvent('click_phone_call', {
+                        phone_number: '+917304432681',
+                        click_location: target.innerText.trim() || 'Header/Bar'
+                    });
+                }
+                // Track WhatsApp Clicks
+                else if (href.includes('wa.me')) {
+                    window.trackEvent('click_whatsapp_booking', {
+                        link_url: href,
+                        button_text: target.innerText.trim() || 'WhatsApp CTA'
+                    });
+                }
+                // Track Instagram Clicks
+                else if (href.includes('instagram.com')) {
+                    window.trackEvent('click_instagram', {
+                        profile: '@orthodontist.riddhi'
+                    });
+                }
+                // Track Google Review Clicks
+                else if (href.includes('g.page') || href.includes('share.google')) {
+                    window.trackEvent('click_google_review', {
+                        destination: 'Google My Business'
+                    });
+                }
+                // Track Google Maps Navigation
+                else if (href.includes('maps.google.com') || href.includes('maps.app.goo.gl')) {
+                    window.trackEvent('click_google_maps', {
+                        destination: 'Directions to Sai Elegance'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 
@@ -258,7 +341,6 @@ const { title, description } = Astro.props;
         margin: 0;
         padding: 0;
     }
-    /* Prevents iOS Safari input zooming while maintaining 44px touch targets */
     input, select, textarea {
         font-size: 16px !important;
     }
@@ -266,7 +348,6 @@ const { title, description } = Astro.props;
         display: inline-block;
         vertical-align: middle;
     }
-    /* Hide default Google Translate banner frame */
     .goog-te-banner-frame.skiptranslate {
         display: none !important;
     }
