@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout 
-    title="Infinora Dental Care | Advanced Dentistry & Aligners | Kandivali West, Mumbai" 
-    description="Premier multispeciality dental clinic in Kandivali West, Mumbai. Master of Dental Surgery (MDS) specialist collective for Clear Aligners, Implants, Single-Visit RCT, and Bespoke Smile Architecture."
+    title="Infinora Dental Care | Dr. Riddhi Patel Shah (MDS) | Kandivali West, Mumbai" 
+    description="Premier multispeciality dental clinic in Kandivali West, Mumbai. Fixing Smile Design, Clear Aligners, Dental Implants, Single-Visit RCT, and Institutional Corporate Care by MDS Specialists."
 >
     <div class="bg-slate-950 text-slate-200 text-xs py-2 px-4 sm:px-6 border-b border-slate-800 w-full">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
@@ -19,7 +19,7 @@ import Layout from '../layouts/Layout.astro';
                 </span>
             </div>
 
-            <div class="flex items-center gap-3.5 text-xs font-semibold">
+            <div class="flex items-center gap-3 text-xs font-semibold">
                 
                 <div class="flex items-center gap-1 bg-slate-900 border border-slate-800 px-1.5 py-0.5 rounded-lg notranslate">
                     <button type="button" onclick="changeLanguage('en')" data-lang="en" class="lang-btn px-2 py-0.5 rounded text-[10px] font-bold bg-teal-500 text-slate-950 transition-colors">
@@ -35,6 +35,12 @@ import Layout from '../layouts/Layout.astro';
                         मरा
                     </button>
                 </div>
+
+                <span class="text-slate-700 hidden sm:inline">|</span>
+
+                <button type="button" onclick="downloadVCard()" class="text-teal-400 hover:text-teal-300 flex items-center gap-1 transition-colors cursor-pointer" title="Save Infinora Dental Care to Contacts">
+                    <span>📇 Save Contact</span>
+                </button>
 
                 <span class="text-slate-700 hidden sm:inline">|</span>
                 
@@ -61,9 +67,10 @@ import Layout from '../layouts/Layout.astro';
             </a>
 
             <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
+                <a href="#smile-design" class="hover:text-teal-700 transition-colors">Fixing Smile Design</a>
                 <a href="#catalogue" class="hover:text-teal-700 transition-colors">Treatments</a>
-                <a href="#aligners" class="hover:text-teal-700 transition-colors">Clear Aligners</a>
                 <a href="#why-us" class="hover:text-teal-700 transition-colors">Why Choose Us</a>
+                <a href="#community" class="hover:text-teal-700 transition-colors">Community & Corporate</a>
                 <a href="#about" class="hover:text-teal-700 transition-colors">Specialists</a>
                 <a href="#location" class="hover:text-teal-700 transition-colors">Location</a>
             </nav>
@@ -91,12 +98,12 @@ import Layout from '../layouts/Layout.astro';
                     </div>
 
                     <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-950 leading-[1.14] break-words">
-                        Precision Aligners & Braces. <br/>
-                        <span class="text-teal-700">Bespoke Smile Architecture.</span>
+                        Fixing Smile Design. <br/>
+                        <span class="text-teal-700">Facial Aesthetics & Balance.</span>
                     </h1>
 
                     <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl break-words">
-                        Welcome to <strong>Infinora Dental Care</strong> in Kandivali West, Mumbai. Directed by MDS Orthodontist <strong>Dr. Riddhi Patel Shah</strong> alongside a dedicated Master of Dental Surgery (MDS) specialist board across every discipline. Experience high-definition intraoral diagnostics and gentle, hospital-grade dental healthcare.
+                        Welcome to <strong>Infinora Dental Care</strong> in Kandivali West, Mumbai. Directed by MDS Orthodontist <strong>Dr. Riddhi Patel Shah</strong> alongside a dedicated Master of Dental Surgery (MDS) specialist collective. Tailored for teenagers, women, models, creators, and professionals seeking natural facial harmony.
                     </p>
 
                     <div class="p-5 rounded-2xl bg-gradient-to-br from-slate-950 via-teal-950 to-slate-900 text-white shadow-xl border border-teal-700/40 space-y-3">
@@ -109,12 +116,12 @@ import Layout from '../layouts/Layout.astro';
                         <div>
                             <h2 class="text-base sm:text-lg font-bold text-white">VIP Pre-Launch Privilege Pass</h2>
                             <p class="text-xs text-slate-300 leading-relaxed mt-0.5">
-                                Pre-register via WhatsApp to claim a <strong>Free Smile Consultation & High-Definition Intraoral Camera Checkup + 20% Privilege Discount</strong> on inaugural procedures (with dedicated 3D optical scanning for aligner patients).
+                                Pre-register via WhatsApp to claim a <strong>Free Smile Consultation & Intraoral Camera Checkup + 20% Privilege Discount</strong> on inaugural treatments (including 3D scan planning for smile design).
                             </p>
                         </div>
                         <div class="pt-1">
                             <a href="#book" class="inline-flex items-center gap-1.5 bg-teal-500 hover:bg-teal-400 text-slate-950 px-4 py-2 rounded-xl font-extrabold text-xs sm:text-sm transition-all shadow-md">
-                                Claim Free Consultation Pass ↓
+                                Claim Free Smile Consultation ↓
                             </a>
                         </div>
                     </div>
@@ -124,9 +131,9 @@ import Layout from '../layouts/Layout.astro';
                             Book Consultation Online
                             <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                         </a>
-                        <a href="#instagram" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 border border-slate-200 text-slate-800 font-bold px-6 py-3.5 rounded-xl shadow-sm transition-all text-sm sm:text-base text-center">
-                            📸 View Instagram Studio
-                        </a>
+                        <button type="button" onclick="downloadVCard()" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 border border-slate-200 text-slate-800 font-bold px-6 py-3.5 rounded-xl shadow-sm transition-all text-sm sm:text-base text-center cursor-pointer">
+                            📇 Save Clinic Contact to Phone
+                        </button>
                     </div>
 
                     <div class="pt-3 grid grid-cols-3 gap-3 border-t border-slate-200">
@@ -160,7 +167,7 @@ import Layout from '../layouts/Layout.astro';
 
                         <div class="space-y-2.5 text-xs text-slate-600 leading-relaxed break-words">
                             <p>
-                                At <strong>Infinora Dental Care</strong>, every clinical case is backed by post-graduate Master of Dental Surgery (MDS) expertise. Dr. Riddhi Patel Shah directs your core aesthetic smile design and intraoral diagnostic roadmap.
+                                At <strong>Infinora Dental Care</strong>, every clinical case is backed by post-graduate Master of Dental Surgery (MDS) expertise. Dr. Riddhi Patel Shah directs your smile design roadmap, facial aesthetics, and intraoral diagnostics.
                             </p>
                             <p>
                                 When specialized interventions are needed, our dedicated <strong>MDS Specialist Board</strong> coordinates together across Endodontics, Oral & Maxillofacial Surgery, Prosthodontics, and Periodontics for complete clinical precision.
@@ -189,6 +196,196 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <section class="py-6 bg-white border-y border-slate-100 w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-around gap-6 text-center">
+                <div class="flex items-center gap-2.5">
+                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-800 flex items-center justify-center font-black text-xs">🏛️</span>
+                    <div class="text-left">
+                        <div class="text-xs font-black text-slate-900">Maharashtra State Dental Council (MSDC)</div>
+                        <div class="text-[10px] text-slate-500 font-medium">Officially Registered Medical Practitioner</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2.5">
+                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-800 flex items-center justify-center font-black text-xs">🇮🇳</span>
+                    <div class="text-left">
+                        <div class="text-xs font-black text-slate-900">Indian Dental Association (IDA)</div>
+                        <div class="text-[10px] text-slate-500 font-medium">Active Member & Clinical Ethics Standard</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2.5">
+                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-800 flex items-center justify-center font-black text-xs">🛡️</span>
+                    <div class="text-left">
+                        <div class="text-xs font-black text-slate-900">Hospital Class-B Autoclave Certified</div>
+                        <div class="text-[10px] text-slate-500 font-medium">100% Sealed Sterile Pouch Protocol</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="smile-design" class="py-16 bg-slate-50 w-full border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    
+                    <div class="lg:col-span-6 space-y-5 min-w-0">
+                        <span class="text-teal-700 text-xs font-extrabold tracking-widest uppercase bg-teal-100 px-3.5 py-1 rounded-full">
+                            Aesthetic Facial Architecture
+                        </span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+                            Fixing Smile Design: Where Orthodontics Meets Facial Harmony
+                        </h2>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Smile design is more than straight teeth—it is about facial balance, jawline symmetry, and natural lip support. Tailored for teenagers, women, models, creators, brides, and corporate executives whose appearance and camera presence matter.
+                        </p>
+
+                        <div class="space-y-3 text-xs sm:text-sm text-slate-700">
+                            <div class="flex items-start gap-2.5">
+                                <span class="text-teal-600 font-bold text-base shrink-0">✓</span>
+                                <div><strong>Facial Proportion Mapping:</strong> Tailoring tooth contour, exposure, and arch width to your facial features and smile line.</div>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <span class="text-teal-600 font-bold text-base shrink-0">✓</span>
+                                <div><strong>Teen & Young Adult Aesthetic Braces:</strong> Low-profile ceramic aesthetic brackets and discreet aligners that correct crowding without awkward wires.</div>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <span class="text-teal-600 font-bold text-base shrink-0">✓</span>
+                                <div><strong>Bridal & Event Smile Fast-Tracks:</strong> Non-invasive composite veneers, teeth whitening, and alignment sprints designed for upcoming weddings and shoot dates.</div>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <span class="text-teal-600 font-bold text-base shrink-0">✓</span>
+                                <div><strong>Biological Safety:</strong> Master orthodontic precision ensuring zero root resorption or gum recession.</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <a href="#book" class="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-xl text-xs sm:text-sm shadow-md transition-all">
+                                Book Smile Design Consultation →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 space-y-5 border border-slate-800 shadow-xl">
+                        <h3 class="text-lg sm:text-xl font-extrabold text-white">Who is Smile Design For?</h3>
+                        <div class="space-y-3 text-xs sm:text-sm">
+                            
+                            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-1">
+                                <div class="flex justify-between font-bold text-teal-300">
+                                    <span>Creators, Models & Actors</span>
+                                    <span>High Aesthetic Precision</span>
+                                </div>
+                                <p class="text-slate-300 text-xs leading-relaxed">
+                                    Micro-aesthetic alignment and porcelain veneers designed to look natural under HD studio cameras and lighting.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-1">
+                                <div class="flex justify-between font-bold text-teal-300">
+                                    <span>Brides & Groom Makeovers</span>
+                                    <span>Wedding Countdown</span>
+                                </div>
+                                <p class="text-slate-300 text-xs leading-relaxed">
+                                    Express smile brightening, gum contouring, and alignment plans timed perfectly for your wedding events.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-1">
+                                <div class="flex justify-between font-bold text-teal-300">
+                                    <span>Teens & College Students</span>
+                                    <span>Confidence & Growth</span>
+                                </div>
+                                <p class="text-slate-300 text-xs leading-relaxed">
+                                    Invisible aligners and ceramic self-ligating braces that correct crowding smoothly without metal brackets or mouth sores.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="aligners" class="py-16 bg-white w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    
+                    <div class="lg:col-span-6 space-y-5 min-w-0">
+                        <span class="text-teal-700 text-xs font-extrabold tracking-widest uppercase bg-teal-100 px-3.5 py-1 rounded-full">
+                            Flagship Orthodontic Studio
+                        </span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+                            Invisible Clear Aligners & Precision Braces
+                        </h2>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Supervised directly by MDS Orthodontist <strong>Dr. Riddhi Patel Shah</strong>. For our clear aligner patients, we deploy dedicated 3D intraoral optical scanning to construct precision custom aligners that shift teeth safely, predictably, and invisibly without metal brackets or food restrictions.
+                        </p>
+
+                        <div class="space-y-3 text-xs sm:text-sm text-slate-700">
+                            <div class="flex items-start gap-2.5">
+                                <span class="text-teal-600 font-bold text-base shrink-0">✓</span>
+                                <div><strong>Dedicated 3D Optical Scanning:</strong> Preview your completed smile simulation before your first tray is fabricated.</div>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <span class="text-teal-600 font-bold text-base shrink-0">✓</span>
+                                <div><strong>Virtually Invisible:</strong> High-grade medical thermoplastic trays that go unnoticed in meetings or social events.</div>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <span class="text-teal-600 font-bold text-base shrink-0">✓</span>
+                                <div><strong>Zero Dietary Restrictions:</strong> Remove trays effortlessly to eat, brush, and floss normally.</div>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <span class="text-teal-600 font-bold text-base shrink-0">✓</span>
+                                <div><strong>MDS Specialized Oversight:</strong> Guaranteed biological tooth safety with no root shortening or gum damage.</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <a href="#book" class="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-xl text-xs sm:text-sm shadow-md transition-all">
+                                Book Aligner Assessment & 3D Scan →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 space-y-5 border border-slate-800 shadow-xl">
+                        <h3 class="text-lg sm:text-xl font-extrabold text-white">Compare Orthodontic Solutions</h3>
+                        <div class="space-y-3 text-xs sm:text-sm">
+                            
+                            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-1">
+                                <div class="flex justify-between font-bold text-teal-300">
+                                    <span>Invisible Clear Aligners</span>
+                                    <span>Top Choice for Adults</span>
+                                </div>
+                                <p class="text-slate-300 text-xs leading-relaxed">
+                                    Custom transparent aligners with 3D digital simulation. Removable, zero mouth sores, ideal for professionals and brides.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-1">
+                                <div class="flex justify-between font-bold text-teal-300">
+                                    <span>Self-Ligating Ceramic Braces</span>
+                                    <span>Discreet & Fixed</span>
+                                </div>
+                                <p class="text-slate-300 text-xs leading-relaxed">
+                                    Tooth-colored ceramic brackets that blend with your enamel. Low friction, faster alignment, and fewer clinic visits.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-1">
+                                <div class="flex justify-between font-bold text-teal-300">
+                                    <span>Advanced Metallic Braces</span>
+                                    <span>Precision Mechanics</span>
+                                </div>
+                                <p class="text-slate-300 text-xs leading-relaxed">
+                                    High-grade stainless steel brackets for complex skeletal corrections and interceptive teenage orthodontics.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
 
@@ -252,7 +449,7 @@ import Layout from '../layouts/Layout.astro';
                                     required 
                                     class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-transparent text-sm text-slate-900 outline-none transition-all bg-white"
                                 >
-                                    <option value="Free Smile Assessment & Intraoral Camera Checkup">Free Smile Assessment & Intraoral Camera Checkup</option>
+                                    <option value="Fixing Smile Design & Facial Aesthetics Assessment">Fixing Smile Design & Aesthetics Assessment</option>
                                     <option value="Invisible Clear Aligners & Precision Braces (with 3D Scan)">Invisible Clear Aligners / Braces (with 3D Scan)</option>
                                     <option value="Single-Visit Root Canal Treatment">Single-Visit Painless Root Canal (RCT)</option>
                                     <option value="Dental Implants & All-on-4/6">Dental Implants / All-on-4/6</option>
@@ -260,6 +457,7 @@ import Layout from '../layouts/Layout.astro';
                                     <option value="Wisdom Tooth & Surgical Care">Wisdom Tooth & Oral Surgery</option>
                                     <option value="Ultrasonic Cleaning & Laser Gum Care">Ultrasonic Cleaning & Gum Care</option>
                                     <option value="Pediatric / Child Dental Care">Pediatric / Child Dental Care</option>
+                                    <option value="School / Corporate / Community Camp Inquiry">School / Corporate / Community Camp Inquiry</option>
                                     <option value="Dental Tourism / NRI Treatment Plan">Dental Tourism / NRI Treatment Plan</option>
                                 </select>
                             </div>
@@ -310,10 +508,14 @@ import Layout from '../layouts/Layout.astro';
 
                     </form>
 
-                    <div class="text-center pt-2 border-t border-slate-100">
+                    <div class="text-center pt-2 border-t border-slate-100 flex flex-wrap items-center justify-center gap-4">
                         <p class="text-xs text-slate-500">
-                            Prefer to call directly? Speak with reception at <a href="tel:+917304432681" class="text-teal-700 font-bold hover:underline">+91 73044 32681</a>
+                            Prefer to call directly? <a href="tel:+917304432681" class="text-teal-700 font-bold hover:underline">+91 73044 32681</a>
                         </p>
+                        <span class="text-slate-300 hidden sm:inline">•</span>
+                        <button type="button" onclick="downloadVCard()" class="text-xs text-teal-700 font-bold hover:underline cursor-pointer">
+                            📇 Download Contact Card (.vcf)
+                        </button>
                     </div>
 
                 </div>
@@ -434,92 +636,10 @@ import Layout from '../layouts/Layout.astro';
             });
         </script>
 
-        <section id="aligners" class="py-16 bg-white w-full border-t border-slate-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                    
-                    <div class="lg:col-span-6 space-y-5 min-w-0">
-                        <span class="text-teal-700 text-xs font-extrabold tracking-widest uppercase bg-teal-100/80 px-3.5 py-1 rounded-full">
-                            Flagship Orthodontic Studio
-                        </span>
-                        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
-                            Invisible Clear Aligners & Precision Braces
-                        </h2>
-                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                            Supervised directly by MDS Orthodontist <strong>Dr. Riddhi Patel Shah</strong>. For our clear aligner patients, we deploy dedicated 3D intraoral optical scanning to construct precision custom aligners that shift teeth safely, predictably, and invisibly without metal brackets or food restrictions.
-                        </p>
-
-                        <div class="space-y-3 text-xs sm:text-sm text-slate-700">
-                            <div class="flex items-start gap-2.5">
-                                <span class="text-teal-600 font-bold text-base shrink-0">✓</span>
-                                <div><strong>Dedicated 3D Optical Scanning:</strong> Preview your completed smile simulation before your first tray is fabricated.</div>
-                            </div>
-                            <div class="flex items-start gap-2.5">
-                                <span class="text-teal-600 font-bold text-base shrink-0">✓</span>
-                                <div><strong>Virtually Invisible:</strong> High-grade medical thermoplastic trays that go unnoticed in meetings or social events.</div>
-                            </div>
-                            <div class="flex items-start gap-2.5">
-                                <span class="text-teal-600 font-bold text-base shrink-0">✓</span>
-                                <div><strong>Zero Dietary Restrictions:</strong> Remove trays effortlessly to eat, brush, and floss normally.</div>
-                            </div>
-                            <div class="flex items-start gap-2.5">
-                                <span class="text-teal-600 font-bold text-base shrink-0">✓</span>
-                                <div><strong>MDS Specialized Oversight:</strong> Guaranteed biological tooth safety with no root shortening or gum damage.</div>
-                            </div>
-                        </div>
-
-                        <div class="pt-2">
-                            <a href="#book" class="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-xl text-xs sm:text-sm shadow-md transition-all">
-                                Book Aligner Assessment & 3D Scan →
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="lg:col-span-6 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 space-y-5 border border-slate-800 shadow-xl">
-                        <h3 class="text-lg sm:text-xl font-extrabold text-white">Compare Orthodontic Solutions</h3>
-                        <div class="space-y-3 text-xs sm:text-sm">
-                            
-                            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-1">
-                                <div class="flex justify-between font-bold text-teal-300">
-                                    <span>Invisible Clear Aligners</span>
-                                    <span>Top Choice for Adults</span>
-                                </div>
-                                <p class="text-slate-300 text-xs leading-relaxed">
-                                    Custom transparent aligners with 3D digital simulation. Removable, zero mouth sores, ideal for professionals and brides.
-                                </p>
-                            </div>
-
-                            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-1">
-                                <div class="flex justify-between font-bold text-teal-300">
-                                    <span>Self-Ligating Ceramic Braces</span>
-                                    <span>Discreet & Fixed</span>
-                                </div>
-                                <p class="text-slate-300 text-xs leading-relaxed">
-                                    Tooth-colored ceramic brackets that blend with your enamel. Low friction, faster alignment, and fewer clinic visits.
-                                </p>
-                            </div>
-
-                            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-1">
-                                <div class="flex justify-between font-bold text-teal-300">
-                                    <span>Advanced Metallic Braces</span>
-                                    <span>Precision Mechanics</span>
-                                </div>
-                                <p class="text-slate-300 text-xs leading-relaxed">
-                                    High-grade stainless steel brackets for complex skeletal corrections and interceptive teenage orthodontics.
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
         <section class="py-16 bg-slate-50 w-full border-t border-slate-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-                    <span class="text-teal-700 text-xs font-extrabold tracking-widest uppercase bg-teal-100/80 px-3.5 py-1 rounded-full">
+                    <span class="text-teal-700 text-xs font-extrabold tracking-widest uppercase bg-teal-100 px-3.5 py-1 rounded-full">
                         Streamlined Experience
                     </span>
                     <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
@@ -721,7 +841,7 @@ import Layout from '../layouts/Layout.astro';
                                 <span class="text-[10px] font-black uppercase tracking-wider bg-teal-200/80 text-teal-900 px-2.5 py-1 rounded-full">MDS Pedodontics</span>
                             </div>
                             <div>
-                                <h3 class="text-lg font-extrabold text-slate-900">Pediatric & Kids Preventive Dentistry</h3>
+                                <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Pediatric & Kids Preventive Dentistry</h3>
                                 <p class="text-xs text-slate-500 font-semibold mt-0.5">Fluoride Varnishes · Sealants · Jaw Guidance</p>
                             </div>
                             <p class="text-slate-600 text-xs leading-relaxed">
@@ -744,58 +864,85 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <section id="why-us" class="py-16 bg-slate-50 w-full border-t border-slate-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-                    <span class="text-teal-700 text-xs font-extrabold tracking-widest uppercase bg-teal-100/80 px-3.5 py-1 rounded-full">
-                        Hospital Standards
+        <section id="community" class="py-16 bg-slate-900 text-white w-full border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-12">
+                
+                <div class="text-center max-w-3xl mx-auto space-y-3">
+                    <span class="text-teal-400 text-xs font-extrabold tracking-widest uppercase bg-teal-950 border border-teal-800 px-3.5 py-1 rounded-full">
+                        Institutional Partnerships & Social Impact
                     </span>
-                    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
-                        The Infinora Standard vs. Traditional Clinics
+                    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
+                        School, Corporate & Community Outreach
                     </h2>
-                    <p class="text-slate-600 text-sm sm:text-base">
-                        Compare our clinical infrastructure, specialist training, and patient safety protocols.
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        At Infinora Dental Care, we actively partner with educational institutions, offices, community organizations, and NGOs to drive preventive oral health awareness across Mumbai.
                     </p>
                 </div>
 
-                <div class="w-full overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
-                    <table class="w-full min-w-[550px] text-left border-collapse text-xs sm:text-sm">
-                        <thead>
-                            <tr class="bg-slate-950 text-white">
-                                <th class="p-4 sm:p-5 font-bold">Clinical Parameter</th>
-                                <th class="p-4 sm:p-5 font-bold text-teal-300 bg-slate-900">Infinora Dental Care</th>
-                                <th class="p-4 sm:p-5 font-bold text-slate-400">Typical Local Clinics</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-200 text-slate-700">
-                            <tr>
-                                <td class="p-4 sm:p-5 font-bold text-slate-900">Clinical Leadership</td>
-                                <td class="p-4 sm:p-5 font-semibold text-teal-900 bg-teal-50/60">MDS Specialist Board Leadership</td>
-                                <td class="p-4 sm:p-5 text-slate-500">Single general practitioner attempting all surgeries</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 sm:p-5 font-bold text-slate-900">Sterilization Rigor</td>
-                                <td class="p-4 sm:p-5 font-semibold text-teal-900 bg-teal-50/60">Hospital Class-B Autoclave + Sealed Pouches</td>
-                                <td class="p-4 sm:p-5 text-slate-500">Basic boiling or chemical soaking</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 sm:p-5 font-bold text-slate-900">Sunday Availability</td>
-                                <td class="p-4 sm:p-5 font-semibold text-teal-900 bg-teal-50/60">10:00 AM – 1:00 PM (Strictly Prior Appt Only)</td>
-                                <td class="p-4 sm:p-5 text-slate-500">Closed or irregular walk-in chaos</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 sm:p-5 font-bold text-slate-900">Pricing & Quotes</td>
-                                <td class="p-4 sm:p-5 font-semibold text-teal-900 bg-teal-50/60">Written upfront quotes, zero surprises</td>
-                                <td class="p-4 sm:p-5 text-slate-500">Unclear costs added mid-treatment</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 sm:p-5 font-bold text-slate-900">Diagnostic Imaging</td>
-                                <td class="p-4 sm:p-5 font-semibold text-teal-900 bg-teal-50/60">HD Intraoral Cameras & Digital RVG Radiography</td>
-                                <td class="p-4 sm:p-5 text-slate-500">Traditional film X-rays with higher exposure</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                    
+                    <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700 space-y-2.5">
+                        <div class="w-10 h-10 rounded-xl bg-teal-950 border border-teal-800 text-teal-400 flex items-center justify-center text-lg">
+                            🏫
+                        </div>
+                        <h3 class="font-extrabold text-base text-white">Schools & Colleges</h3>
+                        <p class="text-slate-300 text-xs leading-relaxed">
+                            Comprehensive pediatric dental checkup camps, cavity screening, and early orthodontic growth assessments for students and sports teams.
+                        </p>
+                        <div class="pt-2">
+                            <a href="https://wa.me/917304432681?text=Hi%2C%20I%20would%20like%20to%20organize%20a%20Dental%20Checkup%20Drive%20for%20our%20School/College." target="_blank" rel="noopener" class="text-xs font-bold text-teal-400 hover:text-teal-300 inline-block">
+                                Partner for School Drive →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700 space-y-2.5">
+                        <div class="w-10 h-10 rounded-xl bg-teal-950 border border-teal-800 text-teal-400 flex items-center justify-center text-lg">
+                            🏢
+                        </div>
+                        <h3 class="font-extrabold text-base text-white">Corporate Wellness</h3>
+                        <p class="text-slate-300 text-xs leading-relaxed">
+                            Corporate dental wellness desks, executive smile packages, ergonomic consultations, and employee privilege family plans.
+                        </p>
+                        <div class="pt-2">
+                            <a href="https://wa.me/917304432681?text=Hi%2C%20we%20want%20to%20enroll%20our%20Corporate/Office%20for%20Dental%20Wellness%20Benefits." target="_blank" rel="noopener" class="text-xs font-bold text-teal-400 hover:text-teal-300 inline-block">
+                                Corporate Desk Inquiry →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700 space-y-2.5">
+                        <div class="w-10 h-10 rounded-xl bg-teal-950 border border-teal-800 text-teal-400 flex items-center justify-center text-lg">
+                            🪷
+                        </div>
+                        <h3 class="font-extrabold text-base text-white">Community Seva Camps</h3>
+                        <p class="text-slate-300 text-xs leading-relaxed">
+                            Dedicated free oral screening camps and subsidized ethical treatment drives for Jain Samaj, Gujarati, Patel community associations, and social trusts.
+                        </p>
+                        <div class="pt-2">
+                            <a href="https://wa.me/917304432681?text=Jai%20Jinendra%20/%20Namaste%2C%20we%20would%20like%20to%20collaborate%20for%20a%20Community%20Dental%20Camp." target="_blank" rel="noopener" class="text-xs font-bold text-teal-400 hover:text-teal-300 inline-block">
+                                Request Community Camp →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700 space-y-2.5">
+                        <div class="w-10 h-10 rounded-xl bg-teal-950 border border-teal-800 text-teal-400 flex items-center justify-center text-lg">
+                            🤝
+                        </div>
+                        <h3 class="font-extrabold text-base text-white">NGO & Senior Drives</h3>
+                        <p class="text-slate-300 text-xs leading-relaxed">
+                            Non-profit oral health awareness sessions, senior citizen denture checkups, and subsidized preventive care drives in local residential societies.
+                        </p>
+                        <div class="pt-2">
+                            <a href="https://wa.me/917304432681?text=Hello%2C%20we%20represent%20an%20NGO/Society%20and%20want%20to%20host%20a%20Dental%20Screening%20Day." target="_blank" rel="noopener" class="text-xs font-bold text-teal-400 hover:text-teal-300 inline-block">
+                                Collaborate with NGO →
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
         </section>
 
@@ -810,7 +957,7 @@ import Layout from '../layouts/Layout.astro';
                         Follow Dr. Riddhi on Instagram
                     </h2>
                     <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                        Step inside the clinic on Instagram. Watch real clear aligner transformations, before-and-after smile designs, and orthodontic reels directly by Dr. Riddhi Patel Shah.
+                        Step inside the clinic on Instagram. Watch real smile design transformations, before-and-after cases, and orthodontic aesthetic reels directly by Dr. Riddhi Patel Shah.
                     </p>
                 </div>
 
@@ -840,8 +987,8 @@ import Layout from '../layouts/Layout.astro';
                                 <span>✨ Smile Aesthetics</span>
                                 <span>Reel</span>
                             </div>
-                            <h4 class="font-extrabold text-white text-sm group-hover:text-pink-300 transition-colors">Clear Aligners vs Braces: What Works Faster?</h4>
-                            <p class="text-slate-400 text-xs leading-relaxed">Dr. Riddhi breaks down treatment timelines and lifestyle differences for working professionals.</p>
+                            <h4 class="font-extrabold text-white text-sm group-hover:text-pink-300 transition-colors">Fixing Smile Design: Timeline & Costs</h4>
+                            <p class="text-slate-400 text-xs leading-relaxed">Dr. Riddhi breaks down aesthetic planning and digital smile mapping.</p>
                         </div>
                         <div class="text-xs font-bold text-pink-400 flex items-center gap-1">
                             Watch on Instagram →
@@ -855,7 +1002,7 @@ import Layout from '../layouts/Layout.astro';
                                 <span>Transformation</span>
                             </div>
                             <h4 class="font-extrabold text-white text-sm group-hover:text-pink-300 transition-colors">Midline Spacing & Overbite Correction</h4>
-                            <p class="text-slate-400 text-xs leading-relaxed">See how a 12-month clear aligner journey restored full aesthetic symmetry.</p>
+                            <p class="text-slate-400 text-xs leading-relaxed">See how a customized aesthetic aligner journey restored full symmetry.</p>
                         </div>
                         <div class="text-xs font-bold text-pink-400 flex items-center gap-1">
                             View Case Study →
@@ -899,7 +1046,7 @@ import Layout from '../layouts/Layout.astro';
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 
                 <div class="text-center max-w-3xl mx-auto mb-10 space-y-3">
-                    <span class="text-teal-700 text-xs font-extrabold tracking-widest uppercase bg-teal-100/80 px-3.5 py-1 rounded-full">
+                    <span class="text-teal-700 text-xs font-extrabold tracking-widest uppercase bg-teal-100 px-3.5 py-1 rounded-full">
                         Patient Trust & Social Proof
                     </span>
                     <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
@@ -938,13 +1085,13 @@ import Layout from '../layouts/Layout.astro';
                         <div class="space-y-2.5">
                             <div class="flex items-center gap-1 text-amber-400 text-sm">★★★★★</div>
                             <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic">
-                                "I had severe dental anxiety from past visits elsewhere. Dr. Riddhi Patel Shah explained the clear aligner process so gently and clearly. Today my smile is completely aligned without anyone noticing I was wearing aligners. The best clinic in Kandivali West!"
+                                "I had severe dental anxiety from past visits elsewhere. Dr. Riddhi Patel Shah explained the smile design and aligner process so gently. Today my smile is completely aligned without anyone noticing I had aligners on. The best clinic in Kandivali West!"
                             </p>
                         </div>
                         <div class="pt-3 border-t border-slate-200 flex items-center justify-between">
                             <div>
                                 <div class="font-extrabold text-slate-900 text-xs sm:text-sm">Pooja K.</div>
-                                <div class="text-[11px] text-teal-700 font-semibold">Kandivali West · Clear Aligners</div>
+                                <div class="text-[11px] text-teal-700 font-semibold">Kandivali West · Fixing Smile Design</div>
                             </div>
                             <span class="text-xs font-bold text-slate-400">Verified Patient</span>
                         </div>
@@ -1037,7 +1184,7 @@ import Layout from '../layouts/Layout.astro';
         <section id="faq" class="py-16 bg-white border-t border-slate-100 w-full">
             <div class="max-w-5xl mx-auto px-4 sm:px-6">
                 <div class="text-center mb-12 space-y-3">
-                    <span class="text-teal-700 text-xs font-extrabold tracking-widest uppercase bg-teal-100/80 px-3.5 py-1 rounded-full">
+                    <span class="text-teal-700 text-xs font-extrabold tracking-widest uppercase bg-teal-100 px-3.5 py-1 rounded-full">
                         Patient Clarity
                     </span>
                     <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
@@ -1051,9 +1198,16 @@ import Layout from '../layouts/Layout.astro';
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
                     
                     <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
-                        <h3 class="font-bold text-slate-900 text-sm sm:text-base">How is clinical care managed at Infinora Dental Care?</h3>
+                        <h3 class="font-bold text-slate-900 text-sm sm:text-base">What is Fixing Smile Design?</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                            Every patient is evaluated directly by Chief Dental Surgeon <strong>Dr. Riddhi Patel Shah (MDS Orthodontist)</strong>. If advanced root canal or surgical work is indicated, our specialized MDS board coordinates together under her master supervision.
+                            Fixing Smile Design is our bespoke orthodontic and aesthetic mapping process that aligns your teeth in proportion with your lips, jawline, and facial symmetry—ideal for creators, models, brides, teenagers, and professionals.
+                        </p>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                        <h3 class="font-bold text-slate-900 text-sm sm:text-base">What diagnostic equipment is used at the clinic?</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            We utilize High-Definition Intraoral Cameras and low-radiation digital RVG radiography for routine patient checkups, while 3D Optical Digital Scanning is deployed specifically for Clear Aligner patients.
                         </p>
                     </div>
 
@@ -1065,16 +1219,9 @@ import Layout from '../layouts/Layout.astro';
                     </div>
 
                     <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
-                        <h3 class="font-bold text-slate-900 text-sm sm:text-base">How do I book an appointment?</h3>
+                        <h3 class="font-bold text-slate-900 text-sm sm:text-base">Do you organize school and community dental checkups?</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                            You can fill out the interactive appointment form on this page, chat with Dr. Riddhi's desk directly on WhatsApp at <strong>+91 73044 32681</strong>, or call reception at <strong>+91 73044 32681</strong>.
-                        </p>
-                    </div>
-
-                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
-                        <h3 class="font-bold text-slate-900 text-sm sm:text-base">Why choose an MDS Orthodontist for Aligners?</h3>
-                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                            An MDS in Orthodontics requires 3 years of clinical specialization dedicated exclusively to facial aesthetics, bone biology, and tooth movement. Dr. Riddhi Patel Shah designs biomechanically stable alignments that protect roots and prevent relapse.
+                            Yes. We organize customized dental checkup drives for schools, corporate offices, and community organizations (Jain Samaj, Gujarati, Patel community associations, and NGOs).
                         </p>
                     </div>
 
@@ -1136,6 +1283,9 @@ import Layout from '../layouts/Layout.astro';
                         <a href="https://g.page/r/Cb7r3l0-R2oSEBM/review" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold px-5 py-2.5 rounded-xl transition-all text-xs sm:text-sm">
                             ✍️ Review on Google
                         </a>
+                        <button type="button" onclick="downloadVCard()" class="inline-flex items-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all cursor-pointer">
+                            📇 Save Contact
+                        </button>
                     </div>
                 </div>
 
@@ -1164,4 +1314,21 @@ import Layout from '../layouts/Layout.astro';
             <span>📅 Book Visit</span>
         </a>
         <a href="https://wa.me/917304432681?text=Hello%20Dr.%20Riddhi%20Patel%20Shah%2C%20I%20would%20like%20to%20consult%20at%20Infinora%20Dental%20Care." target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1 bg-emerald-600 text-white font-bold py-2.5 px-2 rounded-xl text-xs shadow-sm">
-            <svg class="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.
+            <svg class="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+            <span>WhatsApp</span>
+        </a>
+        <button type="button" onclick="downloadVCard()" class="flex-1 inline-flex items-center justify-center gap-1 bg-slate-900 text-white font-bold py-2.5 px-2 rounded-xl text-xs shadow-sm cursor-pointer">
+            <span>📇 Contact</span>
+        </button>
+    </div>
+
+    <footer class="bg-slate-950 text-slate-400 py-10 text-xs border-t border-slate-800 w-full mb-12 sm:mb-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-teal-500 shrink-0"></span>
+                <p>© 2026 Infinora Dental Care. Dr. Riddhi Patel Shah (MDS). All rights reserved.</p>
+            </div>
+            <p class="text-[11px] text-slate-500">Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067</p>
+        </div>
+    </footer>
+</Layout>
