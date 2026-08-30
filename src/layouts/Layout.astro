@@ -29,7 +29,7 @@ const { title, description } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Tailwind Play CDN (Engineered Standalone Execution - Eliminates Race Conditions) -->
+    <!-- Tailwind Play CDN (Standalone Execution - Zero Race Condition) -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
 
     <!-- Comprehensive Medical Clinic, Specialist Board & AEO Schema (JSON-LD) -->
@@ -72,6 +72,18 @@ const { title, description } = Astro.props;
               "@type": "OpeningHoursSpecification",
               "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
               "opens": "09:00",
+              "closes": "13:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "15:00",
+              "closes": "17:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "18:00",
               "closes": "21:00"
             },
             {
@@ -99,14 +111,14 @@ const { title, description } = Astro.props;
             "OralSurgery"
           ],
           "availableService": [
-            { "@type": "MedicalTherapy", "name": "Primary Comprehensive Dental Consultation by Dr. Riddhi Patel Shah (MDS)" },
+            { "@type": "MedicalTherapy", "name": "Free 3D Smile & Oral Health Consultation by Dr. Riddhi Patel Shah (MDS)" },
             { "@type": "MedicalTherapy", "name": "Invisible Clear Aligners & Precision Aesthetic Braces" },
-            { "@type": "MedicalTherapy", "name": "Single-Visit Painless Root Canal Treatment (MDS Endodontist On-Call)" },
-            { "@type": "MedicalTherapy", "name": "Permanent Dental Implants & All-on-4/6 (MDS Oral Surgeon On-Call)" },
-            { "@type": "MedicalTherapy", "name": "Cosmetic Smile Makeovers & E.max Porcelain Veneers" },
-            { "@type": "MedicalTherapy", "name": "Wisdom Teeth Atraumatic Oral Surgery" },
-            { "@type": "MedicalTherapy", "name": "Ultrasonic Scaling & Laser Periodontal Therapy" },
-            { "@type": "MedicalTherapy", "name": "Pediatric Preventive Dental Care" },
+            { "@type": "MedicalTherapy", "name": "Single-Visit Painless Root Canal Treatment (MDS Endodontics)" },
+            { "@type": "MedicalTherapy", "name": "Permanent Dental Implants & All-on-4/6 (MDS Oral Surgery)" },
+            { "@type": "MedicalTherapy", "name": "Bespoke Smile Architecture & E.max Porcelain Veneers" },
+            { "@type": "MedicalTherapy", "name": "Atraumatic Wisdom Teeth Oral Surgery" },
+            { "@type": "MedicalTherapy", "name": "Piezoelectric Ultrasonic Scaling & Laser Periodontal Care" },
+            { "@type": "MedicalTherapy", "name": "Pediatric Preventive Care & Early Growth Guidance" },
             { "@type": "MedicalTherapy", "name": "Global Dental Tourism & NRI Concierge Protocols" }
           ]
         },
@@ -116,18 +128,18 @@ const { title, description } = Astro.props;
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Who examines patients at Infinora Dental Care?",
+              "name": "How is care coordinated at Infinora Dental Care?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Every patient is personally evaluated and diagnosed first by Chief Dental Surgeon Dr. Riddhi Patel Shah (MDS Orthodontist). If specialized advanced surgery or root canal intervention is required, our panel of on-call MDS specialists (Endodontists, Maxillofacial Surgeons, Prosthodontists) are brought in under Dr. Riddhi's direct clinical supervision."
+                "text": "Every patient undergoes a comprehensive aesthetic and clinical evaluation directed by Dr. Riddhi Patel Shah (MDS Orthodontist). Clinical procedures are managed by dedicated board-certified MDS specialists in Endodontics, Oral & Maxillofacial Surgery, Prosthodontics, and Periodontics under strict multi-speciality standards."
               }
             },
             {
               "@type": "Question",
-              "name": "Why choose an MDS specialist over a general dentist for Braces & Aligners?",
+              "name": "Why choose an MDS specialist over a general practitioner for Braces & Clear Aligners?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "An MDS (Master of Dental Surgery) in Orthodontics requires 3 years of full-time master's-level clinical training dedicated exclusively to facial aesthetics, jaw mechanics, and tooth movement. Dr. Riddhi Patel Shah designs biomechanically stable alignments that protect roots and prevent relapse."
+                "text": "An MDS (Master of Dental Surgery) in Orthodontics requires 3 years of intensive full-time post-graduate training focused exclusively on jaw biomechanics, facial harmony, and biological tooth movement. Dr. Riddhi Patel Shah designs biomechanically stable alignments that preserve bone and gum health."
               }
             },
             {
@@ -135,47 +147,31 @@ const { title, description } = Astro.props;
               "name": "Is Single-Visit Root Canal Treatment (RCT) painful?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "No. Using computerized apex locators, high-torque rotary endodontics, and gentle micro-anesthesia, our Endodontists cleanse and seal the canal in a single 45-minute sitting with zero pain."
+                "text": "No. Using computerized apex locators, high-torque rotary micro-instruments, and gentle local anesthesia, our Endodontic specialists cleanse and seal the canal in a single 45-minute sitting with zero discomfort."
               }
             },
             {
               "@type": "Question",
-              "name": "What are the clinic timings on Sundays?",
+              "name": "What are the clinic consultation hours?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "On Sundays, Infinora Dental Care is open from 10:00 AM to 1:00 PM strictly on a prior appointment basis only. Walk-ins are not accommodated on Sundays."
+                "text": "Infinora Dental Care operates Monday through Saturday across three sessions: Morning (9:00 AM – 1:00 PM), Afternoon (3:00 PM – 5:00 PM), and Evening (6:00 PM – 9:00 PM). Sunday sessions are 10:00 AM – 1:00 PM strictly by prior appointment only."
               }
             },
             {
               "@type": "Question",
-              "name": "What sterilization standards are followed at Infinora Dental Care?",
+              "name": "What sterilization protocols are followed at Infinora Dental Care?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We adhere to a hospital-grade 6-step sterilization protocol featuring Class-B fractionated vacuum autoclaving. All instruments are sealed in individual sterile barrier pouches and unsealed exclusively in front of the patient."
+                "text": "We implement a 6-step hospital-grade sterilization protocol utilizing European Class-B vacuum autoclaves. Every instrument is vacuum-sealed in individual sterile barrier pouches and opened in front of each patient."
               }
             },
             {
               "@type": "Question",
-              "name": "How long do Dental Implants last compared to Dental Bridges?",
+              "name": "Where is Infinora Dental Care located?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Dental implants are titanium fixtures fused permanently into your jawbone that can last a lifetime with proper hygiene. Unlike traditional bridges, dental implants do not require grinding down adjacent healthy natural teeth."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Are payment plans and digital payment options available for major treatments?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. We offer transparent upfront treatment pricing with zero hidden charges. We accept Google Pay, UPI, all major credit/debit cards, and structured installment/EMI payment plans for comprehensive orthodontic and implant treatments."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Where is the clinic located in Kandivali West?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Infinora Dental Care is located at Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067, with free street parking available nearby."
+                "text": "The clinic is located at Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067, accessible from S.V. Road and Kandivali Station with dedicated street parking."
               }
             }
           ]
@@ -213,7 +209,7 @@ const { title, description } = Astro.props;
         margin: 0;
         padding: 0;
     }
-    /* Prevents iOS Safari input zooming while maintaining 44px touch targets */
+    /* Prevents iOS Safari input zooming while maintaining touch targets */
     input, select, textarea {
         font-size: 16px !important;
     }
@@ -221,7 +217,7 @@ const { title, description } = Astro.props;
         display: inline-block;
         vertical-align: middle;
     }
-    /* Google Translate Widget Custom Styling */
+    /* Google Translate Widget Styling */
     .goog-te-gadget-simple {
         background-color: rgba(255, 255, 255, 0.1) !important;
         border: 1px solid rgba(20, 184, 166, 0.4) !important;
