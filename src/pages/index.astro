@@ -183,7 +183,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </section>
 
-    <!-- INTERACTIVE ON-PAGE APPOINTMENT BOOKING SECTION -->
+    <!-- INTERACTIVE & FOOLPROOF ON-PAGE APPOINTMENT BOOKING SECTION -->
     <section id="book" class="py-16 bg-slate-900 text-white w-full border-t border-slate-800 relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
             
@@ -195,14 +195,14 @@ import Layout from '../layouts/Layout.astro';
                     Book Your Dental Consultation
                 </h2>
                 <p class="text-slate-300 text-xs sm:text-sm max-w-xl mx-auto">
-                    Fill in your details below to schedule an appointment with Dr. Riddhi Patel Shah and our specialist team.
+                    Select your preferred date and slot below to book with Dr. Riddhi Patel Shah and our specialist team.
                 </p>
             </div>
 
             <!-- Booking Form Card -->
             <div class="bg-white text-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-100 shadow-2xl space-y-6">
                 
-                <form id="appointmentForm" class="space-y-4">
+                <form id="appointmentForm" class="space-y-4" novalidate>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
@@ -216,6 +216,7 @@ import Layout from '../layouts/Layout.astro';
                                 placeholder="e.g. Amit Sharma" 
                                 class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-transparent text-sm text-slate-900 outline-none transition-all"
                             />
+                            <p id="nameError" class="hidden text-xs text-rose-600 font-semibold mt-1">Please enter your full name.</p>
                         </div>
 
                         <div>
@@ -226,9 +227,11 @@ import Layout from '../layouts/Layout.astro';
                                 type="tel" 
                                 id="patientPhone" 
                                 required 
+                                maxlength="15"
                                 placeholder="e.g. 9820000000" 
                                 class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-transparent text-sm text-slate-900 outline-none transition-all"
                             />
+                            <p id="phoneError" class="hidden text-xs text-rose-600 font-semibold mt-1">Please enter a valid 10-digit mobile number.</p>
                         </div>
                     </div>
 
@@ -264,29 +267,30 @@ import Layout from '../layouts/Layout.astro';
                                 required 
                                 class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-transparent text-sm text-slate-900 outline-none transition-all bg-white"
                             />
+                            <p id="dateError" class="hidden text-xs text-rose-600 font-semibold mt-1">Please select a valid upcoming date.</p>
                         </div>
                     </div>
 
                     <div>
                         <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5" for="timeSlot">
-                            Preferred Time Slot *
+                            Available Time Slot *
                         </label>
                         <select 
                             id="timeSlot" 
                             required 
                             class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-transparent text-sm text-slate-900 outline-none transition-all bg-white"
                         >
+                            <!-- Dynamically populated based on day of week -->
                             <option value="Morning Session (10:00 AM – 1:30 PM)">Morning Session (10:00 AM – 1:30 PM)</option>
                             <option value="Evening Session (5:00 PM – 9:00 PM)">Evening Session (5:00 PM – 9:00 PM)</option>
-                            <option value="Sunday Slot (10:00 AM – 1:00 PM - Strictly Prior Appointment Only)">Sunday (10:00 AM – 1:00 PM · Strictly Prior Appointment Only)</option>
                         </select>
                     </div>
 
-                    <!-- Sunday Warning Banner -->
-                    <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs leading-relaxed flex items-start gap-2">
-                        <span class="text-base shrink-0">ℹ️</span>
+                    <!-- Dynamic Day Feedback Banner -->
+                    <div id="sundayAlertBox" class="hidden p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs leading-relaxed flex items-start gap-2">
+                        <span class="text-base shrink-0">⚠️</span>
                         <div>
-                            <strong>Sunday Policy Note:</strong> Sunday timings are strictly <strong>10:00 AM – 1:00 PM by prior appointment only</strong>. No walk-in consultations are accepted on Sundays.
+                            <strong>Sunday Notice:</strong> You have selected a Sunday. Timings are strictly <strong>10:00 AM – 1:00 PM by prior appointment only</strong>. No walk-ins are permitted on Sundays.
                         </div>
                     </div>
 
@@ -311,21 +315,125 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </section>
 
-    <!-- Client-Side Booking Logic Script -->
+    <!-- Foolproof Date & Slot Logic Script -->
     <script is:inline>
         document.addEventListener('DOMContentLoaded', () => {
+            const dateInput = document.getElementById('appointmentDate');
+            const timeSlot = document.getElementById('timeSlot');
+            const sundayAlert = document.getElementById('sundayAlertBox');
             const form = document.getElementById('appointmentForm');
+
+            // 1. Lock past dates: Calculate today's date in YYYY-MM-DD
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const todayStr = `${year}-${month}-${day}`;
+            
+            // Set min attribute to today (disables all previous dates in calendar)
+            if (dateInput) {
+                dateInput.min = todayStr;
+                
+                // Set max attribute to 90 days in the future
+                const maxDate = new Date();
+                maxDate.setDate(maxDate.getDate() + 90);
+                const maxYear = maxDate.getFullYear();
+                const maxMonth = String(maxDate.getMonth() + 1).padStart(2, '0');
+                const maxDay = String(maxDate.getDate()).padStart(2, '0');
+                dateInput.max = `${maxYear}-${maxMonth}-${maxDay}`;
+
+                // Set default date to today
+                dateInput.value = todayStr;
+                updateTimeSlotsForDate(todayStr);
+
+                // Listen for date changes to auto-adjust Sunday logic
+                dateInput.addEventListener('change', (e) => {
+                    updateTimeSlotsForDate(e.target.value);
+                });
+            }
+
+            function updateTimeSlotsForDate(dateString) {
+                if (!dateString) return;
+                
+                // Parse date safely with local offset
+                const parts = dateString.split('-');
+                const selectedDate = new Date(parts[0], parts[1] - 1, parts[2]);
+                const dayOfWeek = selectedDate.getDay(); // 0 is Sunday
+
+                if (dayOfWeek === 0) {
+                    // Sunday selected: limit to Sunday 10am - 1pm
+                    timeSlot.innerHTML = `
+                        <option value="Sunday Slot (10:00 AM – 1:00 PM · Strictly Prior Appt Only)">
+                            Sunday Slot: 10:00 AM – 1:00 PM (Strictly Prior Appointment Only)
+                        </option>
+                    `;
+                    sundayAlert.classList.remove('hidden');
+                } else {
+                    // Mon - Sat selected: regular morning and evening sessions
+                    timeSlot.innerHTML = `
+                        <option value="Morning Session (10:00 AM – 1:30 PM)">Morning Session (10:00 AM – 1:30 PM)</option>
+                        <option value="Evening Session (5:00 PM – 9:00 PM)">Evening Session (5:00 PM – 9:00 PM)</option>
+                    `;
+                    sundayAlert.classList.add('hidden');
+                }
+            }
+
+            // 2. Foolproof Submission Validation
             if (form) {
                 form.addEventListener('submit', (e) => {
                     e.preventDefault();
-                    
-                    const name = document.getElementById('patientName').value.trim();
-                    const phone = document.getElementById('patientPhone').value.trim();
-                    const service = document.getElementById('treatmentService').value;
-                    const date = document.getElementById('appointmentDate').value;
-                    const slot = document.getElementById('timeSlot').value;
 
-                    const message = `Hello Dr. Riddhi Patel Shah (Infinora Dental Care),%0A%0AI would like to book a dental consultation.%0A%0A📋 *Patient Details:*%0A• Name: ${encodeURIComponent(name)}%0A• Phone: ${encodeURIComponent(phone)}%0A• Treatment: ${encodeURIComponent(service)}%0A• Preferred Date: ${encodeURIComponent(date)}%0A• Preferred Slot: ${encodeURIComponent(slot)}%0A%0APlease confirm my appointment time. Thank you!`;
+                    const nameInput = document.getElementById('patientName');
+                    const phoneInput = document.getElementById('patientPhone');
+                    const serviceInput = document.getElementById('treatmentService');
+                    
+                    const nameError = document.getElementById('nameError');
+                    const phoneError = document.getElementById('phoneError');
+                    const dateError = document.getElementById('dateError');
+
+                    let isValid = true;
+
+                    // Name validation
+                    if (!nameInput.value.trim()) {
+                        nameError.classList.remove('hidden');
+                        nameInput.classList.add('border-rose-500');
+                        isValid = false;
+                    } else {
+                        nameError.classList.add('hidden');
+                        nameInput.classList.remove('border-rose-500');
+                    }
+
+                    // Phone validation (accepts 10 digits or international formats >= 8 digits)
+                    const cleanPhone = phoneInput.value.replace(/[\s\-\+]/g, '');
+                    if (!cleanPhone || cleanPhone.length < 8 || isNaN(cleanPhone)) {
+                        phoneError.classList.remove('hidden');
+                        phoneInput.classList.add('border-rose-500');
+                        isValid = false;
+                    } else {
+                        phoneError.classList.add('hidden');
+                        phoneInput.classList.remove('border-rose-500');
+                    }
+
+                    // Date validation (must not be empty or in the past)
+                    if (!dateInput.value || dateInput.value < todayStr) {
+                        dateError.classList.remove('hidden');
+                        dateInput.classList.add('border-rose-500');
+                        isValid = false;
+                    } else {
+                        dateError.classList.add('hidden');
+                        dateInput.classList.remove('border-rose-500');
+                    }
+
+                    if (!isValid) return;
+
+                    // Construct structured WhatsApp dispatch
+                    const name = nameInput.value.trim();
+                    const phone = phoneInput.value.trim();
+                    const service = serviceInput.value;
+                    const date = dateInput.value;
+                    const slot = timeSlot.value;
+
+                    const message = `Hello Dr. Riddhi Patel Shah (Infinora Dental Care),%0A%0AI would like to book a dental consultation.%0A%0A📋 *Patient Details:*%0A• Name: ${encodeURIComponent(name)}%0A• Phone: ${encodeURIComponent(phone)}%0A• Treatment: ${encodeURIComponent(service)}%0A• Preferred Date: ${encodeURIComponent(date)}%0A• Preferred Slot: ${encodeURIComponent(slot)}%0A%0APlease confirm my appointment slot. Thank you!`;
 
                     window.open(`https://wa.me/917304432681?text=${message}`, '_blank');
                 });
@@ -499,7 +607,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </section>
 
-    <!-- 4-STEP PATIENT JOURNEY (ZERO GUESSWORK) -->
+    <!-- 4-STEP PATIENT JOURNEY -->
     <section class="py-16 bg-white w-full border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
