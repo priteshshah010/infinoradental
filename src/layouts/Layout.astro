@@ -15,7 +15,6 @@ const { title, description } = Astro.props;
     <title>{title}</title>
     <meta name="description" content={description} />
     
-    <!-- Canonical & Open Graph Metadata -->
     <link rel="canonical" href="https://infinoradental.com/" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -24,15 +23,12 @@ const { title, description } = Astro.props;
     <meta property="og:locale" content="en_IN" />
     <meta property="og:site_name" content="Infinora Dental Care" />
     
-    <!-- Google Fonts Preconnect & Load -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Tailwind Play CDN (Standalone Execution - Zero Race Condition) -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Comprehensive Medical Clinic, Specialist Board & AEO Schema (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -111,8 +107,8 @@ const { title, description } = Astro.props;
             "OralSurgery"
           ],
           "availableService": [
-            { "@type": "MedicalTherapy", "name": "Free 3D Smile & Oral Health Consultation by Dr. Riddhi Patel Shah (MDS)" },
-            { "@type": "MedicalTherapy", "name": "Invisible Clear Aligners & Precision Aesthetic Braces" },
+            { "@type": "MedicalTherapy", "name": "Free Smile Assessment & High-Definition Intraoral Camera Checkup" },
+            { "@type": "MedicalTherapy", "name": "Invisible Clear Aligners & Precision Aesthetic Braces (with 3D Optical Scanning)" },
             { "@type": "MedicalTherapy", "name": "Single-Visit Painless Root Canal Treatment (MDS Endodontics)" },
             { "@type": "MedicalTherapy", "name": "Permanent Dental Implants & All-on-4/6 (MDS Oral Surgery)" },
             { "@type": "MedicalTherapy", "name": "Bespoke Smile Architecture & E.max Porcelain Veneers" },
@@ -128,10 +124,18 @@ const { title, description } = Astro.props;
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "How is care coordinated at Infinora Dental Care?",
+              "name": "How is clinical care managed at Infinora Dental Care?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Every patient undergoes a comprehensive aesthetic and clinical evaluation directed by Dr. Riddhi Patel Shah (MDS Orthodontist). Clinical procedures are managed by dedicated board-certified MDS specialists in Endodontics, Oral & Maxillofacial Surgery, Prosthodontics, and Periodontics under strict multi-speciality standards."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What diagnostic equipment is available at the clinic?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Infinora Dental Care is equipped with in-house High-Definition Intraoral Cameras and low-radiation digital radiovisiography (RVG) for every checkup. 3D Optical Digital Scanning is deployed specifically for Clear Aligner patients to plan and simulate teeth alignments."
               }
             },
             {
@@ -180,20 +184,38 @@ const { title, description } = Astro.props;
     }
     </script>
 
-    <!-- Automated Google Website Translator Script -->
     <script is:inline type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
                 includedLanguages: 'en,gu,hi,mr',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
                 autoDisplay: false
-            }, 'google_translate_element');
+            }, 'google_translate_hidden_element');
         }
+
+        // Custom Seamless Language Switcher Trigger
+        window.changeLanguage = function(langCode) {
+            const selectEl = document.querySelector('.goog-te-combo');
+            if (selectEl) {
+                selectEl.value = langCode;
+                selectEl.dispatchEvent(new Event('change'));
+            }
+            // Highlight active language button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.dataset.lang === langCode) {
+                    btn.classList.add('bg-teal-500', 'text-slate-950');
+                    btn.classList.remove('text-slate-300', 'hover:text-white');
+                } else {
+                    btn.classList.remove('bg-teal-500', 'text-slate-950');
+                    btn.classList.add('text-slate-300', 'hover:text-white');
+                }
+            });
+        };
     </script>
     <script is:inline type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body class="bg-slate-50 text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-teal-600 selection:text-white overflow-x-hidden w-full m-0 p-0 relative min-h-screen">
+    <div id="google_translate_hidden_element" class="hidden"></div>
     <slot />
 </body>
 </html>
@@ -209,7 +231,6 @@ const { title, description } = Astro.props;
         margin: 0;
         padding: 0;
     }
-    /* Prevents iOS Safari input zooming while maintaining 44px touch targets */
     input, select, textarea {
         font-size: 16px !important;
     }
@@ -217,29 +238,7 @@ const { title, description } = Astro.props;
         display: inline-block;
         vertical-align: middle;
     }
-    /* Google Translate Widget Styling */
-    .goog-te-gadget-simple {
-        background-color: rgba(255, 255, 255, 0.1) !important;
-        border: 1px solid rgba(20, 184, 166, 0.4) !important;
-        padding: 3px 8px !important;
-        border-radius: 8px !important;
-        font-size: 11px !important;
-        line-height: 1.4 !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        cursor: pointer !important;
-    }
-    .goog-te-gadget-simple .goog-te-menu-value {
-        color: #5eead4 !important;
-        font-weight: 700 !important;
-    }
-    .goog-te-gadget-simple .goog-te-menu-value span {
-        border-left: none !important;
-        color: #5eead4 !important;
-    }
-    .goog-te-gadget-icon {
-        display: none !important;
-    }
+    /* Hide default Google Translate banner frame */
     .goog-te-banner-frame.skiptranslate {
         display: none !important;
     }
