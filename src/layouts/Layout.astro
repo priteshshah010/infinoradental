@@ -24,7 +24,7 @@ const { title, description } = Astro.props;
     <meta property="og:locale" content="en_IN" />
     <meta property="og:site_name" content="Infinora Dental Care" />
     
-    <!-- Tailwind CSS Engine -->
+    <!-- Tailwind CSS Engine with Brand Color Extension -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
     <script is:inline>
         tailwind.config = {
@@ -55,7 +55,7 @@ const { title, description } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Verified Medical Clinic, Specialist Board & AEO Schema (JSON-LD) -->
+    <!-- Complete JSON-LD Schema (Dentist, MedicalBusiness, Physician & FAQPage) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -200,7 +200,7 @@ const { title, description } = Astro.props;
     }
     </script>
 </head>
-<body class="bg-slate-50 text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-teal-600 selection:text-white overflow-x-hidden w-full m-0 p-0">
+<body class="bg-slate-50 text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-teal-600 selection:text-white overflow-x-hidden w-full m-0 p-0 relative">
     <slot />
 </body>
 </html>
@@ -210,7 +210,13 @@ const { title, description } = Astro.props;
         box-sizing: border-box;
     }
     html, body {
+        width: 100%;
         max-width: 100vw;
         overflow-x: hidden;
+        position: relative;
+    }
+    /* Prevents iOS Safari input zooming while maintaining touch targets */
+    input, select, textarea {
+        font-size: 16px !important;
     }
 </style>
