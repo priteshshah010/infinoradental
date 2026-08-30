@@ -22,17 +22,21 @@ const { title, description } = Astro.props;
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://infinoradental.com/" />
     <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="Infinora Dental Care" />
     
-    <!-- Tailwind CSS (Inline Execution) -->
+    <!-- Tailwind CSS CDN -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
     <script is:inline>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brand: {
+                        teal: {
                             50: '#f0fdfa',
                             100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
                             500: '#14b8a6',
                             600: '#0d9488',
                             700: '#0f766e',
@@ -51,7 +55,7 @@ const { title, description } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Medical Clinic & High-Impact AEO FAQ Schema (JSON-LD) -->
+    <!-- Comprehensive Medical Clinic, Specialist & Dental Tourism Schema (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -60,14 +64,14 @@ const { title, description } = Astro.props;
           "@type": ["Dentist", "MedicalBusiness"],
           "@id": "https://infinoradental.com/#clinic",
           "name": "Infinora Dental Care - Dr. Riddhi Patel Shah (Dentist & Braces Clinic)",
-          "alternateName": "Infinora Dental Care",
+          "alternateName": "Infinora Dental Care Mumbai",
           "url": "https://infinoradental.com/",
           "telephone": "+91-7304432681",
           "email": "hello@infinoradental.com",
           "priceRange": "₹₹",
           "hasMap": "https://maps.app.goo.gl/3sKwKPjG43PNeN6y7",
-          "currenciesAccepted": "INR",
-          "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Google Pay, Net Banking",
+          "currenciesAccepted": "INR, USD, AUD, GBP, EUR, AED",
+          "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Google Pay, Bank Transfer",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West",
@@ -117,66 +121,34 @@ const { title, description } = Astro.props;
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Why should I choose an MDS Orthodontist for Braces & Clear Aligners?",
+              "name": "Why is an MDS Orthodontist essential for Clear Aligners & Braces?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "An MDS in Orthodontics requires 3 years of rigorous, master's-level clinical specialization exclusively dedicated to facial aesthetics, jaw bone mechanics, and tooth repositioning. Unlike general dentists who take short weekend courses, an MDS Orthodontist like Dr. Riddhi Patel Shah designs biomechanically stable alignment plans that protect your roots and gums."
+                "text": "An MDS (Master of Dental Surgery) in Orthodontics requires 3 years of rigorous full-time post-graduate training focused entirely on jaw biomechanics and tooth movements. Unlike non-specialist certifications, an MDS specialist like Dr. Riddhi Patel Shah guarantees predictable, biologically safe alignments that protect roots and prevent relapse."
               }
             },
             {
               "@type": "Question",
-              "name": "How does Single-Visit Root Canal Treatment (RCT) work and is it painful?",
+              "name": "How does Dental Tourism & NRI Treatment planning work at Infinora Dental Care?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Using computerized apex locators and high-torque rotary endodontic instruments, infected pulp is cleansed and sealed in a single 45-minute sitting. Coupled with advanced local anesthesia, the procedure is completely pain-free and eliminates the need for multiple painful injection appointments."
+                "text": "International patients and NRIs from the UK, USA, Australia, and UAE can share their dental X-rays/CBCT scans via WhatsApp (+91 73044 32681) for a virtual assessment, fixed upfront quote, and fast-tracked appointment scheduling before traveling to Mumbai."
               }
             },
             {
               "@type": "Question",
-              "name": "How long do Dental Implants last compared to Dental Bridges?",
+              "name": "Is Root Canal Treatment (RCT) completely painless?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Dental implants are titanium biocompatible fixtures anchored permanently into your jawbone that can last a lifetime with proper hygiene. Unlike traditional bridges, dental implants do not require grinding down or weakening adjacent healthy natural teeth."
+                "text": "Yes. With computerized apex locators, high-torque rotary endodontics, and gentle local anesthesia, our Endodontists complete root canal treatments in a single 45-minute sitting with zero pain."
               }
             },
             {
               "@type": "Question",
-              "name": "When is the grand opening of Infinora Dental Care in Kandivali West?",
+              "name": "What sterilization standards are followed at the clinic?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Infinora Dental Care opens in September 2026. Pre-registration is currently active via WhatsApp at +91 73044 32681 to claim inaugural launch offers including free comprehensive consultations and digital scans."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What sterilization standards are followed at Infinora Dental Care?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We adhere to a hospital-grade 6-step sterilization protocol featuring Class-B fractionated vacuum autoclaving. All surgical and diagnostic instruments are sealed in individual sterile barrier pouches and unsealed exclusively in front of the patient."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Are payment plans and digital payment options available for major treatments?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. We offer transparent upfront treatment pricing with zero hidden charges. We accept Google Pay, UPI, all major credit/debit cards, and structured installment/EMI payment plans for comprehensive orthodontic and implant treatments."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do you treat dental emergencies and sudden acute toothaches?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. We reserve daily priority slots for emergency toothaches, cracked teeth, acute swelling, and pediatric dental trauma to provide immediate pain relief."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What are the clinic timings and how can I reach the clinic?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We are open Monday to Saturday from 9:00 AM to 9:00 PM and Sundays from 10:00 AM to 1:00 PM. The clinic is located at Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067, with free street parking available."
+                "text": "We operate a strict hospital-grade 6-step sterilization protocol featuring European Class-B vacuum autoclaving. Every instrument is sealed in sterile barrier pouches and opened in front of the patient."
               }
             }
           ]
@@ -185,7 +157,7 @@ const { title, description } = Astro.props;
     }
     </script>
 </head>
-<body class="bg-slate-50 text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-teal-600 selection:text-white overflow-x-hidden w-full">
+<body class="bg-slate-50 text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-teal-600 selection:text-white overflow-x-hidden w-full m-0 p-0">
     <slot />
 </body>
 </html>
@@ -195,7 +167,7 @@ const { title, description } = Astro.props;
         box-sizing: border-box;
     }
     html, body {
-        max-width: 100%;
+        max-width: 100vw;
         overflow-x: hidden;
     }
 </style>
