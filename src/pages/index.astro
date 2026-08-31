@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout 
     title="Infinora Dental Care | Dr. Riddhi Patel Shah (MDS) | Kandivali West, Mumbai" 
-    description="Specialist-led dentistry thoughtfully delivered in Kandivali West, Mumbai. Expert care across orthodontics, restorative, and family dentistry."
+    description="Specialist-led dentistry thoughtfully delivered in Kandivali West, Mumbai. Expert care across orthodontics, restorative, and family dentistry, backed by MSDC and NHA Ayushman Bharat digital registrations."
 >
     <!-- Top Announcement Bar -->
     <div class="bg-slate-950 text-slate-200 text-xs py-2 px-4 sm:px-6 border-b border-slate-800 w-full">
@@ -33,7 +33,7 @@ import Layout from '../layouts/Layout.astro';
                         हि
                     </button>
                     <button type="button" onclick="changeLanguage('mr')" data-lang="mr" class="lang-btn px-2 py-0.5 rounded text-[10px] font-bold text-slate-300 hover:text-white transition-colors">
-                        મरा
+                        मरा
                     </button>
                 </div>
 
@@ -71,6 +71,7 @@ import Layout from '../layouts/Layout.astro';
             <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
                 <a href="#standards" class="hover:text-teal-700 transition-colors">The Infinora Standard</a>
                 <a href="#catalogue" class="hover:text-teal-700 transition-colors">Treatments</a>
+                <a href="#credentials" class="hover:text-teal-700 transition-colors">Statutory Registrations</a>
                 <a href="#community" class="hover:text-teal-700 transition-colors">Community & Outreach</a>
                 <a href="#about" class="hover:text-teal-700 transition-colors">Meet Dr. Riddhi</a>
                 <a href="#location" class="hover:text-teal-700 transition-colors">Location</a>
@@ -126,8 +127,8 @@ import Layout from '../layouts/Layout.astro';
                             <div class="text-[10px] sm:text-xs text-slate-500 font-medium">Orthodontic Lead</div>
                         </div>
                         <div class="p-2.5 sm:p-3 bg-white rounded-xl border border-slate-100 shadow-sm text-center sm:text-left">
-                            <div class="text-base sm:text-xl font-black text-slate-900">MDS Board</div>
-                            <div class="text-[10px] sm:text-xs text-slate-500 font-medium">Specialist Support</div>
+                            <div class="text-base sm:text-xl font-black text-slate-900">ABDM / NHA</div>
+                            <div class="text-[10px] sm:text-xs text-slate-500 font-medium">Digital Facility & Doctor</div>
                         </div>
                         <div class="p-2.5 sm:p-3 bg-white rounded-xl border border-slate-100 shadow-sm text-center sm:text-left">
                             <div class="text-base sm:text-xl font-black text-slate-900">Sterile</div>
@@ -178,29 +179,50 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <!-- OFFICIAL ACCREDITATIONS & AFFILIATIONS BAR -->
-        <section class="py-6 bg-white border-y border-slate-100 w-full">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-around gap-6 text-center">
-                <div class="flex items-center gap-2.5">
-                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-800 flex items-center justify-center font-black text-xs">🏛️</span>
-                    <div class="text-left">
-                        <div class="text-xs font-black text-slate-900">Maharashtra State Dental Council (MSDC)</div>
-                        <div class="text-[10px] text-slate-500 font-medium">Officially Registered Medical Practitioner</div>
-                    </div>
+        <!-- OFFICIAL ACCREDITATIONS & REGISTRATIONS BAR -->
+        <section id="credentials" class="py-6 bg-white border-y border-slate-100 w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-4">
+                <div class="text-center">
+                    <span class="text-teal-700 text-[10px] font-extrabold uppercase tracking-widest bg-teal-50 border border-teal-200 px-3 py-1 rounded-full">
+                        Verified Government & Council Registrations
+                    </span>
                 </div>
-                <div class="flex items-center gap-2.5">
-                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-800 flex items-center justify-center font-black text-xs">🇮🇳</span>
-                    <div class="text-left">
-                        <div class="text-xs font-black text-slate-900">Indian Dental Association (IDA)</div>
-                        <div class="text-[10px] text-slate-500 font-medium">Active Member & Clinical Ethics Standard</div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center sm:text-left">
+                    
+                    <!-- MSDC Registration -->
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+                        <div class="flex items-center gap-2">
+                            <span class="text-teal-700 font-bold">🏛️</span>
+                            <h3 class="font-extrabold text-slate-900 text-xs">Maharashtra State Dental Council</h3>
+                        </div>
+                        <p class="text-[11px] text-slate-600">Council Registration No: <strong>A-45674</strong></p>
+                        <div class="pt-1">
+                            <a href="https://msdcmumbai.in/QR_Verfy.aspx?auth=57d7f7fc-a30e-4fb8-95c1-1f4f163010bc" target="_blank" rel="noopener" class="text-teal-700 hover:underline font-bold text-[11px] inline-flex items-center gap-1">
+                                Verify MSDC Official QR Registration →
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="flex items-center gap-2.5">
-                    <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-800 flex items-center justify-center font-black text-xs">🛡️</span>
-                    <div class="text-left">
-                        <div class="text-xs font-black text-slate-900">Hospital Sterilization Protocol</div>
-                        <div class="text-[10px] text-slate-500 font-medium">Class-B Autoclave & Sealed Barrier Pouches</div>
+
+                    <!-- ABDM Digital Facility (NHA) -->
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+                        <div class="flex items-center gap-2">
+                            <span class="text-teal-700 font-bold">🏥</span>
+                            <h3 class="font-extrabold text-slate-900 text-xs">Ayushman Bharat Digital Mission (HFR)</h3>
+                        </div>
+                        <p class="text-[11px] text-slate-600">Infinora Dental Care Facility ID: <strong class="text-slate-900">IN2710085962</strong></p>
+                        <p class="text-[10px] text-slate-400">National Health Authority Verified (24 Aug 2026)</p>
                     </div>
+
+                    <!-- ABDM Digital Doctor (HPR) -->
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+                        <div class="flex items-center gap-2">
+                            <span class="text-teal-700 font-bold">👩‍⚕️</span>
+                            <h3 class="font-extrabold text-slate-900 text-xs">Ayushman Bharat Digital Doctor (HPR)</h3>
+                        </div>
+                        <p class="text-[11px] text-slate-600">Dr. Riddhi Kantilal Patel ID: <strong class="text-slate-900">71-8554-8443-4346</strong></p>
+                        <p class="text-[10px] text-slate-400">Healthcare Professional Registry · NHA & DCI</p>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -907,7 +929,7 @@ import Layout from '../layouts/Layout.astro';
                                 Morning: <span class="text-teal-300 font-bold">09:00 AM – 01:00 PM</span><br/>
                                 Afternoon: <span class="text-teal-300 font-bold">03:00 PM – 05:00 PM</span><br/>
                                 Evening: <span class="text-teal-300 font-bold">06:00 PM – 09:00 PM</span><br/>
-                                Sunday: <span class="text-amber-300 font-bold">10:00 AM – 01:00 PM (Strictly Prior Appt Only)</span>
+                                Sunday: <span class="text-amber-300 font-bold">10:00 AM – 1:00 PM (Strictly Prior Appt Only)</span>
                             </div>
                         </div>
                     </div>
