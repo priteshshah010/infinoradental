@@ -57,7 +57,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     <!-- Tailwind Play CDN -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Comprehensive Medical Clinic, Specialist Board & AEO Schema (JSON-LD) -->
+    <!-- Comprehensive Medical Clinic, Specialist Board, ABDM & AEO Schema (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -72,10 +72,18 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
           "email": "hello@infinoradental.com",
           "priceRange": "₹₹",
           "hasMap": "https://maps.app.goo.gl/3sKwKPjG43PNeN6y7",
+          "identifier": [
+            {
+              "@type": "PropertyValue",
+              "propertyID": "Ayushman Bharat Digital Mission Health Facility ID (HFR)",
+              "value": "IN2710085962"
+            }
+          ],
           "sameAs": [
             "https://instagram.com/orthodontist.riddhi",
             "https://share.google/pcuutYXTurrftQRyt",
-            "https://maps.app.goo.gl/3sKwKPjG43PNeN6y7"
+            "https://maps.app.goo.gl/3sKwKPjG43PNeN6y7",
+            "https://msdcmumbai.in/QR_Verfy.aspx?auth=57d7f7fc-a30e-4fb8-95c1-1f4f163010bc"
           ],
           "currenciesAccepted": "INR, USD, AUD, GBP, EUR, AED",
           "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Google Pay, Bank Transfer",
@@ -121,9 +129,21 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
           ],
           "founder": {
             "@type": "Person",
-            "name": "Dr. Riddhi Patel Shah",
+            "name": "Dr. Riddhi Patel Shah (Riddhi Kantilal Patel)",
             "jobTitle": "Lead Dental Surgeon & Orthodontist",
             "hasCredential": "MDS (Orthodontics & Dentofacial Orthopedics)",
+            "identifier": [
+              {
+                "@type": "PropertyValue",
+                "propertyID": "Ayushman Bharat Digital Mission Healthcare Professional ID (HPR)",
+                "value": "71-8554-8443-4346"
+              },
+              {
+                "@type": "PropertyValue",
+                "propertyID": "Dental Council / MSDC Registration No",
+                "value": "A-45674"
+              }
+            ],
             "memberOf": [
               { "@type": "Organization", "name": "Maharashtra State Dental Council (MSDC)" },
               { "@type": "Organization", "name": "Indian Dental Association (IDA)" }
@@ -153,10 +173,10 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "What is the Infinora Standard of care?",
+              "name": "How can I verify the clinic and doctor's statutory registrations?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The Infinora Standard focuses exclusively on specialist-led care, thoughtful diagnosis, transparent treatment planning, modern diagnostics, rigorous sterilization protocols, and continuity of care."
+                "text": "Infinora Dental Care is officially registered under the Maharashtra State Dental Council (MSDC Verification ID: 57d7f7fc-a30e-4fb8-95c1-1f4f163010bc) and holds Ayushman Bharat Digital Mission registrations under NHA for both Health Facility Registry (HFR ID: IN2710085962) and Healthcare Professional Registry (HPR ID: 71-8554-8443-4346, Council No: A-45674)."
               }
             },
             {
@@ -220,7 +240,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
                 'EMAIL;TYPE=PREF,INTERNET:hello@infinoradental.com',
                 'URL:https://infinoradental.com',
                 'ADR;TYPE=WORK,POSTAL,PARCEL:;;Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West;Mumbai;Maharashtra;400067;India',
-                'NOTE:Infinora Dental Care - Kandivali West, Mumbai (Metro Line 2A & Western Line). Mon-Sat: 9AM-1PM, 3PM-5PM, 6PM-9PM | Sun: 10AM-1PM (Prior Appt Only)',
+                'NOTE:Infinora Dental Care - Kandivali West, Mumbai. MSDC Reg: A-45674 | ABDM Facility ID: IN2710085962 | Professional ID: 71-8554-8443-4346',
                 'X-SOCIALPROFILE;type=instagram:https://instagram.com/orthodontist.riddhi',
                 'END:VCARD'
             ].join('\r\n');
