@@ -7,20 +7,20 @@ import Layout from '../layouts/Layout.astro';
     description="Specialist-led dentistry thoughtfully delivered in Kandivali West, Mumbai. Expert care across orthodontics, restorative, and family dentistry, backed by MSDC and NHA Ayushman Bharat digital registrations."
 >
     <!-- Top Announcement Bar -->
-    <div class="bg-slate-950 text-slate-200 text-xs py-2 px-4 sm:px-6 border-b border-slate-800 w-full">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+    <div class="bg-slate-950 text-slate-200 text-xs py-2 px-3 sm:px-6 border-b border-slate-800 w-full">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">
             
-            <div class="flex items-center gap-2">
+            <div class="flex items-center justify-center md:justify-start gap-2 flex-wrap">
                 <span class="inline-flex items-center gap-1.5 bg-teal-900 text-teal-300 border border-teal-700/60 px-2.5 py-0.5 rounded-full font-extrabold uppercase tracking-wider text-[10px]">
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                     Grand Opening · September 2026
                 </span>
                 <span class="text-slate-300 font-medium text-xs">
-                    Kandivali West, Mumbai (Metro Line 2A & Western Line)
+                    Kandivali West, Mumbai
                 </span>
             </div>
 
-            <div class="flex items-center gap-3 text-xs font-semibold">
+            <div class="flex items-center justify-center gap-2 sm:gap-3 text-xs font-semibold flex-wrap">
                 <!-- Multi-Language Switcher -->
                 <div class="flex items-center gap-1 bg-slate-900 border border-slate-800 px-1.5 py-0.5 rounded-lg notranslate">
                     <button type="button" onclick="changeLanguage('en')" data-lang="en" class="lang-btn px-2 py-0.5 rounded text-[10px] font-bold bg-teal-500 text-slate-950 transition-colors">
@@ -46,7 +46,7 @@ import Layout from '../layouts/Layout.astro';
                 <span class="text-slate-700 hidden sm:inline">|</span>
                 
                 <a href="tel:+917304432681" class="hover:text-teal-400 transition-colors flex items-center gap-1">
-                    <svg class="w-3.5 h-3.5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    <svg class="w-3.5 h-3.5 text-teal-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                     +91 73044 32681
                 </a>
             </div>
@@ -68,18 +68,18 @@ import Layout from '../layouts/Layout.astro';
                 </div>
             </a>
 
-            <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
-                <a href="#standards" class="hover:text-teal-700 transition-colors">The Infinora Standard</a>
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
+                <a href="#standards" class="hover:text-teal-700 transition-colors">The Standard</a>
                 <a href="#catalogue" class="hover:text-teal-700 transition-colors">Treatments</a>
-                <a href="#credentials" class="hover:text-teal-700 transition-colors">Statutory Registrations</a>
-                <a href="#community" class="hover:text-teal-700 transition-colors">Community & Outreach</a>
+                <a href="#credentials" class="hover:text-teal-700 transition-colors">Registrations</a>
+                <a href="#community" class="hover:text-teal-700 transition-colors">Outreach</a>
                 <a href="#about" class="hover:text-teal-700 transition-colors">Meet Dr. Riddhi</a>
                 <a href="#location" class="hover:text-teal-700 transition-colors">Location</a>
             </nav>
 
-            <div class="flex items-center gap-2.5 shrink-0">
-                <a href="#book" class="inline-flex items-center gap-1.5 bg-teal-700 hover:bg-teal-800 text-white px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md shadow-teal-700/20 transition-all">
-                    <span>Book a Consultation</span>
+            <div class="flex items-center gap-2 shrink-0">
+                <a href="#book" class="inline-flex items-center gap-1.5 bg-teal-700 hover:bg-teal-800 text-white px-3.5 sm:px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md shadow-teal-700/20 transition-all">
+                    <span>Book Consultation</span>
                 </a>
                 <a href="tel:+917304432681" class="hidden sm:inline-flex bg-slate-900 hover:bg-slate-800 text-white px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-sm transition-all">
                     +91 73044 32681
@@ -91,7 +91,7 @@ import Layout from '../layouts/Layout.astro';
     <main class="w-full overflow-hidden pb-24 sm:pb-0">
 
         <!-- REPOSITIONED HERO SECTION -->
-        <section class="relative pt-8 pb-14 sm:pt-16 sm:pb-22 overflow-hidden bg-gradient-to-b from-teal-50/70 via-slate-50/30 to-white w-full">
+        <section class="relative pt-8 pb-12 sm:pt-16 sm:pb-22 overflow-hidden bg-gradient-to-b from-teal-50/70 via-slate-50/30 to-white w-full">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 
                 <div class="lg:col-span-7 space-y-5 text-left min-w-0">
@@ -121,18 +121,18 @@ import Layout from '../layouts/Layout.astro';
                     </div>
 
                     <!-- Trust Badges -->
-                    <div class="pt-3 grid grid-cols-3 gap-3 border-t border-slate-200">
-                        <div class="p-2.5 sm:p-3 bg-white rounded-xl border border-slate-100 shadow-sm text-center sm:text-left">
-                            <div class="text-base sm:text-xl font-black text-slate-900">Dr. Riddhi (MDS)</div>
-                            <div class="text-[10px] sm:text-xs text-slate-500 font-medium">Orthodontic Lead</div>
+                    <div class="pt-3 grid grid-cols-3 gap-2.5 sm:gap-3 border-t border-slate-200">
+                        <div class="p-2 sm:p-3 bg-white rounded-xl border border-slate-100 shadow-sm text-center sm:text-left">
+                            <div class="text-sm sm:text-xl font-black text-slate-900 truncate">Dr. Riddhi (MDS)</div>
+                            <div class="text-[9px] sm:text-xs text-slate-500 font-medium truncate">Orthodontic Lead</div>
                         </div>
-                        <div class="p-2.5 sm:p-3 bg-white rounded-xl border border-slate-100 shadow-sm text-center sm:text-left">
-                            <div class="text-base sm:text-xl font-black text-slate-900">ABDM / NHA</div>
-                            <div class="text-[10px] sm:text-xs text-slate-500 font-medium">Digital Facility & Doctor</div>
+                        <div class="p-2 sm:p-3 bg-white rounded-xl border border-slate-100 shadow-sm text-center sm:text-left">
+                            <div class="text-sm sm:text-xl font-black text-slate-900 truncate">ABDM / NHA</div>
+                            <div class="text-[9px] sm:text-xs text-slate-500 font-medium truncate">Digital Facility & Doctor</div>
                         </div>
-                        <div class="p-2.5 sm:p-3 bg-white rounded-xl border border-slate-100 shadow-sm text-center sm:text-left">
-                            <div class="text-base sm:text-xl font-black text-slate-900">Sterile</div>
-                            <div class="text-[10px] sm:text-xs text-slate-500 font-medium">Barrier Protocol</div>
+                        <div class="p-2 sm:p-3 bg-white rounded-xl border border-slate-100 shadow-sm text-center sm:text-left">
+                            <div class="text-sm sm:text-xl font-black text-slate-900 truncate">Sterile</div>
+                            <div class="text-[9px] sm:text-xs text-slate-500 font-medium truncate">Barrier Protocol</div>
                         </div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ import Layout from '../layouts/Layout.astro';
                             </div>
                         </div>
 
-                        <div class="space-y-2.5 text-xs text-slate-600 leading-relaxed break-words">
+                        <div class="space-y-2.5 text-xs sm:text-sm text-slate-600 leading-relaxed break-words">
                             <p>
                                 Dr. Riddhi Patel Shah brings advanced post-graduate Master of Dental Surgery (MDS) training to every patient consultation, focusing on thoughtful diagnosis and precise treatment planning.
                             </p>
@@ -179,48 +179,65 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <!-- OFFICIAL ACCREDITATIONS & REGISTRATIONS BAR -->
-        <section id="credentials" class="py-6 bg-white border-y border-slate-100 w-full">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-4">
-                <div class="text-center">
+        <!-- OFFICIAL ACCREDITATIONS & REGISTRATIONS BAR (ABDM & MSDC) -->
+        <section id="credentials" class="py-8 bg-white border-y border-slate-100 w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-5">
+                <div class="text-center space-y-1">
                     <span class="text-teal-700 text-[10px] font-extrabold uppercase tracking-widest bg-teal-50 border border-teal-200 px-3 py-1 rounded-full">
                         Verified Government & Council Registrations
                     </span>
+                    <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 mt-2">Institutional Transparency & Trust</h2>
+                    <p class="text-xs text-slate-600 max-w-2xl mx-auto">
+                        Infinora Dental Care is fully integrated with national digital health registries and state dental councils to ensure complete compliance and direct accountability.
+                    </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center sm:text-left">
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     
                     <!-- MSDC Registration -->
-                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
-                        <div class="flex items-center gap-2">
-                            <span class="text-teal-700 font-bold">🏛️</span>
-                            <h3 class="font-extrabold text-slate-900 text-xs">Maharashtra State Dental Council</h3>
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-teal-300 transition-all space-y-2 flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <div class="flex items-center gap-2">
+                                <span class="text-teal-700 text-lg font-bold">🏛️</span>
+                                <h3 class="font-extrabold text-slate-900 text-xs sm:text-sm">Maharashtra State Dental Council</h3>
+                            </div>
+                            <p class="text-xs text-slate-600">Council Registration No: <strong class="text-slate-900">A-45674</strong></p>
                         </div>
-                        <p class="text-[11px] text-slate-600">Council Registration No: <strong>A-45674</strong></p>
-                        <div class="pt-1">
-                            <a href="https://msdcmumbai.in/QR_Verfy.aspx?auth=57d7f7fc-a30e-4fb8-95c1-1f4f163010bc" target="_blank" rel="noopener" class="text-teal-700 hover:underline font-bold text-[11px] inline-flex items-center gap-1">
-                                Verify MSDC Official QR Registration →
+                        <div class="pt-2 border-t border-slate-200/60">
+                            <a href="https://msdcmumbai.in/QR_Verfy.aspx?auth=57d7f7fc-a30e-4fb8-95c1-1f4f163010bc" target="_blank" rel="noopener" class="text-teal-700 hover:text-teal-800 font-extrabold text-xs inline-flex items-center gap-1">
+                                Verify Official MSDC Registration →
                             </a>
                         </div>
                     </div>
 
                     <!-- ABDM Digital Facility (NHA) -->
-                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
-                        <div class="flex items-center gap-2">
-                            <span class="text-teal-700 font-bold">🏥</span>
-                            <h3 class="font-extrabold text-slate-900 text-xs">Ayushman Bharat Digital Mission (HFR)</h3>
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-teal-300 transition-all space-y-2 flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <div class="flex items-center gap-2">
+                                <span class="text-teal-700 text-lg font-bold">🏥</span>
+                                <h3 class="font-extrabold text-slate-900 text-xs sm:text-sm">Ayushman Bharat Digital Mission (HFR)</h3>
+                            </div>
+                            <p class="text-xs text-slate-600">Facility ID (HFR)[cite: 1]: <strong class="text-slate-900">IN2710085962</strong>[cite: 1]</p>
+                            <p class="text-[11px] text-slate-500">National Health Authority Verified Facility[cite: 1]</p>
                         </div>
-                        <p class="text-[11px] text-slate-600">Infinora Dental Care Facility ID: <strong class="text-slate-900">IN2710085962</strong></p>
-                        <p class="text-[10px] text-slate-400">National Health Authority Verified (24 Aug 2026)</p>
+                        <div class="pt-2 border-t border-slate-200/60 text-[11px] text-slate-500 font-semibold">
+                            Registry Verified · Govt. of India[cite: 1]
+                        </div>
                     </div>
 
                     <!-- ABDM Digital Doctor (HPR) -->
-                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
-                        <div class="flex items-center gap-2">
-                            <span class="text-teal-700 font-bold">👩‍⚕️</span>
-                            <h3 class="font-extrabold text-slate-900 text-xs">Ayushman Bharat Digital Doctor (HPR)</h3>
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-teal-300 transition-all space-y-2 flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <div class="flex items-center gap-2">
+                                <span class="text-teal-700 text-lg font-bold">👩‍⚕️</span>
+                                <h3 class="font-extrabold text-slate-900 text-xs sm:text-sm">Ayushman Bharat Digital Doctor (HPR)</h3>
+                            </div>
+                            <p class="text-xs text-slate-600">Professional ID (HPR)[cite: 2]: <strong class="text-slate-900">71-8554-8443-4346</strong>[cite: 2]</p>
+                            <p class="text-[11px] text-slate-500">Dr. Riddhi Kantilal Patel · Dental Council of India[cite: 2]</p>
                         </div>
-                        <p class="text-[11px] text-slate-600">Dr. Riddhi Kantilal Patel ID: <strong class="text-slate-900">71-8554-8443-4346</strong></p>
-                        <p class="text-[10px] text-slate-400">Healthcare Professional Registry · NHA & DCI</p>
+                        <div class="pt-2 border-t border-slate-200/60 text-[11px] text-slate-500 font-semibold">
+                            Healthcare Professional Registry[cite: 2]
+                        </div>
                     </div>
 
                 </div>
@@ -246,7 +263,7 @@ import Layout from '../layouts/Layout.astro';
                     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
                         <div class="text-2xl font-black text-teal-700">01</div>
                         <h3 class="font-extrabold text-slate-900 text-base">Specialist-Led Care</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed">
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
                             Every case is evaluated and guided directly by qualified MDS specialists rather than generalized practitioners.
                         </p>
                     </div>
@@ -254,7 +271,7 @@ import Layout from '../layouts/Layout.astro';
                     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
                         <div class="text-2xl font-black text-teal-700">02</div>
                         <h3 class="font-extrabold text-slate-900 text-base">Thoughtful Diagnosis</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed">
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
                             Comprehensive clinical evaluations focusing on root causes, long-term oral health, and functional preservation.
                         </p>
                     </div>
@@ -262,7 +279,7 @@ import Layout from '../layouts/Layout.astro';
                     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
                         <div class="text-2xl font-black text-teal-700">03</div>
                         <h3 class="font-extrabold text-slate-900 text-base">Transparent Treatment Planning</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed">
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
                             Clear, written explanations of treatment options, phases, and cost structures with zero hidden surprises.
                         </p>
                     </div>
@@ -270,7 +287,7 @@ import Layout from '../layouts/Layout.astro';
                     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
                         <div class="text-2xl font-black text-teal-700">04</div>
                         <h3 class="font-extrabold text-slate-900 text-base">Modern Diagnostics</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed">
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
                             Deployment of high-definition intraoral cameras, digital radiography, and 3D optical scanning for precision mapping.
                         </p>
                     </div>
@@ -278,7 +295,7 @@ import Layout from '../layouts/Layout.astro';
                     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
                         <div class="text-2xl font-black text-teal-700">05</div>
                         <h3 class="font-extrabold text-slate-900 text-base">Sterilization Protocols</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed">
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
                             Rigorous hospital-grade Class-B autoclave sterilization and single-use barrier standards to ensure patient safety.
                         </p>
                     </div>
@@ -286,7 +303,7 @@ import Layout from '../layouts/Layout.astro';
                     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
                         <div class="text-2xl font-black text-teal-700">06</div>
                         <h3 class="font-extrabold text-slate-900 text-base">Continuity of Care</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed">
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
                             Long-term follow-up schedules and preventive maintenance roadmaps to safeguard oral health over decades.
                         </p>
                     </div>
@@ -372,7 +389,7 @@ import Layout from '../layouts/Layout.astro';
                                 <h3 class="text-lg font-extrabold text-slate-900">General Dental Checkup & Consultation</h3>
                                 <p class="text-xs text-slate-500 font-semibold mt-0.5">Intraoral HD Camera & RVG Screening</p>
                             </div>
-                            <p class="text-slate-600 text-xs leading-relaxed">
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
                                 Thorough oral examination, cavity screening, gum health evaluation, and personalized preventive recommendations.
                             </p>
                         </div>
@@ -394,7 +411,7 @@ import Layout from '../layouts/Layout.astro';
                                 <h3 class="text-lg font-extrabold text-slate-900">Root Canal Treatment (RCT)</h3>
                                 <p class="text-xs text-slate-500 font-semibold mt-0.5">Rotary Micro-Endodontics + Zirconia Crown</p>
                             </div>
-                            <p class="text-slate-600 text-xs leading-relaxed">
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
                                 Professional management of deep dental infections using rotary instruments and electronic apex locators for precision care.
                             </p>
                         </div>
@@ -416,7 +433,7 @@ import Layout from '../layouts/Layout.astro';
                                 <h3 class="text-lg font-extrabold text-slate-900">Dental Implants & All-on-4/6</h3>
                                 <p class="text-xs text-slate-500 font-semibold mt-0.5">Titanium Fixtures · Full Mouth Restoration</p>
                             </div>
-                            <p class="text-slate-600 text-xs leading-relaxed">
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
                                 Permanent tooth replacement supporting natural masticatory function without compromising adjacent healthy teeth.
                             </p>
                         </div>
@@ -438,7 +455,7 @@ import Layout from '../layouts/Layout.astro';
                                 <h3 class="text-lg font-extrabold text-slate-900">Bespoke Veneers & Ceramics</h3>
                                 <p class="text-xs text-slate-500 font-semibold mt-0.5">E.max Porcelain · Aesthetic Bonding</p>
                             </div>
-                            <p class="text-slate-600 text-xs leading-relaxed">
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
                                 Custom porcelain laminates designed to correct enamel discoloration, minor chipping, and structural irregularities.
                             </p>
                         </div>
@@ -460,7 +477,7 @@ import Layout from '../layouts/Layout.astro';
                                 <h3 class="text-lg font-extrabold text-slate-900">Periodontal & Laser Gum Care</h3>
                                 <p class="text-xs text-slate-500 font-semibold mt-0.5">Ultrasonic Scaling · Soft Tissue Laser</p>
                             </div>
-                            <p class="text-slate-600 text-xs leading-relaxed">
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
                                 Professional periodontal management to maintain healthy gum attachments and prevent inflammatory bone loss.
                             </p>
                         </div>
@@ -482,7 +499,7 @@ import Layout from '../layouts/Layout.astro';
                                 <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Pediatric & Preventive Dentistry</h3>
                                 <p class="text-xs text-slate-500 font-semibold mt-0.5">Fluoride Care · Interceptive Guidance</p>
                             </div>
-                            <p class="text-slate-600 text-xs leading-relaxed">
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
                                 Gentle, child-friendly preventive care focusing on early habit correction and proper primary-to-permanent tooth transition.
                             </p>
                         </div>
@@ -517,22 +534,22 @@ import Layout from '../layouts/Layout.astro';
                     <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700 space-y-2.5">
                         <div class="text-lg">🏫</div>
                         <h3 class="font-extrabold text-base text-white">Schools & Colleges</h3>
-                        <p class="text-slate-300 text-xs leading-relaxed">Pediatric screening camps and early growth guidance workshops.</p>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">Pediatric screening camps and early growth guidance workshops.</p>
                     </div>
                     <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700 space-y-2.5">
                         <div class="text-lg">🏢</div>
                         <h3 class="font-extrabold text-base text-white">Corporate Wellness</h3>
-                        <p class="text-slate-300 text-xs leading-relaxed">Office dental wellness desks and employee family care plans.</p>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">Office dental wellness desks and employee family care plans.</p>
                     </div>
                     <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700 space-y-2.5">
                         <div class="text-lg">🪷</div>
                         <h3 class="font-extrabold text-base text-white">Community Seva</h3>
-                        <p class="text-slate-300 text-xs leading-relaxed">Collaborative screening drives with local community trusts and associations.</p>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">Collaborative screening drives with local community trusts and associations.</p>
                     </div>
                     <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700 space-y-2.5">
                         <div class="text-lg">🤝</div>
                         <h3 class="font-extrabold text-base text-white">NGO Partnerships</h3>
-                        <p class="text-slate-300 text-xs leading-relaxed">Support for senior citizen dental health and awareness initiatives.</p>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">Support for senior citizen dental health and awareness initiatives.</p>
                     </div>
                 </div>
 
@@ -967,27 +984,27 @@ import Layout from '../layouts/Layout.astro';
     </main>
 
     <!-- FLOATING STICKY MOBILE CONVERSION BAR -->
-    <div class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2 sm:hidden flex items-center justify-between gap-2 shadow-2xl">
-        <a href="#book" class="flex-1 inline-flex items-center justify-center gap-1 bg-teal-700 text-white font-bold py-2.5 px-2 rounded-xl text-xs shadow-sm">
+    <div class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 sm:hidden flex items-center justify-between gap-2 shadow-2xl">
+        <a href="#book" class="flex-1 inline-flex items-center justify-center gap-1 bg-teal-700 text-white font-bold py-3 px-2 rounded-xl text-xs shadow-sm">
             <span>📅 Book Visit</span>
         </a>
-        <a href="https://wa.me/917304432681?text=Hello%20Dr.%20Riddhi%20Patel%20Shah%2C%20I%20would%20like%20to%20consult%20at%20Infinora%20Dental%20Care." target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1 bg-emerald-600 text-white font-bold py-2.5 px-2 rounded-xl text-xs shadow-sm">
+        <a href="https://wa.me/917304432681?text=Hello%20Dr.%20Riddhi%20Patel%20Shah%2C%20I%20would%20like%20to%20consult%20at%20Infinora%20Dental%20Care." target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1 bg-emerald-600 text-white font-bold py-3 px-2 rounded-xl text-xs shadow-sm">
             <svg class="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
             <span>WhatsApp</span>
         </a>
-        <button type="button" onclick="downloadVCard()" class="flex-1 inline-flex items-center justify-center gap-1 bg-slate-900 text-white font-bold py-2.5 px-2 rounded-xl text-xs shadow-sm cursor-pointer">
+        <button type="button" onclick="downloadVCard()" class="flex-1 inline-flex items-center justify-center gap-1 bg-slate-900 text-white font-bold py-3 px-2 rounded-xl text-xs shadow-sm cursor-pointer">
             <span>📇 Contact</span>
         </button>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-slate-400 py-10 text-xs border-t border-slate-800 w-full mb-12 sm:mb-0">
+    <footer class="bg-slate-950 text-slate-400 py-10 text-xs border-t border-slate-800 w-full mb-14 sm:mb-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
             <div class="flex items-center gap-2">
                 <span class="w-2.5 h-2.5 rounded-full bg-teal-500 shrink-0"></span>
                 <p>© 2026 Infinora Dental Care. Dr. Riddhi Patel Shah (MDS). All rights reserved.</p>
             </div>
-            <p class="text-[11px] text-slate-500">Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067 (Metro Line 2A & Western Line)</p>
+            <p class="text-[11px] text-slate-500">Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067 (MSDC Reg: A-45674)</p>
         </div>
     </footer>
 </Layout>
