@@ -141,6 +141,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
             "OralSurgery"
           ],
           "availableService": [
+            { "@type": "MedicalTherapy", "name": "In-Clinic & National/NRI Teleconsultation Services" },
             { "@type": "MedicalTherapy", "name": "Fixing Smile Design & Facial Aesthetics Assessment" },
             { "@type": "MedicalTherapy", "name": "Invisible Clear Aligners & Precision Aesthetic Braces (with 3D Optical Scanning)" },
             { "@type": "MedicalTherapy", "name": "Single-Visit Painless Root Canal Treatment (MDS Endodontics)" },
@@ -160,10 +161,18 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "How is care coordinated at Infinora Dental Care?",
+              "name": "Can I book a teleconsultation from outside Mumbai or India?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Every patient undergoes a comprehensive aesthetic and clinical evaluation directed by Dr. Riddhi Patel Shah (MDS Orthodontist). Clinical procedures are managed by dedicated board-certified MDS specialists in Endodontics, Oral & Maxillofacial Surgery, Prosthodontics, and Periodontics under strict multi-speciality standards."
+                "text": "Yes. Infinora Dental Care offers online video and chat teleconsultations for national and international patients, ideal for second opinions, smile design planning, clear aligner reviews, and treatment cost estimates before traveling to Mumbai."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How close is the clinic to public transport and metro stations?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The clinic is centrally located at Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai, positioned 1.4 kms from Valnai - Meeth Chowky Metro Station and 1.6 kms from Kandivali West Metro Station (Mahavir Nagar)."
               }
             },
             {
@@ -197,14 +206,6 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
                 "@type": "Answer",
                 "text": "Infinora Dental Care operates Monday through Saturday across three sessions: Morning (9:00 AM – 1:00 PM), Afternoon (3:00 PM – 5:00 PM), and Evening (6:00 PM – 9:00 PM). Sunday sessions are 10:00 AM – 1:00 PM strictly by prior appointment only."
               }
-            },
-            {
-              "@type": "Question",
-              "name": "Does Infinora Dental Care conduct institutional and community dental camps?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. We organize tailored dental screening camps for schools, corporate offices, and community organizations (including Jain Samaj, Gujarati, Patel community associations, and social NGOs)."
-              }
             }
           ]
         }
@@ -237,14 +238,12 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
                     btn.classList.add('text-slate-300', 'hover:text-white');
                 }
             });
-            // Track language switch event in GA4
             if (window.trackEvent) {
                 window.trackEvent('change_language', { selected_language: langCode });
             }
         };
 
         window.downloadVCard = function() {
-            // Track vCard download event in GA4
             if (window.trackEvent) {
                 window.trackEvent('download_vcard', { method: 'direct_button' });
             }
@@ -261,7 +260,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
                 'EMAIL;TYPE=PREF,INTERNET:hello@infinoradental.com',
                 'URL:https://infinoradental.com',
                 'ADR;TYPE=WORK,POSTAL,PARCEL:;;Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West;Mumbai;Maharashtra;400067;India',
-                'NOTE:Infinora Dental Care - Multispeciality Dental & Orthodontic Clinic in Kandivali West, Mumbai. Mon-Sat: 9AM-1PM, 3PM-5PM, 6PM-9PM | Sun: 10AM-1PM (Prior Appt Only)',
+                'NOTE:Infinora Dental Care - Multispeciality Dental & Orthodontic Clinic in Kandivali West, Mumbai (1.4km from Valnai-Meeth Chowky Metro, 1.6km from Kandivali West Metro/Mahavir Nagar). Mon-Sat: 9AM-1PM, 3PM-5PM, 6PM-9PM | Sun: 10AM-1PM (Prior Appt Only)',
                 'X-SOCIALPROFILE;type=instagram:https://instagram.com/orthodontist.riddhi',
                 'END:VCARD'
             ].join('\r\n');
@@ -292,36 +291,31 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
 
                 const href = target.getAttribute('href') || '';
 
-                // Track Phone Clicks
                 if (href.startsWith('tel:')) {
                     window.trackEvent('click_phone_call', {
                         phone_number: '+917304432681',
                         click_location: target.innerText.trim() || 'Header/Bar'
                     });
                 }
-                // Track WhatsApp Clicks
                 else if (href.includes('wa.me')) {
                     window.trackEvent('click_whatsapp_booking', {
                         link_url: href,
                         button_text: target.innerText.trim() || 'WhatsApp CTA'
                     });
                 }
-                // Track Instagram Clicks
                 else if (href.includes('instagram.com')) {
                     window.trackEvent('click_instagram', {
                         profile: '@orthodontist.riddhi'
                     });
                 }
-                // Track Google Review Clicks
                 else if (href.includes('g.page') || href.includes('share.google')) {
                     window.trackEvent('click_google_review', {
                         destination: 'Google My Business'
                     });
                 }
-                // Track Google Maps Navigation
                 else if (href.includes('maps.google.com') || href.includes('maps.app.goo.gl')) {
                     window.trackEvent('click_google_maps', {
-                        destination: 'Directions to Sai Elegance'
+                        destination: 'Directions to Clinic'
                     });
                 }
             });
