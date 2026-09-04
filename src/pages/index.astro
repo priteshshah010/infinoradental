@@ -379,7 +379,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <!-- ON-PAGE TREATMENT CATALOGUE -->
+        <!-- ON-PAGE TREATMENT CATALOGUE (Now with pre-selection JS) -->
         <section id="catalogue" class="py-16 bg-slate-50 w-full border-t border-slate-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
@@ -412,9 +412,9 @@ import Layout from '../layouts/Layout.astro';
                             </p>
                         </div>
                         <div class="pt-4 border-t border-slate-200">
-                            <a href="#book" class="w-full text-center py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs font-bold block transition-colors border border-slate-200">
+                            <button type="button" onclick="selectService('General Dental Checkup')" class="w-full text-center py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs font-bold block transition-colors border border-slate-200 cursor-pointer">
                                 Book Checkup →
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -434,9 +434,9 @@ import Layout from '../layouts/Layout.astro';
                             </p>
                         </div>
                         <div class="pt-4 border-t border-slate-200">
-                            <a href="#book" class="w-full text-center py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs font-bold block transition-colors border border-slate-200">
+                            <button type="button" onclick="selectService('Root Canal Treatment')" class="w-full text-center py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs font-bold block transition-colors border border-slate-200 cursor-pointer">
                                 Book RCT Consultation →
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -456,9 +456,9 @@ import Layout from '../layouts/Layout.astro';
                             </p>
                         </div>
                         <div class="pt-4 border-t border-slate-200">
-                            <a href="#book" class="w-full text-center py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs font-bold block transition-colors border border-slate-200">
+                            <button type="button" onclick="selectService('Dental Implants')" class="w-full text-center py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs font-bold block transition-colors border border-slate-200 cursor-pointer">
                                 Consult for Implants →
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -478,9 +478,9 @@ import Layout from '../layouts/Layout.astro';
                             </p>
                         </div>
                         <div class="pt-4 border-t border-slate-200">
-                            <a href="#book" class="w-full text-center py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs font-bold block transition-colors border border-slate-200">
+                            <button type="button" onclick="selectService('Smile Design')" class="w-full text-center py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs font-bold block transition-colors border border-slate-200 cursor-pointer">
                                 Book Veneers Consultation →
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -500,9 +500,9 @@ import Layout from '../layouts/Layout.astro';
                             </p>
                         </div>
                         <div class="pt-4 border-t border-slate-200">
-                            <a href="#book" class="w-full text-center py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs font-bold block transition-colors border border-slate-200">
+                            <button type="button" onclick="selectService('General Dental Checkup')" class="w-full text-center py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs font-bold block transition-colors border border-slate-200 cursor-pointer">
                                 Book Gum Therapy →
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -522,9 +522,9 @@ import Layout from '../layouts/Layout.astro';
                             </p>
                         </div>
                         <div class="pt-4 border-t border-slate-200">
-                            <a href="#book" class="w-full text-center py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs font-bold block transition-colors border border-slate-200">
+                            <button type="button" onclick="selectService('Pediatric')" class="w-full text-center py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs font-bold block transition-colors border border-slate-200 cursor-pointer">
                                 Book Child Visit →
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -574,7 +574,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <!-- INTERACTIVE APPOINTMENT BOOKING SECTION (Color Rhythm Fixed: Clean Light bg with scroll-mt-24) -->
+        <!-- INTERACTIVE APPOINTMENT BOOKING SECTION -->
         <section id="book" class="py-16 bg-white text-slate-900 w-full border-t border-slate-200 relative scroll-mt-24">
             <div class="max-w-4xl mx-auto px-4 sm:px-6">
                 
@@ -750,8 +750,25 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <!-- Script for Foolproof Date, Age Calculation & Form Logic -->
+        <!-- Script for Foolproof Date, Pre-selection & Form Logic -->
         <script is:inline>
+            // Global helper to pre-select treatment from catalogue cards
+            window.selectService = function(keyword) {
+                const select = document.getElementById('treatmentService');
+                if (select) {
+                    for (let opt of select.options) {
+                        if (opt.value.toLowerCase().includes(keyword.toLowerCase()) || opt.text.toLowerCase().includes(keyword.toLowerCase())) {
+                            select.value = opt.value;
+                            break;
+                        }
+                    }
+                }
+                const bookSection = document.getElementById('book');
+                if (bookSection) {
+                    bookSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            };
+
             document.addEventListener('DOMContentLoaded', () => {
                 const dateInput = document.getElementById('appointmentDate');
                 const dobInput = document.getElementById('patientDob');
