@@ -54,9 +54,9 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Tailwind Play CDN & Holistic Architectural Palette -->
-    <script is:inline src="https://cdn.tailwindcss.com"></script>
-    <script is:inline>
+    <!-- Tailwind Play CDN & Architectural Palette (data-cfasync="false" prevents Cloudflare Rocket Loader execution delays) -->
+    <script is:inline data-cfasync="false" src="https://cdn.tailwindcss.com"></script>
+    <script is:inline data-cfasync="false">
       tailwind.config = {
         theme: {
           extend: {
