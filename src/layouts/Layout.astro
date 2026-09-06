@@ -54,8 +54,26 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Tailwind Play CDN -->
+    <!-- Tailwind Play CDN & Interior Theme Extension (Brown, Beige, Grey, Offwhite) -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
+    <script is:inline>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                brown: '#5C4033',
+                darkbrown: '#3E2723',
+                beige: '#F5F2EB',
+                lightbeige: '#FAF8F5',
+                grey: '#9E9E9E',
+                offwhite: '#FCFBFA',
+              }
+            }
+          }
+        }
+      }
+    </script>
 
     <!-- Comprehensive Ultimate Exhaustive Medical Clinic, Specialist Board, ABDM, IDA & AEO Schema (JSON-LD) -->
     <script type="application/ld+json">
@@ -273,11 +291,11 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
             }
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 if (btn.dataset.lang === langCode) {
-                    btn.classList.add('bg-teal-500', 'text-slate-950');
-                    btn.classList.remove('text-slate-300', 'hover:text-white');
+                    btn.classList.add('bg-brand-brown', 'text-brand-offwhite');
+                    btn.classList.remove('text-brand-darkbrown', 'hover:text-brand-brown');
                 } else {
-                    btn.classList.remove('bg-teal-500', 'text-slate-950');
-                    btn.classList.add('text-slate-300', 'hover:text-white');
+                    btn.classList.remove('bg-brand-brown', 'text-brand-offwhite');
+                    btn.classList.add('text-brand-darkbrown', 'hover:text-brand-brown');
                 }
             });
             if (window.trackEvent) {
@@ -320,7 +338,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     </script>
     <script is:inline defer type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <!-- Additional Custom Metadata & Performance Directives to Ensure Full Coverage -->
+    <!-- Additional Custom Metadata & Performance Directives -->
     <meta name="author" content="Dr. Riddhi Patel Shah" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="geo.region" content="IN-MH" />
@@ -328,7 +346,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     <meta name="geo.position" content="19.2024118;72.8371032" />
     <meta name="ICBM" content="19.2024118, 72.8371032" />
 </head>
-<body class="bg-slate-50 text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-teal-600 selection:text-white overflow-x-hidden w-full m-0 p-0 relative min-h-screen">
+<body class="bg-brand-beige text-brand-darkbrown font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-brand-brown selection:text-brand-offwhite overflow-x-hidden w-full m-0 p-0 relative min-h-screen">
     <div id="google_translate_hidden_element" class="hidden"></div>
     <slot />
 
