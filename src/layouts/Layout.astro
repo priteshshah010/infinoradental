@@ -54,7 +54,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Tailwind Play CDN & Interior Theme Extension (Brown, Beige, Grey, Offwhite) -->
+    <!-- Tailwind Play CDN & Holistic Interior Theme Configuration -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
     <script is:inline>
       tailwind.config = {
@@ -62,12 +62,22 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
           extend: {
             colors: {
               brand: {
-                brown: '#5C4033',
-                darkbrown: '#3E2723',
-                beige: '#F5F2EB',
-                lightbeige: '#FAF8F5',
-                grey: '#9E9E9E',
-                offwhite: '#FCFBFA',
+                brown: '#6B4423',
+                darkbrown: '#2C1810',
+                midbrown: '#4A2E1B',
+                hoverbrown: '#533418',
+                lightbrown: '#8B5A2B',
+                beige: '#F7F4EE',
+                cardbeige: '#EFE9DF',
+                lightbeige: '#FAF7F2',
+                offwhite: '#FFFFFF',
+                border: '#E4DDD3',
+                gold: '#C59B27',
+                grey: {
+                  text: '#3A3733',
+                  muted: '#68645E',
+                  light: '#DED8CE'
+                }
               }
             }
           }
@@ -291,11 +301,11 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
             }
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 if (btn.dataset.lang === langCode) {
-                    btn.classList.add('bg-brand-brown', 'text-brand-offwhite');
-                    btn.classList.remove('text-brand-darkbrown', 'hover:text-brand-brown');
+                    btn.classList.add('bg-brand-brown', 'text-white');
+                    btn.classList.remove('text-brand-grey-muted', 'hover:text-brand-darkbrown');
                 } else {
-                    btn.classList.remove('bg-brand-brown', 'text-brand-offwhite');
-                    btn.classList.add('text-brand-darkbrown', 'hover:text-brand-brown');
+                    btn.classList.remove('bg-brand-brown', 'text-white');
+                    btn.classList.add('text-brand-grey-muted', 'hover:text-brand-darkbrown');
                 }
             });
             if (window.trackEvent) {
@@ -346,7 +356,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     <meta name="geo.position" content="19.2024118;72.8371032" />
     <meta name="ICBM" content="19.2024118, 72.8371032" />
 </head>
-<body class="bg-brand-beige text-brand-darkbrown font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-brand-brown selection:text-brand-offwhite overflow-x-hidden w-full m-0 p-0 relative min-h-screen">
+<body class="bg-brand-beige text-brand-grey-text font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-brand-brown selection:text-white overflow-x-hidden w-full m-0 p-0 relative min-h-screen">
     <div id="google_translate_hidden_element" class="hidden"></div>
     <slot />
 
