@@ -2,11 +2,16 @@
 export interface Props {
     title: string;
     description: string;
+    canonicalUrl?: string;
 }
 
-const { title, description } = Astro.props;
+const {
+    title,
+    description,
+    canonicalUrl = "https://infinoradental.com/"
+} = Astro.props;
 
-// GA4 Measurement ID
+// GA4 Measurement ID (Preserved)
 const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
 ---
 
@@ -17,17 +22,17 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    
+
     <!-- Canonical & Open Graph Metadata -->
-    <link rel="canonical" href="https://infinoradental.com/" />
+    <link rel="canonical" href={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://infinoradental.com/" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:locale" content="en_IN" />
     <meta property="og:site_name" content="Infinora Dental Care" />
-    
-    <!-- Google Analytics 4 (gtag.js) - G-Z41QK7SPBW -->
+
+    <!-- Google Analytics 4 (gtag.js) - G-Z41QK7SPBW (Preserved) -->
     <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
     <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
         window.dataLayer = window.dataLayer || [];
@@ -52,9 +57,9 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     <!-- Google Fonts Preconnect & Load -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Tailwind Play CDN & Architectural Palette (data-cfasync="false" prevents Cloudflare Rocket Loader execution delays) -->
+    <!-- Tailwind Play CDN & Primary Brand Palette (#011f39) -->
     <script is:inline data-cfasync="false" src="https://cdn.tailwindcss.com"></script>
     <script is:inline data-cfasync="false">
       tailwind.config = {
@@ -62,21 +67,21 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
           extend: {
             colors: {
               brand: {
-                brown: '#6B4423',
-                darkbrown: '#2C1810',
-                midbrown: '#4A2E1B',
-                hoverbrown: '#533418',
-                lightbrown: '#8B5A2B',
-                beige: '#F7F4EE',
-                cardbeige: '#EFE9DF',
-                lightbeige: '#FAF7F2',
+                navy: '#011f39',
+                darknavy: '#011526',
+                midnavy: '#072c4d',
+                hovernavy: '#022c52',
+                lightnavy: '#0d3b66',
+                surface: '#F4F7FA',
+                cardbg: '#EAF0F6',
+                lightbg: '#F9FBFD',
                 offwhite: '#FFFFFF',
-                border: '#E4DDD3',
+                border: '#D5E0EA',
                 gold: '#C59B27',
                 grey: {
-                  text: '#3A3733',
-                  muted: '#68645E',
-                  light: '#DED8CE'
+                  text: '#1E293B',
+                  muted: '#475569',
+                  light: '#CBD5E1'
                 }
               }
             }
@@ -85,17 +90,52 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
       }
     </script>
 
-    <!-- Comprehensive Ultimate Medical Clinic, Specialist Board, ABDM, IDA & Patient FAQ Schema (JSON-LD) -->
+    <!-- Structured Data (JSON-LD) for Local Search, AEO & GEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://infinoradental.com/#website",
+          "url": "https://infinoradental.com/",
+          "name": "Infinora Dental Care",
+          "inLanguage": "en-IN",
+          "publisher": {
+            "@id": "https://infinoradental.com/#clinic"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://infinoradental.com/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://infinoradental.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Treatments",
+              "item": "https://infinoradental.com/#catalogue"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Book Consultation",
+              "item": "https://infinoradental.com/#book"
+            }
+          ]
+        },
         {
           "@type": ["Dentist", "MedicalBusiness"],
           "@id": "https://infinoradental.com/#clinic",
           "name": "Infinora Dental Care - Dr. Riddhi Patel Shah (Dentist & Braces Clinic)",
           "alternateName": "Infinora Dental Care Mumbai",
           "url": "https://infinoradental.com/",
+          "logo": "https://infinoradental.com/logo.svg",
           "telephone": "+91 73044 32681",
           "email": "hello@infinoradental.com",
           "priceRange": "₹₹",
@@ -132,15 +172,15 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
           "openingHoursSpecification": [
             {
               "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-              "opens": "09:00",
-              "closes": "21:00"
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              "opens": "10:00",
+              "closes": "14:00"
             },
             {
               "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Sunday"],
-              "opens": "10:00",
-              "closes": "13:00"
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              "opens": "17:00",
+              "closes": "21:00"
             }
           ],
           "employee": {
@@ -194,6 +234,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
             { "@type": "MedicalProcedure", "name": "Invisalign" },
             { "@type": "MedicalProcedure", "name": "Root Canals" },
             { "@type": "MedicalProcedure", "name": "Dental Implants" },
+            { "@type": "MedicalProcedure", "name": "Full Mouth Rehabilitation" },
             { "@type": "MedicalProcedure", "name": "Teeth Whitening" },
             { "@type": "MedicalProcedure", "name": "Veneers & Crowns" },
             { "@type": "MedicalProcedure", "name": "Bonding" },
@@ -212,7 +253,6 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
             { "@type": "MedicalProcedure", "name": "Teeth Reshaping" },
             { "@type": "MedicalProcedure", "name": "X-ray" },
             { "@type": "MedicalProcedure", "name": "Gum Surgery / Periodontics" },
-            { "@type": "MedicalProcedure", "name": "Full Mouth Rehabilitation" },
             { "@type": "MedicalProcedure", "name": "Digital Smile Design" }
           ],
           "amenityFeature": [
@@ -251,7 +291,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
               "name": "How much do braces and clear aligners cost in Kandivali West, and what is the treatment duration?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Orthodontic treatment costs depend on malocclusion severity, case complexity, and the appliance selected (metal, ceramic, self-ligating braces, or custom clear aligners like Invisalign). Treatment duration typically ranges from 6 to 18 months. Following an intraoral 3D scan and clinical consultation, you receive an itemized, transparent treatment plan with no hidden fees and zero-interest EMI options."
+                "text": "Orthodontic treatment costs depend on malocclusion severity, case complexity, and the appliance selected (metal, ceramic, self-ligating braces, or custom clear aligners like Invisalign). Treatment duration varies per individual and is assessed during a clinical consultation and diagnostic evaluation."
               }
             },
             {
@@ -259,7 +299,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
               "name": "Is Root Canal Treatment (RCT) painful at Infinora Dental Care?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "No. Modern root canal treatment at Infinora Dental Care is virtually pain-free. We use advanced computer-calibrated local anesthesia, profound topical gels, and rotary micro-endodontics. Most patients report feeling only mild vibration or pressure, and acute toothaches are often resolved in a single comfortable visit."
+                "text": "Comfort is a core focus of endodontic care at Infinora Dental Care using modern anesthesia and rotary instrumentation. Individual comfort, visit count, and crown or restoration needs depend on the clinical condition of the tooth."
               }
             },
             {
@@ -272,10 +312,10 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
             },
             {
               "@type": "Question",
-              "name": "What are your clinic timings, and do you accept Sunday appointments?",
+              "name": "What are your clinic timings and appointment slot rules?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The clinic operates Monday through Saturday from 09:00 AM to 09:00 PM across three shifts: Morning (09:00 AM – 01:00 PM), Afternoon (03:00 PM – 05:00 PM), and Evening (06:00 PM – 09:00 PM). On Sundays, the clinic is open from 10:00 AM to 01:00 PM strictly on a prior appointment basis."
+                "text": "Clinic timings are 10:00 AM to 2:00 PM and Evening: 5:00 PM to 9:00 PM. Appointments are taken strictly for 3:00 PM to 5:00 PM—none other slots work for appointments."
               }
             },
             {
@@ -283,7 +323,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
               "name": "Do you provide emergency dental services in Kandivali West?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, we accommodate emergency dental visits for acute toothache, broken or knocked-out teeth, sports trauma, loose restorations, or sharp broken brackets. Call our desk directly at +91 73044 32681 for immediate priority scheduling."
+                "text": "Yes, we accommodate urgent dental visits for toothache, dental trauma, broken or damaged teeth, or orthodontic concerns. Call our desk directly at +91 73044 32681 for scheduling guidance within our 3:00 PM – 5:00 PM appointment window."
               }
             },
             {
@@ -291,15 +331,15 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
               "name": "At what age should a child first visit an orthodontist?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "According to the Indian Orthodontic Society and international orthodontic guidelines, children should have their initial orthodontic evaluation around age 7. While most children do not need immediate treatment, early screening allows an orthodontist to detect crossbites, thumb-sucking habits, mouth breathing, or jaw growth discrepancies before permanent teeth fully emerge."
+                "text": "According to the Indian Orthodontic Society and international orthodontic guidelines, children should have their initial orthodontic evaluation around age 7 to check tooth eruption, arch space, habits, and jaw balance early."
               }
             },
             {
               "@type": "Question",
-              "name": "What payment modes and flexible installment options are supported?",
+              "name": "What payment modes and installment options are supported?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We accept Cash, UPI (Google Pay, PhonePe, Paytm), Debit Cards, Credit Cards, Mobile NFC, and Direct Bank Transfers. For extensive treatments such as clear aligners, complex braces, dental implants, or full-mouth smile makeovers, we offer structured stage-wise payment schedules and flexible EMI options."
+                "text": "We accept Cash, UPI (Google Pay, PhonePe, Paytm), Debit Cards, Credit Cards, Mobile NFC, and Direct Bank Transfers, along with payment plan options where applicable."
               }
             }
           ]
@@ -308,7 +348,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     }
     </script>
 
-    <!-- Google Website Translator Hidden Core Script (Deferred for Performance) -->
+    <!-- Language & Contact Helpers -->
     <script is:inline type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -326,11 +366,11 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
             }
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 if (btn.dataset.lang === langCode) {
-                    btn.classList.add('bg-brand-brown', 'text-white');
-                    btn.classList.remove('text-brand-grey-muted', 'hover:text-brand-darkbrown');
+                    btn.classList.add('bg-brand-navy', 'text-white');
+                    btn.classList.remove('text-brand-border', 'hover:text-white');
                 } else {
-                    btn.classList.remove('bg-brand-brown', 'text-white');
-                    btn.classList.add('text-brand-grey-muted', 'hover:text-brand-darkbrown');
+                    btn.classList.remove('bg-brand-navy', 'text-white');
+                    btn.classList.add('text-brand-border', 'hover:text-white');
                 }
             });
             if (window.trackEvent) {
@@ -373,7 +413,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     </script>
     <script is:inline defer type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <!-- Additional Custom Metadata & Performance Directives -->
+    <!-- Additional Metadata & Geo Directives -->
     <meta name="author" content="Dr. Riddhi Patel Shah" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="geo.region" content="IN-MH" />
@@ -381,11 +421,11 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     <meta name="geo.position" content="19.2024118;72.8371032" />
     <meta name="ICBM" content="19.2024118, 72.8371032" />
 </head>
-<body class="bg-brand-beige text-brand-grey-text font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-brand-brown selection:text-white overflow-x-hidden w-full m-0 p-0 relative min-h-screen">
+<body class="bg-brand-surface text-brand-grey-text font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-brand-navy selection:text-white overflow-x-hidden w-full m-0 p-0 relative min-h-screen">
     <div id="google_translate_hidden_element" class="hidden"></div>
     <slot />
 
-    <!-- Global Automatic Click Event Tracker for GA4 -->
+    <!-- Global Automatic Click Event Tracker for GA4 (Preserved) -->
     <script is:inline>
         document.addEventListener('DOMContentLoaded', () => {
             document.addEventListener('click', (e) => {
@@ -428,6 +468,11 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
 </html>
 
 <style is:global>
+    :root {
+        --brand-navy: #011f39;
+        --brand-navy-rgb: 1, 31, 57;
+        --brand-gold: #C59B27;
+    }
     *, *::before, *::after {
         box-sizing: border-box;
     }
