@@ -90,7 +90,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
       }
     </script>
 
-    <!-- Structured Data (JSON-LD) for Local Search, AEO & GEO -->
+    <!-- Structured Data (JSON-LD) for Local SEO, AEO, GEO & AI Answer Engines -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -133,8 +133,9 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
           "@type": ["Dentist", "MedicalBusiness"],
           "@id": "https://infinoradental.com/#clinic",
           "name": "Infinora Dental Care - Dr. Riddhi Patel Shah (Dentist & Braces Clinic)",
-          "alternateName": "Infinora Dental Care Mumbai",
+          "alternateName": ["Infinora Dental Care", "Infinora Dental Care Mumbai", "Infinora Dental Care Kandivali West"],
           "url": "https://infinoradental.com/",
+          "logo": "https://infinoradental.com/logo.svg",
           "telephone": "+91 73044 32681",
           "email": "hello@infinoradental.com",
           "priceRange": "₹₹",
@@ -230,12 +231,13 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
           "availableService": [
             { "@type": "MedicalProcedure", "name": "Orthodontics & Braces" },
             { "@type": "MedicalProcedure", "name": "Clear Aligners" },
+            { "@type": "MedicalProcedure", "name": "Invisible Aligners" },
             { "@type": "MedicalProcedure", "name": "Invisalign" },
             { "@type": "MedicalProcedure", "name": "Root Canals" },
             { "@type": "MedicalProcedure", "name": "Dental Implants" },
+            { "@type": "MedicalProcedure", "name": "Veneers & Crowns" },
             { "@type": "MedicalProcedure", "name": "Full Mouth Rehabilitation" },
             { "@type": "MedicalProcedure", "name": "Teeth Whitening" },
-            { "@type": "MedicalProcedure", "name": "Veneers & Crowns" },
             { "@type": "MedicalProcedure", "name": "Bonding" },
             { "@type": "MedicalProcedure", "name": "Checkups" },
             { "@type": "MedicalProcedure", "name": "Cosmetic Procedures" },
@@ -279,6 +281,14 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
           "mainEntity": [
             {
               "@type": "Question",
+              "name": "How do I find a trusted dentist near me in Kandivali West or Mumbai for braces, aligners, implants, veneers, or root canals?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Infinora Dental Care in Kandivali West, Mumbai is led by Dr. Riddhi Patel Shah (BDS Gold Medalist, MDS Orthodontics & Dentofacial Orthopedics; MSDC Reg: A-45674; ABDM HFR: IN2710085962; HPR: 71-8554-8443-4346) and offers orthodontics, braces, clear aligners/Invisalign, invisible aligners, dental implants, veneers, root canals, and family dental care across Mumbai and India."
+              }
+            },
+            {
+              "@type": "Question",
               "name": "Why should I see an MDS Orthodontist instead of a general dentist for braces or clear aligners?",
               "acceptedAnswer": {
                 "@type": "Answer",
@@ -287,18 +297,10 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
             },
             {
               "@type": "Question",
-              "name": "How much do braces and clear aligners cost in Kandivali West, and what is the treatment duration?",
+              "name": "Are clear aligners, Invisalign, or invisible aligners available in Kandivali, Mumbai, and for patients across India?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Orthodontic treatment costs depend on malocclusion severity, case complexity, and the appliance selected (metal, ceramic, self-ligating braces, or custom clear aligners like Invisalign). Treatment duration varies per individual and is assessed during a clinical consultation and diagnostic evaluation."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is Root Canal Treatment (RCT) painful at Infinora Dental Care?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Comfort is a core focus of endodontic care at Infinora Dental Care using modern anesthesia and rotary instrumentation. Individual comfort, visit count, and crown or restoration needs depend on the clinical condition of the tooth."
+                "text": "Yes, orthodontic evaluation for braces, clear aligners, invisible aligners, and Invisalign is available at Infinora Dental Care in Kandivali West, Mumbai, alongside online video opinion options for out-of-city and NRI patients."
               }
             },
             {
@@ -311,18 +313,18 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
             },
             {
               "@type": "Question",
-              "name": "What are your clinic timings and appointment slot rules?",
+              "name": "How are appointment slots scheduled at Infinora Dental Care?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Clinic timings are 10:00 AM to 2:00 PM and Evening: 5:00 PM to 9:00 PM. Appointments are taken strictly for 3:00 PM to 5:00 PM—none other slots work for appointments."
+                "text": "Available slots update dynamically by selected date and time of day across Morning, Afternoon, and Evening options, with Sunday morning available until 12:00 PM (and moving to Monday after 12:00 PM on Sundays)."
               }
             },
             {
               "@type": "Question",
-              "name": "Do you provide emergency dental services in Kandivali West?",
+              "name": "What dental treatments are available beyond orthodontics in Kandivali West, Mumbai?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, we accommodate urgent dental visits for toothache, dental trauma, broken or damaged teeth, or orthodontic concerns. Call our desk directly at +91 73044 32681 for scheduling guidance within our 3:00 PM – 5:00 PM appointment window."
+                "text": "The clinic offers root canal treatment (RCT), dental implants, veneers and crowns, fillings and bonding, teeth whitening, gum therapy/periodontics, extractions/oral surgery, pediatric dentistry, and full-mouth rehabilitation planning following clinical assessment."
               }
             },
             {
@@ -335,7 +337,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
             },
             {
               "@type": "Question",
-              "name": "What payment methods and installment options are supported?",
+              "name": "What payment modes and installment options are supported?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "We accept Cash, UPI (Google Pay, PhonePe, Paytm), Debit Cards, Credit Cards, Mobile NFC, and Direct Bank Transfers, along with payment plan options where applicable."
@@ -412,11 +414,13 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     </script>
     <script is:inline defer type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <!-- Additional Metadata & Geo Directives -->
+    <!-- Additional Metadata, AI Bot & Geo Directives -->
     <meta name="author" content="Dr. Riddhi Patel Shah" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow" />
     <meta name="geo.region" content="IN-MH" />
-    <meta name="geo.placename" content="Mumbai" />
+    <meta name="geo.placename" content="Kandivali West, Mumbai" />
     <meta name="geo.position" content="19.2024118;72.8371032" />
     <meta name="ICBM" content="19.2024118, 72.8371032" />
 </head>
