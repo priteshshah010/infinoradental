@@ -2,28 +2,29 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout 
-    title="Infinora Dental Care | Dr. Riddhi Patel Shah (MDS) | Kandivali West, Mumbai" 
-    description="Specialist-led dentistry thoughtfully delivered in Kandivali West, Mumbai. Precision braces, clear aligners, painless root canals, and family dentistry by Dr. Riddhi Patel Shah (MDS Orthodontics, Gold Medalist)."
+<Layout
+    title="Infinora Dental Care | Dr. Riddhi Patel Shah (MDS) | Family & Specialist Dentistry in Kandivali West, Mumbai"
+    description="Comprehensive family dentistry, braces, clear aligners, dental implants, full-mouth rehabilitation, and painless root canals in Kandivali West, Mumbai with Dr. Riddhi Patel Shah (MDS Orthodontics, Gold Medalist)."
+    canonicalUrl="https://infinoradental.com/"
 >
     <!-- Top Announcement Bar -->
-    <div class="bg-brand-darkbrown text-brand-beige text-xs py-2 px-3 sm:px-6 border-b border-brand-midbrown w-full">
+    <div class="bg-brand-darknavy text-brand-surface text-xs py-2 px-3 sm:px-6 border-b border-brand-midnavy w-full">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">
-            
+
             <div class="flex items-center justify-center md:justify-start gap-2 flex-wrap">
-                <span class="inline-flex items-center gap-1.5 bg-brand-brown/50 text-brand-beige border border-brand-brown px-2.5 py-0.5 rounded-full font-extrabold uppercase tracking-wider text-[10px]">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                    Grand Opening · September 2026
+                <span class="inline-flex items-center gap-1.5 bg-brand-navy text-white border border-brand-lightnavy px-2.5 py-0.5 rounded-full font-extrabold uppercase tracking-wider text-[10px]">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+                    Clinic: 10:00 AM–2:00 PM &amp; 5:00 PM–9:00 PM · Appts: 3:00 PM–5:00 PM Only
                 </span>
                 <span class="text-brand-border font-medium text-xs truncate">
-                    Kandivali West, Mumbai · Specialist Orthodontics & Dental Care
+                    Kandivali West, Mumbai · Family &amp; Specialist Dental Care
                 </span>
             </div>
 
             <div class="flex items-center justify-center gap-2 sm:gap-3 text-xs font-semibold flex-wrap">
                 <!-- Multi-Language Switcher -->
-                <div class="flex items-center gap-1 bg-brand-midbrown border border-brand-brown px-1.5 py-0.5 rounded-lg notranslate">
-                    <button type="button" onclick="changeLanguage('en')" data-lang="en" class="lang-btn px-2 py-0.5 rounded text-[10px] font-bold bg-brand-brown text-white transition-colors">
+                <div class="flex items-center gap-1 bg-brand-midnavy border border-brand-lightnavy px-1.5 py-0.5 rounded-lg notranslate">
+                    <button type="button" onclick="changeLanguage('en')" data-lang="en" class="lang-btn px-2 py-0.5 rounded text-[10px] font-bold bg-brand-navy text-white transition-colors">
                         EN
                     </button>
                     <button type="button" onclick="changeLanguage('gu')" data-lang="gu" class="lang-btn px-2 py-0.5 rounded text-[10px] font-bold text-brand-border hover:text-white transition-colors">
@@ -37,21 +38,21 @@ import Layout from '../layouts/Layout.astro';
                     </button>
                 </div>
 
-                <span class="text-brand-brown hidden sm:inline">|</span>
+                <span class="text-brand-lightnavy hidden sm:inline">|</span>
 
-                <button type="button" onclick="downloadVCard()" class="text-brand-beige hover:text-white flex items-center gap-1 transition-colors cursor-pointer" title="Save Infinora Dental Care to Contacts">
+                <button type="button" onclick="downloadVCard()" class="text-brand-surface hover:text-white flex items-center gap-1 transition-colors cursor-pointer" title="Save Infinora Dental Care to Contacts">
                     <span>📇 Save Contact</span>
                 </button>
 
-                <span class="text-brand-brown hidden sm:inline">|</span>
+                <span class="text-brand-lightnavy hidden sm:inline">|</span>
 
-                <a href="https://g.page/r/Cb7r3l0-R2oSEBM/review" target="_blank" rel="noopener" class="text-brand-beige hover:text-white transition-colors flex items-center gap-1">
+                <a href="https://g.page/r/Cb7r3l0-R2oSEBM/review" target="_blank" rel="noopener" class="text-brand-surface hover:text-white transition-colors flex items-center gap-1">
                     ⭐ Review Us
                 </a>
 
-                <span class="text-brand-brown hidden sm:inline">|</span>
-                
-                <a href="tel:+917304432681" class="hover:text-white transition-colors flex items-center gap-1 text-brand-beige">
+                <span class="text-brand-lightnavy hidden sm:inline">|</span>
+
+                <a href="tel:+917304432681" class="hover:text-white transition-colors flex items-center gap-1 text-brand-surface">
                     <svg class="w-3.5 h-3.5 text-brand-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                     +91 73044 32681
                 </a>
@@ -63,35 +64,42 @@ import Layout from '../layouts/Layout.astro';
     <!-- Main Navigation Bar -->
     <header class="sticky top-0 z-40 bg-brand-offwhite/95 backdrop-blur-md border-b border-brand-border shadow-sm w-full">
         <div class="max-w-7xl mx-auto px-3 sm:px-6 h-18 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
-            
-            <a href="#" class="flex items-center gap-2.5 sm:gap-3 min-w-0 group">
-                <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-brand-brown to-brand-darkbrown text-white flex items-center justify-center font-black text-base sm:text-xl shadow-md shadow-brand-brown/20 shrink-0 group-hover:scale-105 transition-transform">
-                    IDC
-                </div>
+
+            <!-- Logo Reference (/logo.svg — upload file to public/logo.svg) -->
+            <a href="https://infinoradental.com/" class="flex items-center gap-2.5 sm:gap-3 min-w-0 group" aria-label="Infinora Dental Care Home">
+                <span class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-brand-offwhite border border-brand-border flex items-center justify-center shadow-sm shrink-0 overflow-hidden p-1">
+                    <img
+                        src="/logo.svg"
+                        alt="Infinora Dental Care Logo"
+                        width="36"
+                        height="36"
+                        class="w-full h-full object-contain"
+                    />
+                </span>
                 <div class="min-w-0">
-                    <span class="text-sm sm:text-xl font-extrabold tracking-tight text-brand-darkbrown block leading-tight truncate">Infinora Dental Care</span>
-                    <span class="text-[9px] sm:text-xs font-semibold tracking-wider text-brand-brown block truncate">Kandivali West, Mumbai</span>
+                    <span class="text-sm sm:text-xl font-extrabold tracking-tight text-brand-navy block leading-tight truncate">Infinora Dental Care</span>
+                    <span class="text-[9px] sm:text-xs font-semibold tracking-wider text-brand-grey-muted block truncate">Kandivali West, Mumbai</span>
                 </div>
             </a>
 
             <nav class="hidden lg:flex items-center gap-5 text-sm font-semibold text-brand-grey-text">
-                <a href="#standards" class="hover:text-brand-brown transition-colors">The Standard</a>
-                <a href="#about" class="hover:text-brand-brown transition-colors">Meet Dr. Riddhi</a>
-                <a href="#catalogue" class="hover:text-brand-brown transition-colors">Treatments</a>
-                <a href="#credentials" class="hover:text-brand-brown transition-colors">Registrations</a>
-                <a href="#facilities" class="hover:text-brand-brown transition-colors">Amenities</a>
-                <a href="#faq" class="hover:text-brand-brown transition-colors">FAQs</a>
-                <a href="#location" class="hover:text-brand-brown transition-colors">Location</a>
+                <a href="#family-care" class="hover:text-brand-navy transition-colors">Family Care</a>
+                <a href="#catalogue" class="hover:text-brand-navy transition-colors">Treatments</a>
+                <a href="#about" class="hover:text-brand-navy transition-colors">Meet Dr. Riddhi</a>
+                <a href="#standards" class="hover:text-brand-navy transition-colors">The Standard</a>
+                <a href="#credentials" class="hover:text-brand-navy transition-colors">Registrations</a>
+                <a href="#faq" class="hover:text-brand-navy transition-colors">FAQs</a>
+                <a href="#location" class="hover:text-brand-navy transition-colors">Location</a>
             </nav>
 
             <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                <a href="https://maps.app.goo.gl/3sKwKPjG43PNeN6y7" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-1 bg-brand-beige hover:bg-brand-cardbeige text-brand-darkbrown px-3.5 py-2.5 rounded-xl font-bold text-xs transition-all border border-brand-border">
+                <a href="https://maps.app.goo.gl/3sKwKPjG43PNeN6y7" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-1 bg-brand-surface hover:bg-brand-cardbg text-brand-navy px-3.5 py-2.5 rounded-xl font-bold text-xs transition-all border border-brand-border">
                     📍 Directions
                 </a>
-                <a href="#book" class="inline-flex items-center gap-1 bg-brand-brown hover:bg-brand-hoverbrown text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md shadow-brand-brown/20 transition-all">
+                <a href="https://infinoradental.com/#book" class="inline-flex items-center gap-1 bg-brand-navy hover:bg-brand-hovernavy text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md transition-all">
                     <span>Consultation</span>
                 </a>
-                <a href="tel:+917304432681" class="hidden sm:inline-flex bg-brand-darkbrown hover:bg-brand-midbrown text-white px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-sm transition-all">
+                <a href="tel:+917304432681" class="hidden sm:inline-flex bg-brand-darknavy hover:bg-brand-midnavy text-white px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-sm transition-all">
                     +91 73044 32681
                 </a>
             </div>
@@ -101,31 +109,31 @@ import Layout from '../layouts/Layout.astro';
     <main class="w-full overflow-hidden pb-24 sm:pb-0">
 
         <!-- HERO SECTION -->
-        <section class="relative pt-8 pb-12 sm:pt-16 sm:pb-22 overflow-hidden bg-gradient-to-b from-brand-beige via-brand-lightbeige to-brand-offwhite w-full border-b border-brand-border">
+        <section class="relative pt-8 pb-12 sm:pt-16 sm:pb-20 overflow-hidden bg-gradient-to-b from-brand-surface via-brand-lightbg to-brand-offwhite w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                
+
                 <div class="lg:col-span-7 space-y-4 sm:space-y-6 text-left min-w-0">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-cardbeige border border-brand-border text-brand-darkbrown text-[11px] sm:text-xs font-bold tracking-wide uppercase max-w-full">
-                        <span class="w-2 h-2 rounded-full bg-brand-brown shrink-0"></span> 
-                        <span class="truncate">Kandivali West, Mumbai · Central Transit Hub · Specialist-Led</span>
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-cardbg border border-brand-border text-brand-navy text-[11px] sm:text-xs font-bold tracking-wide uppercase max-w-full">
+                        <span class="w-2 h-2 rounded-full bg-brand-navy shrink-0"></span>
+                        <span class="truncate">Kandivali West, Mumbai · Family &amp; Specialist Dentistry</span>
                     </div>
 
-                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-darkbrown leading-[1.12] break-words">
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-navy leading-[1.12] break-words">
                         Specialist-led dentistry. <br/>
-                        <span class="text-brand-brown">Thoughtfully delivered.</span>
+                        <span class="text-brand-lightnavy">Thoughtfully delivered.</span>
                     </h1>
 
                     <p class="text-sm sm:text-base text-brand-grey-text leading-relaxed max-w-2xl break-words">
-                        Infinora Dental Care is founded and guided directly by <strong>Dr. Riddhi Patel Shah</strong> (BDS University Gold Medalist, MDS Orthodontics & Dentofacial Orthopedics University Rank-Holder), verified active member of the <strong>Indian Orthodontic Society (IOS)</strong> and the <a href="https://dentist.ida.org.in/dentist/riddhi-kantilal-patel" target="_blank" rel="noopener" class="text-brand-brown font-bold underline hover:text-brand-darkbrown">Indian Dental Association (IDA Profile)</a>. Experience clinical precision in a calming, anxiety-free atmosphere designed for lifelong smile health.
+                        Infinora Dental Care is a welcoming family and specialist dental practice in Kandivali West, Mumbai, founded and led by <strong>Dr. Riddhi Patel Shah</strong> (BDS University Gold Medalist, MDS Orthodontics &amp; Dentofacial Orthopedics University Rank-Holder), active member of the <strong>Indian Orthodontic Society (IOS)</strong> and the <a href="https://dentist.ida.org.in/dentist/riddhi-kantilal-patel" target="_blank" rel="noopener" class="text-brand-navy font-bold underline hover:text-brand-hovernavy">Indian Dental Association (IDA Profile)</a>. Clinic timings are <strong>10:00 AM to 2:00 PM</strong> and <strong>Evening: 5:00 PM to 9:00 PM</strong>, with appointments taken strictly for <strong>3:00 PM to 5:00 PM</strong> (none other slots work for appointments).
                     </p>
 
                     <!-- Action CTAs -->
                     <div class="flex flex-col sm:flex-row gap-3 pt-2">
-                        <a href="#book" class="inline-flex items-center justify-center gap-2 bg-brand-brown hover:bg-brand-hoverbrown text-white font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-brand-brown/25 transition-all text-sm sm:text-base text-center">
-                            Reserve Consultation
+                        <a href="https://infinoradental.com/#book" class="inline-flex items-center justify-center gap-2 bg-brand-navy hover:bg-brand-hovernavy text-white font-bold px-7 py-3.5 rounded-xl shadow-lg transition-all text-sm sm:text-base text-center">
+                            Reserve Consultation (3:00 PM – 5:00 PM)
                             <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                         </a>
-                        <a href="https://maps.app.goo.gl/3sKwKPjG43PNeN6y7" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-brand-offwhite hover:bg-brand-beige border border-brand-border text-brand-darkbrown font-bold px-6 py-3.5 rounded-xl shadow-sm transition-all text-sm sm:text-base text-center">
+                        <a href="https://maps.app.goo.gl/3sKwKPjG43PNeN6y7" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-brand-offwhite hover:bg-brand-surface border border-brand-border text-brand-navy font-bold px-6 py-3.5 rounded-xl shadow-sm transition-all text-sm sm:text-base text-center">
                             📍 View Clinic Location
                         </a>
                     </div>
@@ -133,15 +141,15 @@ import Layout from '../layouts/Layout.astro';
                     <!-- Trust Badges -->
                     <div class="pt-4 grid grid-cols-3 gap-2 sm:gap-4 border-t border-brand-border">
                         <div class="p-3 bg-brand-offwhite rounded-xl border border-brand-border shadow-sm text-center sm:text-left min-w-0">
-                            <div class="text-xs sm:text-xl font-black text-brand-darkbrown truncate">Dr. Riddhi</div>
-                            <div class="text-[10px] sm:text-xs text-brand-grey-muted font-semibold truncate">Gold Medalist & MDS</div>
+                            <div class="text-xs sm:text-xl font-black text-brand-navy truncate">Dr. Riddhi</div>
+                            <div class="text-[10px] sm:text-xs text-brand-grey-muted font-semibold truncate">Gold Medalist &amp; MDS</div>
                         </div>
                         <div class="p-3 bg-brand-offwhite rounded-xl border border-brand-border shadow-sm text-center sm:text-left min-w-0">
-                            <div class="text-xs sm:text-xl font-black text-brand-darkbrown truncate">IOS & IDA</div>
+                            <div class="text-xs sm:text-xl font-black text-brand-navy truncate">IOS &amp; IDA</div>
                             <div class="text-[10px] sm:text-xs text-brand-grey-muted font-semibold truncate">Verified Specialist</div>
                         </div>
                         <div class="p-3 bg-brand-offwhite rounded-xl border border-brand-border shadow-sm text-center sm:text-left min-w-0">
-                            <div class="text-xs sm:text-xl font-black text-brand-darkbrown truncate">Class-B</div>
+                            <div class="text-xs sm:text-xl font-black text-brand-navy truncate">Class-B</div>
                             <div class="text-[10px] sm:text-xs text-brand-grey-muted font-semibold truncate">Hospital Sterilization</div>
                         </div>
                     </div>
@@ -151,13 +159,19 @@ import Layout from '../layouts/Layout.astro';
                 <div class="lg:col-span-5 relative w-full min-w-0" id="about">
                     <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-8 border border-brand-border shadow-xl space-y-4">
                         <div class="flex items-center gap-3.5 border-b border-brand-border pb-4">
-                            <div class="w-14 h-14 rounded-2xl bg-brand-cardbeige border border-brand-border flex items-center justify-center text-brand-brown font-black text-2xl shrink-0 shadow-inner">
-                                👩‍⚕️
+                            <div class="w-14 h-14 rounded-2xl bg-brand-surface border border-brand-border flex items-center justify-center shrink-0 overflow-hidden p-1.5">
+                                <img
+                                    src="/logo.svg"
+                                    alt="Infinora Dental Care Emblem"
+                                    width="44"
+                                    height="44"
+                                    class="w-full h-full object-contain"
+                                />
                             </div>
                             <div class="min-w-0">
-                                <h2 class="font-extrabold text-brand-darkbrown text-base sm:text-lg leading-tight truncate">Dr. Riddhi Patel Shah</h2>
-                                <p class="text-[11px] sm:text-xs text-brand-brown font-bold tracking-wide break-words">BDS Gold Medalist | MDS Orthodontics</p>
-                                <p class="text-[11px] text-brand-grey-muted font-medium">Founder & Lead Dental Surgeon</p>
+                                <h2 class="font-extrabold text-brand-navy text-base sm:text-lg leading-tight truncate">Dr. Riddhi Patel Shah</h2>
+                                <p class="text-[11px] sm:text-xs text-brand-lightnavy font-bold tracking-wide break-words">BDS Gold Medalist | MDS Orthodontics</p>
+                                <p class="text-[11px] text-brand-grey-muted font-medium">Founder &amp; Lead Dental Surgeon</p>
                             </div>
                         </div>
 
@@ -171,9 +185,9 @@ import Layout from '../layouts/Layout.astro';
                         </div>
 
                         <!-- Academic Honors List -->
-                        <div class="bg-brand-beige rounded-2xl p-4 border border-brand-border space-y-2 text-xs">
-                            <div class="font-bold text-brand-darkbrown text-[11px] uppercase tracking-wider">
-                                Academic Honors & Credentials
+                        <div class="bg-brand-surface rounded-2xl p-4 border border-brand-border space-y-2 text-xs">
+                            <div class="font-bold text-brand-navy text-[11px] uppercase tracking-wider">
+                                Academic Honors &amp; Credentials
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-brand-grey-text font-medium">
                                 <div class="flex items-center gap-1.5"><span class="text-brand-gold font-bold">★</span> Student of the Year (BDS)</div>
@@ -184,8 +198,8 @@ import Layout from '../layouts/Layout.astro';
                         </div>
 
                         <div class="pt-2 flex flex-wrap gap-2 text-[11px]">
-                            <span class="px-2.5 py-1 rounded-full bg-brand-cardbeige text-brand-darkbrown font-semibold">MSDC Reg: A-45674</span>
-                            <span class="px-2.5 py-1 rounded-full bg-brand-cardbeige text-brand-darkbrown font-semibold">7+ Years Experience</span>
+                            <span class="px-2.5 py-1 rounded-full bg-brand-cardbg text-brand-navy font-semibold">MSDC Reg: A-45674</span>
+                            <span class="px-2.5 py-1 rounded-full bg-brand-cardbg text-brand-navy font-semibold">7+ Years Experience</span>
                         </div>
                     </div>
                 </div>
@@ -193,73 +207,107 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
+        <!-- FAMILY DENTISTRY ACROSS EVERY STAGE OF LIFE -->
+        <section id="family-care" class="py-14 bg-brand-offwhite border-b border-brand-border w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
+                <div class="text-center max-w-3xl mx-auto space-y-2.5">
+                    <span class="text-brand-navy text-[10px] font-extrabold uppercase tracking-widest bg-brand-cardbg border border-brand-border px-3 py-1 rounded-full">
+                        Comprehensive Family Dentistry
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy">Care for Every Member of Your Family</h2>
+                    <p class="text-xs sm:text-sm text-brand-grey-muted leading-relaxed">
+                        One trusted Kandivali West clinic for routine checkups, preventive care, alignment, restorative dentistry, and NRI/teleconsultation guidance.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-2">
+                        <h3 class="font-extrabold text-brand-navy text-sm">Children &amp; Teens</h3>
+                        <p class="text-xs text-brand-grey-text leading-relaxed">Gentle first checkups, preventive sealants/fluoride, age-7 orthodontic screening, and braces or aligners for growing smiles.</p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-2">
+                        <h3 class="font-extrabold text-brand-navy text-sm">Adults &amp; Working Professionals</h3>
+                        <p class="text-xs text-brand-grey-text leading-relaxed">Discreet aligners/braces, root canals, crowns, tooth-colored fillings, gum care, and clinic hours at 10:00 AM–2:00 PM and 5:00 PM–9:00 PM.</p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-2">
+                        <h3 class="font-extrabold text-brand-navy text-sm">Seniors &amp; Complex Needs</h3>
+                        <p class="text-xs text-brand-grey-text leading-relaxed">Tooth replacement with implants or dentures/bridges, periodontal care, ground-level access, and individualized full-mouth planning.</p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-2">
+                        <h3 class="font-extrabold text-brand-navy text-sm">NRI &amp; Video Consultations</h3>
+                        <p class="text-xs text-brand-grey-text leading-relaxed">Initial teleconsultation / video opinion options and coordinated scheduling for visiting NRIs and out-of-town families.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- STATUTORY REGISTRATIONS & ACCREDITATIONS (ABDM & MSDC) -->
-        <section id="credentials" class="py-12 bg-brand-offwhite border-b border-brand-border w-full">
+        <section id="credentials" class="py-12 bg-brand-surface border-b border-brand-border w-full">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
                 <div class="text-center space-y-2 max-w-2xl mx-auto">
-                    <span class="text-brand-brown text-[10px] font-extrabold uppercase tracking-widest bg-brand-cardbeige border border-brand-border px-3 py-1 rounded-full">
-                        Statutory Registrations & Transparencies
+                    <span class="text-brand-navy text-[10px] font-extrabold uppercase tracking-widest bg-brand-cardbg border border-brand-border px-3 py-1 rounded-full">
+                        Statutory Registrations &amp; Transparencies
                     </span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-darkbrown">Verified Regulatory Governance</h2>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy">Verified Regulatory Governance</h2>
                     <p class="text-xs sm:text-sm text-brand-grey-muted leading-relaxed">
                         Infinora Dental Care complies fully with the statutory directives of state dental councils and the National Health Authority's Ayushman Bharat Digital Mission.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-                    
+
                     <!-- Card 1: MSDC & IDA -->
-                    <div class="p-6 rounded-2xl bg-brand-beige border border-brand-border hover:border-brand-brown transition-all space-y-3 flex flex-col justify-between shadow-sm">
+                    <div class="p-6 rounded-2xl bg-brand-offwhite border border-brand-border hover:border-brand-navy transition-all space-y-3 flex flex-col justify-between shadow-sm">
                         <div class="space-y-2">
                             <div class="flex items-center gap-2.5">
-                                <span class="text-brand-brown text-2xl font-bold">🏛️</span>
-                                <h3 class="font-extrabold text-brand-darkbrown text-sm">State Council & Associations</h3>
+                                <span class="text-brand-navy text-2xl font-bold">🏛️</span>
+                                <h3 class="font-extrabold text-brand-navy text-sm">State Council &amp; Associations</h3>
                             </div>
                             <p class="text-xs text-brand-grey-text leading-relaxed">
-                                Officially registered under the <strong>Maharashtra State Dental Council</strong> (Registration No: <strong class="text-brand-darkbrown">A-45674</strong>). Verified member of the <strong>Indian Orthodontic Society (IOS)</strong> and the <a href="https://dentist.ida.org.in/dentist/riddhi-kantilal-patel" target="_blank" rel="noopener" class="text-brand-brown font-bold underline hover:text-brand-darkbrown">Indian Dental Association (IDA)</a>.
+                                Officially registered under the <strong>Maharashtra State Dental Council</strong> (Registration No: <strong class="text-brand-navy">A-45674</strong>). Verified member of the <strong>Indian Orthodontic Society (IOS)</strong> and the <a href="https://dentist.ida.org.in/dentist/riddhi-kantilal-patel" target="_blank" rel="noopener" class="text-brand-navy font-bold underline hover:text-brand-hovernavy">Indian Dental Association (IDA)</a>.
                             </p>
                         </div>
                         <div class="pt-3 border-t border-brand-border flex flex-wrap gap-3">
-                            <a href="https://msdcmumbai.in/QR_Verfy.aspx?auth=57d7f7fc-a30e-4fb8-95c1-1f4f163010bc" target="_blank" rel="noopener" class="text-brand-brown hover:text-brand-darkbrown font-extrabold text-xs inline-flex items-center gap-1">
+                            <a href="https://msdcmumbai.in/QR_Verfy.aspx?auth=57d7f7fc-a30e-4fb8-95c1-1f4f163010bc" target="_blank" rel="noopener" class="text-brand-navy hover:text-brand-hovernavy font-extrabold text-xs inline-flex items-center gap-1">
                                 Verify MSDC License →
                             </a>
-                            <a href="https://dentist.ida.org.in/dentist/riddhi-kantilal-patel" target="_blank" rel="noopener" class="text-brand-brown hover:text-brand-darkbrown font-extrabold text-xs inline-flex items-center gap-1">
+                            <a href="https://dentist.ida.org.in/dentist/riddhi-kantilal-patel" target="_blank" rel="noopener" class="text-brand-navy hover:text-brand-hovernavy font-extrabold text-xs inline-flex items-center gap-1">
                                 View IDA Directory Entry →
                             </a>
                         </div>
                     </div>
 
                     <!-- Card 2: ABDM Health Facility (HFR) -->
-                    <div class="p-6 rounded-2xl bg-brand-beige border border-brand-border hover:border-brand-brown transition-all space-y-3 flex flex-col justify-between shadow-sm">
+                    <div class="p-6 rounded-2xl bg-brand-offwhite border border-brand-border hover:border-brand-navy transition-all space-y-3 flex flex-col justify-between shadow-sm">
                         <div class="space-y-2">
                             <div class="flex items-center gap-2.5">
-                                <span class="text-brand-brown text-2xl font-bold">🏥</span>
-                                <h3 class="font-extrabold text-brand-darkbrown text-sm">Ayushman Bharat Facility Registry</h3>
+                                <span class="text-brand-navy text-2xl font-bold">🏥</span>
+                                <h3 class="font-extrabold text-brand-navy text-sm">Ayushman Bharat Facility Registry</h3>
                             </div>
                             <p class="text-xs text-brand-grey-text leading-relaxed">
                                 Verified under the Health Facility Registry (HFR) managed by the <strong>National Health Authority (NHA)</strong>, Government of India.
                             </p>
-                            <p class="text-xs text-brand-darkbrown font-semibold">Facility ID: <span class="font-mono text-brand-brown break-all">IN2710085962</span></p>
+                            <p class="text-xs text-brand-navy font-semibold">Facility ID: <span class="font-mono text-brand-lightnavy break-all">IN2710085962</span></p>
                         </div>
                         <div class="pt-3 border-t border-brand-border text-[11px] text-brand-grey-muted font-medium flex items-center gap-1">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Validated Digital Health Facility
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Validated Digital Health Facility
                         </div>
                     </div>
 
                     <!-- Card 3: ABDM Healthcare Professional (HPR) -->
-                    <div class="p-6 rounded-2xl bg-brand-beige border border-brand-border hover:border-brand-brown transition-all space-y-3 flex flex-col justify-between shadow-sm">
+                    <div class="p-6 rounded-2xl bg-brand-offwhite border border-brand-border hover:border-brand-navy transition-all space-y-3 flex flex-col justify-between shadow-sm">
                         <div class="space-y-2">
                             <div class="flex items-center gap-2.5">
-                                <span class="text-brand-brown text-2xl font-bold">👩‍⚕️</span>
-                                <h3 class="font-extrabold text-brand-darkbrown text-sm">Ayushman Bharat Professional (HPR)</h3>
+                                <span class="text-brand-navy text-2xl font-bold">👩‍⚕️</span>
+                                <h3 class="font-extrabold text-brand-navy text-sm">Ayushman Bharat Professional (HPR)</h3>
                             </div>
                             <p class="text-xs text-brand-grey-text leading-relaxed">
-                                Registered on the Healthcare Professional Registry (HPR) under the <strong>National Health Authority & Dental Council of India</strong>.
+                                Registered on the Healthcare Professional Registry (HPR) under the <strong>National Health Authority &amp; Dental Council of India</strong>.
                             </p>
-                            <p class="text-xs text-brand-darkbrown font-semibold">Professional ID: <span class="font-mono text-brand-brown break-all">71-8554-8443-4346</span></p>
+                            <p class="text-xs text-brand-navy font-semibold">Professional ID: <span class="font-mono text-brand-lightnavy break-all">71-8554-8443-4346</span></p>
                         </div>
                         <div class="pt-3 border-t border-brand-border text-[11px] text-brand-grey-muted font-medium flex items-center gap-1">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Dr. Riddhi Patel · Verified Practitioner
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Dr. Riddhi Patel · Verified Practitioner
                         </div>
                     </div>
 
@@ -268,13 +316,13 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <!-- THE INFINORA STANDARD: OPERATIONAL PILLARS -->
-        <section id="standards" class="py-16 bg-brand-beige w-full border-b border-brand-border">
+        <section id="standards" class="py-16 bg-brand-offwhite w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-                    <span class="text-brand-brown text-xs font-extrabold tracking-widest uppercase bg-brand-cardbeige border border-brand-border px-3.5 py-1 rounded-full">
+                    <span class="text-brand-navy text-xs font-extrabold tracking-widest uppercase bg-brand-cardbg border border-brand-border px-3.5 py-1 rounded-full">
                         Our Operational Core
                     </span>
-                    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-brand-darkbrown">
+                    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-brand-navy">
                         The Infinora Standard
                     </h2>
                     <p class="text-brand-grey-muted text-sm sm:text-base">
@@ -283,50 +331,50 @@ import Layout from '../layouts/Layout.astro';
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    
-                    <div class="bg-brand-offwhite p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-brown transition-all">
-                        <div class="text-2xl font-black text-brand-brown">01</div>
-                        <h3 class="font-extrabold text-brand-darkbrown text-base">Specialist-Led Treatment</h3>
+
+                    <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
+                        <div class="text-2xl font-black text-brand-navy">01</div>
+                        <h3 class="font-extrabold text-brand-navy text-base">Specialist-Led Treatment</h3>
                         <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
                             Treatments are diagnosed, planned, and executed directly by master-degree holding specialists (MDS) rather than generalized practitioners.
                         </p>
                     </div>
 
-                    <div class="bg-brand-offwhite p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-brown transition-all">
-                        <div class="text-2xl font-black text-brand-brown">02</div>
-                        <h3 class="font-extrabold text-brand-darkbrown text-base">Root-Cause Diagnosis</h3>
+                    <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
+                        <div class="text-2xl font-black text-brand-navy">02</div>
+                        <h3 class="font-extrabold text-brand-navy text-base">Root-Cause Diagnosis</h3>
                         <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
                             We analyze systemic bite relationships, bone architecture, and soft tissue health rather than offering superficial short-term patches.
                         </p>
                     </div>
 
-                    <div class="bg-brand-offwhite p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-brown transition-all">
-                        <div class="text-2xl font-black text-brand-brown">03</div>
-                        <h3 class="font-extrabold text-brand-darkbrown text-base">Transparent Written Roadmaps</h3>
+                    <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
+                        <div class="text-2xl font-black text-brand-navy">03</div>
+                        <h3 class="font-extrabold text-brand-navy text-base">Transparent Written Roadmaps</h3>
                         <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
                             Patients receive clear, itemized treatment pathways and complete fee clarity prior to the commencement of any procedure.
                         </p>
                     </div>
 
-                    <div class="bg-brand-offwhite p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-brown transition-all">
-                        <div class="text-2xl font-black text-brand-brown">04</div>
-                        <h3 class="font-extrabold text-brand-darkbrown text-base">Digital Low-Radiation Diagnostics</h3>
+                    <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
+                        <div class="text-2xl font-black text-brand-navy">04</div>
+                        <h3 class="font-extrabold text-brand-navy text-base">Digital Low-Radiation Diagnostics</h3>
                         <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
                             Ultra-low radiation digital radiovisiography (RVG), high-definition intraoral cameras, and 3D optical measurements eliminate guesswork.
                         </p>
                     </div>
 
-                    <div class="bg-brand-offwhite p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-brown transition-all">
-                        <div class="text-2xl font-black text-brand-brown">05</div>
-                        <h3 class="font-extrabold text-brand-darkbrown text-base">Hospital-Grade Sterilization</h3>
+                    <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
+                        <div class="text-2xl font-black text-brand-navy">05</div>
+                        <h3 class="font-extrabold text-brand-navy text-base">Hospital-Grade Sterilization</h3>
                         <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
                             Class-B autoclave sterilization, vacuum-sealed surgical pouches opened chairside, and chemical monitoring ensure zero cross-contamination.
                         </p>
                     </div>
 
-                    <div class="bg-brand-offwhite p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-brown transition-all">
-                        <div class="text-2xl font-black text-brand-brown">06</div>
-                        <h3 class="font-extrabold text-brand-darkbrown text-base">Long-Term Continuity</h3>
+                    <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
+                        <div class="text-2xl font-black text-brand-navy">06</div>
+                        <h3 class="font-extrabold text-brand-navy text-base">Long-Term Continuity</h3>
                         <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
                             Comprehensive post-treatment recall schedules, retainer reviews, and preventive hygiene visits protect your investment for decades.
                         </p>
@@ -337,51 +385,51 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <!-- BRAND PHILOSOPHY: FIXING SMILE DESIGN -->
-        <section id="smile-design" class="py-16 bg-brand-offwhite w-full border-b border-brand-border">
+        <section id="smile-design" class="py-16 bg-brand-surface w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                    
+
                     <div class="lg:col-span-6 space-y-5 min-w-0">
-                        <span class="text-brand-brown text-xs font-extrabold tracking-widest uppercase bg-brand-cardbeige border border-brand-border px-3.5 py-1 rounded-full">
+                        <span class="text-brand-navy text-xs font-extrabold tracking-widest uppercase bg-brand-cardbg border border-brand-border px-3.5 py-1 rounded-full">
                             Brand Philosophy
                         </span>
-                        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-brand-darkbrown">
+                        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-brand-navy">
                             Fixing Smile Design: Where Orthodontics Meets Facial Harmony
                         </h2>
                         <p class="text-brand-grey-text text-sm sm:text-base leading-relaxed">
-                            At Infinora Dental Care, <strong>"Fixing Smile Design"</strong> represents our signature clinical philosophy: a beautiful smile is never achieved by merely straightening front teeth in isolation. It requires balancing dental arches with resting lip curvature, chin projection, and natural facial proportions.
+                            At Infinora Dental Care, <strong>"Fixing Smile Design"</strong> represents our signature clinical philosophy: a balanced smile is never achieved by moving teeth in isolation. It requires harmonizing dental arches, bite function, lip support, and natural facial proportions—tailored to each individual's clinical assessment without promising fixed outcomes or timelines.
                         </p>
 
                         <div class="space-y-3 text-xs sm:text-sm text-brand-grey-text">
                             <div class="flex items-start gap-2.5">
-                                <span class="text-brand-brown font-bold text-base shrink-0">✓</span>
+                                <span class="text-brand-navy font-bold text-base shrink-0">✓</span>
                                 <div><strong>Facial Proportion Mapping:</strong> Harmonizing incisal exposure, buccal corridors, and smile arc curvature with facial symmetry.</div>
                             </div>
                             <div class="flex items-start gap-2.5">
-                                <span class="text-brand-brown font-bold text-base shrink-0">✓</span>
-                                <div><strong>Precision Aligners & Ceramic Braces:</strong> Custom-designed transparent aligners and discrete ceramic brackets suited for busy professionals.</div>
+                                <span class="text-brand-navy font-bold text-base shrink-0">✓</span>
+                                <div><strong>Precision Aligners &amp; Braces:</strong> Custom-designed transparent aligners and metal, ceramic, or self-ligating braces planned around bite stability.</div>
                             </div>
                             <div class="flex items-start gap-2.5">
-                                <span class="text-brand-brown font-bold text-base shrink-0">✓</span>
-                                <div><strong>Periodontal & Root Preservation:</strong> Calculating biological limits to prevent root resorption and gum recession during orthodontic tooth movement.</div>
+                                <span class="text-brand-navy font-bold text-base shrink-0">✓</span>
+                                <div><strong>Periodontal &amp; Root Preservation:</strong> Respecting biological limits to help protect root integrity, gum health, and bite function.</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="lg:col-span-6 bg-brand-darkbrown text-brand-beige rounded-3xl p-6 sm:p-8 space-y-5 border border-brand-midbrown shadow-xl">
-                        <h3 class="text-lg sm:text-xl font-extrabold text-white">Who Benefits from Fixing Smile Design?</h3>
+                    <div class="lg:col-span-6 bg-brand-navy text-brand-surface rounded-3xl p-6 sm:p-8 space-y-5 border border-brand-midnavy shadow-xl">
+                        <h3 class="text-lg sm:text-xl font-extrabold text-white">Who Benefits from Fixing Smile Design &amp; Comprehensive Care?</h3>
                         <div class="space-y-3.5 text-xs sm:text-sm">
-                            <div class="p-4 rounded-2xl bg-brand-midbrown/80 border border-brand-brown space-y-1">
-                                <div class="font-bold text-brand-gold">Working Professionals & Executives</div>
-                                <p class="text-brand-border text-xs leading-relaxed">Low-profile aligners and discrete ceramic solutions that fit demanding public-facing schedules seamlessly.</p>
+                            <div class="p-4 rounded-2xl bg-brand-midnavy border border-brand-lightnavy space-y-1">
+                                <div class="font-bold text-brand-gold">Working Professionals &amp; Executives</div>
+                                <p class="text-brand-border text-xs leading-relaxed">Discreet aligners, ceramic/self-ligating braces, and clinic hours at 10:00 AM–2:00 PM &amp; 5:00 PM–9:00 PM (3:00 PM–5:00 PM appointments).</p>
                             </div>
-                            <div class="p-4 rounded-2xl bg-brand-midbrown/80 border border-brand-brown space-y-1">
-                                <div class="font-bold text-brand-gold">Teens & Young Students</div>
-                                <p class="text-brand-border text-xs leading-relaxed">Interceptive growth guidance, correcting jaw discrepancies early to support healthy breathing, speech, and jaw mechanics.</p>
+                            <div class="p-4 rounded-2xl bg-brand-midnavy border border-brand-lightnavy space-y-1">
+                                <div class="font-bold text-brand-gold">Teens, Children &amp; Young Students</div>
+                                <p class="text-brand-border text-xs leading-relaxed">Preventive checkups, interceptive growth guidance, and orthodontic evaluation to support healthy jaw and bite development.</p>
                             </div>
-                            <div class="p-4 rounded-2xl bg-brand-midbrown/80 border border-brand-brown space-y-1">
-                                <div class="font-bold text-brand-gold">Adults Seeking Functional Reconstruction</div>
-                                <p class="text-brand-border text-xs leading-relaxed">Rehabilitating collapsed bites, deep overbites, and worn teeth prior to implant placement or cosmetic veneer restoration.</p>
+                            <div class="p-4 rounded-2xl bg-brand-midnavy border border-brand-lightnavy space-y-1">
+                                <div class="font-bold text-brand-gold">Adults &amp; Seniors Seeking Functional Reconstruction</div>
+                                <p class="text-brand-border text-xs leading-relaxed">Individualized evaluation and full-mouth rehabilitation, implants, crowns, bridges, and restorative care for worn or missing teeth.</p>
                             </div>
                         </div>
                     </div>
@@ -390,217 +438,217 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <!-- MULTISPECIALITY TREATMENT CATALOGUE -->
-        <section id="catalogue" class="py-16 bg-brand-beige w-full border-b border-brand-border">
+        <!-- MULTISPECIALITY TREATMENT CATALOGUE (HIGH-VALUE & FAMILY TREATMENTS) -->
+        <section id="catalogue" class="py-16 bg-brand-offwhite w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-                    <span class="text-brand-brown text-xs font-extrabold tracking-widest uppercase bg-brand-cardbeige border border-brand-border px-3.5 py-1 rounded-full">
-                        Multispeciality Spectrum
+                    <span class="text-brand-navy text-xs font-extrabold tracking-widest uppercase bg-brand-cardbg border border-brand-border px-3.5 py-1 rounded-full">
+                        High-Value &amp; Family Dentistry
                     </span>
-                    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-brand-darkbrown">
+                    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-brand-navy">
                         Comprehensive Clinical Treatments
                     </h2>
                     <p class="text-brand-grey-muted text-sm sm:text-base leading-relaxed">
-                        Ethical, specialist-delivered oral care spanning preventive, restorative, and aesthetic procedures.
+                        Ethical, specialist-led care across orthodontics, implants, full-mouth rehabilitation, restorative treatments, and family dentistry—planned after clinical evaluation.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    
+
                     <!-- 1. Orthodontics & Braces -->
-                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-brown transition-all">
+                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
                             <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-beige text-brand-darkbrown flex items-center justify-center text-xl font-bold">✨</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbeige text-brand-darkbrown px-2.5 py-1 rounded-full border border-brand-border">MDS Orthodontics</span>
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">01</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Priority 1 · MDS Orthodontics</span>
                             </div>
                             <div>
-                                <h3 class="text-lg font-extrabold text-brand-darkbrown">Orthodontics & Precision Braces</h3>
-                                <p class="text-xs text-brand-brown font-semibold mt-0.5">Ceramic, Metal & Self-Ligating Systems</p>
+                                <h3 class="text-lg font-extrabold text-brand-navy">Orthodontics &amp; Precision Braces</h3>
+                                <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Metal, Ceramic &amp; Self-Ligating Systems</p>
                             </div>
                             <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                                Specialist management of dental crowding, spacing, and jaw discrepancies using advanced low-friction brackets engineered for minimal discomfort.
+                                Specialist assessment and treatment for crowding, spacing, and bite/jaw discrepancies in children, teens, and adults, with suitability and timelines determined after diagnostic evaluation.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border">
-                            <button type="button" onclick="selectService('Braces')" class="w-full text-center py-2.5 rounded-xl bg-brand-beige hover:bg-brand-cardbeige text-brand-darkbrown text-xs font-bold block transition-colors border border-brand-border cursor-pointer">
+                            <button type="button" onclick="selectService('Braces')" class="w-full text-center py-2.5 rounded-xl bg-brand-navy hover:bg-brand-hovernavy text-white text-xs font-bold block transition-colors cursor-pointer">
                                 Book Braces Consultation →
                             </button>
                         </div>
                     </div>
 
                     <!-- 2. Clear Aligners & Invisalign -->
-                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-brown transition-all">
+                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
                             <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-beige text-brand-darkbrown flex items-center justify-center text-xl font-bold">💎</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbeige text-brand-darkbrown px-2.5 py-1 rounded-full border border-brand-border">Aligner Specialist</span>
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">02</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Priority 1 · Clear Aligners</span>
                             </div>
                             <div>
-                                <h3 class="text-lg font-extrabold text-brand-darkbrown">Clear Aligners & Invisalign</h3>
-                                <p class="text-xs text-brand-brown font-semibold mt-0.5">Virtually Invisible Aesthetic Alignment</p>
+                                <h3 class="text-lg font-extrabold text-brand-navy">Clear Aligners &amp; Invisalign</h3>
+                                <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Removable Alignment &amp; Bite Assessment</p>
                             </div>
                             <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                                Custom-designed transparent aligners providing discrete tooth movement with zero food restrictions and effortless oral hygiene maintenance.
+                                Custom-planned removable aligner options for eligible alignment and bite cases, including wear-time discipline, retention requirements, and clinical suitability checks.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border">
-                            <button type="button" onclick="selectService('Clear Aligners')" class="w-full text-center py-2.5 rounded-xl bg-brand-beige hover:bg-brand-cardbeige text-brand-darkbrown text-xs font-bold block transition-colors border border-brand-border cursor-pointer">
-                                Schedule Aligner Scan →
+                            <button type="button" onclick="selectService('Clear Aligners')" class="w-full text-center py-2.5 rounded-xl bg-brand-navy hover:bg-brand-hovernavy text-white text-xs font-bold block transition-colors cursor-pointer">
+                                Schedule Aligner Consultation →
                             </button>
                         </div>
                     </div>
 
-                    <!-- 3. Root Canal Treatment -->
-                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-brown transition-all">
+                    <!-- 3. Dental Implants -->
+                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
                             <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-beige text-brand-darkbrown flex items-center justify-center text-xl font-bold">🦷</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbeige text-brand-darkbrown px-2.5 py-1 rounded-full border border-brand-border">Micro-Endodontics</span>
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">03</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Priority 2 · Tooth Replacement</span>
                             </div>
                             <div>
-                                <h3 class="text-lg font-extrabold text-brand-darkbrown">Root Canal Treatment (RCT)</h3>
-                                <p class="text-xs text-brand-brown font-semibold mt-0.5">Rotary Micro-Instrumentation + Zirconia Crown</p>
+                                <h3 class="text-lg font-extrabold text-brand-navy">Dental Implants &amp; Prosthetic Care</h3>
+                                <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Single, Multiple &amp; Implant-Supported Options</p>
                             </div>
                             <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                                Painless removal of deep pulpal infections using apex locators and nickel-titanium rotary files, finished with durable ceramic crowns.
+                                Tooth replacement planning for missing teeth following bone, gum, and bite evaluation, outlining staged timelines, healing/aftercare, and follow-up maintenance without fixed guarantees.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border">
-                            <button type="button" onclick="selectService('Root Canal')" class="w-full text-center py-2.5 rounded-xl bg-brand-beige hover:bg-brand-cardbeige text-brand-darkbrown text-xs font-bold block transition-colors border border-brand-border cursor-pointer">
-                                Book Pain-Relief Visit →
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- 4. Dental Implants -->
-                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-brown transition-all">
-                        <div class="space-y-3.5">
-                            <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-beige text-brand-darkbrown flex items-center justify-center text-xl font-bold">🔩</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbeige text-brand-darkbrown px-2.5 py-1 rounded-full border border-brand-border">MDS Oral Surgery</span>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-extrabold text-brand-darkbrown">Dental Implants & All-on-4/6</h3>
-                                <p class="text-xs text-brand-brown font-semibold mt-0.5">Titanium Fixtures · Permanent Replacement</p>
-                            </div>
-                            <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                                Biocompatible titanium implants replacing lost roots to preserve jawbone volume and restore authentic chewing efficiency without damaging adjacent teeth.
-                            </p>
-                        </div>
-                        <div class="pt-4 border-t border-brand-border">
-                            <button type="button" onclick="selectService('Dental Implants')" class="w-full text-center py-2.5 rounded-xl bg-brand-beige hover:bg-brand-cardbeige text-brand-darkbrown text-xs font-bold block transition-colors border border-brand-border cursor-pointer">
+                            <button type="button" onclick="selectService('Dental Implants')" class="w-full text-center py-2.5 rounded-xl bg-brand-navy hover:bg-brand-hovernavy text-white text-xs font-bold block transition-colors cursor-pointer">
                                 Consult for Implants →
                             </button>
                         </div>
                     </div>
 
-                    <!-- 5. Bespoke Porcelain Veneers -->
-                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-brown transition-all">
+                    <!-- 4. Full-Mouth Rehabilitation -->
+                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
                             <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-beige text-brand-darkbrown flex items-center justify-center text-xl font-bold">🌟</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbeige text-brand-darkbrown px-2.5 py-1 rounded-full border border-brand-border">Prosthodontics</span>
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">04</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Priority 3 · Full-Mouth Rehab</span>
                             </div>
                             <div>
-                                <h3 class="text-lg font-extrabold text-brand-darkbrown">Bespoke Veneers & Smile Makeovers</h3>
-                                <p class="text-xs text-brand-brown font-semibold mt-0.5">E.max Porcelain Laminates & Bonding</p>
+                                <h3 class="text-lg font-extrabold text-brand-navy">Full-Mouth Rehabilitation</h3>
+                                <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Bite, Functional &amp; Multi-Tooth Restoration</p>
                             </div>
                             <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                                Ultra-thin porcelain facings designed to permanently rectify severe discolouration, edge chipping, and enamel irregularities with minimal tooth preparation.
+                                Comprehensive assessment of worn, missing, or broken teeth and bite mechanics, combining crowns, bridges, implants, or orthodontic care as indicated—with plans and durations tailored per patient.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border">
-                            <button type="button" onclick="selectService('Smile Design')" class="w-full text-center py-2.5 rounded-xl bg-brand-beige hover:bg-brand-cardbeige text-brand-darkbrown text-xs font-bold block transition-colors border border-brand-border cursor-pointer">
-                                Reserve Smile Assessment →
+                            <button type="button" onclick="selectService('Smile Design')" class="w-full text-center py-2.5 rounded-xl bg-brand-navy hover:bg-brand-hovernavy text-white text-xs font-bold block transition-colors cursor-pointer">
+                                Request Rehabilitation Assessment →
                             </button>
                         </div>
                     </div>
 
-                    <!-- 6. Pediatric & Kids Care -->
-                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-brown transition-all">
+                    <!-- 5. Root Canal Treatment -->
+                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
                             <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-beige text-brand-darkbrown flex items-center justify-center text-xl font-bold">🧸</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbeige text-brand-darkbrown px-2.5 py-1 rounded-full border border-brand-border">MDS Pedodontics</span>
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">05</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Priority 4 · Restorative RCT</span>
                             </div>
                             <div>
-                                <h3 class="text-lg font-extrabold text-brand-darkbrown">Pediatric & Preventive Dentistry</h3>
-                                <p class="text-xs text-brand-brown font-semibold mt-0.5">Gentle Care · Interceptive Habit Correction</p>
+                                <h3 class="text-lg font-extrabold text-brand-navy">Root Canal Treatment (RCT)</h3>
+                                <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Rotary Instrumentation &amp; Crown Protection</p>
                             </div>
                             <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                                Anxiety-free dental experiences for children, focusing on pit and fissure sealants, fluoride treatments, and monitoring early dental eruption.
+                                Focused endodontic care to relieve tooth pain and preserve natural teeth with deep decay or infection, followed by post-treatment care and crown/restoration planning as needed.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border">
-                            <button type="button" onclick="selectService('Pediatric')" class="w-full text-center py-2.5 rounded-xl bg-brand-beige hover:bg-brand-cardbeige text-brand-darkbrown text-xs font-bold block transition-colors border border-brand-border cursor-pointer">
-                                Book Child Visit →
+                            <button type="button" onclick="selectService('Root Canal')" class="w-full text-center py-2.5 rounded-xl bg-brand-navy hover:bg-brand-hovernavy text-white text-xs font-bold block transition-colors cursor-pointer">
+                                Book Pain-Relief Visit →
                             </button>
                         </div>
                     </div>
 
-                    <!-- 7. Laser Periodontics & Gum Care -->
-                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-brown transition-all">
+                    <!-- 6. Crowns, Bridges, Fillings & Restorative -->
+                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
                             <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-beige text-brand-darkbrown flex items-center justify-center text-xl font-bold">🛡️</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbeige text-brand-darkbrown px-2.5 py-1 rounded-full border border-brand-border">MDS Periodontics</span>
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">06</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Priority 4 · Restorative &amp; Prostho</span>
                             </div>
                             <div>
-                                <h3 class="text-lg font-extrabold text-brand-darkbrown">Laser Gum Therapy & Deep Scaling</h3>
-                                <p class="text-xs text-brand-brown font-semibold mt-0.5">Ultrasonic Scaling · Soft-Tissue Laser</p>
+                                <h3 class="text-lg font-extrabold text-brand-navy">Crowns, Bridges, Fillings &amp; Veneers</h3>
+                                <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Tooth-Colored Fillings, Ceramic Crowns &amp; Bonding</p>
                             </div>
                             <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                                Treatment of bleeding gums, deep periodontal pockets, and gum inflammation using gentle ultrasonic scalers and soft-tissue dental lasers.
+                                Restoring decayed, chipped, or missing teeth with fillings, dental crowns, bridges, bonding, and veneers tailored to tooth structure, bite forces, and longevity considerations.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border">
-                            <button type="button" onclick="selectService('General Dental Checkup')" class="w-full text-center py-2.5 rounded-xl bg-brand-beige hover:bg-brand-cardbeige text-brand-darkbrown text-xs font-bold block transition-colors border border-brand-border cursor-pointer">
-                                Book Gum Therapy →
+                            <button type="button" onclick="selectService('General Dental Checkup')" class="w-full text-center py-2.5 rounded-xl bg-brand-navy hover:bg-brand-hovernavy text-white text-xs font-bold block transition-colors cursor-pointer">
+                                Book Restorative Checkup →
                             </button>
                         </div>
                     </div>
 
-                    <!-- 8. Wisdom Tooth Oral Surgery -->
-                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-brown transition-all">
+                    <!-- 7. Pediatric & Family Preventive Care -->
+                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
                             <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-beige text-brand-darkbrown flex items-center justify-center text-xl font-bold">⚕️</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbeige text-brand-darkbrown px-2.5 py-1 rounded-full border border-brand-border">Oral Surgery</span>
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">07</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Priority 5 · Family &amp; Kids</span>
                             </div>
                             <div>
-                                <h3 class="text-lg font-extrabold text-brand-darkbrown">Wisdom Tooth & Impaction Care</h3>
-                                <p class="text-xs text-brand-brown font-semibold mt-0.5">Atraumatic Extraction Under Local Anesthesia</p>
+                                <h3 class="text-lg font-extrabold text-brand-navy">Pediatric, Adult &amp; Senior Family Care</h3>
+                                <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Routine Exams, Preventive Care &amp; Sealants</p>
                             </div>
                             <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                                Gentle, surgical extraction of impacted third molars causing localized swelling, trismus (jaw stiffness), or damage to adjacent molars.
+                                Routine dental examinations, oral hygiene guidance, pediatric checkups, and preventive care for children, working adults, and older family members.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border">
-                            <button type="button" onclick="selectService('Wisdom Tooth')" class="w-full text-center py-2.5 rounded-xl bg-brand-beige hover:bg-brand-cardbeige text-brand-darkbrown text-xs font-bold block transition-colors border border-brand-border cursor-pointer">
-                                Consult for Extraction →
+                            <button type="button" onclick="selectService('Pediatric')" class="w-full text-center py-2.5 rounded-xl bg-brand-navy hover:bg-brand-hovernavy text-white text-xs font-bold block transition-colors cursor-pointer">
+                                Book Family or Child Visit →
                             </button>
                         </div>
                     </div>
 
-                    <!-- 9. Teeth Whitening & Polishing -->
-                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-brown transition-all">
+                    <!-- 8. Gum Health & Wisdom Tooth Surgery -->
+                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
                             <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-beige text-brand-darkbrown flex items-center justify-center text-xl font-bold">✨</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbeige text-brand-darkbrown px-2.5 py-1 rounded-full border border-brand-border">Aesthetics</span>
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">08</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Periodontics &amp; Oral Surgery</span>
                             </div>
                             <div>
-                                <h3 class="text-lg font-extrabold text-brand-darkbrown">Teeth Whitening & Enamel Polishing</h3>
-                                <p class="text-xs text-brand-brown font-semibold mt-0.5">Enamel-Safe In-Clinic Bleaching</p>
+                                <h3 class="text-lg font-extrabold text-brand-navy">Gum Care &amp; Wisdom Tooth Surgery</h3>
+                                <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Scaling, Periodontal Care &amp; Extractions</p>
                             </div>
                             <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                                Professional whitening treatments reversing years of coffee, tea, and aging stains safely without compromising tooth enamel sensitivity.
+                                Scaling, gum health management, and wisdom tooth or tooth extractions with clear pre-procedure assessment, aftercare steps, and recovery guidance.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border">
-                            <button type="button" onclick="selectService('General Dental Checkup')" class="w-full text-center py-2.5 rounded-xl bg-brand-beige hover:bg-brand-cardbeige text-brand-darkbrown text-xs font-bold block transition-colors border border-brand-border cursor-pointer">
-                                Book Whitening Session →
+                            <button type="button" onclick="selectService('Wisdom Tooth')" class="w-full text-center py-2.5 rounded-xl bg-brand-navy hover:bg-brand-hovernavy text-white text-xs font-bold block transition-colors cursor-pointer">
+                                Consult for Gum or Extraction Care →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 9. Teeth Whitening & Teleconsultation -->
+                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
+                        <div class="space-y-3.5">
+                            <div class="flex items-center justify-between">
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">09</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Whitening &amp; Video Opinion</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-extrabold text-brand-navy">Teeth Whitening &amp; NRI Video Opinion</h3>
+                                <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">In-Clinic Whitening &amp; Teleconsultation</p>
+                            </div>
+                            <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
+                                Enamel-conscious teeth whitening following sensitivity/enamel checks, plus teleconsultation / video opinion options for national and NRI patients planning care.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-brand-border">
+                            <button type="button" onclick="selectService('Teleconsultation')" class="w-full text-center py-2.5 rounded-xl bg-brand-navy hover:bg-brand-hovernavy text-white text-xs font-bold block transition-colors cursor-pointer">
+                                Book Whitening or Video Opinion →
                             </button>
                         </div>
                     </div>
@@ -610,57 +658,57 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <!-- PATIENT EXPERIENCE & ACCESSIBLE AMENITIES -->
-        <section id="facilities" class="py-16 bg-brand-offwhite w-full border-b border-brand-border">
+        <section id="facilities" class="py-16 bg-brand-surface w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
                 <div class="text-center max-w-2xl mx-auto space-y-2">
-                    <span class="text-brand-brown text-xs font-extrabold tracking-widest uppercase bg-brand-cardbeige border border-brand-border px-3.5 py-1 rounded-full">
+                    <span class="text-brand-navy text-xs font-extrabold tracking-widest uppercase bg-brand-cardbg border border-brand-border px-3.5 py-1 rounded-full">
                         Thoughtful Clinical Hospitality
                     </span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-darkbrown">Designed for Your Comfort & Ease</h2>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy">Designed for Your Comfort &amp; Ease</h2>
                     <p class="text-xs sm:text-sm text-brand-grey-muted leading-relaxed">
-                        Every detail of our Kandivali West practice is designed to provide a calm, respectful, and fully accessible environment.
+                        Every detail of our Kandivali West practice is designed to provide a calm, respectful, and accessible environment for families.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-                    <div class="p-5 rounded-2xl bg-brand-beige border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">🚗</div>
-                        <h3 class="font-bold text-sm text-brand-darkbrown">Free Street Parking</h3>
+                        <h3 class="font-bold text-sm text-brand-navy">Free Street Parking</h3>
                         <p class="text-[11px] text-brand-grey-muted">Accessible parking along Iraniwadi Road No. 3.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-beige border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">♿</div>
-                        <h3 class="font-bold text-sm text-brand-darkbrown">Wheelchair Friendly</h3>
-                        <p class="text-[11px] text-brand-grey-muted">Ground-level access for elderly and disabled guests.</p>
+                        <h3 class="font-bold text-sm text-brand-navy">Wheelchair Friendly</h3>
+                        <p class="text-[11px] text-brand-grey-muted">Ground-level access for elderly and mobility-assisted guests.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-beige border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">💳</div>
-                        <h3 class="font-bold text-sm text-brand-darkbrown">Digital & Card Payments</h3>
-                        <p class="text-[11px] text-brand-grey-muted">UPI, GPay, Credit/Debit, Tap NFC, and EMI plans.</p>
+                        <h3 class="font-bold text-sm text-brand-navy">Digital &amp; Card Payments</h3>
+                        <p class="text-[11px] text-brand-grey-muted">UPI, GPay, Credit/Debit, Tap NFC, and payment/EMI plans.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-beige border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">🌈</div>
-                        <h3 class="font-bold text-sm text-brand-darkbrown">Inclusive Space</h3>
-                        <p class="text-[11px] text-brand-grey-muted">Respectful, affirming care welcoming all community members.</p>
+                        <h3 class="font-bold text-sm text-brand-navy">Inclusive Space</h3>
+                        <p class="text-[11px] text-brand-grey-muted">Respectful, welcoming care for every individual and family.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-beige border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">👩‍💼</div>
-                        <h3 class="font-bold text-sm text-brand-darkbrown">Women-Owned Clinic</h3>
+                        <h3 class="font-bold text-sm text-brand-navy">Women-Owned Clinic</h3>
                         <p class="text-[11px] text-brand-grey-muted">Led by specialist orthodontist Dr. Riddhi Patel Shah.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-beige border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">🚨</div>
-                        <h3 class="font-bold text-sm text-brand-darkbrown">Emergency Dental Care</h3>
-                        <p class="text-[11px] text-brand-grey-muted">Same-day support for tooth trauma and acute toothache.</p>
+                        <h3 class="font-bold text-sm text-brand-navy">Emergency Dental Care</h3>
+                        <p class="text-[11px] text-brand-grey-muted">Priority support for tooth trauma and acute toothache.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-beige border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">🌿</div>
-                        <h3 class="font-bold text-sm text-brand-darkbrown">Gentle Sedation Options</h3>
+                        <h3 class="font-bold text-sm text-brand-navy">Gentle Sedation Options</h3>
                         <p class="text-[11px] text-brand-grey-muted">Comfort protocols for patients with dental anxiety.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-beige border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">🚻</div>
-                        <h3 class="font-bold text-sm text-brand-darkbrown">Private Restrooms</h3>
+                        <h3 class="font-bold text-sm text-brand-navy">Private Restrooms</h3>
                         <p class="text-[11px] text-brand-grey-muted">Hygienic unisex restroom facilities on-site.</p>
                     </div>
                 </div>
@@ -668,14 +716,14 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <!-- COMMUNITY & CORPORATE OUTREACH -->
-        <section id="community" class="py-16 bg-brand-darkbrown text-white w-full border-b border-brand-midbrown">
+        <section id="community" class="py-16 bg-brand-navy text-white w-full border-b border-brand-midnavy">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-12">
                 <div class="text-center max-w-3xl mx-auto space-y-3">
-                    <span class="text-brand-beige text-xs font-extrabold tracking-widest uppercase bg-brand-brown/40 border border-brand-brown px-3.5 py-1 rounded-full">
+                    <span class="text-brand-surface text-xs font-extrabold tracking-widest uppercase bg-brand-midnavy border border-brand-lightnavy px-3.5 py-1 rounded-full">
                         Social Responsibility
                     </span>
                     <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
-                        School, Corporate & Community Outreach
+                        School, Corporate &amp; Community Outreach
                     </h2>
                     <p class="text-brand-border text-xs sm:text-sm leading-relaxed">
                         Promoting preventive oral health education across educational institutions, corporate offices, and community organizations in Mumbai.
@@ -683,22 +731,22 @@ import Layout from '../layouts/Layout.astro';
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-                    <div class="bg-brand-midbrown/80 p-5 rounded-2xl border border-brand-brown space-y-2.5">
+                    <div class="bg-brand-midnavy p-5 rounded-2xl border border-brand-lightnavy space-y-2.5">
                         <div class="text-2xl">🏫</div>
-                        <h3 class="font-extrabold text-base text-white">Schools & Colleges</h3>
+                        <h3 class="font-extrabold text-base text-white">Schools &amp; Colleges</h3>
                         <p class="text-brand-border text-xs sm:text-sm leading-relaxed">Pediatric screening camps, interceptive growth guidance, and dental hygiene awareness sessions.</p>
                     </div>
-                    <div class="bg-brand-midbrown/80 p-5 rounded-2xl border border-brand-brown space-y-2.5">
+                    <div class="bg-brand-midnavy p-5 rounded-2xl border border-brand-lightnavy space-y-2.5">
                         <div class="text-2xl">🏢</div>
                         <h3 class="font-extrabold text-base text-white">Corporate Wellness</h3>
                         <p class="text-brand-border text-xs sm:text-sm leading-relaxed">Executive dental health evaluations and ergonomic jaw/grinding prevention desks.</p>
                     </div>
-                    <div class="bg-brand-midbrown/80 p-5 rounded-2xl border border-brand-brown space-y-2.5">
+                    <div class="bg-brand-midnavy p-5 rounded-2xl border border-brand-lightnavy space-y-2.5">
                         <div class="text-2xl">🪷</div>
                         <h3 class="font-extrabold text-base text-white">Community Seva</h3>
                         <p class="text-brand-border text-xs sm:text-sm leading-relaxed">Preventive screening drives in collaboration with local welfare trusts in Western Suburbs.</p>
                     </div>
-                    <div class="bg-brand-midbrown/80 p-5 rounded-2xl border border-brand-brown space-y-2.5">
+                    <div class="bg-brand-midnavy p-5 rounded-2xl border border-brand-lightnavy space-y-2.5">
                         <div class="text-2xl">🤝</div>
                         <h3 class="font-extrabold text-base text-white">NGO Partnerships</h3>
                         <p class="text-brand-border text-xs sm:text-sm leading-relaxed">Geriatric oral care support and free preventive kits for underprivileged children.</p>
@@ -707,82 +755,84 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <!-- APPOINTMENT BOOKING SECTION -->
-        <section id="book" class="py-16 bg-brand-beige text-brand-darkbrown w-full border-b border-brand-border relative scroll-mt-24">
+        <!-- APPOINTMENT BOOKING SECTION (https://infinoradental.com/#book, 3 PM - 5 PM SLOT RULE, CONSENT, RECORDS, AI PREP & PAYMENT PLACEHOLDER) -->
+        <section id="book" class="py-16 bg-brand-surface text-brand-navy w-full border-b border-brand-border relative scroll-mt-24">
             <div class="max-w-4xl mx-auto px-4 sm:px-6">
-                
+
                 <div class="text-center space-y-2.5 mb-10">
-                    <span class="text-brand-brown text-xs font-extrabold tracking-widest uppercase bg-brand-cardbeige border border-brand-border px-3.5 py-1 rounded-full">
-                        Direct Slot Reservation
+                    <span class="text-brand-navy text-xs font-extrabold tracking-widest uppercase bg-brand-cardbg border border-brand-border px-3.5 py-1 rounded-full">
+                        Direct Slot Reservation · 3:00 PM – 5:00 PM Only
                     </span>
-                    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-brand-darkbrown">
+                    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-brand-navy">
                         Reserve Your Dental Consultation
                     </h2>
-                    <p class="text-brand-grey-muted text-xs sm:text-sm max-w-xl mx-auto">
-                        Fill in your details below. Our front desk will instantly review schedule availability and confirm your appointment via WhatsApp.
+                    <p class="text-brand-grey-muted text-xs sm:text-sm max-w-2xl mx-auto">
+                        Clinic timings are <strong>10:00 AM to 2:00 PM</strong> and <strong>Evening: 5:00 PM to 9:00 PM</strong>. Appointments are taken strictly for <strong>3:00 PM to 5:00 PM</strong> (none other slots work for appointments) and confirmed via WhatsApp review.
                     </p>
                 </div>
 
-                <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-10 border border-brand-border shadow-xl space-y-5">
-                    <form id="appointmentForm" class="space-y-4 max-w-full" novalidate>
-                        
+                <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-10 border border-brand-border shadow-xl space-y-6">
+                    <form id="appointmentForm" class="space-y-5 max-w-full" novalidate>
+
+                        <!-- Patient Details -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="min-w-0">
-                                <label class="block text-xs font-bold text-brand-darkbrown uppercase tracking-wider mb-1.5" for="patientName">
+                                <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-1.5" for="patientName">
                                     Full Name *
                                 </label>
-                                <input 
-                                    type="text" 
-                                    id="patientName" 
-                                    required 
+                                <input
+                                    type="text"
+                                    id="patientName"
+                                    required
                                     autocomplete="name"
-                                    placeholder="e.g. Amit Sharma" 
-                                    class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-brown focus:border-brand-brown text-sm text-brand-darkbrown outline-none transition-all bg-brand-beige/50"
+                                    placeholder="e.g. Amit Sharma"
+                                    class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-navy focus:border-brand-navy text-sm text-brand-navy outline-none transition-all bg-brand-surface/60"
                                 />
-                                <p id="nameError" class="hidden text-xs text-rose-700 font-semibold mt-1">Please enter your full name.</p>
+                                <p id="nameError" class="hidden text-xs text-rose-700 font-semibold mt-1">Please enter your full name (at least 2 characters).</p>
                             </div>
 
                             <div class="min-w-0">
-                                <label class="block text-xs font-bold text-brand-darkbrown uppercase tracking-wider mb-1.5" for="patientPhone">
+                                <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-1.5" for="patientPhone">
                                     Mobile Number *
                                 </label>
-                                <input 
-                                    type="tel" 
-                                    id="patientPhone" 
-                                    required 
+                                <input
+                                    type="tel"
+                                    id="patientPhone"
+                                    required
                                     autocomplete="tel"
                                     maxlength="15"
-                                    placeholder="e.g. 9820000000" 
-                                    class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-brown focus:border-brand-brown text-sm text-brand-darkbrown outline-none transition-all bg-brand-beige/50"
+                                    placeholder="e.g. 9820000000"
+                                    class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-navy focus:border-brand-navy text-sm text-brand-navy outline-none transition-all bg-brand-surface/60"
                                 />
-                                <p id="phoneError" class="hidden text-xs text-rose-700 font-semibold mt-1">Please enter a valid 10-digit mobile number.</p>
+                                <p id="phoneError" class="hidden text-xs text-rose-700 font-semibold mt-1">Please enter a valid phone number (8 to 15 digits).</p>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="min-w-0">
-                                <label class="block text-xs font-bold text-brand-darkbrown uppercase tracking-wider mb-1.5" for="patientDob">
+                                <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-1.5" for="patientDob">
                                     Date of Birth * (For Clinical Chart)
                                 </label>
-                                <input 
-                                    type="date" 
-                                    id="patientDob" 
-                                    required 
+                                <input
+                                    type="date"
+                                    id="patientDob"
+                                    required
+                                    min="1900-01-01"
                                     autocomplete="bday"
-                                    class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-brown focus:border-brand-brown text-sm text-brand-darkbrown outline-none transition-all bg-brand-beige/50"
+                                    class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-navy focus:border-brand-navy text-sm text-brand-navy outline-none transition-all bg-brand-surface/60"
                                 />
-                                <p id="dobError" class="hidden text-xs text-rose-700 font-semibold mt-1">Please select your date of birth.</p>
+                                <p id="dobError" class="hidden text-xs text-rose-700 font-semibold mt-1">Please enter a valid date of birth (between 1900 and today).</p>
                             </div>
 
                             <div class="min-w-0">
-                                <label class="block text-xs font-bold text-brand-darkbrown uppercase tracking-wider mb-1.5" for="patientGender">
+                                <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-1.5" for="patientGender">
                                     Gender *
                                 </label>
-                                <select 
-                                    id="patientGender" 
-                                    required 
+                                <select
+                                    id="patientGender"
+                                    required
                                     autocomplete="sex"
-                                    class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-brown focus:border-brand-brown text-sm text-brand-darkbrown outline-none transition-all bg-brand-beige/50"
+                                    class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-navy focus:border-brand-navy text-sm text-brand-navy outline-none transition-all bg-brand-surface/60"
                                 >
                                     <option value="">Select Gender</option>
                                     <option value="Female">Female</option>
@@ -793,24 +843,25 @@ import Layout from '../layouts/Layout.astro';
                             </div>
                         </div>
 
+                        <!-- Procedure, Date & Strict 3:00 PM - 5:00 PM Slot -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="min-w-0">
-                                <label class="block text-xs font-bold text-brand-darkbrown uppercase tracking-wider mb-1.5" for="treatmentService">
+                                <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-1.5" for="treatmentService">
                                     Procedure / Consultation Type *
                                 </label>
-                                <select 
-                                    id="treatmentService" 
-                                    required 
-                                    class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-brown focus:border-brand-brown text-sm text-brand-darkbrown outline-none transition-all bg-brand-beige/50"
+                                <select
+                                    id="treatmentService"
+                                    required
+                                    class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-navy focus:border-brand-navy text-sm text-brand-navy outline-none transition-all bg-brand-surface/60"
                                 >
-                                    <option value="In-Clinic: General Dental Checkup & Digital Scan">🏥 In-Clinic: General Dental Checkup & Consultation</option>
-                                    <option value="In-Clinic: Braces & Orthodontic Evaluation">🏥 In-Clinic: Orthodontics & Braces Evaluation</option>
+                                    <option value="In-Clinic: General Dental Checkup & Digital Scan">🏥 In-Clinic: General Dental Checkup &amp; Consultation</option>
+                                    <option value="In-Clinic: Braces & Orthodontic Evaluation">🏥 In-Clinic: Orthodontics &amp; Braces Evaluation</option>
                                     <option value="In-Clinic: Clear Aligners / Invisalign Scan">🏥 In-Clinic: Clear Aligners / Invisalign 3D Scan</option>
                                     <option value="In-Clinic: Fixing Smile Design Assessment">🏥 In-Clinic: Fixing Smile Design Assessment</option>
                                     <option value="In-Clinic: Root Canal Treatment (Painless RCT)">🏥 In-Clinic: Root Canal Treatment (RCT)</option>
                                     <option value="In-Clinic: Dental Implants & Tooth Replacement">🏥 In-Clinic: Dental Implants Evaluation</option>
                                     <option value="In-Clinic: Wisdom Tooth Surgical Consultation">🏥 In-Clinic: Wisdom Tooth Surgery</option>
-                                    <option value="In-Clinic: Pediatric & Children Dental Visit">🏥 In-Clinic: Pediatric & Kids Checkup</option>
+                                    <option value="In-Clinic: Pediatric & Children Dental Visit">🏥 In-Clinic: Pediatric &amp; Kids Checkup</option>
                                     <option value="In-Clinic: Teeth Whitening & Aesthetic Polishing">🏥 In-Clinic: Teeth Whitening</option>
                                     <option value="Teleconsultation / Online Video Opinion">🌐 Teleconsultation / Video Opinion (National or NRI)</option>
                                     <option value="School / Corporate Dental Camp Inquiry">🏫 School / Corporate Camp Inquiry</option>
@@ -818,50 +869,158 @@ import Layout from '../layouts/Layout.astro';
                             </div>
 
                             <div class="min-w-0">
-                                <label class="block text-xs font-bold text-brand-darkbrown uppercase tracking-wider mb-1.5" for="appointmentDate">
-                                    Preferred Date *
+                                <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-1.5" for="appointmentDate">
+                                    Preferred Appointment Date (No Past Dates) *
                                 </label>
-                                <input 
-                                    type="date" 
-                                    id="appointmentDate" 
-                                    required 
-                                    class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-brown focus:border-brand-brown text-sm text-brand-darkbrown outline-none transition-all bg-brand-beige/50"
+                                <input
+                                    type="date"
+                                    id="appointmentDate"
+                                    required
+                                    class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-navy focus:border-brand-navy text-sm text-brand-navy outline-none transition-all bg-brand-surface/60"
                                 />
-                                <p id="dateError" class="hidden text-xs text-rose-700 font-semibold mt-1">Please select an upcoming date.</p>
+                                <p id="dateError" class="hidden text-xs text-rose-700 font-semibold mt-1">Past dates are not allowed. Please select today or an upcoming date within 90 days.</p>
                             </div>
                         </div>
 
                         <div class="min-w-0">
-                            <label class="block text-xs font-bold text-brand-darkbrown uppercase tracking-wider mb-1.5" for="timeSlot">
-                                Preferred Consultation Slot *
+                            <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-1.5" for="timeSlot">
+                                Appointment Time Slot (3:00 PM – 5:00 PM Only) *
                             </label>
-                            <select 
-                                id="timeSlot" 
-                                required 
-                                class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-brown focus:border-brand-brown text-sm text-brand-darkbrown outline-none transition-all bg-brand-beige/50"
+                            <select
+                                id="timeSlot"
+                                required
+                                class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-navy focus:border-brand-navy text-sm text-brand-navy outline-none transition-all bg-brand-surface/60"
                             >
-                                <option value="Morning Session (09:00 AM – 01:00 PM)">Morning Session (09:00 AM – 01:00 PM)</option>
-                                <option value="Afternoon Session (03:00 PM – 05:00 PM)">Afternoon Session (03:00 PM – 05:00 PM)</option>
-                                <option value="Evening Session (06:00 PM – 09:00 PM)">Evening Session (06:00 PM – 09:00 PM)</option>
+                                <option value="3:00 PM – 5:00 PM (Only Available Appointment Slot — None Other Slots Work)" selected>3:00 PM – 5:00 PM (Only Available Appointment Slot — None Other Slots Work)</option>
                             </select>
+                            <p id="slotError" class="hidden text-xs text-rose-700 font-semibold mt-1">Appointments are taken strictly for 3:00 PM – 5:00 PM; none other slots work for appointments.</p>
                             <p class="text-[11px] text-brand-grey-muted mt-1.5 leading-relaxed">
-                                * The clinic is open all day. Select your preferred shift. Appointments are officially confirmed upon WhatsApp review by the clinic desk.
+                                * Clinic timings: <strong>10:00 AM to 2:00 PM</strong> and <strong>Evening: 5:00 PM to 9:00 PM</strong>. Appointments are taken strictly for <strong>3:00 PM to 5:00 PM</strong> (none other slots work for appointments).
                             </p>
                         </div>
 
-                        <!-- Dynamic Sunday Notice Box -->
-                        <div id="sundayAlertBox" class="hidden p-4 rounded-xl bg-amber-50 border border-amber-300 text-amber-950 text-xs leading-relaxed flex items-start gap-2.5">
-                            <span class="text-lg shrink-0">⚠️</span>
-                            <div>
-                                <strong>Sunday Consultation Notice:</strong> Sunday hours are strictly <strong>10:00 AM – 01:00 PM on a prior appointment basis only</strong>. Walk-ins are not admitted on Sundays.
+                        <!-- AI Pre-Visit Prep & Summary Helper (Optional, Non-Intrusive) -->
+                        <div class="p-4 sm:p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-3">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <label class="text-xs font-extrabold text-brand-navy uppercase tracking-wider" for="visitNotes">
+                                    AI Pre-Visit Prep &amp; Key Concern (Optional)
+                                </label>
+                                <button type="button" id="generatePrepBtn" class="px-3 py-1.5 rounded-lg bg-brand-navy hover:bg-brand-hovernavy text-white text-[11px] font-bold cursor-pointer transition-colors">
+                                    ✨ Generate Pre-Visit Checklist
+                                </button>
+                            </div>
+                            <textarea
+                                id="visitNotes"
+                                rows="2"
+                                maxlength="500"
+                                placeholder="Briefly note tooth sensitivity, alignment goals, prior X-rays, or questions for Dr. Riddhi..."
+                                class="w-full max-w-full px-3.5 py-2.5 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-navy focus:border-brand-navy text-sm text-brand-navy outline-none bg-brand-offwhite"
+                            ></textarea>
+                            <div id="aiPrepOutput" class="hidden p-3.5 rounded-xl bg-brand-offwhite border border-brand-border text-xs text-brand-grey-text space-y-1.5">
+                                <div class="font-bold text-brand-navy">Recommended Pre-Visit Preparation:</div>
+                                <ul id="aiPrepList" class="list-disc pl-4 space-y-1 text-xs text-brand-grey-text"></ul>
                             </div>
                         </div>
 
-                        <button 
-                            type="submit" 
-                            class="w-full flex items-center justify-center gap-2 bg-brand-brown hover:bg-brand-hoverbrown text-white font-extrabold py-4 px-6 rounded-xl shadow-lg shadow-brand-brown/25 transition-all text-sm sm:text-base cursor-pointer mt-2"
+                        <!-- Pre-Appointment Health Records & Consent Forms -->
+                        <div class="p-4 sm:p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-4">
+                            <div class="space-y-1">
+                                <h3 class="text-xs sm:text-sm font-extrabold text-brand-navy uppercase tracking-wider">
+                                    Pre-Appointment Health Records &amp; Consent Forms
+                                </h3>
+                                <p class="text-[11px] text-brand-grey-muted leading-relaxed">
+                                    Select prior dental records/scans to reference in your request (attach files directly in WhatsApp once opened; avoid uploading sensitive IDs if unnecessary).
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="min-w-0">
+                                    <label class="block text-xs font-bold text-brand-navy mb-1.5" for="healthRecordsInput">
+                                        Health Records / X-Rays / Reports (PDF, JPG, PNG, WEBP · Max 5 files, 5MB each)
+                                    </label>
+                                    <input
+                                        type="file"
+                                        id="healthRecordsInput"
+                                        multiple
+                                        accept=".pdf,.jpg,.jpeg,.png,.webp"
+                                        class="w-full max-w-full text-xs text-brand-grey-text file:mr-3 file:py-2 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-brand-navy file:text-white hover:file:bg-brand-hovernavy cursor-pointer bg-brand-offwhite p-2 rounded-xl border border-brand-border"
+                                    />
+                                    <p id="fileError" class="hidden text-xs text-rose-700 font-semibold mt-1"></p>
+                                    <ul id="selectedFilesList" class="mt-2 space-y-1 text-[11px] text-brand-navy font-medium"></ul>
+                                </div>
+
+                                <div class="min-w-0 space-y-3">
+                                    <div>
+                                        <label class="block text-xs font-bold text-brand-navy mb-1.5" for="consentProcedure">
+                                            Specific Treatment Consent Form to Review
+                                        </label>
+                                        <select
+                                            id="consentProcedure"
+                                            class="w-full max-w-full px-3.5 py-2.5 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-navy text-sm text-brand-navy bg-brand-offwhite"
+                                        >
+                                            <option value="General Dental Evaluation & Diagnostic Consent">General Dental Evaluation &amp; Diagnostic Consent</option>
+                                            <option value="Orthodontics, Braces & Clear Aligners Consent">Orthodontics, Braces &amp; Clear Aligners Consent</option>
+                                            <option value="Dental Implants & Prosthetic Replacement Consent">Dental Implants &amp; Prosthetic Replacement Consent</option>
+                                            <option value="Full-Mouth Rehabilitation Assessment Consent">Full-Mouth Rehabilitation Assessment Consent</option>
+                                            <option value="Root Canal Treatment (RCT) & Restorative Consent">Root Canal Treatment (RCT) &amp; Restorative Consent</option>
+                                            <option value="Wisdom Tooth / Tooth Extraction & Oral Surgery Consent">Wisdom Tooth / Tooth Extraction &amp; Oral Surgery Consent</option>
+                                        </select>
+                                    </div>
+
+                                    <details class="rounded-xl bg-brand-offwhite border border-brand-border p-3 text-xs text-brand-grey-text">
+                                        <summary class="font-bold text-brand-navy cursor-pointer">Read Informed Consultation &amp; Consent Summary</summary>
+                                        <p id="consentSummaryText" class="mt-2 leading-relaxed">
+                                            I understand that a clinical examination and diagnostic checkup are required before treatment planning, and that appointments are taken strictly for 3:00 PM – 5:00 PM (none other slots work for appointments).
+                                        </p>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <div class="pt-1">
+                                <label class="flex items-start gap-2.5 cursor-pointer text-xs text-brand-grey-text">
+                                    <input
+                                        type="checkbox"
+                                        id="consentCheckbox"
+                                        class="mt-0.5 w-4 h-4 accent-brand-navy rounded shrink-0"
+                                    />
+                                    <span>
+                                        <strong>Patient Consent Acknowledgment *:</strong> I confirm that the details entered are accurate to the best of my knowledge, I consent to sharing these booking/pre-visit details with Infinora Dental Care via WhatsApp for scheduling, and I acknowledge that appointments are strictly for <strong>3:00 PM – 5:00 PM</strong> (none other slots work for appointments).
+                                    </span>
+                                </label>
+                                <p id="consentError" class="hidden text-xs text-rose-700 font-semibold mt-1">Please check the consent acknowledgment box before submitting.</p>
+                            </div>
+                        </div>
+
+                        <!-- Handoff Status Notice -->
+                        <div id="whatsappStatusBox" class="hidden p-4 rounded-xl bg-brand-surface border border-brand-navy/30 text-brand-navy text-xs leading-relaxed">
+                            WhatsApp opened with your prefilled consultation details for <strong>+91 73044 32681</strong> (Slot: <strong>3:00 PM – 5:00 PM</strong>). Tap Send in WhatsApp and attach any selected health record files in the chat if needed.
+                        </div>
+
+                        <!-- Online Payment Gateway Placeholder (Razorpay / Cashfree / Pine Labs / PayU) -->
+                        <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div class="space-y-0.5">
+                                <div class="text-xs font-extrabold text-brand-navy">Online Payment Gateway (Placeholder)</div>
+                                <p class="text-[11px] text-brand-grey-muted">
+                                    Planned integration (Razorpay, Cashfree, Pine Labs, or PayU) for patients who wish to pay online. No live charge is processed on this placeholder button.
+                                </p>
+                                <p id="paymentPlaceholderStatus" class="hidden text-[11px] font-semibold text-brand-navy pt-1">
+                                    Online payment gateway integration is in preparation (Razorpay / Cashfree / Pine Labs / PayU). Please use WhatsApp or call +91 73044 32681 for slot &amp; payment details.
+                                </p>
+                            </div>
+                            <button
+                                type="button"
+                                id="payOnlinePlaceholderBtn"
+                                class="shrink-0 px-4 py-2.5 rounded-xl bg-brand-cardbg hover:bg-brand-border text-brand-navy border border-brand-navy/25 font-bold text-xs cursor-pointer transition-colors"
+                            >
+                                💳 Pay Online (Gateway Placeholder)
+                            </button>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="w-full flex items-center justify-center gap-2 bg-brand-navy hover:bg-brand-hovernavy text-white font-extrabold py-4 px-6 rounded-xl shadow-lg transition-all text-sm sm:text-base cursor-pointer mt-2"
                         >
-                            <span>Send Booking Request via WhatsApp</span>
+                            <span>Send Booking Request via WhatsApp (3:00 PM – 5:00 PM)</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                         </button>
 
@@ -869,14 +1028,14 @@ import Layout from '../layouts/Layout.astro';
 
                     <div class="text-center pt-3 border-t border-brand-border flex flex-wrap items-center justify-center gap-4 text-xs">
                         <p class="text-brand-grey-muted">
-                            Prefer direct call? <a href="tel:+917304432681" class="text-brand-brown font-bold hover:underline">+91 73044 32681</a>
+                            Prefer direct call? <a href="tel:+917304432681" class="text-brand-navy font-bold hover:underline">+91 73044 32681</a>
                         </p>
                         <span class="text-brand-border hidden sm:inline">•</span>
-                        <a href="https://g.page/r/Cb7r3l0-R2oSEBM/review" target="_blank" rel="noopener" class="text-brand-brown font-bold hover:underline">
+                        <a href="https://g.page/r/Cb7r3l0-R2oSEBM/review" target="_blank" rel="noopener" class="text-brand-navy font-bold hover:underline">
                             ⭐ Google Reviews
                         </a>
                         <span class="text-brand-border hidden sm:inline">•</span>
-                        <button type="button" onclick="downloadVCard()" class="text-brand-brown font-bold hover:underline cursor-pointer">
+                        <button type="button" onclick="downloadVCard()" class="text-brand-navy font-bold hover:underline cursor-pointer">
                             📇 Save Contact Card
                         </button>
                     </div>
@@ -889,94 +1048,94 @@ import Layout from '../layouts/Layout.astro';
         <section id="faq" class="py-16 bg-brand-offwhite w-full border-b border-brand-border">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8">
                 <div class="text-center space-y-2">
-                    <span class="text-brand-brown text-xs font-extrabold tracking-widest uppercase bg-brand-cardbeige border border-brand-border px-3.5 py-1 rounded-full">
-                        Patient Clarity & Guidance
+                    <span class="text-brand-navy text-xs font-extrabold tracking-widest uppercase bg-brand-cardbg border border-brand-border px-3.5 py-1 rounded-full">
+                        Patient Clarity &amp; Guidance
                     </span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-darkbrown">Frequently Asked Questions</h2>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy">Frequently Asked Questions</h2>
                     <p class="text-xs sm:text-sm text-brand-grey-muted">
-                        Transparent clinical answers to common patient questions regarding braces, aligners, root canals, and appointments.
+                        Transparent clinical answers to common patient questions regarding braces, aligners, root canals, timings, and appointments.
                     </p>
                 </div>
 
                 <div class="space-y-3.5">
-                    
-                    <details class="group bg-brand-beige rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
-                        <summary class="font-bold text-sm sm:text-base text-brand-darkbrown cursor-pointer list-none flex items-center justify-between gap-2">
+
+                    <details class="group bg-brand-surface rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
+                        <summary class="font-bold text-sm sm:text-base text-brand-navy cursor-pointer list-none flex items-center justify-between gap-2">
                             <span>Why should I choose an MDS Orthodontist instead of a general dentist for braces or clear aligners?</span>
-                            <span class="text-brand-brown transition-transform group-open:rotate-180 font-bold">▾</span>
+                            <span class="text-brand-navy transition-transform group-open:rotate-180 font-bold">▾</span>
                         </summary>
                         <p class="text-xs sm:text-sm text-brand-grey-text mt-3 leading-relaxed border-t border-brand-border pt-3">
                             An Orthodontist is a dental surgeon who has undergone three years of dedicated post-graduate master residency (MDS) in facial aesthetics, craniofacial growth, and orthodontic biomechanics. While general dentists can order aligner kits, an MDS Orthodontist diagnoses the underlying bone support, prevents root damage, avoids facial profile flattening, and ensures your bite is stable for life.
                         </p>
                     </details>
 
-                    <details class="group bg-brand-beige rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
-                        <summary class="font-bold text-sm sm:text-base text-brand-darkbrown cursor-pointer list-none flex items-center justify-between gap-2">
+                    <details class="group bg-brand-surface rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
+                        <summary class="font-bold text-sm sm:text-base text-brand-navy cursor-pointer list-none flex items-center justify-between gap-2">
                             <span>How much do braces and clear aligners cost in Kandivali West, and how long does treatment take?</span>
-                            <span class="text-brand-brown transition-transform group-open:rotate-180 font-bold">▾</span>
+                            <span class="text-brand-navy transition-transform group-open:rotate-180 font-bold">▾</span>
                         </summary>
                         <p class="text-xs sm:text-sm text-brand-grey-text mt-3 leading-relaxed border-t border-brand-border pt-3">
-                            Cost and timeline depend on dental crowding severity, skeletal jaw balance, and whether you choose metal, ceramic, self-ligating brackets, or custom clear aligners. Treatment typically ranges from 6 to 18 months. During your clinical consultation and 3D intraoral scan, you receive an itemized, written roadmap with no hidden costs and flexible installment options.
+                            Cost and timeline depend on dental crowding severity, skeletal jaw balance, and whether you choose metal, ceramic, self-ligating brackets, or custom clear aligners. Treatment duration varies per individual and is assessed during your clinical consultation and diagnostic evaluation.
                         </p>
                     </details>
 
-                    <details class="group bg-brand-beige rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
-                        <summary class="font-bold text-sm sm:text-base text-brand-darkbrown cursor-pointer list-none flex items-center justify-between gap-2">
+                    <details class="group bg-brand-surface rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
+                        <summary class="font-bold text-sm sm:text-base text-brand-navy cursor-pointer list-none flex items-center justify-between gap-2">
                             <span>Is Root Canal Treatment (RCT) painful at Infinora Dental Care?</span>
-                            <span class="text-brand-brown transition-transform group-open:rotate-180 font-bold">▾</span>
+                            <span class="text-brand-navy transition-transform group-open:rotate-180 font-bold">▾</span>
                         </summary>
                         <p class="text-xs sm:text-sm text-brand-grey-text mt-3 leading-relaxed border-t border-brand-border pt-3">
-                            No. Modern root canal treatment at our clinic is virtually painless. We utilize computer-guided electronic apex locators, nickel-titanium rotary instrumentation, and profound topical numbing prior to local anesthesia. Most patients report feeling only mild vibration or pressure, with acute toothache resolved in a single comfortable visit.
+                            Comfort is a core focus of endodontic care at our clinic using modern anesthesia and rotary instrumentation. Individual comfort, visit count, and crown or restoration needs depend on the tooth's condition and clinical assessment.
                         </p>
                     </details>
 
-                    <details class="group bg-brand-beige rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
-                        <summary class="font-bold text-sm sm:text-base text-brand-darkbrown cursor-pointer list-none flex items-center justify-between gap-2">
+                    <details class="group bg-brand-surface rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
+                        <summary class="font-bold text-sm sm:text-base text-brand-navy cursor-pointer list-none flex items-center justify-between gap-2">
                             <span>How can I verify the clinic and doctor's statutory registrations?</span>
-                            <span class="text-brand-brown transition-transform group-open:rotate-180 font-bold">▾</span>
+                            <span class="text-brand-navy transition-transform group-open:rotate-180 font-bold">▾</span>
                         </summary>
                         <p class="text-xs sm:text-sm text-brand-grey-text mt-3 leading-relaxed border-t border-brand-border pt-3">
                             Dr. Riddhi Patel Shah is registered with the Maharashtra State Dental Council (MSDC Registration No: A-45674) and verified on the Indian Dental Association national registry. Infinora Dental Care holds national certifications under the National Health Authority's Ayushman Bharat Digital Mission (Health Facility ID: IN2710085962, Healthcare Professional ID: 71-8554-8443-4346).
                         </p>
                     </details>
 
-                    <details class="group bg-brand-beige rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
-                        <summary class="font-bold text-sm sm:text-base text-brand-darkbrown cursor-pointer list-none flex items-center justify-between gap-2">
-                            <span>What are your clinic operating hours, and do you accept Sunday appointments?</span>
-                            <span class="text-brand-brown transition-transform group-open:rotate-180 font-bold">▾</span>
+                    <details class="group bg-brand-surface rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
+                        <summary class="font-bold text-sm sm:text-base text-brand-navy cursor-pointer list-none flex items-center justify-between gap-2">
+                            <span>What are your clinic timings and appointment slot rules?</span>
+                            <span class="text-brand-navy transition-transform group-open:rotate-180 font-bold">▾</span>
                         </summary>
                         <p class="text-xs sm:text-sm text-brand-grey-text mt-3 leading-relaxed border-t border-brand-border pt-3">
-                            We are open Monday through Saturday from 09:00 AM to 09:00 PM across three daily sessions: Morning (09:00 AM – 01:00 PM), Afternoon (03:00 PM – 05:00 PM), and Evening (06:00 PM – 09:00 PM). On Sundays, we are open exclusively from 10:00 AM to 01:00 PM on a strictly prior appointment basis.
+                            Clinic timings are <strong>10:00 AM to 2:00 PM</strong> and <strong>Evening: 5:00 PM to 9:00 PM</strong>. Appointments are taken strictly for <strong>3:00 PM to 5:00 PM</strong>—none other slots work for appointments.
                         </p>
                     </details>
 
-                    <details class="group bg-brand-beige rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
-                        <summary class="font-bold text-sm sm:text-base text-brand-darkbrown cursor-pointer list-none flex items-center justify-between gap-2">
-                            <span>Do you provide emergency dental services in Kandivali West?</span>
-                            <span class="text-brand-brown transition-transform group-open:rotate-180 font-bold">▾</span>
+                    <details class="group bg-brand-surface rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
+                        <summary class="font-bold text-sm sm:text-base text-brand-navy cursor-pointer list-none flex items-center justify-between gap-2">
+                            <span>Do you provide emergency dental guidance in Kandivali West?</span>
+                            <span class="text-brand-navy transition-transform group-open:rotate-180 font-bold">▾</span>
                         </summary>
                         <p class="text-xs sm:text-sm text-brand-grey-text mt-3 leading-relaxed border-t border-brand-border pt-3">
-                            Yes. We handle dental emergencies, including severe throbbing toothaches, sports trauma, broken or chipped teeth, dislodged brackets, poking orthodontic wires, and dental abscesses. Call our clinic desk directly at +91 73044 32681 for immediate triage and same-day scheduling.
+                            For urgent dental concerns such as toothache, dental trauma, broken or damaged teeth, or orthodontic issues, call our desk at +91 73044 32681 so our team can advise on scheduling within our 3:00 PM – 5:00 PM appointment window.
                         </p>
                     </details>
 
-                    <details class="group bg-brand-beige rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
-                        <summary class="font-bold text-sm sm:text-base text-brand-darkbrown cursor-pointer list-none flex items-center justify-between gap-2">
+                    <details class="group bg-brand-surface rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
+                        <summary class="font-bold text-sm sm:text-base text-brand-navy cursor-pointer list-none flex items-center justify-between gap-2">
                             <span>At what age should my child have their first orthodontic screening?</span>
-                            <span class="text-brand-brown transition-transform group-open:rotate-180 font-bold">▾</span>
+                            <span class="text-brand-navy transition-transform group-open:rotate-180 font-bold">▾</span>
                         </summary>
                         <p class="text-xs sm:text-sm text-brand-grey-text mt-3 leading-relaxed border-t border-brand-border pt-3">
-                            Both the Indian Orthodontic Society and international associations recommend a child's first orthodontic evaluation by age 7. At this developmental stage, permanent first molars have erupted, allowing an orthodontist to detect narrow arches, crossbites, thumb-sucking distortions, or jaw imbalances early—preventing invasive extractions or surgeries later in life.
+                            Both the Indian Orthodontic Society and international associations recommend a child's first orthodontic evaluation around age 7. Early evaluation helps check tooth eruption, arch space, habits, and jaw balance before permanent teeth finish coming in.
                         </p>
                     </details>
 
-                    <details class="group bg-brand-beige rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
-                        <summary class="font-bold text-sm sm:text-base text-brand-darkbrown cursor-pointer list-none flex items-center justify-between gap-2">
+                    <details class="group bg-brand-surface rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
+                        <summary class="font-bold text-sm sm:text-base text-brand-navy cursor-pointer list-none flex items-center justify-between gap-2">
                             <span>What payment methods and installment options are available?</span>
-                            <span class="text-brand-brown transition-transform group-open:rotate-180 font-bold">▾</span>
+                            <span class="text-brand-navy transition-transform group-open:rotate-180 font-bold">▾</span>
                         </summary>
                         <p class="text-xs sm:text-sm text-brand-grey-text mt-3 leading-relaxed border-t border-brand-border pt-3">
-                            We accept Cash, UPI (Google Pay, PhonePe, Paytm), Debit Cards, Credit Cards, Mobile Tap NFC, and Bank Transfers. For comprehensive procedures such as clear aligners, complex braces, dental implants, or full-mouth smile makeovers, we provide structured stage-wise payment schedules and flexible EMI options.
+                            We accept Cash, UPI (Google Pay, PhonePe, Paytm), Debit Cards, Credit Cards, Mobile Tap NFC, and Bank Transfers, along with payment plan options where applicable.
                         </p>
                     </details>
 
@@ -985,11 +1144,11 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <!-- CLINIC LOCATION, TRANSIT HUB & GOOGLE MAP -->
-        <section id="location" class="py-16 pb-24 sm:pb-16 bg-brand-darkbrown text-white relative overflow-hidden w-full">
+        <section id="location" class="py-16 pb-24 sm:pb-16 bg-brand-navy text-white relative overflow-hidden w-full">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                
+
                 <div class="lg:col-span-6 space-y-5 min-w-0">
-                    <span class="text-brand-beige text-xs font-extrabold uppercase tracking-widest bg-brand-brown/40 border border-brand-brown px-3.5 py-1 rounded-full">
+                    <span class="text-brand-surface text-xs font-extrabold uppercase tracking-widest bg-brand-midnavy border border-brand-lightnavy px-3.5 py-1 rounded-full">
                         Kandivali West, Mumbai · Central Transit Hub
                     </span>
                     <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
@@ -999,7 +1158,7 @@ import Layout from '../layouts/Layout.astro';
                         Centrally located on Iraniwadi Road No. 3 in Kandivali West with seamless connectivity across Western Express Highway, S.V. Road, Link Road, and local rail/metro networks.
                     </p>
 
-                    <div class="space-y-3.5 text-xs sm:text-sm text-brand-beige">
+                    <div class="space-y-3.5 text-xs sm:text-sm text-brand-surface">
                         <div class="flex items-start gap-3">
                             <span class="text-brand-gold text-lg shrink-0">📍</span>
                             <div class="min-w-0">
@@ -1039,19 +1198,19 @@ import Layout from '../layouts/Layout.astro';
                         <div class="flex items-start gap-3">
                             <span class="text-brand-gold text-lg shrink-0">🕒</span>
                             <div class="min-w-0">
-                                <strong class="text-white block font-bold">Consultation Shifts</strong>
-                                Mon – Sat: <span class="text-brand-beige font-bold">09:00 AM – 09:00 PM</span> (Morning, Afternoon, Evening)<br/>
-                                Sunday: <span class="text-amber-300 font-bold">10:00 AM – 01:00 PM (Strictly Prior Appointment Only)</span>
+                                <strong class="text-white block font-bold">Clinic Timings &amp; Appointment Window</strong>
+                                Clinic Hours: <span class="text-brand-surface font-bold">10:00 AM to 2:00 PM</span> &amp; <span class="text-brand-surface font-bold">Evening: 5:00 PM to 9:00 PM</span><br/>
+                                Appointments Taken: <span class="text-brand-gold font-bold">3:00 PM to 5:00 PM (None other slots work for appointments)</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="pt-2 flex flex-wrap gap-3">
-                        <a href="https://maps.app.goo.gl/3sKwKPjG43PNeN6y7" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 bg-brand-brown hover:bg-brand-hoverbrown text-white font-extrabold px-6 py-3 rounded-xl transition-all text-xs sm:text-sm shadow-md">
+                        <a href="https://maps.app.goo.gl/3sKwKPjG43PNeN6y7" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 bg-brand-hovernavy hover:bg-brand-lightnavy text-white font-extrabold px-6 py-3 rounded-xl transition-all text-xs sm:text-sm shadow-md border border-brand-lightnavy">
                             <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
                             Get Directions on Google Maps
                         </a>
-                        <button type="button" onclick="downloadVCard()" class="inline-flex items-center gap-1.5 bg-brand-midbrown hover:bg-brand-brown text-white border border-brand-brown px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all cursor-pointer">
+                        <button type="button" onclick="downloadVCard()" class="inline-flex items-center gap-1.5 bg-brand-midnavy hover:bg-brand-lightnavy text-white border border-brand-lightnavy px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all cursor-pointer">
                             📇 Save Contact Card
                         </button>
                     </div>
@@ -1059,14 +1218,14 @@ import Layout from '../layouts/Layout.astro';
 
                 <!-- Verified Google Maps Embed with CLS Safeguard Wrapper -->
                 <div class="lg:col-span-6 w-full">
-                    <div class="w-full h-64 sm:h-80 rounded-3xl overflow-hidden border border-brand-midbrown shadow-2xl relative isolate">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4480.651658888555!2d72.84039310514257!3d19.20551107300238!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b781fc712489%3A0x126a473e5ddeebbe!2sInfinora%20Dental%20Care%20-%20Dr.%20Riddhi%20Patel%20Shah%20(Dentist%20%26%20Braces%20Clinic)!5e0!3m2!1sen!2sin!4v1788097220378!5m2!1sen!2sin" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
+                    <div class="w-full h-64 sm:h-80 rounded-3xl overflow-hidden border border-brand-midnavy shadow-2xl relative isolate">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4480.651658888555!2d72.84039310514257!3d19.20551107300238!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b781fc712489%3A0x126a473e5ddeebbe!2sInfinora%20Dental%20Care%20-%20Dr.%20Riddhi%20Patel%20Shah%20(Dentist%20%26%20Braces%20Clinic)!5e0!3m2!1sen!2sin!4v1788097220378!5m2!1sen!2sin"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
                             referrerpolicy="strict-origin-when-cross-origin"
                             title="Infinora Dental Care Google Map Location">
                         </iframe>
@@ -1080,42 +1239,47 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- FLOATING STICKY MOBILE CONVERSION BAR -->
     <div class="fixed bottom-0 left-0 right-0 z-50 bg-brand-offwhite/95 backdrop-blur-md border-t border-brand-border p-2.5 sm:hidden flex items-center justify-between gap-2 shadow-2xl">
-        <a href="#book" class="flex-1 inline-flex items-center justify-center gap-1 bg-brand-brown text-white font-bold py-3 px-2 rounded-xl text-xs shadow-sm">
-            <span>📅 Book Visit</span>
+        <a href="https://infinoradental.com/#book" class="flex-1 inline-flex items-center justify-center gap-1 bg-brand-navy text-white font-bold py-3 px-2 rounded-xl text-xs shadow-sm">
+            <span>📅 Book (3–5 PM)</span>
         </a>
-        <a href="https://maps.app.goo.gl/3sKwKPjG43PNeN6y7" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1 bg-brand-darkbrown text-white font-bold py-3 px-2 rounded-xl text-xs shadow-sm">
+        <a href="https://maps.app.goo.gl/3sKwKPjG43PNeN6y7" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1 bg-brand-darknavy text-white font-bold py-3 px-2 rounded-xl text-xs shadow-sm">
             <span>📍 Directions</span>
         </a>
-        <a href="https://wa.me/917304432681?text=Hello%20Dr.%20Riddhi%20Patel%20Shah,%20I%20would%20like%20to%20consult%20at%20Infinora%20Dental%20Care." target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1 bg-emerald-700 text-white font-bold py-3 px-2 rounded-xl text-xs shadow-sm">
+        <a href="https://wa.me/917304432681?text=Hello%20Dr.%20Riddhi%20Patel%20Shah,%20I%20would%20like%20to%20request%20an%20appointment%20during%20the%203:00%20PM%20%E2%80%93%205:00%20PM%20slot%20at%20Infinora%20Dental%20Care." target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1 bg-brand-hovernavy text-white font-bold py-3 px-2 rounded-xl text-xs shadow-sm border border-brand-lightnavy">
             <svg class="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
             <span>WhatsApp</span>
         </a>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-brand-darkbrown text-brand-border py-12 text-xs border-t border-brand-midbrown w-full mb-14 sm:mb-0">
+    <footer class="bg-brand-darknavy text-brand-border py-12 text-xs border-t border-brand-midnavy w-full mb-14 sm:mb-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-6">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
                 <div class="flex items-center gap-2.5">
                     <span class="w-3 h-3 rounded-full bg-brand-gold shrink-0"></span>
                     <p class="text-white font-semibold">© 2026 Infinora Dental Care. Dr. Riddhi Patel Shah (MDS, Orthodontics). All rights reserved.</p>
                 </div>
-                <div class="flex items-center gap-4 text-brand-beige">
+                <div class="flex items-center gap-4 text-brand-surface">
                     <a href="#about" class="hover:text-white transition-colors">About Doctor</a>
                     <a href="#catalogue" class="hover:text-white transition-colors">Treatments</a>
                     <a href="#credentials" class="hover:text-white transition-colors">Accreditations</a>
                     <a href="#location" class="hover:text-white transition-colors">Location</a>
                 </div>
             </div>
-            <div class="border-t border-brand-midbrown pt-4 text-center sm:text-left text-[11px] text-brand-border flex flex-col sm:flex-row justify-between gap-2">
+            <div class="border-t border-brand-midnavy pt-4 text-center sm:text-left text-[11px] text-brand-border flex flex-col sm:flex-row justify-between gap-2">
                 <p>Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067 (MSDC Reg: A-45674 | ABDM HFR: IN2710085962)</p>
-                <p>Dental council registered & Ayushman Bharat verified practice.</p>
+                <p>Dental council registered &amp; Ayushman Bharat verified practice.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Comprehensive Interaction Script (Date Constraints, Pre-Selection, Sunday Checks & WhatsApp Generation) -->
+    <!-- Comprehensive Interaction Script (Strict Validations, 3 PM - 5 PM Slot Enforcement, Consent, Files, AI Prep, Payment Placeholder & WhatsApp Handoff) -->
     <script is:inline>
+        const ALLOWED_APPT_SLOT = '3:00 PM – 5:00 PM (Only Available Appointment Slot — None Other Slots Work)';
+        const MAX_FILES = 5;
+        const MAX_FILE_BYTES = 5 * 1024 * 1024;
+        const ALLOWED_MIME_TYPES = ['application/pdf', 'image/jpeg', 'image/png', 'image/webp'];
+
         window.selectService = function(keyword) {
             const select = document.getElementById('treatmentService');
             if (select) {
@@ -1136,7 +1300,20 @@ import Layout from '../layouts/Layout.astro';
             const dateInput = document.getElementById('appointmentDate');
             const dobInput = document.getElementById('patientDob');
             const timeSlot = document.getElementById('timeSlot');
-            const sundayAlert = document.getElementById('sundayAlertBox');
+            const serviceSelect = document.getElementById('treatmentService');
+            const visitNotesInput = document.getElementById('visitNotes');
+            const generatePrepBtn = document.getElementById('generatePrepBtn');
+            const aiPrepOutput = document.getElementById('aiPrepOutput');
+            const aiPrepList = document.getElementById('aiPrepList');
+            const fileInput = document.getElementById('healthRecordsInput');
+            const fileError = document.getElementById('fileError');
+            const selectedFilesList = document.getElementById('selectedFilesList');
+            const consentProcedure = document.getElementById('consentProcedure');
+            const consentSummaryText = document.getElementById('consentSummaryText');
+            const consentCheckbox = document.getElementById('consentCheckbox');
+            const payPlaceholderBtn = document.getElementById('payOnlinePlaceholderBtn');
+            const payPlaceholderStatus = document.getElementById('paymentPlaceholderStatus');
+            const statusBox = document.getElementById('whatsappStatusBox');
             const form = document.getElementById('appointmentForm');
 
             const now = new Date();
@@ -1144,40 +1321,159 @@ import Layout from '../layouts/Layout.astro';
             const month = String(now.getMonth() + 1).padStart(2, '0');
             const day = String(now.getDate()).padStart(2, '0');
             const todayStr = `${year}-${month}-${day}`;
-            
+
             if (dateInput) {
                 dateInput.min = todayStr;
-                
+
                 const maxDate = new Date();
                 maxDate.setDate(maxDate.getDate() + 90);
                 const maxYear = maxDate.getFullYear();
                 const maxMonth = String(maxDate.getMonth() + 1).padStart(2, '0');
                 const maxDay = String(maxDate.getDate()).padStart(2, '0');
-                dateInput.max = `${maxYear}-${maxMonth}-${maxDay}`;
+                const maxDateStr = `${maxYear}-${maxMonth}-${maxDay}`;
+                dateInput.max = maxDateStr;
 
-                dateInput.value = todayStr;
-                checkSundaySchedule(todayStr);
+                if (!dateInput.value || dateInput.value < todayStr) {
+                    dateInput.value = todayStr;
+                }
 
-                dateInput.addEventListener('change', (e) => {
-                    checkSundaySchedule(e.target.value);
+                dateInput.addEventListener('change', () => {
+                    if (dateInput.value && dateInput.value < todayStr) {
+                        document.getElementById('dateError').classList.remove('hidden');
+                        dateInput.classList.add('border-rose-600');
+                    } else {
+                        document.getElementById('dateError').classList.add('hidden');
+                        dateInput.classList.remove('border-rose-600');
+                    }
                 });
             }
 
             if (dobInput) {
+                dobInput.min = '1900-01-01';
                 dobInput.max = todayStr;
             }
 
-            function checkSundaySchedule(dateString) {
-                if (!dateString) return;
-                const parts = dateString.split('-');
-                const selectedDate = new Date(parts[0], parts[1] - 1, parts[2]);
-                const dayOfWeek = selectedDate.getDay();
+            if (timeSlot) {
+                timeSlot.value = ALLOWED_APPT_SLOT;
+                timeSlot.addEventListener('change', () => {
+                    if (timeSlot.value !== ALLOWED_APPT_SLOT) {
+                        timeSlot.value = ALLOWED_APPT_SLOT;
+                        document.getElementById('slotError').classList.remove('hidden');
+                    } else {
+                        document.getElementById('slotError').classList.add('hidden');
+                    }
+                });
+            }
 
-                if (dayOfWeek === 0) {
-                    sundayAlert.classList.remove('hidden');
-                } else {
-                    sundayAlert.classList.add('hidden');
+            const consentSummaries = {
+                'General Dental Evaluation & Diagnostic Consent': 'I understand that a clinical examination and diagnostic checkup are required before treatment planning, and that appointments are taken strictly for 3:00 PM – 5:00 PM (none other slots work for appointments).',
+                'Orthodontics, Braces & Clear Aligners Consent': 'I understand that orthodontic suitability, appliance selection (braces or clear aligners), risks such as root or gum changes, and retention/follow-up commitments depend on clinical evaluation.',
+                'Dental Implants & Prosthetic Replacement Consent': 'I understand that implant or prosthetic options require bone, gum, and bite evaluation, and that healing stages, timelines, and follow-up care vary by individual.',
+                'Full-Mouth Rehabilitation Assessment Consent': 'I understand that full-mouth rehabilitation involves comprehensive functional and bite assessment across teeth/restorations, with individualized plans and timelines without fixed guarantees.',
+                'Root Canal Treatment (RCT) & Restorative Consent': 'I understand that endodontic and restorative options, visit requirements, and post-treatment crown or filling protection depend on clinical findings.',
+                'Wisdom Tooth / Tooth Extraction & Oral Surgery Consent': 'I understand that extractions or oral surgery involve pre-procedure assessment, post-operative healing/aftercare steps, and potential procedural risks discussed during consultation.'
+            };
+
+            if (consentProcedure && consentSummaryText) {
+                consentProcedure.addEventListener('change', () => {
+                    consentSummaryText.textContent = consentSummaries[consentProcedure.value] || consentSummaries['General Dental Evaluation & Diagnostic Consent'];
+                });
+            }
+
+            function validateAttachedFiles() {
+                if (!fileInput || !fileError || !selectedFilesList) return { valid: true, files: [] };
+                fileError.classList.add('hidden');
+                fileError.textContent = '';
+                selectedFilesList.innerHTML = '';
+
+                const files = Array.from(fileInput.files || []);
+                if (files.length === 0) {
+                    return { valid: true, files: [] };
                 }
+
+                if (files.length > MAX_FILES) {
+                    fileError.textContent = `Please select up to ${MAX_FILES} files at a time.`;
+                    fileError.classList.remove('hidden');
+                    return { valid: false, files: [] };
+                }
+
+                for (const file of files) {
+                    const extValid = /\.(pdf|jpe?g|png|webp)$/i.test(file.name);
+                    const mimeValid = ALLOWED_MIME_TYPES.includes(file.type) || extValid;
+                    if (!mimeValid) {
+                        fileError.textContent = `Unsupported file "${file.name}". Please upload PDF, JPG, PNG, or WEBP files only.`;
+                        fileError.classList.remove('hidden');
+                        return { valid: false, files: [] };
+                    }
+                    if (file.size > MAX_FILE_BYTES) {
+                        fileError.textContent = `"${file.name}" exceeds the 5 MB per-file limit.`;
+                        fileError.classList.remove('hidden');
+                        return { valid: false, files: [] };
+                    }
+                }
+
+                files.forEach((f) => {
+                    const li = document.createElement('li');
+                    const sizeKb = Math.max(1, Math.round(f.size / 1024));
+                    li.textContent = `• ${f.name} (${sizeKb} KB)`;
+                    selectedFilesList.appendChild(li);
+                });
+
+                return { valid: true, files };
+            }
+
+            if (fileInput) {
+                fileInput.addEventListener('change', validateAttachedFiles);
+            }
+
+            function buildPrepChecklist() {
+                const svc = (serviceSelect ? serviceSelect.value : '').toLowerCase();
+                const notes = (visitNotesInput ? visitNotesInput.value : '').toLowerCase();
+                const items = [
+                    'Arrive a few minutes early for your 3:00 PM – 5:00 PM appointment slot.',
+                    'Carry any recent dental X-rays, OPG/CBCT scans, prescriptions, or medical history notes.'
+                ];
+
+                if (svc.includes('orthodontic') || svc.includes('braces') || svc.includes('aligner') || svc.includes('smile design')) {
+                    items.push('Note any past braces/aligner history, jaw clicking/clenching, or specific alignment goals.');
+                }
+                if (svc.includes('implant') || svc.includes('rehabilitation') || notes.includes('missing')) {
+                    items.push('List missing teeth, current dentures/bridges/crowns, and any relevant medical conditions or medications.');
+                }
+                if (svc.includes('root canal') || notes.includes('pain') || notes.includes('sensitivity')) {
+                    items.push('Note which side/tooth feels sensitive or painful and whether hot/cold or biting triggers discomfort.');
+                }
+                if (svc.includes('pediatric') || svc.includes('kids')) {
+                    items.push('Bring your child’s age details, habit history (such as thumb-sucking or mouth breathing), and comfort preferences.');
+                }
+
+                if (aiPrepList && aiPrepOutput) {
+                    aiPrepList.innerHTML = '';
+                    items.forEach((txt) => {
+                        const li = document.createElement('li');
+                        li.textContent = txt;
+                        aiPrepList.appendChild(li);
+                    });
+                    aiPrepOutput.classList.remove('hidden');
+                }
+                return items;
+            }
+
+            if (generatePrepBtn) {
+                generatePrepBtn.addEventListener('click', buildPrepChecklist);
+            }
+
+            if (payPlaceholderBtn) {
+                payPlaceholderBtn.addEventListener('click', () => {
+                    if (payPlaceholderStatus) {
+                        payPlaceholderStatus.classList.remove('hidden');
+                    }
+                    if (window.trackEvent) {
+                        window.trackEvent('click_payment_gateway_placeholder', {
+                            planned_gateways: 'razorpay,cashfree,pinelabs,payu'
+                        });
+                    }
+                });
             }
 
             if (form) {
@@ -1189,16 +1485,18 @@ import Layout from '../layouts/Layout.astro';
                     const dobField = document.getElementById('patientDob');
                     const genderField = document.getElementById('patientGender');
                     const serviceInput = document.getElementById('treatmentService');
-                    
+
                     const nameError = document.getElementById('nameError');
                     const phoneError = document.getElementById('phoneError');
                     const dobError = document.getElementById('dobError');
                     const genderError = document.getElementById('genderError');
                     const dateError = document.getElementById('dateError');
+                    const slotError = document.getElementById('slotError');
+                    const consentError = document.getElementById('consentError');
 
                     let isValid = true;
 
-                    if (!nameInput.value.trim()) {
+                    if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
                         nameError.classList.remove('hidden');
                         nameInput.classList.add('border-rose-600');
                         isValid = false;
@@ -1208,7 +1506,7 @@ import Layout from '../layouts/Layout.astro';
                     }
 
                     const cleanPhone = phoneInput.value.replace(/[\s\-\+]/g, '');
-                    if (!cleanPhone || cleanPhone.length < 8 || isNaN(cleanPhone)) {
+                    if (!cleanPhone || cleanPhone.length < 8 || cleanPhone.length > 15 || !/^\d+$/.test(cleanPhone)) {
                         phoneError.classList.remove('hidden');
                         phoneInput.classList.add('border-rose-600');
                         isValid = false;
@@ -1217,7 +1515,11 @@ import Layout from '../layouts/Layout.astro';
                         phoneInput.classList.remove('border-rose-600');
                     }
 
-                    if (!dobField.value) {
+                    const dobVal = dobField.value;
+                    const dobCheckDate = dobVal ? new Date(dobVal + 'T00:00:00') : null;
+                    const minDobDate = new Date('1900-01-01T00:00:00');
+                    const maxDobDate = new Date(todayStr + 'T00:00:00');
+                    if (!dobVal || !dobCheckDate || isNaN(dobCheckDate.getTime()) || dobCheckDate < minDobDate || dobCheckDate > maxDobDate) {
                         dobError.classList.remove('hidden');
                         dobField.classList.add('border-rose-600');
                         isValid = false;
@@ -1235,7 +1537,9 @@ import Layout from '../layouts/Layout.astro';
                         genderField.classList.remove('border-rose-600');
                     }
 
-                    if (!dateInput.value || dateInput.value < todayStr) {
+                    const apptVal = dateInput.value;
+                    const maxApptStr = dateInput.max;
+                    if (!apptVal || apptVal < todayStr || (maxApptStr && apptVal > maxApptStr)) {
                         dateError.classList.remove('hidden');
                         dateInput.classList.add('border-rose-600');
                         isValid = false;
@@ -1244,18 +1548,41 @@ import Layout from '../layouts/Layout.astro';
                         dateInput.classList.remove('border-rose-600');
                     }
 
+                    if (!timeSlot || timeSlot.value !== ALLOWED_APPT_SLOT) {
+                        if (timeSlot) timeSlot.value = ALLOWED_APPT_SLOT;
+                        slotError.classList.remove('hidden');
+                        isValid = false;
+                    } else {
+                        slotError.classList.add('hidden');
+                    }
+
+                    const fileCheck = validateAttachedFiles();
+                    if (!fileCheck.valid) {
+                        isValid = false;
+                    }
+
+                    if (!consentCheckbox || !consentCheckbox.checked) {
+                        consentError.classList.remove('hidden');
+                        isValid = false;
+                    } else {
+                        consentError.classList.add('hidden');
+                    }
+
                     if (!isValid) return;
 
                     const name = nameInput.value.trim();
                     const phone = phoneInput.value.trim();
-                    const dob = dobField.value;
+                    const dob = dobVal;
                     const gender = genderField.value;
                     const service = serviceInput.value;
-                    const date = dateInput.value;
-                    const slot = timeSlot.value;
+                    const date = apptVal;
+                    const slot = ALLOWED_APPT_SLOT;
+                    const notes = visitNotesInput ? visitNotesInput.value.trim() : '';
+                    const selectedConsent = consentProcedure ? consentProcedure.value : 'General Dental Evaluation & Diagnostic Consent';
+                    const fileNames = fileCheck.files.map((f) => f.name).join(', ') || 'None selected (will share in chat if needed)';
 
-                    const dobDate = new Date(dob);
-                    const todayDate = new Date();
+                    const dobDate = new Date(dob + 'T00:00:00');
+                    const todayDate = new Date(todayStr + 'T00:00:00');
                     let calculatedAge = todayDate.getFullYear() - dobDate.getFullYear();
                     const monthDiff = todayDate.getMonth() - dobDate.getMonth();
                     if (monthDiff < 0 || (monthDiff === 0 && todayDate.getDate() < dobDate.getDate())) {
@@ -1268,11 +1595,18 @@ import Layout from '../layouts/Layout.astro';
                             preferred_slot: slot,
                             preferred_date: date,
                             patient_gender: gender,
-                            patient_age: calculatedAge
+                            patient_age: calculatedAge,
+                            records_attached_count: fileCheck.files.length,
+                            consent_acknowledged: true
                         });
                     }
 
-                    const message = `Hello Dr. Riddhi Patel Shah (Infinora Dental Care),%0A%0AI would like to request an in-clinic consultation.%0A%0A📋 *Patient Information:*%0A• Name: ${encodeURIComponent(name)}%0A• Mobile: ${encodeURIComponent(phone)}%0A• Age: ${encodeURIComponent(calculatedAge + ' years')} (DOB: ${encodeURIComponent(dob)})%0A• Gender: ${encodeURIComponent(gender)}%0A• Service: ${encodeURIComponent(service)}%0A• Preferred Date: ${encodeURIComponent(date)}%0A• Preferred Slot: ${encodeURIComponent(slot)}%0A%0APlease verify clinic availability and confirm my visit. Thank you!`;
+                    const optionalBlock = notes ? `%0A• Pre-Visit Notes: ${encodeURIComponent(notes)}` : '';
+                    const message = `Hello Dr. Riddhi Patel Shah (Infinora Dental Care),%0A%0AI would like to request a consultation during the 3:00 PM – 5:00 PM appointment slot.%0A%0A📋 *Patient Information:*%0A• Name: ${encodeURIComponent(name)}%0A• Mobile: ${encodeURIComponent(phone)}%0A• Age: ${encodeURIComponent(calculatedAge + ' years')} (DOB: ${encodeURIComponent(dob)})%0A• Gender: ${encodeURIComponent(gender)}%0A• Service: ${encodeURIComponent(service)}%0A• Preferred Date: ${encodeURIComponent(date)}%0A• Appointment Slot: ${encodeURIComponent(slot)} (None other slots work for appointments)${optionalBlock}%0A• Consent Form: ${encodeURIComponent(selectedConsent)} (Acknowledged)%0A• Health Records Selected: ${encodeURIComponent(fileNames)}%0A%0APlease review availability for 3:00 PM – 5:00 PM and confirm my visit. Thank you!`;
+
+                    if (statusBox) {
+                        statusBox.classList.remove('hidden');
+                    }
 
                     window.open(`https://wa.me/917304432681?text=${message}`, '_blank');
                 });
