@@ -12,12 +12,12 @@ import Layout from '../layouts/Layout.astro';
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">
 
             <div class="flex items-center justify-center md:justify-start gap-2 flex-wrap">
-                <span class="inline-flex items-center gap-1.5 bg-brand-navy text-white border border-brand-lightnavy px-2.5 py-0.5 rounded-full font-extrabold uppercase tracking-wider text-[10px]">
-                    <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
-                    Clinic: 10:00 AM–2:00 PM &amp; 5:00 PM–9:00 PM · Appts: 3:00 PM–5:00 PM
+                <span class="inline-flex items-center gap-1.5 bg-brand-navy text-white border border-brand-lightnavy px-2.5 py-0.5 rounded-full font-extrabold uppercase tracking-wider text-[10px] whitespace-normal break-words">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-gold shrink-0"></span>
+                    Infinora Dental Care · Kandivali West, Mumbai
                 </span>
-                <span class="text-brand-border font-medium text-xs truncate">
-                    Kandivali West, Mumbai
+                <span class="text-brand-border font-medium text-xs whitespace-normal break-words">
+                    Specialist Orthodontics &amp; Family Dental Care
                 </span>
             </div>
 
@@ -81,51 +81,46 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </div>
 
-    <!-- Main Navigation Bar (Inline Scalable Vector Logo + Brand Identity #011f39) -->
+    <!-- Main Navigation Bar (Server /logo.svg + Full Uncut Clinic Name) -->
     <header class="sticky top-0 z-40 bg-brand-offwhite/95 backdrop-blur-md border-b border-brand-border shadow-sm w-full">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 h-18 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 min-h-18 sm:min-h-20 py-2 flex items-center justify-between gap-2 sm:gap-4">
 
             <a href="https://infinoradental.com/" class="flex items-center gap-2.5 sm:gap-3 min-w-0 group" aria-label="Infinora Dental Care Home">
-                <span class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-brand-navy text-white flex items-center justify-center shadow-sm shrink-0 p-1.5 group-hover:bg-brand-hovernavy transition-colors">
-                    <svg viewBox="0 0 1024 1024" class="w-full h-full" fill="currentColor" role="img" aria-label="Infinora Dental Care Logo">
-                        <path d="M420.679657,554.460876 C420.715088,542.017151 419.884735,529.949036 420.897583,518.037720 C423.926514,482.418243 436.126801,450.798309 464.682648,427.582062 C490.957642,406.220184 522.860596,409.363647 545.238220,434.939880 C561.353699,453.358765 570.165771,475.262329 575.275146,498.896027 C578.577576,514.171997 578.556885,529.655151 578.338196,545.148499 C578.269470,550.016113 578.760315,554.811646 579.772095,559.521179 C582.022827,569.997070 587.258789,571.924133 595.594238,565.251343 C603.044250,559.287354 609.355652,552.152954 615.075684,544.547791 C636.472961,516.098633 648.897034,484.433746 649.930298,448.504089 C650.499268,428.719330 651.151917,408.880981 657.677002,389.824036 C664.518250,369.843811 674.263550,351.321686 685.286072,333.390869 C697.839905,312.969055 711.484131,293.172485 720.979919,270.988800 C732.296387,244.551666 735.319092,217.499634 727.573853,189.522278 C726.303528,184.933670 723.232361,181.009933 722.451721,175.690140 C725.308960,176.482361 725.981628,178.650635 727.012695,180.369049 C745.361450,210.952194 745.741333,242.709839 733.461182,275.432190 C724.830200,298.430939 712.962463,319.876434 702.298096,341.906036 C689.786133,367.752350 678.948792,394.180786 674.796326,422.915100 C673.195374,433.993042 673.265015,445.148895 672.312988,456.252045 C668.394287,501.954346 652.818542,542.386292 619.120056,574.675049 C612.818115,580.713318 605.738770,585.689941 597.535339,588.860596 C580.825684,595.318909 567.590576,588.629639 562.852844,571.389587 C560.009033,561.041382 559.269287,550.421448 558.715027,539.769348 C557.522949,516.861084 554.129150,494.393982 544.785278,473.200012 C540.328613,463.091248 535.027710,453.491455 526.954712,445.702667 C510.290619,429.625183 490.486145,429.387238 473.567596,445.402649 C457.204895,460.891846 449.074951,480.722961 444.294769,502.260681 C440.334961,520.101990 440.929718,538.343323 439.253479,556.383850 C438.521637,564.260254 436.443787,571.807373 431.865295,578.403259 C423.041321,591.115356 408.250793,593.772278 395.516388,585.016296 C384.501404,577.442566 377.081360,566.767151 370.700470,555.378967 C352.647217,523.159119 343.228302,488.614197 344.656067,451.570221 C346.190582,411.759064 335.500488,374.893494 319.298645,339.139099 C309.132019,316.703339 297.221161,295.012634 289.838135,271.371002 C281.753906,245.484009 280.637085,219.674576 291.231598,194.131592 C293.055847,189.733368 295.083191,185.369720 298.335876,181.446167 C299.895935,183.095505 298.898926,184.409012 298.441833,185.698318 C284.718719,224.406265 293.227020,258.053650 321.736511,286.994446 C347.555817,313.204315 378.791687,329.844635 414.332916,338.706024 C419.934540,340.102661 422.385468,347.161804 418.710266,351.530914 C417.383087,353.108765 415.632294,352.441010 414.051178,352.061188 C376.478424,343.035736 343.756561,325.632202 317.926483,296.341919 C316.399872,294.610779 314.832672,292.915466 312.317535,290.134521 C314.183044,296.494934 316.720917,301.010986 319.179047,305.552277 C330.273193,326.048553 342.983765,345.692810 351.765167,367.407471 C361.467102,391.398529 367.370087,416.174835 367.279663,442.200348 C367.216095,460.502960 366.155457,478.887115 370.365723,496.923096 C375.738342,519.938354 383.157074,542.128662 398.162292,560.964966 C401.713074,565.422424 405.651093,570.351318 412.191895,568.517700 C418.627686,566.713501 419.433105,560.463989 420.679657,554.460876 Z" />
-                        <path d="M401.230469,294.437744 C369.888397,299.949341 343.949738,290.086243 322.213867,268.342987 C305.729004,251.852554 297.118744,231.763809 296.701202,208.287674 C296.079254,173.316605 320.936768,137.976852 357.613770,126.721390 C389.948669,116.798447 418.740967,125.033447 445.462891,143.641647 C464.964264,157.221680 481.445404,174.289795 498.679779,190.487991 C518.097290,208.738144 536.257019,228.336700 556.981995,245.183640 C569.362976,255.248016 582.775635,263.577881 598.342163,267.789520 C609.863525,270.906708 621.348511,271.461365 632.434204,265.843140 C633.130737,265.490173 633.973755,265.426208 634.739502,265.230072 C636.207275,267.563934 634.835999,269.295563 633.966431,270.979431 C628.192932,282.160004 616.153503,287.871246 603.025940,286.827240 C580.601990,285.043915 561.503601,275.445190 543.636597,262.706024 C521.723389,247.081894 502.717102,228.059723 482.663025,210.265167 C466.827423,196.213760 451.086090,182.017014 432.468811,171.622192 C416.421906,162.662537 399.569611,158.221725 381.149261,163.379578 C345.531494,173.352875 330.134399,218.601074 353.079224,246.705933 C364.495209,260.689209 379.946625,265.122467 397.411133,263.312469 C415.597504,261.427643 431.501709,253.321304 446.849304,244.138596 C458.709534,237.042435 470.266724,229.428452 481.801300,221.806549 C485.026245,219.675552 487.310944,219.525223 489.970123,222.498276 C492.517761,225.346649 495.433594,227.868393 498.219818,230.499619 C499.794708,231.986908 500.347992,233.343887 498.392548,235.041611 C475.114410,255.252121 452.267609,276.084991 423.160400,287.986908 C416.225189,290.822662 409.146667,293.319763 401.230469,294.437744 Z" />
-                        <path d="M680.644714,210.277878 C679.031921,191.848526 670.886597,177.806580 655.209290,168.604111 C638.092834,158.556854 620.503967,159.993973 602.856079,167.212845 C582.935974,175.361176 565.703308,188.023575 548.044617,199.960815 C542.799744,203.506317 537.581909,207.099823 532.482544,210.849258 C530.079224,212.616379 528.281860,212.871536 526.033081,210.523087 C522.477295,206.809708 518.612976,203.391708 514.283936,199.283813 C518.951843,195.224609 522.978577,191.612656 527.121460,188.139252 C546.140808,172.193344 564.607666,155.503708 585.848694,142.449554 C603.360229,131.687408 621.866760,123.614586 642.990967,123.665131 C672.630859,123.736061 695.632141,136.446198 712.221863,160.680054 C731.291138,188.536224 729.734619,217.296127 714.725220,246.200562 C707.987915,259.174896 698.592651,270.250153 688.348816,280.586700 C680.724182,288.280304 672.879333,295.755768 665.253967,303.448700 C662.068542,306.662323 657.775879,307.732025 654.031433,309.847107 C643.282654,315.918732 632.159058,321.219696 620.510681,325.355255 C618.723938,325.989624 616.997864,327.271942 614.629883,326.431091 C614.888062,323.409302 616.772400,321.254852 618.264709,318.958282 C630.718567,299.793274 645.043335,281.999207 658.689331,263.704407 C666.764832,252.877899 674.373535,241.696350 678.138611,228.452484 C679.784729,222.662247 680.707520,216.759155 680.644714,210.277878 Z" />
-                        <path d="M578.856567,688.336792 C582.617065,661.360229 596.392822,642.559692 621.749451,633.133606 C647.679688,623.494263 681.833801,627.885071 701.332520,650.365234 C711.210083,661.753052 715.464844,675.226196 715.978455,689.804077 C716.778564,712.510986 709.414734,732.036316 691.098694,746.479858 C661.202026,770.055420 601.342163,766.093811 583.114075,720.685852 C578.980042,710.387695 578.313049,699.688477 578.856567,688.336792 M613.324768,707.138000 C614.050232,715.480164 615.820129,723.551392 619.384644,731.186157 C625.772949,744.868958 639.456909,751.934387 653.284302,748.507263 C661.880066,746.376892 667.746643,740.758362 672.321228,733.418762 C678.313293,723.804993 680.403381,713.068665 681.309937,702.085510 C682.611633,686.314087 681.247131,670.827515 674.301758,656.295593 C665.681396,638.259216 644.286560,633.487732 629.633972,646.409424 C624.028809,651.352478 620.694092,657.906128 618.156555,664.868774 C613.273804,678.266174 612.597900,692.152527 613.324768,707.138000 Z" />
-                        <path d="M529.712891,342.023193 C529.489319,339.935577 529.286316,338.285126 529.078003,336.635345 C528.331543,330.725433 531.091736,326.808472 536.913818,326.006226 C547.621704,324.530853 558.343384,323.141785 569.079773,321.892548 C575.123535,321.189362 578.865479,324.178680 579.109314,330.194672 C579.292114,334.704956 580.889343,339.205811 578.559814,343.857880 C577.352295,346.269379 578.142578,349.723907 579.545654,352.092804 C582.706787,357.429840 582.177002,363.363312 582.809998,369.040527 C583.272034,373.183807 580.922180,376.604492 576.446533,377.281067 C564.769043,379.046265 553.066711,380.670380 541.343262,382.095978 C536.747314,382.654846 533.371399,379.437378 532.890076,374.181244 C532.366089,368.459320 530.729980,362.805542 532.580139,356.905212 C533.453735,354.119415 532.610779,350.866150 531.168396,348.185730 C530.169678,346.329681 529.807251,344.469452 529.712891,342.023193 M546.059387,359.585968 C546.474670,367.136597 546.474365,367.134583 553.742126,365.973450 C554.399170,365.868469 555.062988,365.802826 555.725281,365.734497 C567.668823,364.502777 567.896912,364.478333 566.589233,352.536774 C565.985229,347.020996 566.432495,341.258514 564.126221,335.644501 C558.242371,336.463959 552.668762,337.343170 547.067505,337.977844 C544.175964,338.305450 543.515198,339.715271 543.903809,342.358856 C544.702148,347.789093 545.319458,353.245972 546.059387,359.585968 Z" />
-                        <path d="M435.590820,322.358704 C445.418182,323.629730 454.821381,324.752716 464.208252,325.998901 C470.549164,326.840668 473.255737,330.305084 472.536926,336.603638 C472.001709,341.293335 472.639526,346.189758 469.061218,350.284943 C467.588257,351.970612 467.585175,355.042328 468.354675,357.050354 C470.682648,363.125153 468.269745,368.902496 467.744019,374.734741 C467.234802,380.384125 463.561157,382.880463 457.947510,382.121246 C446.917297,380.629395 435.908905,378.970428 424.905884,377.286377 C420.442078,376.603210 418.446503,373.643951 418.543243,368.686218 C418.682556,361.543304 420.998566,354.896667 422.883301,348.127594 C424.488281,342.363403 421.663696,336.530823 423.301331,330.527039 C425.308990,323.166534 427.401642,321.171204 435.590820,322.358704 M435.271637,347.745026 C434.834290,351.710907 434.670563,355.732941 433.872040,359.624725 C433.245514,362.678040 434.174438,363.998810 437.077271,364.400055 C441.848328,365.059601 446.616943,365.740814 451.376465,366.478149 C453.805725,366.854462 454.608307,365.669525 454.867737,363.462952 C455.701508,356.370514 456.670013,349.293976 457.538239,342.205414 C457.742004,340.541840 457.957336,338.700897 455.597626,338.321899 C449.441193,337.333008 443.312958,335.999939 436.815674,336.125427 C436.284271,339.976013 435.810303,343.410461 435.271637,347.745026 Z" />
-                        <path d="M652.813416,345.801025 C641.666321,363.397705 636.829590,382.494598 635.095520,402.722839 C633.530334,420.980164 636.785522,438.887115 637.908508,456.943237 C639.401855,480.954041 633.374084,502.758453 619.750000,522.505737 C616.021606,527.909851 612.220337,533.281738 607.216797,537.438293 C605.517700,536.248962 606.038086,535.259766 606.317261,534.347412 C611.836609,516.310303 613.444763,497.797424 612.633484,479.067474 C611.998047,464.398224 608.806519,450.072266 606.081604,435.686218 C601.169861,409.754761 602.776428,384.347504 612.578247,359.623566 C614.048035,355.916168 616.204773,353.799652 620.074402,352.470612 C631.585938,348.516846 642.492371,343.121826 653.255432,337.450012 C655.102417,336.476685 656.823853,334.984833 659.716187,335.341064 C658.506287,339.588318 654.815857,341.970093 652.813416,345.801025 Z" />
-                        <path d="M532.072083,690.944580 C541.457397,702.448730 550.290405,713.969299 559.879700,724.821716 C572.451355,739.049377 585.366394,753.083557 604.872681,758.581116 C603.783875,761.232849 601.633179,760.995850 599.810974,761.302979 C578.551941,764.886658 560.413940,757.783020 544.192566,744.693115 C526.190552,730.166199 511.383179,712.541321 496.725494,694.810547 C485.263336,680.945190 473.976105,666.935242 462.521210,653.063782 C454.863281,643.790283 446.133759,635.975342 433.890106,633.289978 C433.252289,633.150085 432.606598,632.904602 432.473572,631.642761 C435.385986,629.140747 439.238037,629.067078 442.900879,628.780884 C461.750031,627.307922 477.212463,635.225708 491.348633,646.598389 C507.065247,659.242676 519.184570,675.210999 532.072083,690.944580 Z" />
-                        <path d="M705.156738,284.154419 C707.115784,282.791504 707.927795,280.344025 710.753723,280.393982 C711.023804,282.779572 709.309387,284.068146 708.190491,285.549652 C689.451538,310.362091 664.612305,326.806915 636.051819,338.189880 C620.228455,344.496399 603.998474,349.334991 587.294861,352.698761 C583.371399,353.488831 582.254944,352.194336 581.940125,348.590576 C581.254272,340.741028 581.158020,340.821899 588.996399,339.065216 C628.313354,330.253571 664.838257,315.159180 697.200684,290.768372 C699.857971,288.765625 702.336853,286.526093 705.156738,284.154419 Z" />
-                        <path d="M492.413910,348.531372 C503.365784,349.041199 513.813232,348.191345 524.245300,347.437744 C527.682312,347.189423 529.239746,347.820282 529.226807,351.453033 C529.190613,361.624969 531.647705,360.150848 521.001465,360.853638 C505.932373,361.848419 490.788666,361.981750 475.684753,360.434906 C472.282166,360.086456 470.751251,359.181488 471.569336,355.600677 C471.898651,354.159119 471.831268,352.625793 471.932281,351.133453 C472.105621,348.571564 473.106750,347.250916 476.031158,347.527985 C481.319397,348.028992 486.639008,348.199280 492.413910,348.531372 Z" />
-                        <path d="M564.560242,348.719788 C566.069641,357.396851 566.069641,357.396790 558.069763,358.434296 C557.905762,358.455536 557.742310,358.481567 557.579163,358.508728 C544.881653,360.622864 547.771912,359.609009 546.102112,347.991089 C545.755310,345.578247 547.250244,344.313965 549.511475,343.951447 C552.283875,343.506958 555.090698,343.251190 557.842529,342.709778 C562.465881,341.800049 564.808716,343.415344 564.560242,348.719788 Z" />
-                        <path d="M454.291443,354.094086 C454.377594,358.525269 452.369141,359.910278 448.608429,359.144135 C447.469727,358.912170 446.336273,358.642639 445.188538,358.468475 C435.887085,357.056915 433.250488,353.155670 437.969574,344.833984 C441.119019,339.280212 447.227539,344.336639 451.984528,344.076904 C454.599976,343.934082 455.453522,346.136414 454.930756,348.719421 C454.603119,350.338287 454.509674,352.004608 454.291443,354.094086 Z" />
-                    </svg>
+                <span class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-brand-offwhite border border-brand-border flex items-center justify-center shadow-sm shrink-0 p-1">
+                    <img
+                        src="/logo.svg"
+                        alt="Infinora Dental Care Logo"
+                        width="38"
+                        height="38"
+                        class="w-full h-full object-contain"
+                        onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+                    />
+                    <span class="hidden text-xs font-black text-brand-navy">IDC</span>
                 </span>
                 <div class="min-w-0">
-                    <span class="text-sm sm:text-xl font-extrabold tracking-tight text-brand-navy block leading-tight truncate">Infinora Dental Care</span>
-                    <span class="text-[9px] sm:text-xs font-semibold tracking-wider text-brand-grey-muted block truncate">Kandivali West, Mumbai</span>
+                    <span class="text-sm sm:text-xl font-extrabold tracking-tight text-brand-navy block leading-snug whitespace-normal break-words">Infinora Dental Care</span>
+                    <span class="text-[10px] sm:text-xs font-semibold tracking-wider text-brand-grey-muted block leading-snug whitespace-normal break-words">Kandivali West, Mumbai</span>
                 </div>
             </a>
 
-            <nav class="hidden lg:flex items-center gap-5 text-sm font-semibold text-brand-grey-text">
+            <nav class="hidden lg:flex items-center gap-5 text-sm font-semibold text-brand-grey-text shrink-0">
                 <a href="#family-care" class="hover:text-brand-navy transition-colors">Family Care</a>
                 <a href="#catalogue" class="hover:text-brand-navy transition-colors">Treatments</a>
                 <a href="#about" class="hover:text-brand-navy transition-colors">Meet Dr. Riddhi</a>
-                <a href="#standards" class="hover:text-brand-navy transition-colors">The Standard</a>
+                <a href="#reviews" class="hover:text-brand-navy transition-colors">Google Reviews</a>
                 <a href="#credentials" class="hover:text-brand-navy transition-colors">Registrations</a>
                 <a href="#faq" class="hover:text-brand-navy transition-colors">FAQs</a>
                 <a href="#location" class="hover:text-brand-navy transition-colors">Location</a>
             </nav>
 
             <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                <a href="https://maps.app.goo.gl/3sKwKPjG43PNeN6y7" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-1 bg-brand-surface hover:bg-brand-cardbg text-brand-navy px-3.5 py-2.5 rounded-xl font-bold text-xs transition-all border border-brand-border">
+                <a href="https://maps.app.goo.gl/3sKwKPjG43PNeN6y7" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-1 bg-brand-surface hover:bg-brand-cardbg text-brand-navy px-3.5 py-2.5 rounded-xl font-bold text-xs transition-all border border-brand-border whitespace-nowrap">
                     📍 Directions
                 </a>
-                <a href="https://infinoradental.com/#book" class="inline-flex items-center gap-1 bg-brand-navy hover:bg-brand-hovernavy text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md transition-all">
+                <a href="https://infinoradental.com/#book" class="inline-flex items-center gap-1 bg-brand-navy hover:bg-brand-hovernavy text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md transition-all whitespace-nowrap">
                     <span>Book Appointment</span>
                 </a>
-                <a href="tel:+917304432681" class="hidden sm:inline-flex bg-brand-darknavy hover:bg-brand-midnavy text-white px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-sm transition-all">
+                <a href="tel:+917304432681" class="hidden sm:inline-flex bg-brand-darknavy hover:bg-brand-midnavy text-white px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-sm transition-all whitespace-nowrap">
                     +91 73044 32681
                 </a>
             </div>
@@ -139,18 +134,18 @@ import Layout from '../layouts/Layout.astro';
             <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
                 <div class="lg:col-span-7 space-y-4 sm:space-y-6 text-left min-w-0">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-cardbg border border-brand-border text-brand-navy text-[11px] sm:text-xs font-bold tracking-wide uppercase max-w-full">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-cardbg border border-brand-border text-brand-navy text-[11px] sm:text-xs font-bold tracking-wide uppercase whitespace-normal break-words">
                         <span class="w-2 h-2 rounded-full bg-brand-gold shrink-0"></span>
-                        <span class="truncate">Kandivali West, Mumbai · Family &amp; Specialist Dentistry</span>
+                        <span>Infinora Dental Care · Kandivali West, Mumbai · Specialist-Led</span>
                     </div>
 
-                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-navy leading-[1.12] break-words">
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-navy leading-[1.12] whitespace-normal break-words">
                         Specialist-led dentistry. <br/>
                         <span class="text-brand-lightnavy">Thoughtfully delivered.</span>
                     </h1>
 
-                    <p class="text-sm sm:text-base text-brand-grey-text leading-relaxed max-w-2xl break-words">
-                        Infinora Dental Care is a welcoming family and specialist dental practice in Kandivali West, Mumbai, founded and led by <strong>Dr. Riddhi Patel Shah</strong> (BDS University Gold Medalist, MDS Orthodontics &amp; Dentofacial Orthopedics University Rank-Holder), active member of the <strong>Indian Orthodontic Society (IOS)</strong> and the <a href="https://dentist.ida.org.in/dentist/riddhi-kantilal-patel" target="_blank" rel="noopener" class="text-brand-navy font-bold underline hover:text-brand-hovernavy">Indian Dental Association (IDA Profile)</a>. Clinic hours are <strong>10:00 AM to 2:00 PM</strong> and <strong>Evening: 5:00 PM to 9:00 PM</strong>, with appointments taken for <strong>3:00 PM to 5:00 PM</strong>.
+                    <p class="text-sm sm:text-base text-brand-grey-text leading-relaxed max-w-2xl whitespace-normal break-words">
+                        <strong>Infinora Dental Care</strong> is a welcoming family and specialist dental practice in Kandivali West, Mumbai, founded and led by <strong>Dr. Riddhi Patel Shah</strong> (BDS University Gold Medalist, MDS Orthodontics &amp; Dentofacial Orthopedics University Rank-Holder), active member of the <strong>Indian Orthodontic Society (IOS)</strong> and the <a href="https://dentist.ida.org.in/dentist/riddhi-kantilal-patel" target="_blank" rel="noopener" class="text-brand-navy font-bold underline hover:text-brand-hovernavy">Indian Dental Association (IDA Profile)</a>.
                     </p>
 
                     <!-- Action CTAs -->
@@ -167,16 +162,16 @@ import Layout from '../layouts/Layout.astro';
                     <!-- Trust Badges -->
                     <div class="pt-4 grid grid-cols-3 gap-2 sm:gap-4 border-t border-brand-border">
                         <div class="p-3 bg-brand-offwhite rounded-xl border border-brand-border shadow-sm text-center sm:text-left min-w-0">
-                            <div class="text-xs sm:text-xl font-black text-brand-navy truncate">Dr. Riddhi</div>
-                            <div class="text-[10px] sm:text-xs text-brand-grey-muted font-semibold truncate">Gold Medalist &amp; MDS</div>
+                            <div class="text-xs sm:text-xl font-black text-brand-navy whitespace-normal break-words">Dr. Riddhi</div>
+                            <div class="text-[10px] sm:text-xs text-brand-grey-muted font-semibold whitespace-normal break-words">Gold Medalist &amp; MDS</div>
                         </div>
                         <div class="p-3 bg-brand-offwhite rounded-xl border border-brand-border shadow-sm text-center sm:text-left min-w-0">
-                            <div class="text-xs sm:text-xl font-black text-brand-navy truncate">IOS &amp; IDA</div>
-                            <div class="text-[10px] sm:text-xs text-brand-grey-muted font-semibold truncate">Verified Specialist</div>
+                            <div class="text-xs sm:text-xl font-black text-brand-navy whitespace-normal break-words">IOS &amp; IDA</div>
+                            <div class="text-[10px] sm:text-xs text-brand-grey-muted font-semibold whitespace-normal break-words">Verified Specialist</div>
                         </div>
                         <div class="p-3 bg-brand-offwhite rounded-xl border border-brand-border shadow-sm text-center sm:text-left min-w-0">
-                            <div class="text-xs sm:text-xl font-black text-brand-navy truncate">Class-B</div>
-                            <div class="text-[10px] sm:text-xs text-brand-grey-muted font-semibold truncate">Hospital Sterilization</div>
+                            <div class="text-xs sm:text-xl font-black text-brand-navy whitespace-normal break-words">Class-B</div>
+                            <div class="text-[10px] sm:text-xs text-brand-grey-muted font-semibold whitespace-normal break-words">Hospital Sterilization</div>
                         </div>
                     </div>
                 </div>
@@ -185,24 +180,27 @@ import Layout from '../layouts/Layout.astro';
                 <div class="lg:col-span-5 relative w-full min-w-0" id="about">
                     <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-8 border border-brand-border shadow-xl space-y-4">
                         <div class="flex items-center gap-3.5 border-b border-brand-border pb-4">
-                            <div class="w-14 h-14 rounded-2xl bg-brand-navy text-white flex items-center justify-center shrink-0 p-2 shadow-sm">
-                                <svg viewBox="0 0 1024 1024" class="w-full h-full" fill="currentColor" role="img" aria-label="Infinora Dental Care Emblem">
-                                    <path d="M420.679657,554.460876 C420.715088,542.017151 419.884735,529.949036 420.897583,518.037720 C423.926514,482.418243 436.126801,450.798309 464.682648,427.582062 C490.957642,406.220184 522.860596,409.363647 545.238220,434.939880 C561.353699,453.358765 570.165771,475.262329 575.275146,498.896027 C578.577576,514.171997 578.556885,529.655151 578.338196,545.148499 C578.269470,550.016113 578.760315,554.811646 579.772095,559.521179 C582.022827,569.997070 587.258789,571.924133 595.594238,565.251343 C603.044250,559.287354 609.355652,552.152954 615.075684,544.547791 C636.472961,516.098633 648.897034,484.433746 649.930298,448.504089 C650.499268,428.719330 651.151917,408.880981 657.677002,389.824036 C664.518250,369.843811 674.263550,351.321686 685.286072,333.390869 C697.839905,312.969055 711.484131,293.172485 720.979919,270.988800 C732.296387,244.551666 735.319092,217.499634 727.573853,189.522278 C726.303528,184.933670 723.232361,181.009933 722.451721,175.690140 C725.308960,176.482361 725.981628,178.650635 727.012695,180.369049 C745.361450,210.952194 745.741333,242.709839 733.461182,275.432190 C724.830200,298.430939 712.962463,319.876434 702.298096,341.906036 C689.786133,367.752350 678.948792,394.180786 674.796326,422.915100 C673.195374,433.993042 673.265015,445.148895 672.312988,456.252045 C668.394287,501.954346 652.818542,542.386292 619.120056,574.675049 C612.818115,580.713318 605.738770,585.689941 597.535339,588.860596 C580.825684,595.318909 567.590576,588.629639 562.852844,571.389587 C560.009033,561.041382 559.269287,550.421448 558.715027,539.769348 C557.522949,516.861084 554.129150,494.393982 544.785278,473.200012 C540.328613,463.091248 535.027710,453.491455 526.954712,445.702667 C510.290619,429.625183 490.486145,429.387238 473.567596,445.402649 C457.204895,460.891846 449.074951,480.722961 444.294769,502.260681 C440.334961,520.101990 440.929718,538.343323 439.253479,556.383850 C438.521637,564.260254 436.443787,571.807373 431.865295,578.403259 C423.041321,591.115356 408.250793,593.772278 395.516388,585.016296 C384.501404,577.442566 377.081360,566.767151 370.700470,555.378967 C352.647217,523.159119 343.228302,488.614197 344.656067,451.570221 C346.190582,411.759064 335.500488,374.893494 319.298645,339.139099 C309.132019,316.703339 297.221161,295.012634 289.838135,271.371002 C281.753906,245.484009 280.637085,219.674576 291.231598,194.131592 C293.055847,189.733368 295.083191,185.369720 298.335876,181.446167 C299.895935,183.095505 298.898926,184.409012 298.441833,185.698318 C284.718719,224.406265 293.227020,258.053650 321.736511,286.994446 C347.555817,313.204315 378.791687,329.844635 414.332916,338.706024 C419.934540,340.102661 422.385468,347.161804 418.710266,351.530914 C417.383087,353.108765 415.632294,352.441010 414.051178,352.061188 C376.478424,343.035736 343.756561,325.632202 317.926483,296.341919 C316.399872,294.610779 314.832672,292.915466 312.317535,290.134521 C314.183044,296.494934 316.720917,301.010986 319.179047,305.552277 C330.273193,326.048553 342.983765,345.692810 351.765167,367.407471 C361.467102,391.398529 367.370087,416.174835 367.279663,442.200348 C367.216095,460.502960 366.155457,478.887115 370.365723,496.923096 C375.738342,519.938354 383.157074,542.128662 398.162292,560.964966 C401.713074,565.422424 405.651093,570.351318 412.191895,568.517700 C418.627686,566.713501 419.433105,560.463989 420.679657,554.460876 Z" />
-                                    <path d="M401.230469,294.437744 C369.888397,299.949341 343.949738,290.086243 322.213867,268.342987 C305.729004,251.852554 297.118744,231.763809 296.701202,208.287674 C296.079254,173.316605 320.936768,137.976852 357.613770,126.721390 C389.948669,116.798447 418.740967,125.033447 445.462891,143.641647 C464.964264,157.221680 481.445404,174.289795 498.679779,190.487991 C518.097290,208.738144 536.257019,228.336700 556.981995,245.183640 C569.362976,255.248016 582.775635,263.577881 598.342163,267.789520 C609.863525,270.906708 621.348511,271.461365 632.434204,265.843140 C633.130737,265.490173 633.973755,265.426208 634.739502,265.230072 C636.207275,267.563934 634.835999,269.295563 633.966431,270.979431 C628.192932,282.160004 616.153503,287.871246 603.025940,286.827240 C580.601990,285.043915 561.503601,275.445190 543.636597,262.706024 C521.723389,247.081894 502.717102,228.059723 482.663025,210.265167 C466.827423,196.213760 451.086090,182.017014 432.468811,171.622192 C416.421906,162.662537 399.569611,158.221725 381.149261,163.379578 C345.531494,173.352875 330.134399,218.601074 353.079224,246.705933 C364.495209,260.689209 379.946625,265.122467 397.411133,263.312469 C415.597504,261.427643 431.501709,253.321304 446.849304,244.138596 C458.709534,237.042435 470.266724,229.428452 481.801300,221.806549 C485.026245,219.675552 487.310944,219.525223 489.970123,222.498276 C492.517761,225.346649 495.433594,227.868393 498.219818,230.499619 C499.794708,231.986908 500.347992,233.343887 498.392548,235.041611 C475.114410,255.252121 452.267609,276.084991 423.160400,287.986908 C416.225189,290.822662 409.146667,293.319763 401.230469,294.437744 Z" />
-                                    <path d="M680.644714,210.277878 C679.031921,191.848526 670.886597,177.806580 655.209290,168.604111 C638.092834,158.556854 620.503967,159.993973 602.856079,167.212845 C582.935974,175.361176 565.703308,188.023575 548.044617,199.960815 C542.799744,203.506317 537.581909,207.099823 532.482544,210.849258 C530.079224,212.616379 528.281860,212.871536 526.033081,210.523087 C522.477295,206.809708 518.612976,203.391708 514.283936,199.283813 C518.951843,195.224609 522.978577,191.612656 527.121460,188.139252 C546.140808,172.193344 564.607666,155.503708 585.848694,142.449554 C603.360229,131.687408 621.866760,123.614586 642.990967,123.665131 C672.630859,123.736061 695.632141,136.446198 712.221863,160.680054 C731.291138,188.536224 729.734619,217.296127 714.725220,246.200562 C707.987915,259.174896 698.592651,270.250153 688.348816,280.586700 C680.724182,288.280304 672.879333,295.755768 665.253967,303.448700 C662.068542,306.662323 657.775879,307.732025 654.031433,309.847107 C643.282654,315.918732 632.159058,321.219696 620.510681,325.355255 C618.723938,325.989624 616.997864,327.271942 614.629883,326.431091 C614.888062,323.409302 616.772400,321.254852 618.264709,318.958282 C630.718567,299.793274 645.043335,281.999207 658.689331,263.704407 C666.764832,252.877899 674.373535,241.696350 678.138611,228.452484 C679.784729,222.662247 680.707520,216.759155 680.644714,210.277878 Z" />
-                                    <path d="M578.856567,688.336792 C582.617065,661.360229 596.392822,642.559692 621.749451,633.133606 C647.679688,623.494263 681.833801,627.885071 701.332520,650.365234 C711.210083,661.753052 715.464844,675.226196 715.978455,689.804077 C716.778564,712.510986 709.414734,732.036316 691.098694,746.479858 C661.202026,770.055420 601.342163,766.093811 583.114075,720.685852 C578.980042,710.387695 578.313049,699.688477 578.856567,688.336792 M613.324768,707.138000 C614.050232,715.480164 615.820129,723.551392 619.384644,731.186157 C625.772949,744.868958 639.456909,751.934387 653.284302,748.507263 C661.880066,746.376892 667.746643,740.758362 672.321228,733.418762 C678.313293,723.804993 680.403381,713.068665 681.309937,702.085510 C682.611633,686.314087 681.247131,670.827515 674.301758,656.295593 C665.681396,638.259216 644.286560,633.487732 629.633972,646.409424 C624.028809,651.352478 620.694092,657.906128 618.156555,664.868774 C613.273804,678.266174 612.597900,692.152527 613.324768,707.138000 Z" />
-                                </svg>
+                            <div class="w-14 h-14 rounded-2xl bg-brand-surface border border-brand-border flex items-center justify-center shrink-0 p-1.5">
+                                <img
+                                    src="/logo.svg"
+                                    alt="Infinora Dental Care Logo"
+                                    width="44"
+                                    height="44"
+                                    class="w-full h-full object-contain"
+                                    onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+                                />
+                                <span class="hidden text-sm font-black text-brand-navy">DR</span>
                             </div>
                             <div class="min-w-0">
-                                <h2 class="font-extrabold text-brand-navy text-base sm:text-lg leading-tight truncate">Dr. Riddhi Patel Shah</h2>
-                                <p class="text-[11px] sm:text-xs text-brand-lightnavy font-bold tracking-wide break-words">BDS Gold Medalist | MDS Orthodontics</p>
-                                <p class="text-[11px] text-brand-grey-muted font-medium">Founder &amp; Lead Dental Surgeon</p>
+                                <h2 class="font-extrabold text-brand-navy text-base sm:text-lg leading-snug whitespace-normal break-words">Dr. Riddhi Patel Shah</h2>
+                                <p class="text-[11px] sm:text-xs text-brand-lightnavy font-bold tracking-wide whitespace-normal break-words">BDS Gold Medalist | MDS Orthodontics</p>
+                                <p class="text-[11px] text-brand-grey-muted font-medium whitespace-normal break-words">Founder &amp; Lead Dental Surgeon · Infinora Dental Care</p>
                             </div>
                         </div>
 
-                        <div class="space-y-3 text-xs sm:text-sm text-brand-grey-text leading-relaxed break-words">
+                        <div class="space-y-3 text-xs sm:text-sm text-brand-grey-text leading-relaxed whitespace-normal break-words">
                             <p>
-                                <strong>Dr. Riddhi Patel Shah</strong> is an accomplished Orthodontist and Lead Dental Surgeon practicing in Kandivali West, Mumbai. Combining post-graduate clinical excellence with an empathetic, patient-first philosophy, she delivers specialist-led treatments designed for lifelong dental function and facial balance.
+                                <strong>Dr. Riddhi Patel Shah</strong> is an accomplished Orthodontist and Lead Dental Surgeon practicing at <strong>Infinora Dental Care</strong> in Kandivali West, Mumbai. Combining post-graduate clinical excellence with an empathetic, patient-first philosophy, she delivers specialist-led treatments designed for lifelong dental function and facial balance.
                             </p>
                             <p>
                                 With extensive training in diagnosing complex jaw discrepancies, crowded dentition, and malocclusions, Dr. Riddhi pairs digital imaging with delicate orthodontic biomechanics to safeguard periodontal health.
@@ -252,7 +250,7 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                     <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-2">
                         <h3 class="font-extrabold text-brand-navy text-sm">Adults &amp; Working Professionals</h3>
-                        <p class="text-xs text-brand-grey-text leading-relaxed">Discreet aligners/braces, root canals, crowns, tooth-colored fillings, gum care, and clinic hours at 10:00 AM–2:00 PM &amp; 5:00 PM–9:00 PM.</p>
+                        <p class="text-xs text-brand-grey-text leading-relaxed">Discreet aligners/braces, root canals, crowns, tooth-colored fillings, gum care, and structured daily clinic hours.</p>
                     </div>
                     <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-2">
                         <h3 class="font-extrabold text-brand-navy text-sm">Seniors &amp; Complex Needs</h3>
@@ -446,7 +444,7 @@ import Layout from '../layouts/Layout.astro';
                         <div class="space-y-3.5 text-xs sm:text-sm">
                             <div class="p-4 rounded-2xl bg-brand-midnavy border border-brand-lightnavy space-y-1">
                                 <div class="font-bold text-brand-gold">Working Professionals &amp; Executives</div>
-                                <p class="text-brand-border text-xs leading-relaxed">Discreet aligners, ceramic/self-ligating braces, and clinic hours at 10:00 AM–2:00 PM &amp; 5:00 PM–9:00 PM (3:00 PM–5:00 PM appointments).</p>
+                                <p class="text-brand-border text-xs leading-relaxed">Discreet aligners, ceramic/self-ligating braces, and convenient clinic hours.</p>
                             </div>
                             <div class="p-4 rounded-2xl bg-brand-midnavy border border-brand-lightnavy space-y-1">
                                 <div class="font-bold text-brand-gold">Teens, Children &amp; Young Students</div>
@@ -483,9 +481,9 @@ import Layout from '../layouts/Layout.astro';
                     <!-- 1. Orthodontics & Braces -->
                     <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
-                            <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">01</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Priority 1 · MDS Orthodontics</span>
+                            <div class="flex items-center justify-between gap-2">
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">01</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border whitespace-normal">Priority 1 · MDS Orthodontics</span>
                             </div>
                             <div>
                                 <h3 class="text-lg font-extrabold text-brand-navy">Orthodontics &amp; Precision Braces</h3>
@@ -505,9 +503,9 @@ import Layout from '../layouts/Layout.astro';
                     <!-- 2. Clear Aligners & Invisalign -->
                     <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
-                            <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">02</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Priority 1 · Clear Aligners</span>
+                            <div class="flex items-center justify-between gap-2">
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">02</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border whitespace-normal">Priority 1 · Clear Aligners</span>
                             </div>
                             <div>
                                 <h3 class="text-lg font-extrabold text-brand-navy">Clear Aligners &amp; Invisalign</h3>
@@ -527,9 +525,9 @@ import Layout from '../layouts/Layout.astro';
                     <!-- 3. Dental Implants -->
                     <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
-                            <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">03</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Priority 2 · Tooth Replacement</span>
+                            <div class="flex items-center justify-between gap-2">
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">03</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border whitespace-normal">Priority 2 · Tooth Replacement</span>
                             </div>
                             <div>
                                 <h3 class="text-lg font-extrabold text-brand-navy">Dental Implants &amp; Prosthetic Care</h3>
@@ -549,9 +547,9 @@ import Layout from '../layouts/Layout.astro';
                     <!-- 4. Full-Mouth Rehabilitation -->
                     <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
-                            <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">04</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Priority 3 · Full-Mouth Rehab</span>
+                            <div class="flex items-center justify-between gap-2">
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">04</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border whitespace-normal">Priority 3 · Full-Mouth Rehab</span>
                             </div>
                             <div>
                                 <h3 class="text-lg font-extrabold text-brand-navy">Full-Mouth Rehabilitation</h3>
@@ -571,9 +569,9 @@ import Layout from '../layouts/Layout.astro';
                     <!-- 5. Root Canal Treatment -->
                     <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
-                            <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">05</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Priority 4 · Restorative RCT</span>
+                            <div class="flex items-center justify-between gap-2">
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">05</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border whitespace-normal">Priority 4 · Restorative RCT</span>
                             </div>
                             <div>
                                 <h3 class="text-lg font-extrabold text-brand-navy">Root Canal Treatment (RCT)</h3>
@@ -593,9 +591,9 @@ import Layout from '../layouts/Layout.astro';
                     <!-- 6. Crowns, Bridges, Fillings & Restorative -->
                     <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
-                            <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">06</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Priority 4 · Restorative &amp; Prostho</span>
+                            <div class="flex items-center justify-between gap-2">
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">06</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border whitespace-normal">Priority 4 · Restorative &amp; Prostho</span>
                             </div>
                             <div>
                                 <h3 class="text-lg font-extrabold text-brand-navy">Crowns, Bridges, Fillings &amp; Veneers</h3>
@@ -615,9 +613,9 @@ import Layout from '../layouts/Layout.astro';
                     <!-- 7. Pediatric & Family Preventive Care -->
                     <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
-                            <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">07</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Priority 5 · Family &amp; Kids</span>
+                            <div class="flex items-center justify-between gap-2">
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">07</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border whitespace-normal">Priority 5 · Family &amp; Kids</span>
                             </div>
                             <div>
                                 <h3 class="text-lg font-extrabold text-brand-navy">Pediatric, Adult &amp; Senior Family Care</h3>
@@ -637,20 +635,20 @@ import Layout from '../layouts/Layout.astro';
                     <!-- 8. Gum Health & Wisdom Tooth Surgery -->
                     <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
-                            <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">08</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Periodontics &amp; Oral Surgery</span>
+                            <div class="flex items-center justify-between gap-2">
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">08</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border whitespace-normal">Periodontics &amp; Oral Surgery</span>
                             </div>
                             <div>
-                                <h3 class="text-lg font-extrabold text-brand-navy">Gum Care &amp; Wisdom Tooth Surgery</h3>
-                                <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Scaling, Periodontal Care &amp; Extractions</p>
+                                <h3 class="text-lg font-extrabold text-brand-navy">Gum Care &amp; Extraction Care</h3>
+                                <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Gum Surgery / Periodontics &amp; Extractions</p>
                             </div>
                             <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                                Scaling, gum health management, and wisdom tooth or tooth extractions with clear pre-procedure assessment, aftercare steps, and recovery guidance.
+                                Gum care, periodontics, and tooth/wisdom tooth extractions with clear pre-procedure assessment, aftercare steps, and recovery guidance.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border">
-                            <button type="button" onclick="selectService('Wisdom Tooth')" class="w-full text-center py-2.5 rounded-xl bg-brand-navy hover:bg-brand-hovernavy text-white text-xs font-bold block transition-colors cursor-pointer">
+                            <button type="button" onclick="selectService('Gum')" class="w-full text-center py-2.5 rounded-xl bg-brand-navy hover:bg-brand-hovernavy text-white text-xs font-bold block transition-colors cursor-pointer">
                                 Consult for Gum or Extraction Care →
                             </button>
                         </div>
@@ -659,9 +657,9 @@ import Layout from '../layouts/Layout.astro';
                     <!-- 9. Teeth Whitening & Teleconsultation -->
                     <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
-                            <div class="flex items-center justify-between">
-                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black">09</span>
-                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border">Whitening &amp; Video Opinion</span>
+                            <div class="flex items-center justify-between gap-2">
+                                <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">09</span>
+                                <span class="text-[10px] font-black uppercase tracking-wider bg-brand-cardbg text-brand-navy px-2.5 py-1 rounded-full border border-brand-border whitespace-normal">Whitening &amp; Video Opinion</span>
                             </div>
                             <div>
                                 <h3 class="text-lg font-extrabold text-brand-navy">Teeth Whitening &amp; NRI Video Opinion</h3>
@@ -682,8 +680,43 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
+        <!-- GOOGLE REVIEWS TRUST SECTION -->
+        <section id="reviews" class="py-14 bg-brand-surface w-full border-b border-brand-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
+                <div class="text-center max-w-2xl mx-auto space-y-2.5">
+                    <span class="text-brand-navy text-[10px] font-extrabold uppercase tracking-widest bg-brand-cardbg border border-brand-border px-3 py-1 rounded-full">
+                        Verified Google Profile &amp; Reviews
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy">Patient Reviews on Google</h2>
+                    <p class="text-xs sm:text-sm text-brand-grey-muted leading-relaxed">
+                        Read verified patient feedback directly on our Google Business Profile for <strong>Infinora Dental Care - Dr. Riddhi Patel Shah (Dentist &amp; Braces Clinic)</strong> in Kandivali West, Mumbai.
+                    </p>
+                </div>
+
+                <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-8 border border-brand-border shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                    <div class="space-y-2 min-w-0">
+                        <div class="text-brand-gold font-bold text-sm">★★★★★ · Authentic Google Reviews Only</div>
+                        <h3 class="text-lg font-extrabold text-brand-navy whitespace-normal break-words">
+                            Infinora Dental Care - Dr. Riddhi Patel Shah (Dentist &amp; Braces Clinic)
+                        </h3>
+                        <p class="text-xs sm:text-sm text-brand-grey-text leading-relaxed whitespace-normal break-words">
+                            Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067 · Rather than displaying fabricated quotes, view live reviews directly on our official Google profile or share your own visit feedback.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-3 shrink-0">
+                        <a href="https://share.google/fYPKASkVLyZ0KXni9" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 bg-brand-navy hover:bg-brand-hovernavy text-white font-bold px-5 py-3 rounded-xl text-xs sm:text-sm transition-all shadow-sm">
+                            Read Google Reviews →
+                        </a>
+                        <a href="https://g.page/r/Cb7r3l0-R2oSEBM/review" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 bg-brand-surface hover:bg-brand-cardbg text-brand-navy border border-brand-border font-bold px-5 py-3 rounded-xl text-xs sm:text-sm transition-all">
+                            ⭐ Write a Review
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- PATIENT EXPERIENCE & ACCESSIBLE AMENITIES -->
-        <section id="facilities" class="py-16 bg-brand-surface w-full border-b border-brand-border">
+        <section id="facilities" class="py-16 bg-brand-offwhite w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
                 <div class="text-center max-w-2xl mx-auto space-y-2">
                     <span class="text-brand-navy text-xs font-extrabold tracking-widest uppercase bg-brand-cardbg border border-brand-border px-3.5 py-1 rounded-full">
@@ -696,42 +729,42 @@ import Layout from '../layouts/Layout.astro';
                 </div>
 
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">🚗</div>
                         <h3 class="font-bold text-sm text-brand-navy">Free Street Parking</h3>
                         <p class="text-[11px] text-brand-grey-muted">Accessible parking along Iraniwadi Road No. 3.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">♿</div>
                         <h3 class="font-bold text-sm text-brand-navy">Wheelchair Friendly</h3>
                         <p class="text-[11px] text-brand-grey-muted">Ground-level access for elderly and mobility-assisted guests.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">💳</div>
                         <h3 class="font-bold text-sm text-brand-navy">Digital &amp; Card Payments</h3>
                         <p class="text-[11px] text-brand-grey-muted">UPI, GPay, Credit/Debit, Tap NFC, and payment/EMI plans.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">🌈</div>
                         <h3 class="font-bold text-sm text-brand-navy">Inclusive Space</h3>
                         <p class="text-[11px] text-brand-grey-muted">Respectful, welcoming care for every individual and family.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">👩‍💼</div>
                         <h3 class="font-bold text-sm text-brand-navy">Women-Owned Clinic</h3>
                         <p class="text-[11px] text-brand-grey-muted">Led by specialist orthodontist Dr. Riddhi Patel Shah.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">🚨</div>
                         <h3 class="font-bold text-sm text-brand-navy">Emergency Dental Care</h3>
                         <p class="text-[11px] text-brand-grey-muted">Priority support for tooth trauma and acute toothache.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">🌿</div>
                         <h3 class="font-bold text-sm text-brand-navy">Gentle Sedation Options</h3>
                         <p class="text-[11px] text-brand-grey-muted">Comfort protocols for patients with dental anxiety.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">🚻</div>
                         <h3 class="font-bold text-sm text-brand-navy">Private Restrooms</h3>
                         <p class="text-[11px] text-brand-grey-muted">Hygienic unisex restroom facilities on-site.</p>
@@ -786,13 +819,13 @@ import Layout from '../layouts/Layout.astro';
 
                 <div class="text-center space-y-2.5 mb-10">
                     <span class="text-brand-navy text-xs font-extrabold tracking-widest uppercase bg-brand-cardbg border border-brand-border px-3.5 py-1 rounded-full">
-                        Direct Slot Reservation · 3:00 PM – 5:00 PM
+                        Direct Slot Reservation · Infinora Dental Care
                     </span>
-                    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-brand-navy">
+                    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-brand-navy whitespace-normal break-words">
                         Reserve Your Dental Consultation
                     </h2>
                     <p class="text-brand-grey-muted text-xs sm:text-sm max-w-2xl mx-auto">
-                        Clinic timings: <strong>10:00 AM to 2:00 PM</strong> and <strong>Evening: 5:00 PM to 9:00 PM</strong>. Appointments are taken for <strong>3:00 PM to 5:00 PM</strong>—none other slots work for appointments.
+                        Select your date and available time slot below. Details are sent via WhatsApp to confirm availability.
                     </p>
                 </div>
 
@@ -818,7 +851,7 @@ import Layout from '../layouts/Layout.astro';
 
                             <div class="min-w-0">
                                 <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-1.5" for="patientPhone">
-                                    Mobile Number (10 Digits) *
+                                    Mobile Number *
                                 </label>
                                 <input
                                     type="tel"
@@ -848,7 +881,7 @@ import Layout from '../layouts/Layout.astro';
                                     autocomplete="bday"
                                     class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-navy focus:border-brand-navy text-sm text-brand-navy outline-none transition-all bg-brand-surface/60"
                                 />
-                                <p id="dobError" class="hidden text-xs text-rose-700 font-semibold mt-1">Please select a valid date of birth (1930 onwards).</p>
+                                <p id="dobError" class="hidden text-xs text-rose-700 font-semibold mt-1">Please enter a valid date of birth (1930 onwards).</p>
                             </div>
 
                             <div class="min-w-0">
@@ -870,28 +903,28 @@ import Layout from '../layouts/Layout.astro';
                             </div>
                         </div>
 
-                        <!-- Procedure & Appointment Date -->
+                        <!-- Procedure & Preferred Date -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="min-w-0">
                                 <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-1.5" for="treatmentService">
-                                    Procedure / Consultation Type *
+                                    Consultation Type *
                                 </label>
                                 <select
                                     id="treatmentService"
                                     required
                                     class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-navy focus:border-brand-navy text-sm text-brand-navy outline-none transition-all bg-brand-surface/60"
                                 >
-                                    <option value="In-Clinic: General Dental Checkup & Digital Scan">🏥 In-Clinic: General Dental Checkup &amp; Consultation</option>
-                                    <option value="In-Clinic: Braces & Orthodontic Evaluation">🏥 In-Clinic: Orthodontics &amp; Braces Evaluation</option>
-                                    <option value="In-Clinic: Clear Aligners / Invisalign Scan">🏥 In-Clinic: Clear Aligners / Invisalign 3D Scan</option>
+                                    <option value="In-Clinic: General Dental Checkup & Consultation">🏥 In-Clinic: General Dental Checkup &amp; Consultation</option>
+                                    <option value="In-Clinic: Orthodontics & Braces Evaluation">🏥 In-Clinic: Orthodontics &amp; Braces Evaluation</option>
+                                    <option value="In-Clinic: Clear Aligners / Invisalign 3D Scan">🏥 In-Clinic: Clear Aligners / Invisalign 3D Scan</option>
                                     <option value="In-Clinic: Fixing Smile Design Assessment">🏥 In-Clinic: Fixing Smile Design Assessment</option>
-                                    <option value="In-Clinic: Root Canal Treatment (Painless RCT)">🏥 In-Clinic: Root Canal Treatment (RCT)</option>
-                                    <option value="In-Clinic: Dental Implants & Tooth Replacement">🏥 In-Clinic: Dental Implants Evaluation</option>
-                                    <option value="In-Clinic: Wisdom Tooth Surgical Consultation">🏥 In-Clinic: Wisdom Tooth Surgery</option>
-                                    <option value="In-Clinic: Pediatric & Children Dental Visit">🏥 In-Clinic: Pediatric &amp; Kids Checkup</option>
-                                    <option value="In-Clinic: Teeth Whitening & Aesthetic Polishing">🏥 In-Clinic: Teeth Whitening</option>
-                                    <option value="Teleconsultation / Online Video Opinion">🌐 Teleconsultation / Video Opinion (National or NRI)</option>
-                                    <option value="School / Corporate Dental Camp Inquiry">🏫 School / Corporate Camp Inquiry</option>
+                                    <option value="In-Clinic: Root Canal Treatment (RCT)">🏥 In-Clinic: Root Canal Treatment (RCT)</option>
+                                    <option value="In-Clinic: Dental Implants Evaluation">🏥 In-Clinic: Dental Implants Evaluation</option>
+                                    <option value="In-Clinic: Gum Surgery / Periodontics & Extraction Care">🏥 In-Clinic: Gum Surgery / Periodontics &amp; Extraction Care</option>
+                                    <option value="In-Clinic: Pediatric & Kids Checkup">🏥 In-Clinic: Pediatric &amp; Kids Checkup</option>
+                                    <option value="In-Clinic: Teeth Whitening">🏥 In-Clinic: Teeth Whitening</option>
+                                    <option value="Teleconsultation / Video Opinion (National or NRI)">🌐 Teleconsultation / Video Opinion (National or NRI)</option>
+                                    <option value="School / Corporate Camp Inquiry">🏫 School / Corporate Camp Inquiry</option>
                                 </select>
                             </div>
 
@@ -905,43 +938,50 @@ import Layout from '../layouts/Layout.astro';
                                     required
                                     class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-navy focus:border-brand-navy text-sm text-brand-navy outline-none transition-all bg-brand-surface/60"
                                 />
-                                <p id="dateError" class="hidden text-xs text-rose-700 font-semibold mt-1">Please select today or an upcoming date.</p>
+                                <p id="dateError" class="hidden text-xs text-rose-700 font-semibold mt-1">Please select a valid upcoming date.</p>
                             </div>
                         </div>
 
-                        <!-- Appointment Slot (3:00 PM - 5:00 PM Only) -->
+                        <!-- Sunday Post-12 PM Fade-Out Notice -->
+                        <div id="sundayPostNoonNotice" class="hidden p-4 rounded-xl bg-brand-cardbg border border-brand-border text-brand-navy text-xs leading-relaxed opacity-80">
+                            Sunday bookings close after 12:00 PM; Sunday has faded out as unavailable and the earliest appointment available is <strong>Monday</strong>.
+                        </div>
+
+                        <!-- Dynamic Time Slot Selector (Morning / Afternoon / Evening) -->
                         <div class="min-w-0">
                             <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-1.5" for="timeSlot">
-                                Appointment Slot *
+                                Time Slot *
                             </label>
                             <select
                                 id="timeSlot"
                                 required
                                 class="w-full max-w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-navy focus:border-brand-navy text-sm text-brand-navy outline-none transition-all bg-brand-surface/60"
-                            >
-                                <option value="3:00 PM – 5:00 PM (Only Available Appointment Slot — None Other Slots Work)" selected>3:00 PM – 5:00 PM (Only Available Appointment Slot — None Other Slots Work)</option>
-                            </select>
-                            <p id="slotError" class="hidden text-xs text-rose-700 font-semibold mt-1">Appointments are taken only for 3:00 PM – 5:00 PM; none other slots work for appointments.</p>
-                            <p class="text-[11px] text-brand-grey-muted mt-1.5">
-                                Appointments are for <strong>3:00 PM – 5:00 PM</strong> only (none other slots work for appointments). Clinic timings: 10:00 AM to 2:00 PM &amp; Evening: 5:00 PM to 9:00 PM.
-                            </p>
+                            ></select>
+                            <p id="slotError" class="hidden text-xs text-rose-700 font-semibold mt-1">Please select an available time slot.</p>
+                        </div>
+
+                        <!-- Warning Prompt ONLY for Middle Slot (03:00 PM – 05:00 PM) -->
+                        <div id="middleSlotConfirmBox" class="hidden p-4 rounded-xl bg-amber-50 border border-amber-300 text-amber-950 text-xs space-y-2.5">
+                            <div class="font-bold">
+                                ⚠️ Generally the clinic stays closed during 03:00 PM – 05:00 PM. Are you sure you want it then?
+                            </div>
+                            <label class="flex items-center gap-2 cursor-pointer font-semibold">
+                                <input type="checkbox" id="middleSlotConfirmCheckbox" class="w-4 h-4 accent-brand-navy rounded shrink-0" />
+                                <span>Yes, I understand the clinic generally stays closed during 03:00 PM – 05:00 PM and I still want to request this slot.</span>
+                            </label>
+                            <p id="middleSlotConfirmError" class="hidden text-xs text-rose-700 font-semibold">Please confirm above if you still want the 03:00 PM – 05:00 PM slot.</p>
                         </div>
 
                         <!-- Short Pre-Appointment Intake: Complaints, Medical History, Allergies & Optional Records -->
                         <div class="p-4 sm:p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-4">
-                            <div class="flex flex-wrap items-center justify-between gap-2">
-                                <h3 class="text-xs font-extrabold text-brand-navy uppercase tracking-wider">
-                                    Pre-Appointment Details
-                                </h3>
-                                <button type="button" id="generatePrepBtn" class="px-3 py-1.5 rounded-lg bg-brand-navy hover:bg-brand-hovernavy text-white text-[11px] font-bold cursor-pointer transition-colors">
-                                    ✨ Quick Checklist
-                                </button>
-                            </div>
+                            <h3 class="text-xs font-extrabold text-brand-navy uppercase tracking-wider">
+                                Complaints, Medical History &amp; Allergies
+                            </h3>
 
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div class="min-w-0">
                                     <label class="block text-xs font-bold text-brand-navy mb-1.5" for="chiefComplaints">
-                                        Complaints / Reason for Visit
+                                        Complaints
                                     </label>
                                     <textarea
                                         id="chiefComplaints"
@@ -994,11 +1034,6 @@ import Layout from '../layouts/Layout.astro';
                                 <p id="fileError" class="hidden text-xs text-rose-700 font-semibold mt-1"></p>
                                 <ul id="selectedFilesList" class="mt-2 space-y-1 text-[11px] text-brand-navy font-medium"></ul>
                             </div>
-
-                            <div id="aiPrepOutput" class="hidden p-3.5 rounded-xl bg-brand-offwhite border border-brand-border text-xs text-brand-grey-text space-y-1">
-                                <div class="font-bold text-brand-navy">Helpful to Bring:</div>
-                                <ul id="aiPrepList" class="list-disc pl-4 space-y-1 text-xs text-brand-grey-text"></ul>
-                            </div>
                         </div>
 
                         <!-- Handoff Status Notice -->
@@ -1043,7 +1078,7 @@ import Layout from '../layouts/Layout.astro';
                     </span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy">Frequently Asked Questions</h2>
                     <p class="text-xs sm:text-sm text-brand-grey-muted">
-                        Transparent clinical answers to common patient questions regarding braces, aligners, root canals, timings, and appointments.
+                        Transparent clinical answers to common patient questions regarding braces, aligners, root canals, and appointments.
                     </p>
                 </div>
 
@@ -1091,11 +1126,11 @@ import Layout from '../layouts/Layout.astro';
 
                     <details class="group bg-brand-surface rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
                         <summary class="font-bold text-sm sm:text-base text-brand-navy cursor-pointer list-none flex items-center justify-between gap-2">
-                            <span>What are your clinic timings and appointment slot rules?</span>
+                            <span>How are appointment slots scheduled?</span>
                             <span class="text-brand-navy transition-transform group-open:rotate-180 font-bold">▾</span>
                         </summary>
                         <p class="text-xs sm:text-sm text-brand-grey-text mt-3 leading-relaxed border-t border-brand-border pt-3">
-                            Clinic timings are <strong>10:00 AM to 2:00 PM</strong> and <strong>Evening: 5:00 PM to 9:00 PM</strong>. Appointments are taken strictly for <strong>3:00 PM to 5:00 PM</strong>—none other slots work for appointments.
+                            Available slots update dynamically by selected date and time of day across Morning, Afternoon, and Evening options, with Sunday morning available until 12:00 PM (and moving to Monday after 12:00 PM on Sundays).
                         </p>
                     </details>
 
@@ -1105,7 +1140,7 @@ import Layout from '../layouts/Layout.astro';
                             <span class="text-brand-navy transition-transform group-open:rotate-180 font-bold">▾</span>
                         </summary>
                         <p class="text-xs sm:text-sm text-brand-grey-text mt-3 leading-relaxed border-t border-brand-border pt-3">
-                            For urgent dental concerns such as toothache, dental trauma, broken or damaged teeth, or orthodontic issues, call our desk at +91 73044 32681 so our team can advise on scheduling within our 3:00 PM – 5:00 PM appointment window.
+                            For urgent dental concerns such as toothache, dental trauma, broken or damaged teeth, or orthodontic issues, call our desk at +91 73044 32681 for guidance and scheduling support.
                         </p>
                     </details>
 
@@ -1115,7 +1150,7 @@ import Layout from '../layouts/Layout.astro';
                             <span class="text-brand-navy transition-transform group-open:rotate-180 font-bold">▾</span>
                         </summary>
                         <p class="text-xs sm:text-sm text-brand-grey-text mt-3 leading-relaxed border-t border-brand-border pt-3">
-                            Both the Indian Orthodontic Society and international associations recommend a child's first orthodontic evaluation around age 7. Early evaluation helps check tooth eruption, arch space, habits, and jaw balance before permanent teeth finish coming in.
+                            Both the Indian Orthodontic Society and international associations recommend a child's first orthodontic evaluation around age 7. Early evaluation helps check tooth eruption, arch space, habits, and jaw balance early.
                         </p>
                     </details>
 
@@ -1138,10 +1173,10 @@ import Layout from '../layouts/Layout.astro';
             <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
                 <div class="lg:col-span-6 space-y-5 min-w-0">
-                    <span class="text-brand-surface text-xs font-extrabold uppercase tracking-widest bg-brand-midnavy border border-brand-lightnavy px-3.5 py-1 rounded-full">
-                        Kandivali West, Mumbai · Central Transit Hub
+                    <span class="text-brand-surface text-xs font-extrabold uppercase tracking-widest bg-brand-midnavy border border-brand-lightnavy px-3.5 py-1 rounded-full whitespace-normal">
+                        Infinora Dental Care · Kandivali West, Mumbai
                     </span>
-                    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
+                    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight whitespace-normal break-words">
                         Visit Infinora Dental Care
                     </h2>
                     <p class="text-brand-border text-xs sm:text-sm leading-relaxed">
@@ -1184,15 +1219,6 @@ import Layout from '../layouts/Layout.astro';
                                 • <strong>Laljipada Police Chowky (750 m):</strong> 223 LTD, A-204
                             </div>
                         </div>
-
-                        <div class="flex items-start gap-3">
-                            <span class="text-brand-gold text-lg shrink-0">🕒</span>
-                            <div class="min-w-0">
-                                <strong class="text-white block font-bold">Clinic Timings &amp; Appointment Window</strong>
-                                Clinic Hours: <span class="text-brand-surface font-bold">10:00 AM to 2:00 PM</span> &amp; <span class="text-brand-surface font-bold">Evening: 5:00 PM to 9:00 PM</span><br/>
-                                Appointments Taken: <span class="text-brand-gold font-bold">3:00 PM to 5:00 PM (None other slots work for appointments)</span>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="pt-2 flex flex-wrap gap-3">
@@ -1227,17 +1253,17 @@ import Layout from '../layouts/Layout.astro';
 
     </main>
 
-    <!-- FLOATING BOOK APPOINTMENT & CALL CLINIC BUTTONS (DESKTOP & MOBILE ACCESSIBLE) -->
+    <!-- FLOATING BOOK APPOINTMENT & CALL CLINIC BUTTONS -->
     <div class="fixed bottom-4 right-4 z-50 hidden sm:flex items-center gap-2.5">
         <a
             href="tel:+917304432681"
-            class="inline-flex items-center gap-2 bg-brand-offwhite hover:bg-brand-surface text-brand-navy border border-brand-navy/25 font-extrabold px-4 py-3 rounded-full shadow-xl text-xs transition-all"
+            class="inline-flex items-center gap-2 bg-brand-offwhite hover:bg-brand-surface text-brand-navy border border-brand-navy/25 font-extrabold px-4 py-3 rounded-full shadow-xl text-xs transition-all whitespace-nowrap"
         >
             <span>📞 Call Clinic</span>
         </a>
         <a
             href="https://infinoradental.com/#book"
-            class="inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-hovernavy text-white border border-brand-gold/40 font-extrabold px-5 py-3 rounded-full shadow-xl text-xs transition-all"
+            class="inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-hovernavy text-white border border-brand-gold/40 font-extrabold px-5 py-3 rounded-full shadow-xl text-xs transition-all whitespace-nowrap"
         >
             <span>📅 Book Appointment</span>
         </a>
@@ -1245,13 +1271,13 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- MOBILE STICKY BAR (BOOK APPOINTMENT + CALL CLINIC + WHATSAPP) -->
     <div class="fixed bottom-0 left-0 right-0 z-50 bg-brand-offwhite/95 backdrop-blur-md border-t border-brand-border p-2.5 sm:hidden flex items-center justify-between gap-2 shadow-2xl">
-        <a href="https://infinoradental.com/#book" class="flex-1 inline-flex items-center justify-center gap-1 bg-brand-navy text-white font-bold py-3 px-2 rounded-xl text-xs shadow-sm">
-            <span>📅 Book Visit</span>
+        <a href="https://infinoradental.com/#book" class="flex-1 inline-flex items-center justify-center gap-1 bg-brand-navy text-white font-bold py-3 px-2 rounded-xl text-xs shadow-sm whitespace-nowrap">
+            <span>📅 Book</span>
         </a>
-        <a href="tel:+917304432681" class="flex-1 inline-flex items-center justify-center gap-1 bg-brand-darknavy text-white font-bold py-3 px-2 rounded-xl text-xs shadow-sm">
-            <span>📞 Call Clinic</span>
+        <a href="tel:+917304432681" class="flex-1 inline-flex items-center justify-center gap-1 bg-brand-darknavy text-white font-bold py-3 px-2 rounded-xl text-xs shadow-sm whitespace-nowrap">
+            <span>📞 Call</span>
         </a>
-        <a href="https://wa.me/917304432681?text=Hello%20Dr.%20Riddhi%20Patel%20Shah,%20I%20would%20like%20to%20request%20an%20appointment%20during%20the%203:00%20PM%20%E2%80%93%205:00%20PM%20slot%20at%20Infinora%20Dental%20Care." target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1 bg-brand-hovernavy text-white font-bold py-3 px-2 rounded-xl text-xs shadow-sm border border-brand-lightnavy">
+        <a href="https://wa.me/917304432681?text=Hello%20Dr.%20Riddhi%20Patel%20Shah,%20I%20would%20like%20to%20request%20an%20appointment%20at%20Infinora%20Dental%20Care." target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1 bg-brand-hovernavy text-white font-bold py-3 px-2 rounded-xl text-xs shadow-sm border border-brand-lightnavy whitespace-nowrap">
             <span>WhatsApp</span>
         </a>
     </div>
@@ -1260,19 +1286,20 @@ import Layout from '../layouts/Layout.astro';
     <footer class="bg-brand-darknavy text-brand-border py-12 text-xs border-t border-brand-midnavy w-full mb-16 sm:mb-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-6">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-                <div class="flex items-center gap-2.5">
+                <div class="flex items-center gap-2.5 min-w-0">
                     <span class="w-3 h-3 rounded-full bg-brand-gold shrink-0"></span>
-                    <p class="text-white font-semibold">© 2026 Infinora Dental Care. Dr. Riddhi Patel Shah (MDS, Orthodontics). All rights reserved.</p>
+                    <p class="text-white font-semibold whitespace-normal break-words">© 2026 Infinora Dental Care. Dr. Riddhi Patel Shah (MDS, Orthodontics). All rights reserved.</p>
                 </div>
-                <div class="flex items-center gap-4 text-brand-surface">
+                <div class="flex items-center gap-4 text-brand-surface flex-wrap justify-center">
                     <a href="#about" class="hover:text-white transition-colors">About Doctor</a>
                     <a href="#catalogue" class="hover:text-white transition-colors">Treatments</a>
+                    <a href="#reviews" class="hover:text-white transition-colors">Google Reviews</a>
                     <a href="#credentials" class="hover:text-white transition-colors">Accreditations</a>
                     <a href="#location" class="hover:text-white transition-colors">Location</a>
                 </div>
             </div>
             <div class="border-t border-brand-midnavy pt-4 text-center sm:text-left text-[11px] text-brand-border flex flex-col sm:flex-row justify-between gap-2">
-                <p>Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067 (MSDC Reg: A-45674 | ABDM HFR: IN2710085962)</p>
+                <p class="whitespace-normal break-words">Infinora Dental Care · Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067 (MSDC Reg: A-45674 | ABDM HFR: IN2710085962)</p>
                 <p>Dental council registered &amp; Ayushman Bharat verified practice.</p>
             </div>
         </div>
@@ -1280,7 +1307,9 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- Comprehensive Interaction Script -->
     <script is:inline>
-        const ALLOWED_APPT_SLOT = '3:00 PM – 5:00 PM (Only Available Appointment Slot — None Other Slots Work)';
+        const SLOT_MORNING = 'Morning (10:00 AM – 02:00 PM)';
+        const SLOT_AFTERNOON = 'Afternoon (03:00 PM – 05:00 PM)';
+        const SLOT_EVENING = 'Evening (05:00 PM – 09:00 PM)';
         const MAX_FILES = 5;
         const MAX_FILE_BYTES = 5 * 1024 * 1024;
         const ALLOWED_MIME_TYPES = ['application/pdf', 'image/jpeg', 'image/png', 'image/webp'];
@@ -1288,10 +1317,21 @@ import Layout from '../layouts/Layout.astro';
         window.selectService = function(keyword) {
             const select = document.getElementById('treatmentService');
             if (select) {
+                const kw = String(keyword || '').toLowerCase();
+                let matched = false;
                 for (let opt of select.options) {
-                    if (opt.value.toLowerCase().includes(keyword.toLowerCase()) || opt.text.toLowerCase().includes(keyword.toLowerCase())) {
+                    if (opt.value.toLowerCase().includes(kw) || opt.text.toLowerCase().includes(kw)) {
                         select.value = opt.value;
+                        matched = true;
                         break;
+                    }
+                }
+                if (!matched && kw === 'gum') {
+                    for (let opt of select.options) {
+                        if (opt.value.toLowerCase().includes('gum') || opt.value.toLowerCase().includes('periodont')) {
+                            select.value = opt.value;
+                            break;
+                        }
                     }
                 }
             }
@@ -1301,17 +1341,31 @@ import Layout from '../layouts/Layout.astro';
             }
         };
 
+        function formatLocalYMD(dateObj) {
+            const y = dateObj.getFullYear();
+            const m = String(dateObj.getMonth() + 1).padStart(2, '0');
+            const d = String(dateObj.getDate()).padStart(2, '0');
+            return `${y}-${m}-${d}`;
+        }
+
+        function parseLocalYMD(ymdStr) {
+            const parts = String(ymdStr || '').split('-');
+            if (parts.length !== 3) return null;
+            const dt = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+            return isNaN(dt.getTime()) ? null : dt;
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const dateInput = document.getElementById('appointmentDate');
             const dobInput = document.getElementById('patientDob');
             const timeSlot = document.getElementById('timeSlot');
-            const serviceSelect = document.getElementById('treatmentService');
+            const middleBox = document.getElementById('middleSlotConfirmBox');
+            const middleCheckbox = document.getElementById('middleSlotConfirmCheckbox');
+            const middleError = document.getElementById('middleSlotConfirmError');
+            const sundayPostNoonNotice = document.getElementById('sundayPostNoonNotice');
             const complaintsInput = document.getElementById('chiefComplaints');
             const historyInput = document.getElementById('medicalHistory');
             const allergiesInput = document.getElementById('medicalAllergies');
-            const generatePrepBtn = document.getElementById('generatePrepBtn');
-            const aiPrepOutput = document.getElementById('aiPrepOutput');
-            const aiPrepList = document.getElementById('aiPrepList');
             const fileInput = document.getElementById('healthRecordsInput');
             const fileError = document.getElementById('fileError');
             const selectedFilesList = document.getElementById('selectedFilesList');
@@ -1322,32 +1376,133 @@ import Layout from '../layouts/Layout.astro';
             const form = document.getElementById('appointmentForm');
 
             const now = new Date();
-            const year = now.getFullYear();
-            const month = String(now.getMonth() + 1).padStart(2, '0');
-            const day = String(now.getDate()).padStart(2, '0');
-            const todayStr = `${year}-${month}-${day}`;
+            const todayStr = formatLocalYMD(now);
+            const isPastNoonToday = now.getHours() >= 12;
 
-            if (dateInput) {
-                dateInput.min = todayStr;
+            const maxDate = new Date(now);
+            maxDate.setDate(maxDate.getDate() + 90);
+            const maxDateStr = formatLocalYMD(maxDate);
 
-                const maxDate = new Date();
-                maxDate.setDate(maxDate.getDate() + 90);
-                const maxYear = maxDate.getFullYear();
-                const maxMonth = String(maxDate.getMonth() + 1).padStart(2, '0');
-                const maxDay = String(maxDate.getDate()).padStart(2, '0');
-                dateInput.max = `${maxYear}-${maxMonth}-${maxDay}`;
+            function getAvailableSlotsForDate(ymdStr) {
+                const dt = parseLocalYMD(ymdStr);
+                if (!dt) return [];
 
-                if (!dateInput.value || dateInput.value < todayStr) {
+                const dayOfWeek = dt.getDay();
+                const isSunday = dayOfWeek === 0;
+                const isToday = ymdStr === todayStr;
+
+                if (isSunday) {
+                    if (isToday && isPastNoonToday) {
+                        return [];
+                    }
+                    return [SLOT_MORNING];
+                }
+
+                let daySlots = [SLOT_MORNING, SLOT_AFTERNOON, SLOT_EVENING];
+
+                if (isToday) {
+                    const currentHour = now.getHours();
+                    if (currentHour >= 17) {
+                        daySlots = [SLOT_EVENING];
+                    } else if (currentHour >= 14) {
+                        daySlots = [SLOT_AFTERNOON, SLOT_EVENING];
+                    } else if (currentHour >= 10) {
+                        daySlots = [SLOT_MORNING, SLOT_AFTERNOON, SLOT_EVENING];
+                    }
+                }
+
+                return daySlots;
+            }
+
+            function syncMiddleSlotUI() {
+                if (!timeSlot || !middleBox) return;
+                if (timeSlot.value === SLOT_AFTERNOON) {
+                    middleBox.classList.remove('hidden');
+                } else {
+                    middleBox.classList.add('hidden');
+                    if (middleCheckbox) middleCheckbox.checked = false;
+                    if (middleError) middleError.classList.add('hidden');
+                }
+            }
+
+            function refreshSlotsForSelectedDate() {
+                if (!dateInput || !timeSlot) return;
+
+                let chosenYMD = dateInput.value;
+                const chosenDate = parseLocalYMD(chosenYMD);
+
+                if (!chosenDate || chosenYMD < todayStr) {
+                    chosenYMD = todayStr;
                     dateInput.value = todayStr;
                 }
 
+                const parsedToday = parseLocalYMD(todayStr);
+                const isTodaySunday = parsedToday && parsedToday.getDay() === 0;
+
+                if (chosenYMD === todayStr && isTodaySunday && isPastNoonToday) {
+                    const mondayDate = new Date(parsedToday);
+                    mondayDate.setDate(mondayDate.getDate() + 1);
+                    chosenYMD = formatLocalYMD(mondayDate);
+                    dateInput.value = chosenYMD;
+                    dateInput.classList.add('opacity-90');
+                    if (sundayPostNoonNotice) {
+                        sundayPostNoonNotice.classList.remove('hidden');
+                        sundayPostNoonNotice.classList.add('opacity-100');
+                    }
+                } else {
+                    const selectedParsed = parseLocalYMD(chosenYMD);
+                    const isSelectedSunday = selectedParsed && selectedParsed.getDay() === 0;
+                    if (sundayPostNoonNotice) {
+                        if (isSelectedSunday && isPastNoonToday && chosenYMD === todayStr) {
+                            sundayPostNoonNotice.classList.remove('hidden');
+                        } else {
+                            sundayPostNoonNotice.classList.add('hidden');
+                        }
+                    }
+                }
+
+                const availableSlots = getAvailableSlotsForDate(chosenYMD);
+                const prevValue = timeSlot.value;
+                timeSlot.innerHTML = '';
+
+                availableSlots.forEach((slotLabel) => {
+                    const opt = document.createElement('option');
+                    opt.value = slotLabel;
+                    opt.textContent = slotLabel;
+                    timeSlot.appendChild(opt);
+                });
+
+                if (availableSlots.includes(prevValue)) {
+                    timeSlot.value = prevValue;
+                } else if (availableSlots.length > 0) {
+                    timeSlot.value = availableSlots[0];
+                }
+
+                syncMiddleSlotUI();
+            }
+
+            if (dateInput) {
+                dateInput.min = todayStr;
+                dateInput.max = maxDateStr;
+                if (!dateInput.value || dateInput.value < todayStr) {
+                    dateInput.value = todayStr;
+                }
+                refreshSlotsForSelectedDate();
                 dateInput.addEventListener('change', () => {
-                    if (dateInput.value && dateInput.value < todayStr) {
-                        document.getElementById('dateError').classList.remove('hidden');
-                        dateInput.classList.add('border-rose-600');
-                    } else {
-                        document.getElementById('dateError').classList.add('hidden');
-                        dateInput.classList.remove('border-rose-600');
+                    document.getElementById('dateError').classList.add('hidden');
+                    dateInput.classList.remove('border-rose-600');
+                    refreshSlotsForSelectedDate();
+                });
+            }
+
+            if (timeSlot) {
+                timeSlot.addEventListener('change', syncMiddleSlotUI);
+            }
+
+            if (middleCheckbox && middleError) {
+                middleCheckbox.addEventListener('change', () => {
+                    if (middleCheckbox.checked) {
+                        middleError.classList.add('hidden');
                     }
                 });
             }
@@ -1355,18 +1510,6 @@ import Layout from '../layouts/Layout.astro';
             if (dobInput) {
                 dobInput.min = '1930-01-01';
                 dobInput.max = todayStr;
-            }
-
-            if (timeSlot) {
-                timeSlot.value = ALLOWED_APPT_SLOT;
-                timeSlot.addEventListener('change', () => {
-                    if (timeSlot.value !== ALLOWED_APPT_SLOT) {
-                        timeSlot.value = ALLOWED_APPT_SLOT;
-                        document.getElementById('slotError').classList.remove('hidden');
-                    } else {
-                        document.getElementById('slotError').classList.add('hidden');
-                    }
-                });
             }
 
             if (topPayBtn && topPayNotice) {
@@ -1433,30 +1576,6 @@ import Layout from '../layouts/Layout.astro';
                 fileInput.addEventListener('change', validateAttachedFiles);
             }
 
-            if (generatePrepBtn && aiPrepList && aiPrepOutput) {
-                generatePrepBtn.addEventListener('click', () => {
-                    const svc = (serviceSelect ? serviceSelect.value : '').toLowerCase();
-                    const notes = (complaintsInput ? complaintsInput.value : '').toLowerCase();
-                    const tips = [
-                        'Appointment slot: 3:00 PM – 5:00 PM (none other slots work for appointments).',
-                        'Any prior dental X-rays, prescriptions, or medical reports.'
-                    ];
-                    if (svc.includes('orthodontic') || svc.includes('braces') || svc.includes('aligner') || svc.includes('smile')) {
-                        tips.push('Any prior orthodontic records or alignment notes.');
-                    }
-                    if (svc.includes('implant') || svc.includes('root canal') || notes.includes('pain') || notes.includes('tooth')) {
-                        tips.push('Details of affected teeth, sensitivity, or recent dental visits.');
-                    }
-                    aiPrepList.innerHTML = '';
-                    tips.forEach((t) => {
-                        const li = document.createElement('li');
-                        li.textContent = t;
-                        aiPrepList.appendChild(li);
-                    });
-                    aiPrepOutput.classList.remove('hidden');
-                });
-            }
-
             if (form) {
                 form.addEventListener('submit', (e) => {
                     e.preventDefault();
@@ -1496,10 +1615,10 @@ import Layout from '../layouts/Layout.astro';
                     }
 
                     const dobVal = dobField.value;
-                    const dobCheckDate = dobVal ? new Date(dobVal + 'T00:00:00') : null;
-                    const minDobDate = new Date('1930-01-01T00:00:00');
-                    const maxDobDate = new Date(todayStr + 'T00:00:00');
-                    if (!dobVal || !dobCheckDate || isNaN(dobCheckDate.getTime()) || dobCheckDate < minDobDate || dobCheckDate > maxDobDate) {
+                    const dobCheckDate = dobVal ? parseLocalYMD(dobVal) : null;
+                    const minDobDate = parseLocalYMD('1930-01-01');
+                    const maxDobDate = parseLocalYMD(todayStr);
+                    if (!dobVal || !dobCheckDate || dobCheckDate < minDobDate || dobCheckDate > maxDobDate) {
                         dobError.classList.remove('hidden');
                         dobField.classList.add('border-rose-600');
                         isValid = false;
@@ -1518,8 +1637,9 @@ import Layout from '../layouts/Layout.astro';
                     }
 
                     const apptVal = dateInput.value;
-                    const maxApptStr = dateInput.max;
-                    if (!apptVal || apptVal < todayStr || (maxApptStr && apptVal > maxApptStr)) {
+                    const apptParsed = parseLocalYMD(apptVal);
+                    const isApptSunday = apptParsed && apptParsed.getDay() === 0;
+                    if (!apptVal || apptVal < todayStr || apptVal > maxDateStr || (apptVal === todayStr && isApptSunday && isPastNoonToday)) {
                         dateError.classList.remove('hidden');
                         dateInput.classList.add('border-rose-600');
                         isValid = false;
@@ -1528,12 +1648,21 @@ import Layout from '../layouts/Layout.astro';
                         dateInput.classList.remove('border-rose-600');
                     }
 
-                    if (!timeSlot || timeSlot.value !== ALLOWED_APPT_SLOT) {
-                        if (timeSlot) timeSlot.value = ALLOWED_APPT_SLOT;
+                    const validSlots = getAvailableSlotsForDate(apptVal);
+                    if (!timeSlot || !timeSlot.value || !validSlots.includes(timeSlot.value)) {
                         slotError.classList.remove('hidden');
                         isValid = false;
                     } else {
                         slotError.classList.add('hidden');
+                    }
+
+                    if (timeSlot && timeSlot.value === SLOT_AFTERNOON) {
+                        if (!middleCheckbox || !middleCheckbox.checked) {
+                            if (middleError) middleError.classList.remove('hidden');
+                            isValid = false;
+                        } else if (middleError) {
+                            middleError.classList.add('hidden');
+                        }
                     }
 
                     const fileCheck = validateAttachedFiles();
@@ -1549,14 +1678,14 @@ import Layout from '../layouts/Layout.astro';
                     const gender = genderField.value;
                     const service = serviceInput.value;
                     const date = apptVal;
-                    const slot = ALLOWED_APPT_SLOT;
+                    const slot = timeSlot.value;
                     const complaints = complaintsInput ? complaintsInput.value.trim() : '';
                     const medHistory = historyInput ? historyInput.value.trim() : '';
                     const allergies = allergiesInput ? allergiesInput.value.trim() : '';
                     const fileNames = fileCheck.files.map((f) => f.name).join(', ') || 'None';
 
-                    const dobDate = new Date(dob + 'T00:00:00');
-                    const todayDate = new Date(todayStr + 'T00:00:00');
+                    const dobDate = parseLocalYMD(dob);
+                    const todayDate = parseLocalYMD(todayStr);
                     let calculatedAge = todayDate.getFullYear() - dobDate.getFullYear();
                     const monthDiff = todayDate.getMonth() - dobDate.getMonth();
                     if (monthDiff < 0 || (monthDiff === 0 && todayDate.getDate() < dobDate.getDate())) {
@@ -1579,7 +1708,7 @@ import Layout from '../layouts/Layout.astro';
                     const allergiesLine = allergies ? `%0A• Medical Allergies: ${encodeURIComponent(allergies)}` : '';
                     const filesLine = fileCheck.files.length ? `%0A• Health Records Selected: ${encodeURIComponent(fileNames)}` : '';
 
-                    const message = `Hello Dr. Riddhi Patel Shah (Infinora Dental Care),%0A%0AI would like to request an appointment during the 3:00 PM – 5:00 PM slot.%0A%0A📋 *Patient Details:*%0A• Name: ${encodeURIComponent(name)}%0A• Mobile: ${encodeURIComponent(phone)}%0A• Age: ${encodeURIComponent(calculatedAge + ' years')} (DOB: ${encodeURIComponent(dob)})%0A• Gender: ${encodeURIComponent(gender)}%0A• Service: ${encodeURIComponent(service)}%0A• Preferred Date: ${encodeURIComponent(date)}%0A• Slot: ${encodeURIComponent(slot)}${complaintsLine}${historyLine}${allergiesLine}${filesLine}%0A%0APlease confirm my appointment. Thank you!`;
+                    const message = `Hello Dr. Riddhi Patel Shah (Infinora Dental Care),%0A%0AI would like to request a consultation.%0A%0A📋 *Patient Details:*%0A• Name: ${encodeURIComponent(name)}%0A• Mobile: ${encodeURIComponent(phone)}%0A• Age: ${encodeURIComponent(calculatedAge + ' years')} (DOB: ${encodeURIComponent(dob)})%0A• Gender: ${encodeURIComponent(gender)}%0A• Service: ${encodeURIComponent(service)}%0A• Preferred Date: ${encodeURIComponent(date)}%0A• Time Slot: ${encodeURIComponent(slot)}${complaintsLine}${historyLine}${allergiesLine}${filesLine}%0A%0APlease confirm my appointment. Thank you!`;
 
                     if (statusBox) {
                         statusBox.classList.remove('hidden');
