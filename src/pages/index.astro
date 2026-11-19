@@ -16,9 +16,9 @@ import Layout from '../layouts/Layout.astro';
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold shrink-0"></span>
                     Infinora Dental Care · Kandivali West, Mumbai
                 </span>
-                <span class="text-brand-border font-medium text-xs whitespace-normal break-words">
-                    Dentist &amp; Orthodontist · Mumbai &amp; India
-                </span>
+                <a href="#offers" class="text-brand-gold hover:underline font-semibold text-xs whitespace-normal break-words">
+                    Current Month Offers: Free Dental Checkup · Teeth Cleaning @ Rs 999*
+                </a>
             </div>
 
             <div class="flex items-center justify-center gap-2 sm:gap-3 text-xs font-semibold flex-wrap">
@@ -81,12 +81,12 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </div>
 
-    <!-- Main Navigation Bar (Large High-Contrast Logo + Clean Uncut Clinic Name) -->
-    <header class="sticky top-0 z-40 bg-brand-offwhite/95 backdrop-blur-md border-b border-brand-border shadow-sm w-full">
+    <!-- Sticky Navigation Bar: Logo & Clinic Name Stay Pinned While Scrolling -->
+    <header id="stickyClinicHeader" class="sticky top-0 z-40 bg-brand-offwhite/95 backdrop-blur-md border-b border-brand-border shadow-sm w-full transition-all">
         <div class="max-w-7xl mx-auto px-3 sm:px-6 min-h-20 sm:min-h-22 py-2.5 flex items-center justify-between gap-2 sm:gap-4">
 
             <a href="#top" class="flex items-center gap-3 min-w-0 group" aria-label="Infinora Dental Care Home">
-                <span class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-brand-offwhite border-2 border-brand-navy/20 flex items-center justify-center shadow-sm shrink-0 p-1.5">
+                <span class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-brand-offwhite border-2 border-brand-navy/25 flex items-center justify-center shadow-sm shrink-0 p-1.5">
                     <img
                         src="/logo.svg"
                         alt="Infinora Dental Care Logo"
@@ -104,16 +104,19 @@ import Layout from '../layouts/Layout.astro';
             </a>
 
             <nav class="hidden lg:flex items-center gap-4 xl:gap-5 text-xs xl:text-sm font-semibold text-brand-grey-text shrink-0" aria-label="Primary Navigation">
+                <a href="#offers" class="hover:text-brand-navy transition-colors">Offers</a>
                 <a href="#family-care" class="hover:text-brand-navy transition-colors">Family Care</a>
                 <a href="#catalogue" class="hover:text-brand-navy transition-colors">Treatments</a>
                 <a href="#about" class="hover:text-brand-navy transition-colors">Meet Dr. Riddhi</a>
                 <a href="#reviews" class="hover:text-brand-navy transition-colors">Reviews</a>
-                <a href="#credentials" class="hover:text-brand-navy transition-colors">Registrations</a>
                 <a href="#faq" class="hover:text-brand-navy transition-colors">FAQs</a>
                 <a href="#location" class="hover:text-brand-navy transition-colors">Location</a>
             </nav>
 
             <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+                <span id="scrolledBrandPill" class="hidden md:inline-flex items-center gap-1.5 bg-brand-cardbg text-brand-navy border border-brand-border px-2.5 py-1.5 rounded-lg text-[11px] font-bold whitespace-nowrap">
+                    <span>Infinora Dental Care</span>
+                </span>
                 <a href="https://maps.app.goo.gl/3sKwKPjG43PNeN6y7" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-1 bg-brand-surface hover:bg-brand-cardbg text-brand-navy px-3 py-2.5 rounded-xl font-bold text-xs transition-all border border-brand-border whitespace-nowrap">
                     📍 Directions
                 </a>
@@ -127,10 +130,10 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </header>
 
-    <main id="top" class="w-full overflow-hidden pb-28 sm:pb-20">
+    <main id="top" class="w-full pb-28 sm:pb-20">
 
         <!-- HERO SECTION (LOCAL SEO, AEO & GEO ANCHOR) -->
-        <section class="relative pt-8 pb-12 sm:pt-14 sm:pb-20 overflow-hidden bg-gradient-to-b from-brand-surface via-brand-lightbg to-brand-offwhite w-full border-b border-brand-border">
+        <section class="relative pt-8 pb-12 sm:pt-14 sm:pb-20 bg-gradient-to-b from-brand-surface via-brand-lightbg to-brand-offwhite w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
                 <div class="lg:col-span-7 space-y-4 sm:space-y-6 text-left min-w-0">
@@ -145,7 +148,7 @@ import Layout from '../layouts/Layout.astro';
                     </h1>
 
                     <p class="text-sm sm:text-base text-brand-grey-text leading-relaxed max-w-2xl whitespace-normal break-words">
-                        Searching for a trusted <strong>dentist near me</strong>, <strong>dentist in Kandivali</strong>, or <strong>dentist in Mumbai</strong>? <strong>Infinora Dental Care</strong> is founded and led by <strong>Dr. Riddhi Patel Shah</strong> (BDS Gold Medalist, MDS Orthodontics &amp; Dentofacial Orthopedics), active member of the <strong>Indian Orthodontic Society (IOS)</strong> and the <a href="https://dentist.ida.org.in/dentist/riddhi-kantilal-patel" target="_blank" rel="noopener" class="text-brand-navy font-bold underline hover:text-brand-hovernavy">Indian Dental Association (IDA Profile)</a>—offering braces, clear aligners, Invisalign, invisible aligners, dental implants, veneers, root canals, and family dental care for patients in Kandivali, Mumbai, and across India.
+                        Searching for a trusted <strong>dentist near me</strong>, <strong>dentist in Kandivali</strong>, or <strong>dentist in Mumbai</strong>? <strong>Infinora Dental Care</strong> is founded and led by <strong>Dr. Riddhi Patel Shah</strong> (BDS Gold Medalist, MDS Orthodontics &amp; Dentofacial Orthopedics, MSDC Reg: A-45674), active member of the <strong>Indian Orthodontic Society (IOS)</strong> and the <a href="https://dentist.ida.org.in/dentist/riddhi-kantilal-patel" target="_blank" rel="noopener" class="text-brand-navy font-bold underline hover:text-brand-hovernavy">Indian Dental Association (IDA Profile)</a>—offering braces, clear aligners, Invisalign, invisible aligners, dental implants, veneers, root canals, and family dental care for patients in Kandivali, Mumbai, and across India.
                     </p>
 
                     <!-- Action CTAs (Same-Page #book & Direct Call) -->
@@ -170,8 +173,8 @@ import Layout from '../layouts/Layout.astro';
                             <div class="text-[10px] sm:text-xs text-brand-grey-muted font-semibold whitespace-normal break-words">Verified Specialist</div>
                         </div>
                         <div class="p-3 bg-brand-offwhite rounded-xl border border-brand-border shadow-sm text-center sm:text-left min-w-0">
-                            <div class="text-xs sm:text-xl font-black text-brand-navy whitespace-normal break-words">Class-B</div>
-                            <div class="text-[10px] sm:text-xs text-brand-grey-muted font-semibold whitespace-normal break-words">Hospital Sterilization</div>
+                            <div class="text-xs sm:text-xl font-black text-brand-navy whitespace-normal break-words">MSDC A-45674</div>
+                            <div class="text-[10px] sm:text-xs text-brand-grey-muted font-semibold whitespace-normal break-words">Registered Practitioner</div>
                         </div>
                     </div>
                 </div>
@@ -180,7 +183,7 @@ import Layout from '../layouts/Layout.astro';
                 <div class="lg:col-span-5 relative w-full min-w-0" id="about">
                     <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-8 border border-brand-border shadow-xl space-y-5">
                         <div class="flex flex-col sm:flex-row sm:items-center gap-4 border-b border-brand-border pb-5">
-                            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-brand-surface border-2 border-brand-navy/20 flex items-center justify-center shrink-0 p-2 shadow-sm">
+                            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-brand-surface border-2 border-brand-navy/25 flex items-center justify-center shrink-0 p-2 shadow-sm">
                                 <img
                                     src="/logo.svg"
                                     alt="Infinora Dental Care Official Logo"
@@ -201,10 +204,10 @@ import Layout from '../layouts/Layout.astro';
 
                         <div class="space-y-3 text-xs sm:text-sm text-brand-grey-text leading-relaxed whitespace-normal break-words">
                             <p>
-                                <strong>Dr. Riddhi Patel Shah</strong> is an accomplished Orthodontist and Lead Dental Surgeon practicing at <strong>Infinora Dental Care</strong> in Kandivali West, Mumbai. Combining post-graduate clinical excellence with an empathetic, patient-first philosophy, she delivers specialist-led treatments designed for lifelong dental function and facial balance.
+                                <strong>Dr. Riddhi Patel Shah</strong> is an Orthodontist and Lead Dental Surgeon practicing at <strong>Infinora Dental Care</strong> in Kandivali West, Mumbai. Combining academic training with a patient-first approach, she delivers specialist-led orthodontic and family dental care designed for oral health and bite balance.
                             </p>
                             <p>
-                                With extensive training in diagnosing complex jaw discrepancies, crowded dentition, and malocclusions, Dr. Riddhi pairs digital imaging with delicate orthodontic biomechanics to safeguard periodontal health.
+                                Her clinical focus covers orthodontic consultations, braces, clear aligners, Invisalign, invisible aligners, smile improvement, and comprehensive dental care tailored to each individual's examination.
                             </p>
                         </div>
 
@@ -231,8 +234,51 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
+        <!-- OFFERS FOR CURRENT MONTH -->
+        <section id="offers" class="py-12 bg-brand-offwhite border-b border-brand-border w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-6">
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <span class="text-brand-navy text-[10px] font-extrabold uppercase tracking-widest bg-brand-cardbg border border-brand-border px-3 py-1 rounded-full">
+                        Offers for Current Month
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy whitespace-normal break-words">Current Month Clinic Offers</h2>
+                    <p class="text-xs sm:text-sm text-brand-grey-muted leading-relaxed">
+                        Available at <strong>Infinora Dental Care</strong>, Kandivali West, Mumbai—subject to appointment slot availability and clinical suitability.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-6 rounded-3xl bg-brand-surface border border-brand-border shadow-sm flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <span class="inline-block text-[10px] font-extrabold uppercase tracking-wider bg-brand-navy text-white px-2.5 py-1 rounded-full">Offer 01</span>
+                            <h3 class="text-xl font-extrabold text-brand-navy">Free Dental Checkup</h3>
+                            <p class="text-xs sm:text-sm text-brand-grey-text leading-relaxed">
+                                Initial dental examination and consultation at Infinora Dental Care for individuals and families looking to check their teeth, gums, or alignment.
+                            </p>
+                        </div>
+                        <button type="button" onclick="selectService('Checkup')" class="w-full text-center py-3 rounded-xl bg-brand-navy hover:bg-brand-hovernavy text-white text-xs sm:text-sm font-bold transition-colors cursor-pointer">
+                            Claim Free Dental Checkup →
+                        </button>
+                    </div>
+
+                    <div class="p-6 rounded-3xl bg-brand-surface border border-brand-border shadow-sm flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <span class="inline-block text-[10px] font-extrabold uppercase tracking-wider bg-brand-navy text-white px-2.5 py-1 rounded-full">Offer 02</span>
+                            <h3 class="text-xl font-extrabold text-brand-navy">Teeth Cleaning @ Rs 999*</h3>
+                            <p class="text-xs sm:text-sm text-brand-grey-text leading-relaxed">
+                                Routine scaling and teeth cleaning offer at <strong>Rs 999*</strong>. *Terms, oral hygiene condition, and clinical assessment apply; additional procedures or deep periodontal care are evaluated separately.
+                            </p>
+                        </div>
+                        <button type="button" onclick="selectService('Checkup')" class="w-full text-center py-3 rounded-xl bg-brand-navy hover:bg-brand-hovernavy text-white text-xs sm:text-sm font-bold transition-colors cursor-pointer">
+                            Book Teeth Cleaning @ Rs 999* →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- FAMILY DENTISTRY ACROSS EVERY STAGE OF LIFE -->
-        <section id="family-care" class="py-14 bg-brand-offwhite border-b border-brand-border w-full">
+        <section id="family-care" class="py-14 bg-brand-surface border-b border-brand-border w-full">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
                 <div class="text-center max-w-3xl mx-auto space-y-2.5">
                     <span class="text-brand-navy text-[10px] font-extrabold uppercase tracking-widest bg-brand-cardbg border border-brand-border px-3 py-1 rounded-full">
@@ -245,19 +291,19 @@ import Layout from '../layouts/Layout.astro';
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-2">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-2">
                         <h3 class="font-extrabold text-brand-navy text-sm">Children &amp; Teens</h3>
-                        <p class="text-xs text-brand-grey-text leading-relaxed">Gentle first checkups, preventive sealants/fluoride, age-7 orthodontic screening, and braces or aligners for growing smiles.</p>
+                        <p class="text-xs text-brand-grey-text leading-relaxed">Gentle first checkups, preventive care, early orthodontic screening, and braces or aligners for growing smiles.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-2">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-2">
                         <h3 class="font-extrabold text-brand-navy text-sm">Adults &amp; Working Professionals</h3>
-                        <p class="text-xs text-brand-grey-text leading-relaxed">Discreet aligners/braces, root canals, veneers, crowns, tooth-colored fillings, and gum care in Kandivali West, Mumbai.</p>
+                        <p class="text-xs text-brand-grey-text leading-relaxed">Discreet aligners/braces, root canals, veneers, crowns, fillings, and gum care in Kandivali West, Mumbai.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-2">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-2">
                         <h3 class="font-extrabold text-brand-navy text-sm">Seniors &amp; Complex Needs</h3>
-                        <p class="text-xs text-brand-grey-text leading-relaxed">Tooth replacement with implants or dentures/bridges, periodontal care, ground-level access, and individualized full-mouth planning.</p>
+                        <p class="text-xs text-brand-grey-text leading-relaxed">Tooth replacement options, gum care, ground-level access, and individualized treatment planning after evaluation.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-2">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-2">
                         <h3 class="font-extrabold text-brand-navy text-sm">India-Wide &amp; NRI Consultations</h3>
                         <p class="text-xs text-brand-grey-text leading-relaxed">Teleconsultation / video opinion options and coordinated scheduling for patients across India and visiting NRIs.</p>
                     </div>
@@ -266,7 +312,7 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <!-- STATUTORY REGISTRATIONS & ACCREDITATIONS (ABDM & MSDC) -->
-        <section id="credentials" class="py-12 bg-brand-surface border-b border-brand-border w-full">
+        <section id="credentials" class="py-12 bg-brand-offwhite border-b border-brand-border w-full">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
                 <div class="text-center space-y-2 max-w-2xl mx-auto">
                     <span class="text-brand-navy text-[10px] font-extrabold uppercase tracking-widest bg-brand-cardbg border border-brand-border px-3 py-1 rounded-full">
@@ -274,21 +320,21 @@ import Layout from '../layouts/Layout.astro';
                     </span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy whitespace-normal break-words">Verified Regulatory Governance</h2>
                     <p class="text-xs sm:text-sm text-brand-grey-muted leading-relaxed">
-                        Infinora Dental Care complies fully with the statutory directives of state dental councils and the National Health Authority's Ayushman Bharat Digital Mission.
+                        Infinora Dental Care complies with state dental council registration requirements and National Health Authority digital health registry records.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
 
                     <!-- Card 1: MSDC & IDA -->
-                    <div class="p-6 rounded-2xl bg-brand-offwhite border border-brand-border hover:border-brand-navy transition-all space-y-3 flex flex-col justify-between shadow-sm">
+                    <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border hover:border-brand-navy transition-all space-y-3 flex flex-col justify-between shadow-sm">
                         <div class="space-y-2">
                             <div class="flex items-center gap-2.5">
                                 <span class="text-brand-navy text-2xl font-bold">🏛️</span>
                                 <h3 class="font-extrabold text-brand-navy text-sm">State Council &amp; Associations</h3>
                             </div>
                             <p class="text-xs text-brand-grey-text leading-relaxed">
-                                Officially registered under the <strong>Maharashtra State Dental Council</strong> (Registration No: <strong class="text-brand-navy">A-45674</strong>). Verified member of the <strong>Indian Orthodontic Society (IOS)</strong> and the <a href="https://dentist.ida.org.in/dentist/riddhi-kantilal-patel" target="_blank" rel="noopener" class="text-brand-navy font-bold underline hover:text-brand-hovernavy">Indian Dental Association (IDA)</a>.
+                                Registered under the <strong>Maharashtra State Dental Council</strong> (Registration No: <strong class="text-brand-navy">A-45674</strong>). Member of the <strong>Indian Orthodontic Society (IOS)</strong> and the <a href="https://dentist.ida.org.in/dentist/riddhi-kantilal-patel" target="_blank" rel="noopener" class="text-brand-navy font-bold underline hover:text-brand-hovernavy">Indian Dental Association (IDA)</a>.
                             </p>
                         </div>
                         <div class="pt-3 border-t border-brand-border flex flex-wrap gap-3">
@@ -302,36 +348,36 @@ import Layout from '../layouts/Layout.astro';
                     </div>
 
                     <!-- Card 2: ABDM Health Facility (HFR) -->
-                    <div class="p-6 rounded-2xl bg-brand-offwhite border border-brand-border hover:border-brand-navy transition-all space-y-3 flex flex-col justify-between shadow-sm">
+                    <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border hover:border-brand-navy transition-all space-y-3 flex flex-col justify-between shadow-sm">
                         <div class="space-y-2">
                             <div class="flex items-center gap-2.5">
                                 <span class="text-brand-navy text-2xl font-bold">🏥</span>
                                 <h3 class="font-extrabold text-brand-navy text-sm">Ayushman Bharat Facility Registry</h3>
                             </div>
                             <p class="text-xs text-brand-grey-text leading-relaxed">
-                                Verified under the Health Facility Registry (HFR) managed by the <strong>National Health Authority (NHA)</strong>, Government of India.
+                                Registered on the Health Facility Registry (HFR) under the <strong>National Health Authority (NHA)</strong>, Government of India.
                             </p>
                             <p class="text-xs text-brand-navy font-semibold">Facility ID: <span class="font-mono text-brand-lightnavy break-all">IN2710085962</span></p>
                         </div>
                         <div class="pt-3 border-t border-brand-border text-[11px] text-brand-grey-muted font-medium flex items-center gap-1">
-                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Validated Digital Health Facility
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> ABDM HFR Registered Facility
                         </div>
                     </div>
 
                     <!-- Card 3: ABDM Healthcare Professional (HPR) -->
-                    <div class="p-6 rounded-2xl bg-brand-offwhite border border-brand-border hover:border-brand-navy transition-all space-y-3 flex flex-col justify-between shadow-sm">
+                    <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border hover:border-brand-navy transition-all space-y-3 flex flex-col justify-between shadow-sm">
                         <div class="space-y-2">
                             <div class="flex items-center gap-2.5">
                                 <span class="text-brand-navy text-2xl font-bold">👩‍⚕️</span>
                                 <h3 class="font-extrabold text-brand-navy text-sm">Ayushman Bharat Professional (HPR)</h3>
                             </div>
                             <p class="text-xs text-brand-grey-text leading-relaxed">
-                                Registered on the Healthcare Professional Registry (HPR) under the <strong>National Health Authority &amp; Dental Council of India</strong>.
+                                Registered on the Healthcare Professional Registry (HPR) under the <strong>National Health Authority</strong>.
                             </p>
                             <p class="text-xs text-brand-navy font-semibold">Professional ID: <span class="font-mono text-brand-lightnavy break-all">71-8554-8443-4346</span></p>
                         </div>
                         <div class="pt-3 border-t border-brand-border text-[11px] text-brand-grey-muted font-medium flex items-center gap-1">
-                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Dr. Riddhi Patel · Verified Practitioner
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Dr. Riddhi Patel Shah · HPR ID
                         </div>
                     </div>
 
@@ -340,7 +386,7 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <!-- THE INFINORA STANDARD: OPERATIONAL PILLARS -->
-        <section id="standards" class="py-16 bg-brand-offwhite w-full border-b border-brand-border">
+        <section id="standards" class="py-16 bg-brand-surface w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
                     <span class="text-brand-navy text-xs font-extrabold tracking-widest uppercase bg-brand-cardbg border border-brand-border px-3.5 py-1 rounded-full">
@@ -350,57 +396,57 @@ import Layout from '../layouts/Layout.astro';
                         The Infinora Standard
                     </h2>
                     <p class="text-brand-grey-muted text-sm sm:text-base">
-                        Six non-negotiable principles of specialist dental healthcare in Kandivali West, Mumbai.
+                        Six core principles guiding patient care at Infinora Dental Care in Kandivali West, Mumbai.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                    <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
+                    <div class="bg-brand-offwhite p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
                         <div class="text-2xl font-black text-brand-navy">01</div>
-                        <h3 class="font-extrabold text-brand-navy text-base">Specialist-Led Treatment</h3>
+                        <h3 class="font-extrabold text-brand-navy text-base">Specialist-Led Orthodontics</h3>
                         <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                            Treatments are diagnosed, planned, and executed directly by master-degree holding specialists (MDS) rather than generalized practitioners.
+                            Orthodontic evaluations and treatment planning are led by Dr. Riddhi Patel Shah (MDS Orthodontics &amp; Dentofacial Orthopedics).
                         </p>
                     </div>
 
-                    <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
+                    <div class="bg-brand-offwhite p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
                         <div class="text-2xl font-black text-brand-navy">02</div>
                         <h3 class="font-extrabold text-brand-navy text-base">Root-Cause Diagnosis</h3>
                         <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                            We analyze systemic bite relationships, bone architecture, and soft tissue health rather than offering superficial short-term patches.
+                            We assess bite alignment, tooth structure, and gum health before recommending treatment rather than offering quick surface fixes.
                         </p>
                     </div>
 
-                    <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
+                    <div class="bg-brand-offwhite p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
                         <div class="text-2xl font-black text-brand-navy">03</div>
-                        <h3 class="font-extrabold text-brand-navy text-base">Transparent Written Roadmaps</h3>
+                        <h3 class="font-extrabold text-brand-navy text-base">Transparent Roadmaps</h3>
                         <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                            Patients receive clear, itemized treatment pathways and complete fee clarity prior to the commencement of any procedure.
+                            Patients receive clear options, suitability considerations, and fee clarity before starting care, without fixed outcome guarantees.
                         </p>
                     </div>
 
-                    <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
+                    <div class="bg-brand-offwhite p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
                         <div class="text-2xl font-black text-brand-navy">04</div>
-                        <h3 class="font-extrabold text-brand-navy text-base">Digital Low-Radiation Diagnostics</h3>
+                        <h3 class="font-extrabold text-brand-navy text-base">Digital Diagnostics</h3>
                         <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                            Ultra-low radiation digital radiovisiography (RVG), high-definition intraoral cameras, and 3D optical measurements eliminate guesswork.
+                            Diagnostic checkups, digital imaging/X-rays, and scans support careful clinical planning.
                         </p>
                     </div>
 
-                    <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
+                    <div class="bg-brand-offwhite p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
                         <div class="text-2xl font-black text-brand-navy">05</div>
-                        <h3 class="font-extrabold text-brand-navy text-base">Hospital-Grade Sterilization</h3>
+                        <h3 class="font-extrabold text-brand-navy text-base">Structured Hygiene &amp; Sterilization</h3>
                         <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                            Class-B autoclave sterilization, vacuum-sealed surgical pouches opened chairside, and chemical monitoring ensure zero cross-contamination.
+                            Consistent clinic hygiene and instrument sterilization practices protect patient safety at every visit.
                         </p>
                     </div>
 
-                    <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
+                    <div class="bg-brand-offwhite p-6 rounded-2xl border border-brand-border shadow-sm space-y-2 hover:border-brand-navy transition-all">
                         <div class="text-2xl font-black text-brand-navy">06</div>
-                        <h3 class="font-extrabold text-brand-navy text-base">Long-Term Continuity</h3>
+                        <h3 class="font-extrabold text-brand-navy text-base">Follow-Up &amp; Retention Care</h3>
                         <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                            Comprehensive post-treatment recall schedules, retainer reviews, and preventive hygiene visits protect your investment for decades.
+                            Ongoing checkups, retainer guidance, and maintenance support long-term oral health after active care.
                         </p>
                     </div>
 
@@ -409,7 +455,7 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <!-- BRAND PHILOSOPHY: FIXING SMILE DESIGN -->
-        <section id="smile-design" class="py-16 bg-brand-surface w-full border-b border-brand-border">
+        <section id="smile-design" class="py-16 bg-brand-offwhite w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 
@@ -421,13 +467,13 @@ import Layout from '../layouts/Layout.astro';
                             Fixing Smile Design: Where Orthodontics Meets Facial Harmony
                         </h2>
                         <p class="text-brand-grey-text text-sm sm:text-base leading-relaxed">
-                            At Infinora Dental Care, <strong>"Fixing Smile Design"</strong> represents our signature clinical philosophy: a balanced smile is never achieved by moving teeth in isolation. It requires harmonizing dental arches, bite function, lip support, and natural facial proportions—tailored to each individual's clinical assessment without promising fixed outcomes or timelines.
+                            At Infinora Dental Care, <strong>"Fixing Smile Design"</strong> reflects our focus on aligning teeth while considering bite function, lip support, and facial proportions—tailored to each individual's clinical assessment without promising fixed outcomes or timelines.
                         </p>
 
                         <div class="space-y-3 text-xs sm:text-sm text-brand-grey-text">
                             <div class="flex items-start gap-2.5">
                                 <span class="text-brand-navy font-bold text-base shrink-0">✓</span>
-                                <div><strong>Facial Proportion Mapping:</strong> Harmonizing incisal exposure, buccal corridors, and smile arc curvature with facial symmetry.</div>
+                                <div><strong>Facial &amp; Bite Balance:</strong> Evaluating smile arc, tooth display, and bite relationship alongside facial proportions.</div>
                             </div>
                             <div class="flex items-start gap-2.5">
                                 <span class="text-brand-navy font-bold text-base shrink-0">✓</span>
@@ -435,7 +481,7 @@ import Layout from '../layouts/Layout.astro';
                             </div>
                             <div class="flex items-start gap-2.5">
                                 <span class="text-brand-navy font-bold text-base shrink-0">✓</span>
-                                <div><strong>Periodontal &amp; Root Preservation:</strong> Respecting biological limits to help protect root integrity, gum health, and bite function.</div>
+                                <div><strong>Tooth &amp; Gum Consideration:</strong> Planning tooth movement thoughtfully with attention to gum health and root support.</div>
                             </div>
                         </div>
                     </div>
@@ -449,11 +495,11 @@ import Layout from '../layouts/Layout.astro';
                             </div>
                             <div class="p-4 rounded-2xl bg-brand-midnavy border border-brand-lightnavy space-y-1">
                                 <div class="font-bold text-brand-gold">Teens, Children &amp; Young Students</div>
-                                <p class="text-brand-border text-xs leading-relaxed">Preventive checkups, interceptive growth guidance, and orthodontist evaluations to support healthy jaw and bite development.</p>
+                                <p class="text-brand-border text-xs leading-relaxed">Preventive checkups, early orthodontic screening, and orthodontic evaluations for growing smiles.</p>
                             </div>
                             <div class="p-4 rounded-2xl bg-brand-midnavy border border-brand-lightnavy space-y-1">
                                 <div class="font-bold text-brand-gold">Adults, Seniors &amp; Outstation/India Patients</div>
-                                <p class="text-brand-border text-xs leading-relaxed">Dental implants, veneers, root canals, and full-mouth rehabilitation planning tailored after clinical evaluation.</p>
+                                <p class="text-brand-border text-xs leading-relaxed">Dental implants, veneers, root canals, and restorative options planned after clinical evaluation.</p>
                             </div>
                         </div>
                     </div>
@@ -463,7 +509,7 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <!-- MULTISPECIALITY TREATMENT CATALOGUE (SAME-PAGE #book SCROLL + PREFILL) -->
-        <section id="catalogue" class="py-16 bg-brand-offwhite w-full border-b border-brand-border">
+        <section id="catalogue" class="py-16 bg-brand-surface w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
                     <span class="text-brand-navy text-xs font-extrabold tracking-widest uppercase bg-brand-cardbg border border-brand-border px-3.5 py-1 rounded-full">
@@ -473,14 +519,14 @@ import Layout from '../layouts/Layout.astro';
                         Comprehensive Clinical Treatments
                     </h2>
                     <p class="text-brand-grey-muted text-sm sm:text-base leading-relaxed">
-                        Specialist-led orthodontist and family dental treatments—including braces, clear aligners, Invisalign, invisible aligners, implants, veneers, and root canals—planned after clinical evaluation.
+                        Orthodontic and family dental options—including braces, clear aligners, Invisalign, invisible aligners, dental implants, veneers, and root canals—evaluated on an individual basis.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
                     <!-- 1. Orthodontics & Braces -->
-                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
+                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
                             <div class="flex items-center justify-between gap-2">
                                 <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">01</span>
@@ -491,7 +537,7 @@ import Layout from '../layouts/Layout.astro';
                                 <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Metal, Ceramic &amp; Self-Ligating Braces</p>
                             </div>
                             <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                                Specialist assessment and treatment for crowding, spacing, and bite/jaw alignment in Kandivali, Mumbai, and across India, with suitability and timelines determined after diagnostic evaluation.
+                                Orthodontic consultations and braces treatment for crowding, spacing, and bite alignment in Kandivali, Mumbai, and across India, with suitability and timelines determined after evaluation.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border">
@@ -502,7 +548,7 @@ import Layout from '../layouts/Layout.astro';
                     </div>
 
                     <!-- 2. Clear Aligners, Invisalign & Invisible Aligners -->
-                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
+                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
                             <div class="flex items-center justify-between gap-2">
                                 <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">02</span>
@@ -513,7 +559,7 @@ import Layout from '../layouts/Layout.astro';
                                 <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Kandivali, Mumbai &amp; India Aligner Care</p>
                             </div>
                             <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                                Custom-planned clear aligners, Invisalign, and invisible aligners for eligible alignment and bite cases, including wear-time discipline, retention guidance, and suitability checks.
+                                Aligner options including clear aligners, Invisalign, and invisible aligners for eligible cases, covering wear schedules, retention, and clinical suitability.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border">
@@ -524,7 +570,7 @@ import Layout from '../layouts/Layout.astro';
                     </div>
 
                     <!-- 3. Dental Implants -->
-                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
+                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
                             <div class="flex items-center justify-between gap-2">
                                 <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">03</span>
@@ -535,7 +581,7 @@ import Layout from '../layouts/Layout.astro';
                                 <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Single, Multiple &amp; Implant Restorations</p>
                             </div>
                             <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                                Tooth replacement planning for missing teeth following bone, gum, and bite evaluation, outlining staged timelines, healing/aftercare, and follow-up care without fixed guarantees.
+                                Tooth replacement options for missing teeth following clinical, bone, and gum assessment, outlining staged planning, healing, and follow-up care without fixed guarantees.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border">
@@ -546,7 +592,7 @@ import Layout from '../layouts/Layout.astro';
                     </div>
 
                     <!-- 4. Veneers & Smile Design -->
-                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
+                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
                             <div class="flex items-center justify-between gap-2">
                                 <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">04</span>
@@ -557,7 +603,7 @@ import Layout from '../layouts/Layout.astro';
                                 <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Aesthetic &amp; Restorative Tooth Enhancement</p>
                             </div>
                             <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                                Tailored veneers, crowns, bonding, and smile design evaluations addressing tooth wear, shape, or shade concerns based on enamel and bite assessment.
+                                Veneers, crowns, bonding, and smile improvement evaluations addressing tooth shape, wear, or shade based on enamel and bite assessment.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border">
@@ -568,7 +614,7 @@ import Layout from '../layouts/Layout.astro';
                     </div>
 
                     <!-- 5. Root Canal Treatment -->
-                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
+                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
                             <div class="flex items-center justify-between gap-2">
                                 <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">05</span>
@@ -579,7 +625,7 @@ import Layout from '../layouts/Layout.astro';
                                 <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Endodontic Care &amp; Crown Protection</p>
                             </div>
                             <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                                Focused root canal treatment to address tooth pain or deep decay and help preserve natural teeth, followed by post-treatment care and crown planning as needed.
+                                Root canal treatment to address tooth pain or deep decay and help preserve natural teeth, followed by aftercare and crown/restoration planning as needed.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border">
@@ -590,7 +636,7 @@ import Layout from '../layouts/Layout.astro';
                     </div>
 
                     <!-- 6. Gum Care & Extraction Care -->
-                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
+                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
                             <div class="flex items-center justify-between gap-2">
                                 <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">06</span>
@@ -598,10 +644,10 @@ import Layout from '../layouts/Layout.astro';
                             </div>
                             <div>
                                 <h3 class="text-lg font-extrabold text-brand-navy">Gum Care &amp; Extraction Care</h3>
-                                <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Gum Surgery / Periodontics &amp; Extractions</p>
+                                <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Gum Treatment &amp; Extractions</p>
                             </div>
                             <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                                Gum health care, periodontics, and tooth or wisdom tooth extractions with clear pre-procedure evaluation, aftercare steps, and recovery guidance.
+                                Gum health care and tooth or wisdom tooth extractions with clear pre-procedure evaluation, aftercare steps, and recovery guidance.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border">
@@ -612,7 +658,7 @@ import Layout from '../layouts/Layout.astro';
                     </div>
 
                     <!-- 7. Pediatric & Family Dentistry -->
-                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
+                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
                             <div class="flex items-center justify-between gap-2">
                                 <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">07</span>
@@ -620,21 +666,21 @@ import Layout from '../layouts/Layout.astro';
                             </div>
                             <div>
                                 <h3 class="text-lg font-extrabold text-brand-navy">Family, Kids &amp; Preventive Dentistry</h3>
-                                <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Routine Checkups, Fillings &amp; Cleaning</p>
+                                <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">Checkups, Teeth Cleaning &amp; Fillings</p>
                             </div>
                             <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
                                 Routine dental exams, teeth cleaning, fillings, sealants, and age-appropriate care for children, adults, and seniors in Kandivali West, Mumbai.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border">
-                            <button type="button" onclick="selectService('Pediatric')" class="w-full text-center py-2.5 rounded-xl bg-brand-navy hover:bg-brand-hovernavy text-white text-xs font-bold block transition-colors cursor-pointer">
+                            <button type="button" onclick="selectService('Checkup')" class="w-full text-center py-2.5 rounded-xl bg-brand-navy hover:bg-brand-hovernavy text-white text-xs font-bold block transition-colors cursor-pointer">
                                 Book Family or Child Visit →
                             </button>
                         </div>
                     </div>
 
                     <!-- 8. Full-Mouth Rehabilitation -->
-                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
+                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
                             <div class="flex items-center justify-between gap-2">
                                 <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">08</span>
@@ -656,7 +702,7 @@ import Layout from '../layouts/Layout.astro';
                     </div>
 
                     <!-- 9. Teeth Whitening & India / NRI Video Opinion -->
-                    <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
+                    <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3.5">
                             <div class="flex items-center justify-between gap-2">
                                 <span class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center text-xs font-black shrink-0">09</span>
@@ -667,7 +713,7 @@ import Layout from '../layouts/Layout.astro';
                                 <p class="text-xs text-brand-lightnavy font-semibold mt-0.5">In-Clinic Whitening &amp; Video Opinion</p>
                             </div>
                             <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                                Enamel-conscious teeth whitening following sensitivity/enamel checks, plus teleconsultation / video opinion options for patients across India and NRIs.
+                                Teeth whitening options following sensitivity/enamel checks, plus teleconsultation / video opinion options for patients across India and NRIs.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border">
@@ -682,7 +728,7 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <!-- GOOGLE REVIEWS CAROUSEL SECTION -->
-        <section id="reviews" class="py-14 bg-brand-surface w-full border-b border-brand-border">
+        <section id="reviews" class="py-14 bg-brand-offwhite w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
                 <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                     <div class="space-y-2 max-w-2xl">
@@ -696,7 +742,7 @@ import Layout from '../layouts/Layout.astro';
                     </div>
 
                     <div class="flex items-center gap-2 shrink-0">
-                        <button type="button" id="prevReviewBtn" aria-label="Previous review slide" class="px-3.5 py-2 rounded-xl bg-brand-offwhite hover:bg-brand-cardbg text-brand-navy border border-brand-border font-bold text-xs cursor-pointer transition-colors">
+                        <button type="button" id="prevReviewBtn" aria-label="Previous review slide" class="px-3.5 py-2 rounded-xl bg-brand-surface hover:bg-brand-cardbg text-brand-navy border border-brand-border font-bold text-xs cursor-pointer transition-colors">
                             ← Prev
                         </button>
                         <button type="button" id="nextReviewBtn" aria-label="Next review slide" class="px-3.5 py-2 rounded-xl bg-brand-navy hover:bg-brand-hovernavy text-white font-bold text-xs cursor-pointer transition-colors">
@@ -706,14 +752,14 @@ import Layout from '../layouts/Layout.astro';
                 </div>
 
                 <!-- Carousel Track -->
-                <div class="relative overflow-hidden rounded-3xl">
+                <div class="relative rounded-3xl">
                     <div id="reviewsTrack" class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                        <article class="review-slide bg-brand-offwhite rounded-2xl p-6 border border-brand-border shadow-sm flex flex-col justify-between space-y-4">
+                        <article class="review-slide bg-brand-surface rounded-2xl p-6 border border-brand-border shadow-sm flex flex-col justify-between space-y-4">
                             <div class="space-y-2">
                                 <div class="text-brand-gold text-sm font-bold">★★★★★ · Google Profile</div>
                                 <h3 class="font-extrabold text-brand-navy text-base whitespace-normal break-words">Infinora Dental Care · Kandivali West</h3>
                                 <p class="text-xs sm:text-sm text-brand-grey-text leading-relaxed">
-                                    Specialist orthodontic and family dental care led by Dr. Riddhi Patel Shah (BDS Gold Medalist, MDS Orthodontics) at Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai.
+                                    Orthodontic and family dental care led by Dr. Riddhi Patel Shah (BDS Gold Medalist, MDS Orthodontics; MSDC Reg: A-45674) at Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai.
                                 </p>
                             </div>
                             <div class="pt-3 border-t border-brand-border flex items-center justify-between text-xs">
@@ -726,12 +772,12 @@ import Layout from '../layouts/Layout.astro';
                             </div>
                         </article>
 
-                        <article class="review-slide bg-brand-offwhite rounded-2xl p-6 border border-brand-border shadow-sm flex flex-col justify-between space-y-4">
+                        <article class="review-slide bg-brand-surface rounded-2xl p-6 border border-brand-border shadow-sm flex flex-col justify-between space-y-4">
                             <div class="space-y-2">
                                 <div class="text-brand-gold text-sm font-bold">★★★★★ · Orthodontics &amp; Aligners</div>
                                 <h3 class="font-extrabold text-brand-navy text-base whitespace-normal break-words">Braces, Clear Aligners &amp; Smile Care</h3>
                                 <p class="text-xs sm:text-sm text-brand-grey-text leading-relaxed">
-                                    Consultations for braces, clear aligners, Invisalign, and invisible aligners in Kandivali and Mumbai, with transparent guidance and verified MSDC / ABDM registrations.
+                                    Consultations for braces, clear aligners, Invisalign, and invisible aligners in Kandivali and Mumbai, with transparent suitability and retention guidance.
                                 </p>
                             </div>
                             <div class="pt-3 border-t border-brand-border flex items-center justify-between text-xs">
@@ -744,7 +790,7 @@ import Layout from '../layouts/Layout.astro';
                             </div>
                         </article>
 
-                        <article class="review-slide bg-brand-offwhite rounded-2xl p-6 border border-brand-border shadow-sm flex flex-col justify-between space-y-4">
+                        <article class="review-slide bg-brand-surface rounded-2xl p-6 border border-brand-border shadow-sm flex flex-col justify-between space-y-4">
                             <div class="space-y-2">
                                 <div class="text-brand-gold text-sm font-bold">★★★★★ · Restorative &amp; Implants</div>
                                 <h3 class="font-extrabold text-brand-navy text-base whitespace-normal break-words">Root Canal, Implants &amp; Veneers</h3>
@@ -774,7 +820,7 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <!-- PATIENT EXPERIENCE & ACCESSIBLE AMENITIES -->
-        <section id="facilities" class="py-16 bg-brand-offwhite w-full border-b border-brand-border">
+        <section id="facilities" class="py-16 bg-brand-surface w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
                 <div class="text-center max-w-2xl mx-auto space-y-2">
                     <span class="text-brand-navy text-xs font-extrabold tracking-widest uppercase bg-brand-cardbg border border-brand-border px-3.5 py-1 rounded-full">
@@ -787,42 +833,42 @@ import Layout from '../layouts/Layout.astro';
                 </div>
 
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">🚗</div>
                         <h3 class="font-bold text-sm text-brand-navy">Free Street Parking</h3>
                         <p class="text-[11px] text-brand-grey-muted">Accessible parking along Iraniwadi Road No. 3.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">♿</div>
                         <h3 class="font-bold text-sm text-brand-navy">Wheelchair Friendly</h3>
                         <p class="text-[11px] text-brand-grey-muted">Ground-level access for elderly and mobility-assisted guests.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">💳</div>
                         <h3 class="font-bold text-sm text-brand-navy">Digital &amp; Card Payments</h3>
                         <p class="text-[11px] text-brand-grey-muted">UPI, GPay, Credit/Debit, Tap NFC, and payment/EMI plans.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">🌈</div>
                         <h3 class="font-bold text-sm text-brand-navy">Inclusive Space</h3>
                         <p class="text-[11px] text-brand-grey-muted">Respectful, welcoming care for every individual and family.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">👩‍💼</div>
                         <h3 class="font-bold text-sm text-brand-navy">Women-Owned Clinic</h3>
                         <p class="text-[11px] text-brand-grey-muted">Led by specialist orthodontist Dr. Riddhi Patel Shah.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">🚨</div>
                         <h3 class="font-bold text-sm text-brand-navy">Emergency Dental Care</h3>
                         <p class="text-[11px] text-brand-grey-muted">Priority support for tooth trauma and acute toothache.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">🌿</div>
                         <h3 class="font-bold text-sm text-brand-navy">Gentle Sedation Options</h3>
                         <p class="text-[11px] text-brand-grey-muted">Comfort protocols for patients with dental anxiety.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1.5 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <div class="text-2xl">🚻</div>
                         <h3 class="font-bold text-sm text-brand-navy">Private Restrooms</h3>
                         <p class="text-[11px] text-brand-grey-muted">Hygienic unisex restroom facilities on-site.</p>
@@ -883,7 +929,7 @@ import Layout from '../layouts/Layout.astro';
                         Reserve Your Dental Consultation
                     </h2>
                     <p class="text-brand-grey-muted text-xs sm:text-sm max-w-2xl mx-auto">
-                        Select your date and available time slot below. Details are sent via WhatsApp to confirm availability.
+                        Select your date and available time slot below. Submitting opens WhatsApp so our team can review and confirm availability.
                     </p>
                 </div>
 
@@ -1064,24 +1110,37 @@ import Layout from '../layouts/Layout.astro';
                                         />
                                     </div>
                                     <div>
-                                        <label class="block text-xs font-bold text-brand-navy mb-1.5" for="medicalAllergies">
-                                            Medical Allergies (If Known)
-                                        </label>
+                                        <div class="flex items-center justify-between gap-2 mb-1.5">
+                                            <label class="block text-xs font-bold text-brand-navy" for="medicalAllergies">
+                                                Medical Allergies (If Known)
+                                            </label>
+                                            <button
+                                                type="button"
+                                                id="noKnownAllergiesBtn"
+                                                class="px-2.5 py-1 rounded-lg bg-brand-cardbg hover:bg-brand-border text-brand-navy border border-brand-border text-[11px] font-bold cursor-pointer transition-colors"
+                                            >
+                                                No known allergies
+                                            </button>
+                                        </div>
                                         <input
                                             type="text"
                                             id="medicalAllergies"
                                             maxlength="250"
-                                            placeholder="Drug, local anesthesia, latex, or none known"
+                                            placeholder="Drug, local anesthesia, latex, or tap 'No known allergies'"
                                             class="w-full max-w-full px-3.5 py-2.5 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-navy text-sm text-brand-navy bg-brand-offwhite outline-none"
                                         />
                                     </div>
                                 </div>
                             </div>
+
+                            <p class="text-[11px] text-brand-grey-muted">
+                                Privacy notice: Details entered above are used to prepare your consultation request and open WhatsApp for scheduling with Infinora Dental Care.
+                            </p>
                         </div>
 
                         <!-- Handoff Status Notice -->
                         <div id="whatsappStatusBox" class="hidden p-4 rounded-xl bg-brand-surface border border-brand-navy/30 text-brand-navy text-xs leading-relaxed">
-                            WhatsApp opened with your prefilled consultation details for <strong>+91 73044 32681</strong>. Please tap Send in WhatsApp to confirm availability.
+                            WhatsApp opened with your prefilled appointment request for <strong>+91 73044 32681</strong>. Please tap Send in WhatsApp so our clinic desk can review and confirm availability (a request is confirmed only after clinic review).
                         </div>
 
                         <button
@@ -1163,7 +1222,7 @@ import Layout from '../layouts/Layout.astro';
                             <span class="text-brand-navy transition-transform group-open:rotate-180 font-bold">▾</span>
                         </summary>
                         <p class="text-xs sm:text-sm text-brand-grey-text mt-3 leading-relaxed border-t border-brand-border pt-3">
-                            We offer clinical evaluation and treatment planning for dental implants, veneers and crowns, root canal treatment (RCT), fillings, gum therapy, extractions, and family dental care, tailored after in-clinic assessment.
+                            We offer clinical evaluation and treatment planning for dental implants, veneers and crowns, root canal treatment (RCT), fillings, gum care, extractions, and family dental care, tailored after in-clinic assessment.
                         </p>
                     </details>
 
@@ -1212,7 +1271,7 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <!-- CLINIC LOCATION, TRANSIT HUB & GOOGLE MAP -->
-        <section id="location" class="py-16 pb-28 sm:pb-20 bg-brand-navy text-white relative overflow-hidden w-full">
+        <section id="location" class="py-16 pb-28 sm:pb-20 bg-brand-navy text-white relative w-full">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
                 <div class="lg:col-span-6 space-y-5 min-w-0">
@@ -1334,10 +1393,10 @@ import Layout from '../layouts/Layout.astro';
                     <p class="text-white font-semibold whitespace-normal break-words">© 2026 Infinora Dental Care. Dr. Riddhi Patel Shah (MDS, Orthodontics). All rights reserved.</p>
                 </div>
                 <div class="flex items-center gap-4 text-brand-surface flex-wrap justify-center">
+                    <a href="#offers" class="hover:text-white transition-colors">Offers</a>
                     <a href="#about" class="hover:text-white transition-colors">About Doctor</a>
                     <a href="#catalogue" class="hover:text-white transition-colors">Treatments</a>
                     <a href="#reviews" class="hover:text-white transition-colors">Google Reviews</a>
-                    <a href="#credentials" class="hover:text-white transition-colors">Accreditations</a>
                     <a href="#location" class="hover:text-white transition-colors">Location</a>
                 </div>
             </div>
@@ -1353,7 +1412,6 @@ import Layout from '../layouts/Layout.astro';
         const SLOT_MORNING = 'Morning (10:00 AM – 02:00 PM)';
         const SLOT_AFTERNOON = 'Afternoon (03:00 PM – 05:00 PM)';
         const SLOT_EVENING = 'Evening (05:00 PM – 09:00 PM)';
-        const ALLOWED_MIME_TYPES = ['application/pdf', 'image/jpeg', 'image/png', 'image/webp'];
 
         window.selectService = function(keyword) {
             const select = document.getElementById('treatmentService');
@@ -1407,11 +1465,30 @@ import Layout from '../layouts/Layout.astro';
             const complaintsInput = document.getElementById('chiefComplaints');
             const historyInput = document.getElementById('medicalHistory');
             const allergiesInput = document.getElementById('medicalAllergies');
+            const noAllergiesBtn = document.getElementById('noKnownAllergiesBtn');
             const topPayBtn = document.getElementById('topPayOnlineBtn');
             const topPayNotice = document.getElementById('topPaymentNotice');
             const closeTopPayNotice = document.getElementById('closeTopPaymentNotice');
+            const scrolledBrandPill = document.getElementById('scrolledBrandPill');
             const statusBox = document.getElementById('whatsappStatusBox');
             const form = document.getElementById('appointmentForm');
+
+            /* Keep Brand Pill Highlighted When Scrolled */
+            window.addEventListener('scroll', () => {
+                if (!scrolledBrandPill) return;
+                if (window.scrollY > 120) {
+                    scrolledBrandPill.classList.add('ring-1', 'ring-brand-navy/30');
+                } else {
+                    scrolledBrandPill.classList.remove('ring-1', 'ring-brand-navy/30');
+                }
+            }, { passive: true });
+
+            /* Quick-Fill: No Known Allergies */
+            if (noAllergiesBtn && allergiesInput) {
+                noAllergiesBtn.addEventListener('click', () => {
+                    allergiesInput.value = 'No known allergies';
+                });
+            }
 
             /* Google Reviews Carousel Controls */
             const slides = Array.from(document.querySelectorAll('.review-slide'));
