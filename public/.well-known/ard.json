@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0",
+  "name": "Infinora Dental Care",
+  "url": "https://infinoradental.com/",
+  "bookingUrl": "https://infinoradental.com/#book",
+  "telephone": "+91 73044 32681",
+  "whatsapp": "https://wa.me/917304432681",
+  "address": {
+    "streetAddress": "Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West",
+    "addressLocality": "Mumbai",
+    "addressRegion": "Maharashtra",
+    "postalCode": "400067",
+    "addressCountry": "IN"
+  },
+  "practitioner": {
+    "name": "Dr. Riddhi Patel Shah",
+    "qualifications": [
+      "BDS University Gold Medalist",
+      "MDS Orthodontics & Dentofacial Orthopedics"
+    ],
+    "msdcRegistration": "A-45674"
+  }
+}
