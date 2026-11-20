@@ -7,71 +7,40 @@ import Layout from '../layouts/Layout.astro';
     description="Dentist & orthodontist in Kandivali West, Mumbai. Braces, clear aligners, Invisalign, implants, veneers & root canals with Dr. Riddhi Patel Shah. Book today."
     canonicalUrl="https://infinoradental.com/"
 >
-    <!-- Top Utility Bar -->
-    <div class="bg-brand-darknavy text-brand-surface text-xs py-2 px-3 sm:px-6 border-b border-brand-midnavy w-full">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">
-
-            <div class="flex items-center justify-center md:justify-start gap-2 flex-wrap">
-                <span class="inline-flex items-center gap-1.5 bg-brand-navy text-white border border-brand-lightnavy px-2.5 py-0.5 rounded-full font-extrabold uppercase tracking-wider text-[10px] whitespace-normal break-words">
-                    <span class="w-1.5 h-1.5 rounded-full bg-brand-gold shrink-0"></span>
-                    Infinora Dental Care · Kandivali West, Mumbai
-                </span>
-                <a href="#offers" class="text-brand-gold hover:underline font-semibold text-xs whitespace-normal break-words">
-                    Offers: Free Dental Checkup · Teeth Cleaning @ Rs 999*
-                </a>
+    <!-- UTILITY BAR (Normal Flow — Scrolls Away) -->
+    <div class="bg-brand-darknavy text-brand-surface text-[11px] sm:text-xs py-2 px-3 sm:px-6 border-b border-brand-midnavy w-full">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2 min-w-0">
+                <span class="w-2 h-2 rounded-full bg-brand-gold shrink-0"></span>
+                <span class="font-semibold text-brand-surface whitespace-nowrap">Kandivali West, Mumbai</span>
             </div>
 
-            <div class="flex items-center justify-center gap-2 sm:gap-3 text-xs font-semibold flex-wrap">
-                <!-- Multi-Language Switcher -->
+            <div class="flex items-center flex-wrap gap-2 sm:gap-3 font-semibold">
                 <div class="flex items-center gap-1 bg-brand-midnavy border border-brand-lightnavy px-1.5 py-0.5 rounded-lg notranslate">
-                    <button type="button" onclick="changeLanguage('en')" data-lang="en" class="lang-btn px-2 py-1 rounded text-[10px] font-bold bg-brand-navy text-white transition-colors cursor-pointer">
-                        EN
-                    </button>
-                    <button type="button" onclick="changeLanguage('gu')" data-lang="gu" class="lang-btn px-2 py-1 rounded text-[10px] font-bold text-brand-border hover:text-white transition-colors cursor-pointer">
-                        ગુજ
-                    </button>
-                    <button type="button" onclick="changeLanguage('hi')" data-lang="hi" class="lang-btn px-2 py-1 rounded text-[10px] font-bold text-brand-border hover:text-white transition-colors cursor-pointer">
-                        हि
-                    </button>
-                    <button type="button" onclick="changeLanguage('mr')" data-lang="mr" class="lang-btn px-2 py-1 rounded text-[10px] font-bold text-brand-border hover:text-white transition-colors cursor-pointer">
-                        मरा
-                    </button>
+                    <button type="button" onclick="changeLanguage('en')" data-lang="en" class="lang-btn px-2 py-1 rounded text-[10px] font-bold bg-brand-navy text-white cursor-pointer">EN</button>
+                    <button type="button" onclick="changeLanguage('gu')" data-lang="gu" class="lang-btn px-2 py-1 rounded text-[10px] font-bold text-brand-border hover:text-white cursor-pointer">ગુજ</button>
+                    <button type="button" onclick="changeLanguage('hi')" data-lang="hi" class="lang-btn px-2 py-1 rounded text-[10px] font-bold text-brand-border hover:text-white cursor-pointer">हि</button>
+                    <button type="button" onclick="changeLanguage('mr')" data-lang="mr" class="lang-btn px-2 py-1 rounded text-[10px] font-bold text-brand-border hover:text-white cursor-pointer">मरा</button>
                 </div>
 
-                <span class="text-brand-lightnavy hidden sm:inline">|</span>
-
-                <!-- Post-Treatment Online Payment Gateway Placeholder -->
-                <button
-                    type="button"
-                    id="topPayOnlineBtn"
-                    class="bg-brand-midnavy hover:bg-brand-lightnavy text-white border border-brand-gold/50 px-2.5 py-1.5 rounded-lg font-bold text-[11px] transition-colors cursor-pointer"
-                    title="Post-treatment online payment placeholder (not for booking appointments)"
-                >
+                <button type="button" id="topPayOnlineBtn" class="bg-brand-midnavy hover:bg-brand-lightnavy text-white border border-brand-gold/50 px-2.5 py-1.5 rounded-lg text-[11px] font-bold cursor-pointer">
                     Pay Online
                 </button>
 
-                <span class="text-brand-lightnavy hidden sm:inline">|</span>
-
-                <button type="button" onclick="downloadVCard()" class="text-brand-surface hover:text-white flex items-center gap-1 py-1 transition-colors cursor-pointer" title="Save Infinora Dental Care to Contacts">
-                    <span>Save Contact</span>
+                <button type="button" onclick="downloadVCard()" class="text-brand-surface hover:text-white py-1 cursor-pointer">
+                    Save Contact
                 </button>
 
-                <span class="text-brand-lightnavy hidden sm:inline">|</span>
-
-                <a href="https://g.page/r/Cb7r3l0-R2oSEBM/review" target="_blank" rel="noopener" class="text-brand-surface hover:text-white py-1 transition-colors flex items-center gap-1">
+                <a href="https://g.page/r/Cb7r3l0-R2oSEBM/review" target="_blank" rel="noopener" class="text-brand-surface hover:text-white py-1">
                     Google Review Link
                 </a>
 
-                <span class="text-brand-lightnavy hidden sm:inline">|</span>
-
-                <a href="tel:+917304432681" class="hover:text-white py-1 transition-colors flex items-center gap-1 text-brand-surface">
+                <a href="tel:+917304432681" class="text-brand-surface hover:text-white py-1 whitespace-nowrap">
                     +91 73044 32681
                 </a>
             </div>
-
         </div>
 
-        <!-- Top Bar Notice for Post-Treatment Payment Gateway Placeholder -->
         <div id="topPaymentNotice" class="hidden max-w-7xl mx-auto mt-2 px-3 py-2 rounded-xl bg-brand-midnavy border border-brand-gold/40 text-brand-surface text-[11px] flex items-center justify-between gap-3">
             <span>
                 <strong>Post-Treatment Payment (Placeholder):</strong> For post-treatment online payment balances (Razorpay, Cashfree, Pine Labs, or PayU integration planned; not for appointment booking). Please contact +91 73044 32681.
@@ -80,49 +49,88 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </div>
 
-    <!-- Sticky Navigation Bar: Fixed Height & Pinned Logo + Clinic Name -->
-    <header id="stickyClinicHeader" class="sticky top-0 z-40 bg-brand-offwhite/95 backdrop-blur-md border-b border-brand-border shadow-sm w-full">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 h-20 sm:h-22 flex items-center justify-between gap-2 sm:gap-4">
+    <!-- STICKY MAIN NAVIGATION -->
+    <header id="stickyClinicHeader" class="sticky top-0 z-[1000] bg-brand-offwhite border-b border-brand-border shadow-sm w-full">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 h-[68px] lg:h-[80px] flex items-center justify-between gap-3">
 
-            <a href="#top" class="flex items-center gap-3 min-w-0 group" aria-label="Infinora Dental Care Home">
-                <span class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-brand-offwhite border-2 border-brand-navy/25 flex items-center justify-center shadow-sm shrink-0 p-1.5">
-                    <img
-                        src="/logo.svg"
-                        alt="Infinora Dental Care Logo"
-                        width="56"
-                        height="56"
-                        class="w-full h-full object-contain"
-                        onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
-                    />
-                    <span class="hidden text-sm font-black text-brand-navy">IDC</span>
+            <a href="#top" class="flex items-center gap-[10px] sm:gap-[12px] shrink-0 group" aria-label="INFINORA DENTAL CARE Home">
+                <img
+                    src="/logo.svg"
+                    alt="INFINORA DENTAL CARE Logo"
+                    width="52"
+                    height="52"
+                    class="w-[42px] h-[42px] lg:w-[52px] lg:h-[52px] object-contain shrink-0"
+                    onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+                />
+                <span class="hidden w-[42px] h-[42px] lg:w-[52px] lg:h-[52px] rounded-xl bg-brand-navy text-white items-center justify-center font-extrabold text-xs shrink-0">IDC</span>
+                <span class="flex flex-col leading-none shrink-0">
+                    <span class="text-[20px] lg:text-[24px] font-extrabold tracking-tight text-brand-navy whitespace-nowrap">INFINORA</span>
+                    <span class="text-[9px] lg:text-[10px] font-bold tracking-[0.14em] text-brand-grey-muted uppercase mt-1 whitespace-nowrap">DENTAL CARE</span>
                 </span>
-                <div class="min-w-0 max-w-[11rem] sm:max-w-[15rem] xl:max-w-none">
-                    <span class="text-sm sm:text-lg xl:text-xl font-extrabold tracking-tight text-brand-navy block leading-tight whitespace-normal break-words">Infinora Dental Care</span>
-                    <span class="text-[10px] sm:text-xs font-semibold text-brand-grey-muted block leading-tight mt-0.5 whitespace-normal break-words">Kandivali West, Mumbai</span>
-                </div>
             </a>
 
-            <nav class="hidden lg:flex items-center gap-4 xl:gap-5 text-xs xl:text-sm font-semibold text-brand-grey-text shrink-0" aria-label="Primary Navigation">
-                <a href="#offers" class="hover:text-brand-navy transition-colors">Offers</a>
-                <a href="#family-care" class="hover:text-brand-navy transition-colors">Family Care</a>
-                <a href="#catalogue" class="hover:text-brand-navy transition-colors">Treatments</a>
-                <a href="#about" class="hover:text-brand-navy transition-colors">Dr. Riddhi</a>
-                <a href="#reviews" class="hover:text-brand-navy transition-colors">Reviews Section</a>
-                <a href="#faq" class="hover:text-brand-navy transition-colors">FAQs</a>
-                <a href="#location" class="hover:text-brand-navy transition-colors">Location</a>
+            <nav class="hidden lg:flex items-center gap-4 xl:gap-5 text-[13px] xl:text-[14px] font-semibold text-brand-grey-text min-w-0" aria-label="Main Navigation">
+                <a href="#top" class="hover:text-brand-navy transition-colors whitespace-nowrap">Home</a>
+                <a href="#offers" class="hover:text-brand-navy transition-colors whitespace-nowrap">Offers</a>
+                <a href="#family-care" class="hover:text-brand-navy transition-colors whitespace-nowrap">Family Care</a>
+                <a href="#catalogue" class="hover:text-brand-navy transition-colors whitespace-nowrap">Treatments</a>
+                <a href="#about" class="hover:text-brand-navy transition-colors whitespace-nowrap">Dr. Riddhi</a>
+                <a href="#reviews" class="hover:text-brand-navy transition-colors whitespace-nowrap">Reviews</a>
+                <a href="#faq" class="hover:text-brand-navy transition-colors whitespace-nowrap">FAQs</a>
+                <a href="#location" class="hover:text-brand-navy transition-colors whitespace-nowrap">Location</a>
             </nav>
 
-            <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                <span id="scrolledBrandPill" class="hidden md:inline-flex items-center gap-1.5 bg-brand-cardbg text-brand-navy border border-brand-border px-2.5 py-1.5 rounded-lg text-[11px] font-bold whitespace-nowrap">
-                    <span>Infinora Dental Care</span>
-                </span>
-                <a href="#location" class="hidden sm:inline-flex items-center gap-1 bg-brand-surface hover:bg-brand-cardbg text-brand-navy px-3 py-2.5 rounded-xl font-bold text-xs transition-all border border-brand-border whitespace-nowrap">
-                    Location
+            <div class="flex items-center gap-2 shrink-0">
+                <a href="#book" class="inline-flex items-center justify-center bg-brand-navy hover:bg-brand-hovernavy text-white px-3.5 lg:px-5 py-2.5 rounded-xl font-bold text-xs lg:text-sm transition-colors whitespace-nowrap">
+                    Book Appointment
                 </a>
-                <a href="#book" class="inline-flex items-center gap-1 bg-brand-navy hover:bg-brand-hovernavy text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md transition-all whitespace-nowrap">
-                    <span>Book Appointment</span>
+
+                <button
+                    type="button"
+                    id="mobileMenuToggle"
+                    aria-expanded="false"
+                    aria-controls="mobileNavDrawer"
+                    aria-label="Open navigation menu"
+                    class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-brand-border bg-brand-surface text-brand-navy font-bold text-base cursor-pointer shrink-0"
+                >
+                    ☰
+                </button>
+            </div>
+        </div>
+
+        <!-- ACCESSIBLE MOBILE NAVIGATION DRAWER -->
+        <div id="mobileNavDrawer" class="hidden fixed inset-0 z-[1100] bg-brand-offwhite flex flex-col justify-between p-5 overflow-y-auto lg:hidden" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+            <div class="space-y-6">
+                <div class="flex items-center justify-between border-b border-brand-border pb-4">
+                    <div class="flex items-center gap-2.5 shrink-0">
+                        <img src="/logo.svg" alt="INFINORA DENTAL CARE Logo" width="42" height="42" class="w-[42px] h-[42px] object-contain shrink-0" onerror="this.style.display='none';" />
+                        <span class="flex flex-col leading-none">
+                            <span class="text-[20px] font-extrabold text-brand-navy whitespace-nowrap">INFINORA</span>
+                            <span class="text-[9px] font-bold tracking-[0.14em] text-brand-grey-muted uppercase mt-1 whitespace-nowrap">DENTAL CARE</span>
+                        </span>
+                    </div>
+                    <button type="button" id="mobileMenuClose" aria-label="Close navigation menu" class="w-10 h-10 rounded-xl border border-brand-border text-brand-navy font-bold text-lg cursor-pointer">
+                        ✕
+                    </button>
+                </div>
+
+                <nav class="flex flex-col gap-2 text-base font-bold text-brand-navy" aria-label="Mobile Menu Links">
+                    <a href="#top" class="mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">Home</a>
+                    <a href="#offers" class="mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">Offers</a>
+                    <a href="#family-care" class="mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">Family Care</a>
+                    <a href="#catalogue" class="mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">Treatments</a>
+                    <a href="#about" class="mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">Dr. Riddhi</a>
+                    <a href="#reviews" class="mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">Reviews</a>
+                    <a href="#faq" class="mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">FAQs</a>
+                    <a href="#location" class="mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">Location</a>
+                </nav>
+            </div>
+
+            <div class="pt-4 border-t border-brand-border space-y-3">
+                <a href="#book" class="mobile-nav-link w-full inline-flex items-center justify-center bg-brand-navy text-white font-extrabold py-3.5 px-4 rounded-xl text-sm">
+                    Book Appointment
                 </a>
-                <a href="tel:+917304432681" class="hidden xl:inline-flex bg-brand-darknavy hover:bg-brand-midnavy text-white px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-sm transition-all whitespace-nowrap">
+                <a href="tel:+917304432681" class="w-full inline-flex items-center justify-center bg-brand-surface text-brand-navy border border-brand-border font-bold py-3 px-4 rounded-xl text-sm">
                     +91 73044 32681
                 </a>
             </div>
@@ -131,7 +139,7 @@ import Layout from '../layouts/Layout.astro';
 
     <main id="top" class="w-full pb-28 sm:pb-20">
 
-        <!-- 1. HERO SECTION -->
+        <!-- HERO SECTION -->
         <section class="relative pt-8 pb-12 sm:pt-14 sm:pb-20 bg-gradient-to-b from-brand-surface via-brand-lightbg to-brand-offwhite w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
@@ -147,10 +155,9 @@ import Layout from '../layouts/Layout.astro';
                     </h1>
 
                     <p class="text-sm sm:text-base text-brand-grey-text leading-relaxed max-w-2xl whitespace-normal break-words">
-                        Specialist-led orthodontic and family dental care in <strong>Kandivali West, Mumbai</strong>, founded and led by <strong>Dr. Riddhi Patel Shah</strong> (BDS University Gold Medalist, MDS Orthodontics &amp; Dentofacial Orthopedics, MSDC Reg: A-45674). Care spans clear aligners, Invisalign, invisible aligners, metal, ceramic, and self-ligating braces, early orthodontic evaluations, smile improvement, and comprehensive dental services for families in Kandivali, Mumbai, and across India.
+                        Specialist-led orthodontic and family dental care in <strong>Kandivali West, Mumbai</strong>, founded and led by <strong>Dr. Riddhi Patel Shah</strong> (BDS University Gold Medalist, MDS Orthodontics &amp; Dentofacial Orthopedics, MSDC Reg: A-45674)[cite: 3, 4]. Care spans clear aligners, Invisalign, invisible aligners, metal, ceramic, and self-ligating braces, early orthodontic evaluations, smile improvement, and comprehensive dental services for families in Kandivali, Mumbai, and across India[cite: 2, 3, 4].
                     </p>
 
-                    <!-- Two Prominent Hero CTAs -->
                     <div class="flex flex-col sm:flex-row gap-3 pt-2">
                         <a href="#book" class="inline-flex items-center justify-center gap-2 bg-brand-navy hover:bg-brand-hovernavy text-white font-bold px-7 py-3.5 rounded-xl shadow-lg transition-all text-sm sm:text-base text-center">
                             Book Appointment
@@ -160,7 +167,6 @@ import Layout from '../layouts/Layout.astro';
                         </a>
                     </div>
 
-                    <!-- Trust Badges -->
                     <div class="pt-4 grid grid-cols-3 gap-2 sm:gap-4 border-t border-brand-border">
                         <div class="p-3 bg-brand-offwhite rounded-xl border border-brand-border shadow-sm text-center sm:text-left min-w-0">
                             <div class="text-xs sm:text-xl font-black text-brand-navy whitespace-normal break-words">BDS Gold Medalist</div>
@@ -177,14 +183,14 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
 
-                <!-- 2. DOCTOR INTRODUCTION & CREDENTIALS CARD -->
+                <!-- DOCTOR INTRODUCTION & CREDENTIALS CARD -->
                 <div class="lg:col-span-5 relative w-full min-w-0" id="about">
                     <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-8 border border-brand-border shadow-xl space-y-5">
                         <div class="flex flex-col sm:flex-row sm:items-center gap-4 border-b border-brand-border pb-5">
                             <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-brand-surface border-2 border-brand-navy/25 flex items-center justify-center shrink-0 p-2 shadow-sm">
                                 <img
                                     src="/logo.svg"
-                                    alt="Infinora Dental Care Logo"
+                                    alt="INFINORA DENTAL CARE Logo"
                                     width="88"
                                     height="88"
                                     class="w-full h-full object-contain"
@@ -202,23 +208,22 @@ import Layout from '../layouts/Layout.astro';
 
                         <div class="space-y-3 text-xs sm:text-sm text-brand-grey-text leading-relaxed whitespace-normal break-words">
                             <p>
-                                <strong>Dr. Riddhi Patel Shah</strong> leads <strong>Infinora Dental Care</strong> in Kandivali West, Mumbai, bringing specialist orthodontic training (MDS Orthodontics &amp; Dentofacial Orthopedics) and a patient-centered approach to every consultation.
+                                <strong>Dr. Riddhi Patel Shah</strong> leads <strong>Infinora Dental Care</strong> in Kandivali West, Mumbai, bringing specialist orthodontic training (MDS Orthodontics &amp; Dentofacial Orthopedics) and a patient-centered approach to every consultation[cite: 3, 4].
                             </p>
                             <p>
-                                She focuses on orthodontic assessments, braces, clear aligners, Invisalign, invisible aligners, early orthodontic evaluations, smile improvement, and comprehensive dental care tailored to individual clinical needs.
+                                She focuses on orthodontic assessments, braces, clear aligners, Invisalign, invisible aligners, early orthodontic evaluations, smile improvement, and comprehensive dental care tailored to individual clinical needs[cite: 2, 3, 4].
                             </p>
                         </div>
 
-                        <!-- Academic Honors & Memberships -->
                         <div class="bg-brand-surface rounded-2xl p-4 border border-brand-border space-y-2 text-xs">
                             <div class="font-bold text-brand-navy text-[11px] uppercase tracking-wider">
                                 Credentials &amp; Associations
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-brand-grey-text font-medium">
-                                <div>BDS University Gold Medalist</div>
-                                <div>MDS Orthodontics &amp; Dentofacial Orthopedics</div>
-                                <div>MSDC Registration: A-45674</div>
-                                <div>Indian Orthodontic Society (IOS) &amp; IDA</div>
+                                <div>Student of the Year (BDS)</div>
+                                <div>BDS University Medalist</div>
+                                <div>MDS University Rank-Holder</div>
+                                <div>Best Prosthodontist (IDA CCRP)</div>
                             </div>
                         </div>
 
@@ -313,7 +318,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <!-- 3. SPECIALITIES & PRIMARY TREATMENTS -->
+        <!-- SPECIALITIES & TREATMENTS -->
         <section id="catalogue" class="py-16 bg-brand-offwhite w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
@@ -330,7 +335,6 @@ import Layout from '../layouts/Layout.astro';
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                    <!-- 1. Orthodontist & Braces -->
                     <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3">
                             <div class="text-[10px] font-black uppercase tracking-wider text-brand-lightnavy">Orthodontics · Braces</div>
@@ -346,7 +350,6 @@ import Layout from '../layouts/Layout.astro';
                         </div>
                     </div>
 
-                    <!-- 2. Clear Aligners, Invisalign & Invisible Aligners -->
                     <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3">
                             <div class="text-[10px] font-black uppercase tracking-wider text-brand-lightnavy">Aligners · Invisalign</div>
@@ -362,7 +365,6 @@ import Layout from '../layouts/Layout.astro';
                         </div>
                     </div>
 
-                    <!-- 3. Early Orthodontic Intervention -->
                     <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3">
                             <div class="text-[10px] font-black uppercase tracking-wider text-brand-lightnavy">Early Orthodontics</div>
@@ -378,7 +380,6 @@ import Layout from '../layouts/Layout.astro';
                         </div>
                     </div>
 
-                    <!-- 4. Dental Implants -->
                     <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3">
                             <div class="text-[10px] font-black uppercase tracking-wider text-brand-lightnavy">Dental Implants</div>
@@ -394,7 +395,6 @@ import Layout from '../layouts/Layout.astro';
                         </div>
                     </div>
 
-                    <!-- 5. Veneers & Smile Improvement -->
                     <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3">
                             <div class="text-[10px] font-black uppercase tracking-wider text-brand-lightnavy">Veneers &amp; Aesthetics</div>
@@ -410,7 +410,6 @@ import Layout from '../layouts/Layout.astro';
                         </div>
                     </div>
 
-                    <!-- 6. Root Canal, Gum & General Dentistry -->
                     <div class="bg-brand-surface rounded-3xl p-6 sm:p-7 border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-navy transition-all">
                         <div class="space-y-3">
                             <div class="text-[10px] font-black uppercase tracking-wider text-brand-lightnavy">Root Canal &amp; General Care</div>
@@ -430,7 +429,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <!-- 4. WHY CHOOSE INFINORA & REGISTRATIONS -->
+        <!-- WHY CHOOSE INFINORA & STATUTORY REGISTRATIONS -->
         <section id="standards" class="py-16 bg-brand-surface w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-12">
                 <div class="text-center max-w-3xl mx-auto space-y-3">
@@ -449,7 +448,7 @@ import Layout from '../layouts/Layout.astro';
                     <div class="bg-brand-offwhite p-6 rounded-2xl border border-brand-border shadow-sm space-y-2">
                         <h3 class="font-extrabold text-brand-navy text-base">Orthodontist-Led Guidance</h3>
                         <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                            Led by Dr. Riddhi Patel Shah (BDS University Gold Medalist, MDS Orthodontics &amp; Dentofacial Orthopedics, MSDC Reg: A-45674).
+                            Led by Dr. Riddhi Patel Shah (BDS University Gold Medalist, MDS Orthodontics &amp; Dentofacial Orthopedics, MSDC Reg: A-45674)[cite: 3, 4].
                         </p>
                     </div>
                     <div class="bg-brand-offwhite p-6 rounded-2xl border border-brand-border shadow-sm space-y-2">
@@ -461,14 +460,14 @@ import Layout from '../layouts/Layout.astro';
                     <div class="bg-brand-offwhite p-6 rounded-2xl border border-brand-border shadow-sm space-y-2">
                         <h3 class="font-extrabold text-brand-navy text-base">Statutory &amp; Health Registries</h3>
                         <p class="text-brand-grey-text text-xs sm:text-sm leading-relaxed">
-                            MSDC Reg: A-45674 · IOS &amp; IDA member · ABDM Health Facility ID: IN2710085962 · ABDM Professional ID: 71-8554-8443-4346.
+                            MSDC Reg: A-45674 · IOS &amp; IDA member · ABDM Health Facility ID: IN2710085962 · ABDM Professional ID: 71-8554-8443-4346[cite: 3, 4].
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 5. CLINIC PROFILE & 6. GOOGLE REVIEWS CAROUSEL -->
+        <!-- GOOGLE REVIEWS CAROUSEL -->
         <section id="reviews" class="py-14 bg-brand-offwhite w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
                 <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
@@ -478,7 +477,7 @@ import Layout from '../layouts/Layout.astro';
                         </span>
                         <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy whitespace-normal break-words">Patient Reviews on Google</h2>
                         <p class="text-xs sm:text-sm text-brand-grey-muted leading-relaxed">
-                            Actual clinic photographs will be added once uploaded; browse our Google profile review cards for <strong>Infinora Dental Care - Dr. Riddhi Patel Shah (Dentist &amp; Braces Clinic)</strong> and open Google directly to read or post reviews.
+                            Actual clinic photographs will be added once uploaded[cite: 4]; browse our Google profile cards for <strong>Infinora Dental Care - Dr. Riddhi Patel Shah (Dentist &amp; Braces Clinic)</strong> and open Google directly to read or post reviews[cite: 2, 3].
                         </p>
                     </div>
 
@@ -492,15 +491,14 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
 
-                <!-- Carousel Track -->
                 <div class="relative rounded-3xl">
                     <div id="reviewsTrack" class="grid grid-cols-1 md:grid-cols-3 gap-5">
                         <article class="review-slide bg-brand-surface rounded-2xl p-6 border border-brand-border shadow-sm flex flex-col justify-between space-y-4">
                             <div class="space-y-2">
-                                <div class="text-brand-navy text-xs font-extrabold uppercase">Google Business Profile</div>
+                                <div class="text-brand-navy text-xs font-extrabold uppercase">5 Stars · Google Business Profile</div>
                                 <h3 class="font-extrabold text-brand-navy text-base whitespace-normal break-words">Infinora Dental Care · Kandivali West</h3>
                                 <p class="text-xs sm:text-sm text-brand-grey-text leading-relaxed">
-                                    Listed at Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067 with direct booking and directions on Google.
+                                    Listed at Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067 with direct booking and directions on Google[cite: 2, 3].
                                 </p>
                             </div>
                             <div class="pt-3 border-t border-brand-border flex items-center justify-between text-xs">
@@ -515,10 +513,10 @@ import Layout from '../layouts/Layout.astro';
 
                         <article class="review-slide bg-brand-surface rounded-2xl p-6 border border-brand-border shadow-sm flex flex-col justify-between space-y-4">
                             <div class="space-y-2">
-                                <div class="text-brand-navy text-xs font-extrabold uppercase">Orthodontics &amp; Aligners</div>
+                                <div class="text-brand-navy text-xs font-extrabold uppercase">5 Stars · Orthodontics &amp; Aligners</div>
                                 <h3 class="font-extrabold text-brand-navy text-base whitespace-normal break-words">Braces, Clear Aligners &amp; Invisalign</h3>
                                 <p class="text-xs sm:text-sm text-brand-grey-text leading-relaxed">
-                                    Orthodontic consultations for clear aligners, Invisalign, invisible aligners, and braces in Kandivali West, Mumbai, and across India.
+                                    Orthodontic consultations for clear aligners, Invisalign, invisible aligners, and braces in Kandivali West, Mumbai, and across India[cite: 2, 3, 4].
                                 </p>
                             </div>
                             <div class="pt-3 border-t border-brand-border flex items-center justify-between text-xs">
@@ -533,10 +531,10 @@ import Layout from '../layouts/Layout.astro';
 
                         <article class="review-slide bg-brand-surface rounded-2xl p-6 border border-brand-border shadow-sm flex flex-col justify-between space-y-4">
                             <div class="space-y-2">
-                                <div class="text-brand-navy text-xs font-extrabold uppercase">Family &amp; Restorative Care</div>
+                                <div class="text-brand-navy text-xs font-extrabold uppercase">5 Stars · Family &amp; Restorative Care</div>
                                 <h3 class="font-extrabold text-brand-navy text-base whitespace-normal break-words">Implants, Veneers, Root Canal &amp; Checkups</h3>
                                 <p class="text-xs sm:text-sm text-brand-grey-text leading-relaxed">
-                                    Consultations for implants, veneers, root canal treatment, checkups, and family dentistry in Kandivali West, Mumbai.
+                                    Consultations for implants, veneers, root canal treatment, checkups, and family dentistry in Kandivali West, Mumbai[cite: 2, 3, 4].
                                 </p>
                             </div>
                             <div class="pt-3 border-t border-brand-border flex items-center justify-between text-xs">
@@ -551,7 +549,6 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
 
-                <!-- Accessible Carousel Tabs (Proper role="tab" inside role="tablist" + Touch-Friendly Targets) -->
                 <div class="flex items-center justify-center gap-3" id="reviewDots" role="tablist" aria-label="Review carousel slides">
                     <button type="button" role="tab" aria-selected="true" data-slide-index="0" aria-label="Slide 1" class="review-dot w-8 h-8 rounded-full flex items-center justify-center cursor-pointer">
                         <span class="dot-indicator w-3 h-3 rounded-full bg-brand-navy block"></span>
@@ -566,7 +563,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <!-- 7. TREATMENT PROCESS -->
+        <!-- TREATMENT PROCESS -->
         <section id="process" class="py-14 bg-brand-surface w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
                 <div class="text-center max-w-2xl mx-auto space-y-2">
@@ -581,28 +578,28 @@ import Layout from '../layouts/Layout.astro';
                         <div class="text-xs font-extrabold text-brand-lightnavy">Step 1</div>
                         <h3 class="font-bold text-base text-brand-navy">Submit Appointment Request</h3>
                         <p class="text-xs sm:text-sm text-brand-grey-text leading-relaxed">
-                            Choose your consultation type, date, and available time slot in the form below and send your request via WhatsApp.
+                            Choose your consultation type, date, and available time slot in the form below and send your request via WhatsApp[cite: 3].
                         </p>
                     </div>
                     <div class="p-6 rounded-2xl bg-brand-offwhite border border-brand-border space-y-2">
                         <div class="text-xs font-extrabold text-brand-lightnavy">Step 2</div>
                         <h3 class="font-bold text-base text-brand-navy">Clinic Availability Confirmation</h3>
                         <p class="text-xs sm:text-sm text-brand-grey-text leading-relaxed">
-                            Submitting a request opens WhatsApp to our clinic desk (+91 73044 32681); an appointment is confirmed once reviewed and scheduled with the clinic.
+                            Submitting a request opens WhatsApp to our clinic desk (+91 73044 32681); an appointment is confirmed once reviewed and scheduled with the clinic[cite: 2, 3].
                         </p>
                     </div>
                     <div class="p-6 rounded-2xl bg-brand-offwhite border border-brand-border space-y-2">
                         <div class="text-xs font-extrabold text-brand-lightnavy">Step 3</div>
                         <h3 class="font-bold text-base text-brand-navy">Clinical Evaluation &amp; Care Plan</h3>
                         <p class="text-xs sm:text-sm text-brand-grey-text leading-relaxed">
-                            Dr. Riddhi Patel Shah evaluates your oral health or alignment needs and discusses suitable options, considerations, and next steps.
+                            Dr. Riddhi Patel Shah evaluates your oral health or alignment needs and discusses suitable options, considerations, and next steps[cite: 3, 4].
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 8. FREQUENTLY ASKED QUESTIONS (AEO & GEO) -->
+        <!-- FREQUENTLY ASKED QUESTIONS -->
         <section id="faq" class="py-16 bg-brand-offwhite w-full border-b border-brand-border">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8">
                 <div class="text-center space-y-2">
@@ -613,14 +610,13 @@ import Layout from '../layouts/Layout.astro';
                 </div>
 
                 <div class="space-y-3.5">
-
                     <details class="group bg-brand-surface rounded-2xl border border-brand-border p-4 sm:p-5 transition-all">
                         <summary class="font-bold text-sm sm:text-base text-brand-navy cursor-pointer list-none flex items-center justify-between gap-2">
                             <span>How do I find a trusted dentist near me in Kandivali West or Mumbai?</span>
                             <span class="text-brand-navy transition-transform group-open:rotate-180 font-bold">v</span>
                         </summary>
                         <p class="text-xs sm:text-sm text-brand-grey-text mt-3 leading-relaxed border-t border-brand-border pt-3">
-                            Infinora Dental Care is located at Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067, led by Dr. Riddhi Patel Shah (BDS University Gold Medalist, MDS Orthodontics &amp; Dentofacial Orthopedics, MSDC Reg: A-45674) serving families in Kandivali, Mumbai, and across India.
+                            Infinora Dental Care is located at Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067, led by Dr. Riddhi Patel Shah (BDS University Gold Medalist, MDS Orthodontics &amp; Dentofacial Orthopedics, MSDC Reg: A-45674) serving families in Kandivali, Mumbai, and across India[cite: 2, 3, 4].
                         </p>
                     </details>
 
@@ -630,7 +626,7 @@ import Layout from '../layouts/Layout.astro';
                             <span class="text-brand-navy transition-transform group-open:rotate-180 font-bold">v</span>
                         </summary>
                         <p class="text-xs sm:text-sm text-brand-grey-text mt-3 leading-relaxed border-t border-brand-border pt-3">
-                            Consultations cover clear aligners, Invisalign, invisible aligners, metal braces, ceramic braces, self-ligating braces, early orthodontic evaluations, and smile improvement, with suitability assessed during your visit.
+                            Consultations cover clear aligners, Invisalign, invisible aligners, metal braces, ceramic braces, self-ligating braces, early orthodontic evaluations, and smile improvement, with suitability assessed during your visit[cite: 2, 3, 4].
                         </p>
                     </details>
 
@@ -640,7 +636,7 @@ import Layout from '../layouts/Layout.astro';
                             <span class="text-brand-navy transition-transform group-open:rotate-180 font-bold">v</span>
                         </summary>
                         <p class="text-xs sm:text-sm text-brand-grey-text mt-3 leading-relaxed border-t border-brand-border pt-3">
-                            Yes. Infinora Dental Care in Kandivali West, Mumbai offers consultations and care across general dentistry, root canal treatment, crowns, dental implants, veneers, and family checkups, tailored after clinical examination.
+                            Yes. Infinora Dental Care in Kandivali West, Mumbai offers consultations and care across general dentistry, root canal treatment, crowns, dental implants, veneers, and family checkups, tailored after clinical examination[cite: 2, 3, 4].
                         </p>
                     </details>
 
@@ -660,15 +656,14 @@ import Layout from '../layouts/Layout.astro';
                             <span class="text-brand-navy transition-transform group-open:rotate-180 font-bold">v</span>
                         </summary>
                         <p class="text-xs sm:text-sm text-brand-grey-text mt-3 leading-relaxed border-t border-brand-border pt-3">
-                            Dr. Riddhi Patel Shah holds Maharashtra State Dental Council registration A-45674, is an Indian Dental Association and Indian Orthodontic Society member, and is listed on ABDM registries (HFR: IN2710085962; HPR: 71-8554-8443-4346).
+                            Dr. Riddhi Patel Shah holds Maharashtra State Dental Council registration A-45674, is an Indian Dental Association and Indian Orthodontic Society member, and is listed on ABDM registries (HFR: IN2710085962; HPR: 71-8554-8443-4346)[cite: 3, 4].
                         </p>
                     </details>
-
                 </div>
             </div>
         </section>
 
-        <!-- 9. CLINIC LOCATION & OPERATING HOURS -->
+        <!-- CLINIC LOCATION & TRANSIT -->
         <section id="location" class="py-16 pb-28 sm:pb-20 bg-brand-navy text-white relative w-full">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
@@ -680,26 +675,26 @@ import Layout from '../layouts/Layout.astro';
                         Visit Infinora Dental Care
                     </h2>
                     <p class="text-brand-border text-xs sm:text-sm leading-relaxed">
-                        Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067—serving Kandivali West, Iraniwadi, Mahavir Nagar, Charkop, Dahanukarwadi, Borivali West, Malad West, and Dahisar West.
+                        Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067—serving Kandivali West, Iraniwadi, Mahavir Nagar, Charkop, Dahanukarwadi, Borivali West, Malad West, and Dahisar West[cite: 2, 3].
                     </p>
 
                     <div class="space-y-3.5 text-xs sm:text-sm text-brand-surface">
                         <div class="flex items-start gap-3">
                             <span class="text-brand-gold text-sm font-bold shrink-0">Address</span>
                             <div class="min-w-0">
-                                Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai, Maharashtra – 400067
+                                Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai, Maharashtra 400067, India[cite: 2]
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <span class="text-brand-gold text-sm font-bold shrink-0">Phone</span>
                             <div class="min-w-0">
-                                <a href="tel:+917304432681" class="underline hover:text-white">+91 73044 32681</a>
+                                <a href="tel:+917304432681" class="underline hover:text-white">+91 73044 32681</a>[cite: 3]
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <span class="text-brand-gold text-sm font-bold shrink-0">Transit</span>
                             <div class="min-w-0">
-                                Dahanukarwadi Metro (1.0 km), Valnai - Meeth Chowky Metro (1.4 km), Kandivali West Metro (1.6 km), Kandivali Railway Station West (1.3 km), BEST buses near Vaishali Bhavan (400 m) &amp; Laljipada Police Chowky (750 m).
+                                Dahanukarwadi Metro (1.0 km), Valnai - Meeth Chowky Metro (1.4 km), Kandivali West Metro (1.6 km), Kandivali Railway Station West (1.3 km), BEST buses near Vaishali Bhavan (400 m) &amp; Laljipada Police Chowky (750 m)[cite: 3].
                             </div>
                         </div>
                     </div>
@@ -714,7 +709,6 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
 
-                <!-- Verified Google Maps Embed -->
                 <div class="lg:col-span-6 w-full">
                     <div class="w-full h-64 sm:h-80 rounded-3xl overflow-hidden border border-brand-midnavy shadow-2xl relative isolate">
                         <iframe
@@ -733,7 +727,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <!-- 10. APPOINTMENT BOOKING & CONTACT DETAILS (#book) -->
+        <!-- APPOINTMENT BOOKING SECTION (#book) -->
         <section id="book" class="py-16 bg-brand-surface text-brand-navy w-full border-b border-brand-border relative scroll-mt-24">
             <div class="max-w-4xl mx-auto px-4 sm:px-6">
 
@@ -745,14 +739,13 @@ import Layout from '../layouts/Layout.astro';
                         Request a Dental Consultation
                     </h2>
                     <p class="text-brand-grey-muted text-xs sm:text-sm max-w-2xl mx-auto">
-                        Submit your request below to open WhatsApp with your details. Appointment requests are confirmed once reviewed by the clinic desk.
+                        Submit your request below to open WhatsApp with your details[cite: 3]. Appointment requests are confirmed once reviewed by the clinic desk[cite: 3].
                     </p>
                 </div>
 
                 <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-10 border border-brand-border shadow-xl space-y-6">
                     <form id="appointmentForm" class="space-y-5 max-w-full" novalidate>
 
-                        <!-- Name & 10-Digit Mobile -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="min-w-0">
                                 <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-1.5" for="patientName">
@@ -787,7 +780,6 @@ import Layout from '../layouts/Layout.astro';
                             </div>
                         </div>
 
-                        <!-- Date of Birth (1930+) & Gender -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="min-w-0">
                                 <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-1.5" for="patientDob">
@@ -823,7 +815,6 @@ import Layout from '../layouts/Layout.astro';
                             </div>
                         </div>
 
-                        <!-- Treatment Interest & Preferred Date -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="min-w-0">
                                 <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-1.5" for="treatmentService">
@@ -862,12 +853,10 @@ import Layout from '../layouts/Layout.astro';
                             </div>
                         </div>
 
-                        <!-- Sunday Post-12 PM Fade-Out Notice -->
                         <div id="sundayPostNoonNotice" class="hidden p-4 rounded-xl bg-brand-cardbg border border-brand-border text-brand-navy text-xs leading-relaxed opacity-80">
                             Sunday bookings close after 12:00 PM; Sunday has faded out as unavailable and the earliest appointment available is <strong>Monday</strong>.
                         </div>
 
-                        <!-- Dynamic Time Slot Selector (Morning / Afternoon / Evening) -->
                         <div class="min-w-0">
                             <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-1.5" for="timeSlot">
                                 Time Slot *
@@ -880,7 +869,6 @@ import Layout from '../layouts/Layout.astro';
                             <p id="slotError" class="hidden text-xs text-rose-700 font-semibold mt-1">Please select an available time slot.</p>
                         </div>
 
-                        <!-- Warning Prompt ONLY for Middle Slot (03:00 PM – 05:00 PM) -->
                         <div id="middleSlotConfirmBox" class="hidden p-4 rounded-xl bg-amber-50 border border-amber-300 text-amber-950 text-xs space-y-2.5">
                             <div class="font-bold">
                                 Generally the clinic stays closed during 03:00 PM – 05:00 PM. Are you sure you want it then?
@@ -892,7 +880,6 @@ import Layout from '../layouts/Layout.astro';
                             <p id="middleSlotConfirmError" class="hidden text-xs text-rose-700 font-semibold">Please confirm above if you still want the 03:00 PM – 05:00 PM slot.</p>
                         </div>
 
-                        <!-- Short Pre-Appointment Intake: Complaints, Medical History & Allergies -->
                         <div class="p-4 sm:p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-4">
                             <h3 class="text-xs font-extrabold text-brand-navy uppercase tracking-wider">
                                 Complaints, Medical History &amp; Allergies
@@ -954,9 +941,8 @@ import Layout from '../layouts/Layout.astro';
                             </p>
                         </div>
 
-                        <!-- Handoff Status Notice -->
                         <div id="whatsappStatusBox" class="hidden p-4 rounded-xl bg-brand-surface border border-brand-navy/30 text-brand-navy text-xs leading-relaxed">
-                            WhatsApp opened with your prefilled appointment request for <strong>+91 73044 32681</strong>. Please tap Send in WhatsApp so the clinic can review and confirm availability.
+                            WhatsApp opened with your prefilled appointment request for <strong>+91 73044 32681</strong>[cite: 2, 3]. Please tap Send in WhatsApp so the clinic can review and confirm availability[cite: 3].
                         </div>
 
                         <button
@@ -970,15 +956,15 @@ import Layout from '../layouts/Layout.astro';
 
                     <div class="text-center pt-3 border-t border-brand-border flex flex-wrap items-center justify-center gap-4 text-xs">
                         <p class="text-brand-grey-muted">
-                            Call clinic: <a href="tel:+917304432681" class="text-brand-navy font-bold hover:underline">+91 73044 32681</a>
+                            Call clinic: <a href="tel:+917304432681" class="text-brand-navy font-bold hover:underline">+91 73044 32681</a>[cite: 3]
                         </p>
                         <span class="text-brand-border hidden sm:inline">|</span>
                         <a href="https://maps.app.goo.gl/3sKwKPjG43PNeN6y7" target="_blank" rel="noopener" class="text-brand-navy font-bold hover:underline">
-                            Google Maps Directions
+                            Google Maps Directions[cite: 3]
                         </a>
                         <span class="text-brand-border hidden sm:inline">|</span>
                         <a href="https://g.page/r/Cb7r3l0-R2oSEBM/review" target="_blank" rel="noopener" class="text-brand-navy font-bold hover:underline">
-                            Google Review Link
+                            Google Review Link[cite: 3]
                         </a>
                     </div>
                 </div>
@@ -988,7 +974,7 @@ import Layout from '../layouts/Layout.astro';
 
     </main>
 
-    <!-- FLOATING BOOK APPOINTMENT & CALL CLINIC BUTTONS (SAME-PAGE #book) -->
+    <!-- FLOATING BOOK APPOINTMENT & CALL CLINIC BUTTONS -->
     <div class="fixed bottom-4 right-4 z-50 hidden sm:flex items-center gap-2.5">
         <a
             href="tel:+917304432681"
@@ -1004,7 +990,7 @@ import Layout from '../layouts/Layout.astro';
         </a>
     </div>
 
-    <!-- MOBILE STICKY BAR (SAME-PAGE #book + CALL CLINIC + WHATSAPP) -->
+    <!-- MOBILE STICKY BAR -->
     <div class="fixed bottom-0 left-0 right-0 z-50 bg-brand-offwhite/95 backdrop-blur-md border-t border-brand-border p-2.5 sm:hidden flex items-center justify-between gap-2 shadow-2xl">
         <a href="#book" class="flex-1 inline-flex items-center justify-center gap-1 bg-brand-navy text-white font-bold py-3 px-2 rounded-xl text-xs shadow-sm whitespace-nowrap">
             <span>Book</span>
@@ -1017,30 +1003,30 @@ import Layout from '../layouts/Layout.astro';
         </a>
     </div>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="bg-brand-darknavy text-brand-border py-12 text-xs border-t border-brand-midnavy w-full mb-16 sm:mb-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-6">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
                 <div class="flex items-center gap-2.5 min-w-0">
                     <span class="w-3 h-3 rounded-full bg-brand-gold shrink-0"></span>
-                    <p class="text-white font-semibold whitespace-normal break-words">© 2026 Infinora Dental Care. Dr. Riddhi Patel Shah (BDS University Gold Medalist, MDS Orthodontics). All rights reserved.</p>
+                    <p class="text-white font-semibold whitespace-normal break-words">© 2026 Infinora Dental Care. Dr. Riddhi Patel Shah (BDS University Gold Medalist, MDS Orthodontics). All rights reserved[cite: 3, 4].</p>
                 </div>
                 <div class="flex items-center gap-4 text-brand-surface flex-wrap justify-center">
                     <a href="#offers" class="hover:text-white transition-colors">Offers</a>
                     <a href="#about" class="hover:text-white transition-colors">Dr. Riddhi</a>
                     <a href="#catalogue" class="hover:text-white transition-colors">Treatments</a>
-                    <a href="#reviews" class="hover:text-white transition-colors">Reviews Section</a>
+                    <a href="#reviews" class="hover:text-white transition-colors">Reviews</a>
                     <a href="#location" class="hover:text-white transition-colors">Location</a>
                 </div>
             </div>
             <div class="border-t border-brand-midnavy pt-4 text-center sm:text-left text-[11px] text-brand-border flex flex-col sm:flex-row justify-between gap-2">
-                <p class="whitespace-normal break-words">Infinora Dental Care · Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067 (MSDC Reg: A-45674 | ABDM HFR: IN2710085962)</p>
-                <p>Registered dental practice in Kandivali West, Mumbai.</p>
+                <p class="whitespace-normal break-words">Infinora Dental Care · Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067 (MSDC Reg: A-45674 | ABDM HFR: IN2710085962)[cite: 2, 3]</p>
+                <p>Registered dental practice in Kandivali West, Mumbai[cite: 2, 3].</p>
             </div>
         </div>
     </footer>
 
-    <!-- Comprehensive Interaction Script -->
+    <!-- INTERACTION & BOOKING SCRIPT -->
     <script is:inline>
         const SLOT_MORNING = 'Morning';
         const SLOT_AFTERNOON = 'Afternoon (03:00 PM – 05:00 PM)';
@@ -1088,6 +1074,35 @@ import Layout from '../layouts/Layout.astro';
         }
 
         document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('mobileMenuToggle');
+            const menuClose = document.getElementById('mobileMenuClose');
+            const drawer = document.getElementById('mobileNavDrawer');
+            const mobileNavLinks = Array.from(document.querySelectorAll('.mobile-nav-link'));
+
+            function setDrawerOpen(isOpen) {
+                if (!drawer || !menuToggle) return;
+                if (isOpen) {
+                    drawer.classList.remove('hidden');
+                    menuToggle.setAttribute('aria-expanded', 'true');
+                    document.body.style.overflow = 'hidden';
+                    if (menuClose) menuClose.focus();
+                } else {
+                    drawer.classList.add('hidden');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                    menuToggle.focus();
+                }
+            }
+
+            if (menuToggle) menuToggle.addEventListener('click', () => setDrawerOpen(true));
+            if (menuClose) menuClose.addEventListener('click', () => setDrawerOpen(false));
+            mobileNavLinks.forEach((link) => link.addEventListener('click', () => setDrawerOpen(false)));
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && drawer && !drawer.classList.contains('hidden')) {
+                    setDrawerOpen(false);
+                }
+            });
+
             const dateInput = document.getElementById('appointmentDate');
             const dobInput = document.getElementById('patientDob');
             const timeSlot = document.getElementById('timeSlot');
@@ -1102,28 +1117,15 @@ import Layout from '../layouts/Layout.astro';
             const topPayBtn = document.getElementById('topPayOnlineBtn');
             const topPayNotice = document.getElementById('topPaymentNotice');
             const closeTopPayNotice = document.getElementById('closeTopPaymentNotice');
-            const scrolledBrandPill = document.getElementById('scrolledBrandPill');
             const statusBox = document.getElementById('whatsappStatusBox');
             const form = document.getElementById('appointmentForm');
 
-            /* Keep Brand Pill Highlighted When Scrolled */
-            window.addEventListener('scroll', () => {
-                if (!scrolledBrandPill) return;
-                if (window.scrollY > 120) {
-                    scrolledBrandPill.classList.add('ring-1', 'ring-brand-navy/30');
-                } else {
-                    scrolledBrandPill.classList.remove('ring-1', 'ring-brand-navy/30');
-                }
-            }, { passive: true });
-
-            /* Quick-Fill: No Known Allergies */
             if (noAllergiesBtn && allergiesInput) {
                 noAllergiesBtn.addEventListener('click', () => {
                     allergiesInput.value = 'No known allergies';
                 });
             }
 
-            /* Accessible Google Reviews Carousel Controls */
             const slides = Array.from(document.querySelectorAll('.review-slide'));
             const dots = Array.from(document.querySelectorAll('.review-dot'));
             const prevBtn = document.getElementById('prevReviewBtn');
@@ -1156,21 +1158,13 @@ import Layout from '../layouts/Layout.astro';
                 });
             }
 
-            if (prevBtn) {
-                prevBtn.addEventListener('click', () => updateReviewCarousel(activeSlideIndex - 1));
-            }
-            if (nextBtn) {
-                nextBtn.addEventListener('click', () => updateReviewCarousel(activeSlideIndex + 1));
-            }
+            if (prevBtn) prevBtn.addEventListener('click', () => updateReviewCarousel(activeSlideIndex - 1));
+            if (nextBtn) nextBtn.addEventListener('click', () => updateReviewCarousel(activeSlideIndex + 1));
             dots.forEach((dot) => {
-                dot.addEventListener('click', () => {
-                    const idx = Number(dot.dataset.slideIndex || 0);
-                    updateReviewCarousel(idx);
-                });
+                dot.addEventListener('click', () => updateReviewCarousel(Number(dot.dataset.slideIndex || 0)));
             });
             updateReviewCarousel(0);
 
-            /* Date, Slot & Validation Logic */
             const now = new Date();
             const todayStr = formatLocalYMD(now);
             const isPastNoonToday = now.getHours() >= 12;
@@ -1188,9 +1182,7 @@ import Layout from '../layouts/Layout.astro';
                 const isToday = ymdStr === todayStr;
 
                 if (isSunday) {
-                    if (isToday && isPastNoonToday) {
-                        return [];
-                    }
+                    if (isToday && isPastNoonToday) return [];
                     return [SLOT_MORNING];
                 }
 
@@ -1291,15 +1283,11 @@ import Layout from '../layouts/Layout.astro';
                 });
             }
 
-            if (timeSlot) {
-                timeSlot.addEventListener('change', syncMiddleSlotUI);
-            }
+            if (timeSlot) timeSlot.addEventListener('change', syncMiddleSlotUI);
 
             if (middleCheckbox && middleError) {
                 middleCheckbox.addEventListener('change', () => {
-                    if (middleCheckbox.checked) {
-                        middleError.classList.add('hidden');
-                    }
+                    if (middleCheckbox.checked) middleError.classList.add('hidden');
                 });
             }
 
@@ -1321,9 +1309,7 @@ import Layout from '../layouts/Layout.astro';
             }
 
             if (closeTopPayNotice && topPayNotice) {
-                closeTopPayNotice.addEventListener('click', () => {
-                    topPayNotice.classList.add('hidden');
-                });
+                closeTopPayNotice.addEventListener('click', () => topPayNotice.classList.add('hidden'));
             }
 
             if (form) {
