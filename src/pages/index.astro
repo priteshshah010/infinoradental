@@ -49,34 +49,32 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </div>
 
-    <!-- STICKY MAIN NAVIGATION -->
+    <!-- STICKY MAIN NAVIGATION (Icon-Only /logo.svg + Cinzel INFINORA Wordmark) -->
     <header id="stickyClinicHeader" class="sticky top-0 z-[1000] bg-brand-offwhite border-b border-brand-border shadow-sm w-full">
         <div class="max-w-7xl mx-auto px-3 sm:px-6 h-[68px] lg:h-[80px] flex items-center justify-between gap-3">
 
-            <a href="#top" class="flex items-center gap-[10px] sm:gap-[12px] shrink-0 group" aria-label="INFINORA DENTAL CARE Home">
+            <a href="#" class="scroll-top-link flex items-center gap-[10px] sm:gap-[12px] shrink-0 group" aria-label="INFINORA DENTAL CARE Home">
                 <img
                     src="/logo.svg"
-                    alt="INFINORA DENTAL CARE Logo"
+                    alt="INFINORA DENTAL CARE Icon"
                     width="52"
                     height="52"
                     class="w-[42px] h-[42px] lg:w-[52px] lg:h-[52px] object-contain shrink-0"
-                    onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
                 />
-                <span class="hidden w-[42px] h-[42px] lg:w-[52px] lg:h-[52px] rounded-xl bg-brand-navy text-white items-center justify-center font-extrabold text-xs shrink-0">IDC</span>
                 <span class="flex flex-col leading-none shrink-0">
-                    <span class="text-[20px] lg:text-[24px] font-extrabold tracking-tight text-brand-navy whitespace-nowrap">INFINORA</span>
-                    <span class="text-[9px] lg:text-[10px] font-bold tracking-[0.14em] text-brand-grey-muted uppercase mt-1 whitespace-nowrap">DENTAL CARE</span>
+                    <span class="font-brand text-[20px] lg:text-[25px] font-bold tracking-[0.06em] text-brand-navy whitespace-nowrap">INFINORA</span>
+                    <span class="text-[9px] lg:text-[10px] font-bold tracking-[0.22em] text-brand-grey-muted uppercase mt-1 whitespace-nowrap">DENTAL CARE</span>
                 </span>
             </a>
 
             <nav class="hidden lg:flex items-center gap-4 xl:gap-5 text-[13px] xl:text-[14px] font-semibold text-brand-grey-text min-w-0" aria-label="Main Navigation">
-                <a href="#top" class="hover:text-brand-navy transition-colors whitespace-nowrap">Home</a>
+                <a href="#" class="scroll-top-link hover:text-brand-navy transition-colors whitespace-nowrap">Home</a>
                 <a href="#offers" class="hover:text-brand-navy transition-colors whitespace-nowrap">Offers</a>
                 <a href="#standards" class="hover:text-brand-navy transition-colors whitespace-nowrap">The Standard</a>
                 <a href="#catalogue" class="hover:text-brand-navy transition-colors whitespace-nowrap">Treatments</a>
                 <a href="#about" class="hover:text-brand-navy transition-colors whitespace-nowrap">Dr. Riddhi</a>
+                <a href="#clinic-gallery" class="hover:text-brand-navy transition-colors whitespace-nowrap">Clinic</a>
                 <a href="#reviews" class="hover:text-brand-navy transition-colors whitespace-nowrap">Reviews</a>
-                <a href="#community" class="hover:text-brand-navy transition-colors whitespace-nowrap">Community</a>
                 <a href="#location" class="hover:text-brand-navy transition-colors whitespace-nowrap">How to Reach</a>
             </nav>
 
@@ -102,24 +100,25 @@ import Layout from '../layouts/Layout.astro';
         <div id="mobileNavDrawer" class="hidden fixed inset-0 z-[1100] bg-brand-offwhite flex flex-col justify-between p-5 overflow-y-auto lg:hidden" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
             <div class="space-y-6">
                 <div class="flex items-center justify-between border-b border-brand-border pb-4">
-                    <div class="flex items-center gap-2.5 shrink-0">
-                        <img src="/logo.svg" alt="INFINORA DENTAL CARE Logo" width="42" height="42" class="w-[42px] h-[42px] object-contain shrink-0" onerror="this.style.display='none';" />
+                    <a href="#" class="scroll-top-link mobile-nav-link flex items-center gap-2.5 shrink-0">
+                        <img src="/logo.svg" alt="INFINORA DENTAL CARE Icon" width="42" height="42" class="w-[42px] h-[42px] object-contain shrink-0" />
                         <span class="flex flex-col leading-none">
-                            <span class="text-[20px] font-extrabold text-brand-navy whitespace-nowrap">INFINORA</span>
-                            <span class="text-[9px] font-bold tracking-[0.14em] text-brand-grey-muted uppercase mt-1 whitespace-nowrap">DENTAL CARE</span>
+                            <span class="font-brand text-[20px] font-bold tracking-[0.06em] text-brand-navy whitespace-nowrap">INFINORA</span>
+                            <span class="text-[9px] font-bold tracking-[0.22em] text-brand-grey-muted uppercase mt-1 whitespace-nowrap">DENTAL CARE</span>
                         </span>
-                    </div>
+                    </a>
                     <button type="button" id="mobileMenuClose" aria-label="Close navigation menu" class="w-10 h-10 rounded-xl border border-brand-border text-brand-navy font-bold text-lg cursor-pointer">
                         ✕
                     </button>
                 </div>
 
                 <nav class="flex flex-col gap-2 text-base font-bold text-brand-navy" aria-label="Mobile Menu Links">
-                    <a href="#top" class="mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">Home</a>
+                    <a href="#" class="scroll-top-link mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">Home</a>
                     <a href="#offers" class="mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">Offers</a>
                     <a href="#standards" class="mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">The Standard</a>
                     <a href="#catalogue" class="mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">Treatments</a>
                     <a href="#about" class="mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">Dr. Riddhi</a>
+                    <a href="#clinic-gallery" class="mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">Clinic Gallery</a>
                     <a href="#reviews" class="mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">Reviews</a>
                     <a href="#community" class="mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">Community &amp; Schools</a>
                     <a href="#faq" class="mobile-nav-link py-3 px-3 rounded-xl hover:bg-brand-surface">FAQs</a>
@@ -138,7 +137,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </header>
 
-    <main id="top" class="w-full pb-28 sm:pb-20">
+    <main class="w-full pb-28 sm:pb-20">
 
         <!-- HERO & DOCTOR PROFILE -->
         <section class="relative pt-8 pb-12 sm:pt-14 sm:pb-20 bg-gradient-to-b from-brand-surface via-brand-lightbg to-brand-offwhite w-full border-b border-brand-border">
@@ -184,20 +183,19 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
 
-                <!-- DOCTOR PROFILE CARD -->
+                <!-- DOCTOR PROFILE CARD (With Photo Slot for Step 5) -->
                 <div class="lg:col-span-5 relative w-full min-w-0" id="about">
                     <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-8 border border-brand-border shadow-xl space-y-5">
                         <div class="flex flex-col sm:flex-row sm:items-center gap-4 border-b border-brand-border pb-5">
-                            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-brand-surface border-2 border-brand-navy/25 flex items-center justify-center shrink-0 p-2 shadow-sm">
+                            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-brand-surface border-2 border-brand-navy/25 flex items-center justify-center shrink-0 overflow-hidden p-1.5 shadow-sm">
                                 <img
-                                    src="/logo.svg"
-                                    alt="INFINORA DENTAL CARE Logo"
+                                    src="/images/dr-riddhi.webp"
+                                    alt="Dr. Riddhi Patel Shah at Infinora Dental Care, Kandivali West"
                                     width="88"
                                     height="88"
-                                    class="w-full h-full object-contain"
-                                    onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+                                    class="w-full h-full object-cover rounded-xl"
+                                    onerror="this.src='/logo.svg'; this.classList.remove('object-cover'); this.classList.add('object-contain', 'p-1.5');"
                                 />
-                                <span class="hidden text-base font-black text-brand-navy">IDC</span>
                             </div>
                             <div class="min-w-0">
                                 <div class="text-[10px] font-extrabold uppercase tracking-wider text-brand-lightnavy">Infinora Dental Care</div>
@@ -518,8 +516,91 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
+        <!-- STEP 5: REAL CLINIC & DOCTOR PHOTO SLOTS -->
+        <section id="clinic-gallery" class="py-16 bg-brand-offwhite w-full border-b border-brand-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <span class="text-brand-navy text-[10px] font-extrabold uppercase tracking-widest bg-brand-cardbg border border-brand-border px-3 py-1 rounded-full">
+                        Inside Infinora Dental Care
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy whitespace-normal break-words">Our Kandivali West Clinic</h2>
+                    <p class="text-xs sm:text-sm text-brand-grey-muted leading-relaxed">
+                        Place your optimized WebP clinic photos in <code class="text-brand-navy font-semibold">public/images/</code> (<code class="text-brand-navy">dr-riddhi.webp</code>, <code class="text-brand-navy">clinic-operatory.webp</code>, <code class="text-brand-navy">clinic-reception.webp</code>) to display them automatically below.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <figure class="rounded-3xl overflow-hidden border border-brand-border bg-brand-surface shadow-sm flex flex-col">
+                        <div class="aspect-[4/3] w-full bg-brand-cardbg flex items-center justify-center overflow-hidden">
+                            <img
+                                src="/images/dr-riddhi.webp"
+                                alt="Dr. Riddhi Patel Shah — Founder & Lead Orthodontist at Infinora Dental Care, Kandivali West"
+                                width="640"
+                                height="480"
+                                loading="lazy"
+                                decoding="async"
+                                class="w-full h-full object-cover"
+                                onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+                            />
+                            <div class="hidden p-6 text-center space-y-1">
+                                <div class="text-xs font-extrabold text-brand-navy">Dr. Riddhi Patel Shah</div>
+                                <div class="text-[11px] text-brand-grey-muted">Upload <span class="font-mono">/images/dr-riddhi.webp</span></div>
+                            </div>
+                        </div>
+                        <figcaption class="p-4 text-xs text-brand-grey-text font-medium">
+                            Dr. Riddhi Patel Shah — Specialist Orthodontist &amp; Lead Dental Surgeon
+                        </figcaption>
+                    </figure>
+
+                    <figure class="rounded-3xl overflow-hidden border border-brand-border bg-brand-surface shadow-sm flex flex-col">
+                        <div class="aspect-[4/3] w-full bg-brand-cardbg flex items-center justify-center overflow-hidden">
+                            <img
+                                src="/images/clinic-operatory.webp"
+                                alt="Clinical treatment operatory at Infinora Dental Care in Kandivali West, Mumbai"
+                                width="640"
+                                height="480"
+                                loading="lazy"
+                                decoding="async"
+                                class="w-full h-full object-cover"
+                                onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+                            />
+                            <div class="hidden p-6 text-center space-y-1">
+                                <div class="text-xs font-extrabold text-brand-navy">Treatment Operatory</div>
+                                <div class="text-[11px] text-brand-grey-muted">Upload <span class="font-mono">/images/clinic-operatory.webp</span></div>
+                            </div>
+                        </div>
+                        <figcaption class="p-4 text-xs text-brand-grey-text font-medium">
+                            Modern Clinical Operatory &amp; Diagnostic Setup
+                        </figcaption>
+                    </figure>
+
+                    <figure class="rounded-3xl overflow-hidden border border-brand-border bg-brand-surface shadow-sm flex flex-col">
+                        <div class="aspect-[4/3] w-full bg-brand-cardbg flex items-center justify-center overflow-hidden">
+                            <img
+                                src="/images/clinic-reception.webp"
+                                alt="Patient reception and waiting lounge at Infinora Dental Care, Kandivali West"
+                                width="640"
+                                height="480"
+                                loading="lazy"
+                                decoding="async"
+                                class="w-full h-full object-cover"
+                                onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+                            />
+                            <div class="hidden p-6 text-center space-y-1">
+                                <div class="text-xs font-extrabold text-brand-navy">Reception &amp; Lounge</div>
+                                <div class="text-[11px] text-brand-grey-muted">Upload <span class="font-mono">/images/clinic-reception.webp</span></div>
+                            </div>
+                        </div>
+                        <figcaption class="p-4 text-xs text-brand-grey-text font-medium">
+                            Patient Reception &amp; Accessible Ground-Level Lounge
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
         <!-- CLINIC AMENITIES -->
-        <section id="facilities" class="py-14 bg-brand-offwhite w-full border-b border-brand-border">
+        <section id="facilities" class="py-14 bg-brand-surface w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
                 <div class="text-center max-w-2xl mx-auto space-y-2">
                     <span class="text-brand-navy text-[10px] font-extrabold uppercase tracking-widest bg-brand-cardbg border border-brand-border px-3 py-1 rounded-full">
@@ -529,19 +610,19 @@ import Layout from '../layouts/Layout.astro';
                 </div>
 
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1 text-center">
                         <h3 class="font-bold text-sm text-brand-navy">Free Street Parking</h3>
                         <p class="text-[11px] text-brand-grey-muted">Near Iraniwadi Road No. 3, Kandivali West.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1 text-center">
                         <h3 class="font-bold text-sm text-brand-navy">Wheelchair Friendly</h3>
                         <p class="text-[11px] text-brand-grey-muted">Ground-level access at Shop No. 5, Sai Elegance.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1 text-center">
                         <h3 class="font-bold text-sm text-brand-navy">Flexible Payments</h3>
                         <p class="text-[11px] text-brand-grey-muted">Cash, UPI, Cards, Mobile NFC &amp; payment plans.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-1 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1 text-center">
                         <h3 class="font-bold text-sm text-brand-navy">Inclusive &amp; Women-Owned</h3>
                         <p class="text-[11px] text-brand-grey-muted">Welcoming care for individuals and families.</p>
                     </div>
@@ -550,7 +631,7 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <!-- GOOGLE REVIEWS CAROUSEL -->
-        <section id="reviews" class="py-14 bg-brand-surface w-full border-b border-brand-border">
+        <section id="reviews" class="py-14 bg-brand-offwhite w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
                 <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                     <div class="space-y-2 max-w-2xl">
@@ -564,7 +645,7 @@ import Layout from '../layouts/Layout.astro';
                     </div>
 
                     <div class="flex items-center gap-2 shrink-0">
-                        <button type="button" id="prevReviewBtn" aria-label="Previous review slide" class="px-4 py-2.5 rounded-xl bg-brand-offwhite hover:bg-brand-cardbg text-brand-navy border border-brand-border font-bold text-xs cursor-pointer transition-colors">
+                        <button type="button" id="prevReviewBtn" aria-label="Previous review slide" class="px-4 py-2.5 rounded-xl bg-brand-surface hover:bg-brand-cardbg text-brand-navy border border-brand-border font-bold text-xs cursor-pointer transition-colors">
                             Prev
                         </button>
                         <button type="button" id="nextReviewBtn" aria-label="Next review slide" class="px-4 py-2.5 rounded-xl bg-brand-navy hover:bg-brand-hovernavy text-white font-bold text-xs cursor-pointer transition-colors">
@@ -575,7 +656,7 @@ import Layout from '../layouts/Layout.astro';
 
                 <div class="relative rounded-3xl">
                     <div id="reviewsTrack" class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                        <article class="review-slide bg-brand-offwhite rounded-2xl p-6 border border-brand-border shadow-sm flex flex-col justify-between space-y-4">
+                        <article class="review-slide bg-brand-surface rounded-2xl p-6 border border-brand-border shadow-sm flex flex-col justify-between space-y-4">
                             <div class="space-y-2">
                                 <div class="text-brand-navy text-xs font-extrabold uppercase">Google Business Profile</div>
                                 <h3 class="font-extrabold text-brand-navy text-base whitespace-normal break-words">Infinora Dental Care · Kandivali West</h3>
@@ -593,7 +674,7 @@ import Layout from '../layouts/Layout.astro';
                             </div>
                         </article>
 
-                        <article class="review-slide bg-brand-offwhite rounded-2xl p-6 border border-brand-border shadow-sm flex flex-col justify-between space-y-4">
+                        <article class="review-slide bg-brand-surface rounded-2xl p-6 border border-brand-border shadow-sm flex flex-col justify-between space-y-4">
                             <div class="space-y-2">
                                 <div class="text-brand-navy text-xs font-extrabold uppercase">Orthodontics &amp; Aligners</div>
                                 <h3 class="font-extrabold text-brand-navy text-base whitespace-normal break-words">Braces, Clear Aligners &amp; Invisalign</h3>
@@ -611,7 +692,7 @@ import Layout from '../layouts/Layout.astro';
                             </div>
                         </article>
 
-                        <article class="review-slide bg-brand-offwhite rounded-2xl p-6 border border-brand-border shadow-sm flex flex-col justify-between space-y-4">
+                        <article class="review-slide bg-brand-surface rounded-2xl p-6 border border-brand-border shadow-sm flex flex-col justify-between space-y-4">
                             <div class="space-y-2">
                                 <div class="text-brand-navy text-xs font-extrabold uppercase">Family &amp; Restorative Care</div>
                                 <h3 class="font-extrabold text-brand-navy text-base whitespace-normal break-words">Implants, Veneers, Root Canal &amp; Checkups</h3>
@@ -1154,6 +1235,15 @@ import Layout from '../layouts/Layout.astro';
         }
 
         document.addEventListener('DOMContentLoaded', () => {
+            /* Smooth Scroll to Top Without Removing Header or Adding #top */
+            document.querySelectorAll('.scroll-top-link').forEach((el) => {
+                el.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
+
+            /* Accessible Mobile Navigation Drawer */
             const menuToggle = document.getElementById('mobileMenuToggle');
             const menuClose = document.getElementById('mobileMenuClose');
             const drawer = document.getElementById('mobileNavDrawer');
