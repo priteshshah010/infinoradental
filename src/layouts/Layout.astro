@@ -11,7 +11,6 @@ const {
     canonicalUrl = "https://infinoradental.com/"
 } = Astro.props;
 
-// GA4 Measurement ID (Preserved)
 const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
 ---
 
@@ -23,7 +22,6 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     <title>{title}</title>
     <meta name="description" content={description} />
 
-    <!-- Canonical & Open Graph Metadata -->
     <link rel="canonical" href={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -32,7 +30,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     <meta property="og:locale" content="en_IN" />
     <meta property="og:site_name" content="Infinora Dental Care" />
 
-    <!-- Google Analytics 4 (gtag.js) - G-Z41QK7SPBW (Preserved) -->
+    <!-- Google Analytics 4 (G-Z41QK7SPBW) -->
     <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
     <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
         window.dataLayer = window.dataLayer || [];
@@ -54,12 +52,12 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
         };
     </script>
 
-    <!-- Google Fonts Preconnect & Load -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Tailwind Play CDN & Primary Brand Palette (#011f39) -->
+    <!-- Tailwind Play CDN & Brand Palette (#011f39) -->
     <script is:inline data-cfasync="false" src="https://cdn.tailwindcss.com"></script>
     <script is:inline data-cfasync="false">
       tailwind.config = {
@@ -78,6 +76,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
                 offwhite: '#FFFFFF',
                 border: '#D5E0EA',
                 gold: '#C59B27',
+                golddark: '#856404',
                 grey: {
                   text: '#1E293B',
                   muted: '#475569',
@@ -90,7 +89,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
       }
     </script>
 
-    <!-- Structured Data (JSON-LD) for Local SEO, AEO, GEO & AI Answer Engines -->
+    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -154,8 +153,6 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
             "https://msdcmumbai.in/QR_Verfy.aspx?auth=57d7f7fc-a30e-4fb8-95c1-1f4f163010bc",
             "https://share.google/fYPKASkVLyZ0KXni9"
           ],
-          "currenciesAccepted": "INR, USD, AUD, GBP, EUR, AED",
-          "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Google Pay, Bank Transfer, Mobile NFC, Accepts payment plan",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West",
@@ -169,26 +166,11 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
             "latitude": 19.2024118,
             "longitude": 72.8371032
           },
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-              "opens": "10:00",
-              "closes": "14:00"
-            },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-              "opens": "17:00",
-              "closes": "21:00"
-            }
-          ],
           "employee": {
             "@type": "Person",
             "@id": "https://infinoradental.com/#drriddhi",
             "name": "Dr. Riddhi Patel Shah",
-            "jobTitle": "Lead Dental Surgeon & Specialist Orthodontist",
-            "description": "Dr. Riddhi Patel Shah is a distinguished and highly accomplished Orthodontist and Lead Dental Surgeon practicing in Kandivali West, Mumbai. Dedicated to transforming oral healthcare experiences, Dr. Riddhi combines an exceptional academic pedigree with a rigorous, patient-first clinical philosophy to deliver evidence-based, specialist-led dentistry. Her practice is built on a foundation of clinical precision, advanced technology, and genuine empathy, ensuring every patient receives tailored care designed for lifelong oral health and functional stability.",
+            "jobTitle": "Lead Dental Surgeon & Orthodontist (MDS Orthodontics & Dentofacial Orthopedics)",
             "alumniOf": "BDS, MDS (Orthodontics and Dentofacial Orthopedics)",
             "award": [
               "Student of the Year (BDS)",
@@ -220,14 +202,6 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
               "https://msdcmumbai.in/QR_Verfy.aspx?auth=57d7f7fc-a30e-4fb8-95c1-1f4f163010bc"
             ]
           },
-          "medicalSpecialty": [
-            "Orthodontics",
-            "Dentofacial Orthopedics",
-            "Prosthodontics",
-            "Pediatric Dentistry",
-            "Endodontics",
-            "Periodontics"
-          ],
           "availableService": [
             { "@type": "MedicalProcedure", "name": "Orthodontics & Braces" },
             { "@type": "MedicalProcedure", "name": "Clear Aligners" },
@@ -255,24 +229,6 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
             { "@type": "MedicalProcedure", "name": "X-ray" },
             { "@type": "MedicalProcedure", "name": "Gum Surgery / Periodontics" },
             { "@type": "MedicalProcedure", "name": "Digital Smile Design" }
-          ],
-          "amenityFeature": [
-            { "@type": "LocationFeatureSpecification", "name": "Free street parking", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Restroom", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Unisex restroom", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Welcomes LGBTQ+", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Offers emergency service", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Offers pediatric care", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Offers cosmetic dentistry", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Offers sedation dentistry", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Debit cards", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Mobile NFC", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Google Pay / Tez", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Credit cards", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Accepts payment plan", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Onsite services", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Wheelchair accessible parking", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Women-owned", "value": true }
           ]
         },
         {
@@ -281,34 +237,26 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "How do I find a trusted dentist near me in Kandivali West or Mumbai for braces, aligners, implants, veneers, or root canals?",
+              "name": "How do I find a trusted dentist near me in Kandivali West or Mumbai?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Infinora Dental Care in Kandivali West, Mumbai is led by Dr. Riddhi Patel Shah (BDS Gold Medalist, MDS Orthodontics & Dentofacial Orthopedics; MSDC Reg: A-45674; ABDM HFR: IN2710085962; HPR: 71-8554-8443-4346) and offers orthodontics, braces, clear aligners/Invisalign, invisible aligners, dental implants, veneers, root canals, and family dental care across Mumbai and India."
+                "text": "Infinora Dental Care is located at Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067, led by Dr. Riddhi Patel Shah (BDS University Gold Medalist, MDS Orthodontics & Dentofacial Orthopedics; MSDC Reg: A-45674; ABDM HFR: IN2710085962; HPR: 71-8554-8443-4346) for families in Kandivali, Mumbai, and across India."
               }
             },
             {
               "@type": "Question",
-              "name": "Why should I see an MDS Orthodontist instead of a general dentist for braces or clear aligners?",
+              "name": "What orthodontic options are available for braces, clear aligners, Invisalign, or invisible aligners?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "An Orthodontist is a dental surgeon who has completed three full years of specialized post-graduate residency (MDS) studying facial aesthetics, bone growth, and orthodontic biomechanics. While any dentist can order aligner trays, an MDS Orthodontist ensures teeth move safely within biological bone boundaries without causing root resorption, gum recession, or bite collapse."
+                "text": "Consultations cover clear aligners, Invisalign, invisible aligners, metal braces, ceramic braces, self-ligating braces, early orthodontic evaluations, and smile improvement, with suitability assessed during your visit."
               }
             },
             {
               "@type": "Question",
-              "name": "Are clear aligners, Invisalign, or invisible aligners available in Kandivali, Mumbai, and for patients across India?",
+              "name": "Are dental implants, veneers, root canals, and family dental care available in Kandivali and Mumbai?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, orthodontic evaluation for braces, clear aligners, invisible aligners, and Invisalign is available at Infinora Dental Care in Kandivali West, Mumbai, alongside online video opinion options for out-of-city and NRI patients."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How can I verify the clinic and doctor's statutory registrations?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Dr. Riddhi Patel Shah is officially registered with the Maharashtra State Dental Council (MSDC Registration No: A-45674) and verified on the Indian Dental Association (IDA) national directory. Infinora Dental Care holds official National Health Authority registrations under the Ayushman Bharat Digital Mission (Health Facility ID: IN2710085962 and Healthcare Professional ID: 71-8554-8443-4346)."
+                "text": "Yes. Infinora Dental Care in Kandivali West, Mumbai offers consultations and care across general dentistry, root canal treatment, crowns, dental implants, veneers, and family checkups, tailored after clinical examination."
               }
             },
             {
@@ -318,30 +266,6 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
                 "@type": "Answer",
                 "text": "Available slots update dynamically by selected date and time of day across Morning, Afternoon, and Evening options, with Sunday morning available until 12:00 PM (and moving to Monday after 12:00 PM on Sundays)."
               }
-            },
-            {
-              "@type": "Question",
-              "name": "What dental treatments are available beyond orthodontics in Kandivali West, Mumbai?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The clinic offers root canal treatment (RCT), dental implants, veneers and crowns, fillings and bonding, teeth whitening, gum therapy/periodontics, extractions/oral surgery, pediatric dentistry, and full-mouth rehabilitation planning following clinical assessment."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "At what age should a child first visit an orthodontist?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "According to the Indian Orthodontic Society and international orthodontic guidelines, children should have their initial orthodontic evaluation around age 7 to check tooth eruption, arch space, habits, and jaw balance early."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What payment modes and installment options are supported?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We accept Cash, UPI (Google Pay, PhonePe, Paytm), Debit Cards, Credit Cards, Mobile NFC, and Direct Bank Transfers, along with payment plan options where applicable."
-              }
             }
           ]
         }
@@ -349,7 +273,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     }
     </script>
 
-    <!-- Language & Contact Helpers -->
+    <!-- Language & vCard Helpers -->
     <script is:inline type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -414,7 +338,6 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     </script>
     <script is:inline defer type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <!-- Additional Metadata, AI Bot & Geo Directives -->
     <meta name="author" content="Dr. Riddhi Patel Shah" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -428,7 +351,7 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     <div id="google_translate_hidden_element" class="hidden"></div>
     <slot />
 
-    <!-- Global Automatic Click Event Tracker for GA4 (Preserved) -->
+    <!-- Global Automatic Click Event Tracker for GA4 -->
     <script is:inline>
         document.addEventListener('DOMContentLoaded', () => {
             document.addEventListener('click', (e) => {
