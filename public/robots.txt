@@ -6,7 +6,6 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /_astro/
 
 # ==============================================================================
 # AI Search Engines & Answer Engine Optimization (AEO) Agents
@@ -63,7 +62,7 @@ Allow: /
 # ==============================================================================
 # Sitemaps & Structured AI Knowledge Files
 # ==============================================================================
-Sitemap: https://infinoradental.com/sitemap-index.xml
+Sitemap: https://infinoradental.com/sitemap.xml
 
 # LLMs Structured Knowledge Base:
 # https://infinoradental.com/llms.txt
