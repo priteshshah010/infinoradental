@@ -1,15 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://infinoradental.com/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://infinoradental.com/" />
-    <xhtml:link rel="alternate" hreflang="gu" href="https://infinoradental.com/" />
-    <xhtml:link rel="alternate" hreflang="hi" href="https://infinoradental.com/" />
-    <xhtml:link rel="alternate" hreflang="mr" href="https://infinoradental.com/" />
+
+    <image:image>
+      <image:loc>https://infinoradental.com/images/riddhi_headshot.avif</image:loc>
+      <image:title>Dr. Riddhi Patel Shah at Infinora Dental Care, Kandivali West</image:title>
+      <image:caption>Dr. Riddhi Patel Shah (BDS University Gold Medalist, MDS Orthodontics) at Infinora Dental Care, Kandivali West, Mumbai.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://infinoradental.com/images/riddhi_headshot.webp</image:loc>
+      <image:title>Dr. Riddhi Patel Shah at Infinora Dental Care, Kandivali West</image:title>
+      <image:caption>Dr. Riddhi Patel Shah (BDS University Gold Medalist, MDS Orthodontics) at Infinora Dental Care, Kandivali West, Mumbai.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://infinoradental.com/images/dr-riddhi.avif</image:loc>
+      <image:title>Dr. Riddhi Patel Shah Consultation Desk &amp; Trophies</image:title>
+      <image:caption>Dr. Riddhi Patel Shah at her consultation desk with trophies and academic recognition at Infinora Dental Care.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://infinoradental.com/images/dr-riddhi.webp</image:loc>
+      <image:title>Dr. Riddhi Patel Shah Consultation Desk &amp; Trophies</image:title>
+      <image:caption>Dr. Riddhi Patel Shah at her consultation desk with trophies and academic recognition at Infinora Dental Care.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://infinoradental.com/images/clinic-operatory.avif</image:loc>
+      <image:title>Clinical Treatment Operatory at Infinora Dental Care</image:title>
+      <image:caption>Clinical treatment room at Infinora Dental Care in Kandivali West, Mumbai.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://infinoradental.com/images/clinic-operatory.webp</image:loc>
+      <image:title>Clinical Treatment Operatory at Infinora Dental Care</image:title>
+      <image:caption>Clinical treatment room at Infinora Dental Care in Kandivali West, Mumbai.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://infinoradental.com/images/clinic-reception.avif</image:loc>
+      <image:title>Reception Area at Infinora Dental Care, Kandivali West</image:title>
+      <image:caption>Patient reception area at Infinora Dental Care, Iraniwadi Road No. 3, Kandivali West, Mumbai.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://infinoradental.com/images/clinic-reception.webp</image:loc>
+      <image:title>Reception Area at Infinora Dental Care, Kandivali West</image:title>
+      <image:caption>Patient reception area at Infinora Dental Care, Iraniwadi Road No. 3, Kandivali West, Mumbai.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://infinoradental.com/images/clinic_shopfront.avif</image:loc>
+      <image:title>Infinora Dental Care Signboard &amp; Shopfront</image:title>
+      <image:caption>Signboard and entrance of Infinora Dental Care at Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://infinoradental.com/images/clinic_shopfront.webp</image:loc>
+      <image:title>Infinora Dental Care Signboard &amp; Shopfront</image:title>
+      <image:caption>Signboard and entrance of Infinora Dental Care at Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai.</image:caption>
+    </image:image>
   </url>
 </urlset>
