@@ -183,25 +183,28 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
 
-                <!-- DOCTOR PROFILE CARD (With Photo Slot for Step 5) -->
+                <!-- DOCTOR PROFILE CARD (Uses riddhi_headshot.avif / riddhi_headshot.webp) -->
                 <div class="lg:col-span-5 relative w-full min-w-0" id="about">
                     <div class="bg-brand-offwhite rounded-3xl p-6 sm:p-8 border border-brand-border shadow-xl space-y-5">
                         <div class="flex flex-col sm:flex-row sm:items-center gap-4 border-b border-brand-border pb-5">
-                            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-brand-surface border-2 border-brand-navy/25 flex items-center justify-center shrink-0 overflow-hidden p-1.5 shadow-sm">
-                                <img
-                                    src="/images/dr-riddhi.webp"
-                                    alt="Dr. Riddhi Patel Shah at Infinora Dental Care, Kandivali West"
-                                    width="88"
-                                    height="88"
-                                    class="w-full h-full object-cover rounded-xl"
-                                    onerror="this.src='/logo.svg'; this.classList.remove('object-cover'); this.classList.add('object-contain', 'p-1.5');"
-                                />
+                            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-brand-surface border-2 border-brand-navy/25 flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+                                <picture class="w-full h-full block">
+                                    <source srcset="/images/riddhi_headshot.avif" type="image/avif" />
+                                    <source srcset="/images/riddhi_headshot.webp" type="image/webp" />
+                                    <img
+                                        src="/images/riddhi_headshot.webp"
+                                        alt="Dr. Riddhi Patel Shah headshot at Infinora Dental Care, Kandivali West"
+                                        width="96"
+                                        height="96"
+                                        class="w-full h-full object-cover object-top"
+                                    />
+                                </picture>
                             </div>
                             <div class="min-w-0">
                                 <div class="text-[10px] font-extrabold uppercase tracking-wider text-brand-lightnavy">Infinora Dental Care</div>
                                 <h2 class="font-extrabold text-brand-navy text-lg sm:text-xl leading-snug whitespace-normal break-words">Dr. Riddhi Patel Shah</h2>
                                 <p class="text-xs text-brand-lightnavy font-bold tracking-wide whitespace-normal break-words">BDS University Gold Medalist | MDS Orthodontics &amp; Dentofacial Orthopedics</p>
-                                <p class="text-[11px] text-brand-grey-muted font-medium whitespace-normal break-words">Founder &amp; Lead Dental Surgeon · MSDC Reg: A-45674</p>
+                                <p class="text-[11px] text-brand-grey-muted font-medium whitespace-normal break-words">Founder &amp; Lead Clinician · MSDC Reg: A-45674</p>
                             </div>
                         </div>
 
@@ -516,7 +519,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <!-- STEP 5: REAL CLINIC & DOCTOR PHOTO SLOTS -->
+        <!-- STEP 5: REAL CLINIC & DOCTOR PHOTO GALLERY (Note Removed, All Uploaded Files Wired) -->
         <section id="clinic-gallery" class="py-16 bg-brand-offwhite w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
                 <div class="text-center max-w-2xl mx-auto space-y-2">
@@ -524,82 +527,97 @@ import Layout from '../layouts/Layout.astro';
                         Inside Infinora Dental Care
                     </span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy whitespace-normal break-words">Our Kandivali West Clinic</h2>
-                    <p class="text-xs sm:text-sm text-brand-grey-muted leading-relaxed">
-                        Place your optimized WebP clinic photos in <code class="text-brand-navy font-semibold">public/images/</code> (<code class="text-brand-navy">dr-riddhi.webp</code>, <code class="text-brand-navy">clinic-operatory.webp</code>, <code class="text-brand-navy">clinic-reception.webp</code>) to display them automatically below.
-                    </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <figure class="rounded-3xl overflow-hidden border border-brand-border bg-brand-surface shadow-sm flex flex-col">
-                        <div class="aspect-[4/3] w-full bg-brand-cardbg flex items-center justify-center overflow-hidden">
-                            <img
-                                src="/images/dr-riddhi.webp"
-                                alt="Dr. Riddhi Patel Shah — Founder & Lead Orthodontist at Infinora Dental Care, Kandivali West"
-                                width="640"
-                                height="480"
-                                loading="lazy"
-                                decoding="async"
-                                class="w-full h-full object-cover"
-                                onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
-                            />
-                            <div class="hidden p-6 text-center space-y-1">
-                                <div class="text-xs font-extrabold text-brand-navy">Dr. Riddhi Patel Shah</div>
-                                <div class="text-[11px] text-brand-grey-muted">Upload <span class="font-mono">/images/dr-riddhi.webp</span></div>
-                            </div>
+                        <div class="aspect-[4/3] w-full bg-brand-cardbg overflow-hidden">
+                            <picture class="w-full h-full block">
+                                <source srcset="/images/dr-riddhi.avif" type="image/avif" />
+                                <source srcset="/images/dr-riddhi.webp" type="image/webp" />
+                                <img
+                                    src="/images/dr-riddhi.webp"
+                                    alt="Dr. Riddhi Patel Shah seated at her consultation desk with trophies in the background at Infinora Dental Care"
+                                    width="640"
+                                    height="480"
+                                    loading="lazy"
+                                    decoding="async"
+                                    class="w-full h-full object-cover"
+                                />
+                            </picture>
                         </div>
                         <figcaption class="p-4 text-xs text-brand-grey-text font-medium">
-                            Dr. Riddhi Patel Shah — Specialist Orthodontist &amp; Lead Dental Surgeon
+                            Dr. Riddhi Patel Shah at Her Consultation Desk
                         </figcaption>
                     </figure>
 
                     <figure class="rounded-3xl overflow-hidden border border-brand-border bg-brand-surface shadow-sm flex flex-col">
-                        <div class="aspect-[4/3] w-full bg-brand-cardbg flex items-center justify-center overflow-hidden">
-                            <img
-                                src="/images/clinic-operatory.webp"
-                                alt="Clinical treatment operatory at Infinora Dental Care in Kandivali West, Mumbai"
-                                width="640"
-                                height="480"
-                                loading="lazy"
-                                decoding="async"
-                                class="w-full h-full object-cover"
-                                onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
-                            />
-                            <div class="hidden p-6 text-center space-y-1">
-                                <div class="text-xs font-extrabold text-brand-navy">Treatment Operatory</div>
-                                <div class="text-[11px] text-brand-grey-muted">Upload <span class="font-mono">/images/clinic-operatory.webp</span></div>
-                            </div>
+                        <div class="aspect-[4/3] w-full bg-brand-cardbg overflow-hidden">
+                            <picture class="w-full h-full block">
+                                <source srcset="/images/clinic-operatory.avif" type="image/avif" />
+                                <source srcset="/images/clinic-operatory.webp" type="image/webp" />
+                                <img
+                                    src="/images/clinic-operatory.webp"
+                                    alt="Clinical treatment operatory at Infinora Dental Care in Kandivali West, Mumbai"
+                                    width="640"
+                                    height="480"
+                                    loading="lazy"
+                                    decoding="async"
+                                    class="w-full h-full object-cover"
+                                />
+                            </picture>
                         </div>
                         <figcaption class="p-4 text-xs text-brand-grey-text font-medium">
-                            Modern Clinical Operatory &amp; Diagnostic Setup
+                            Clinical Treatment Operatory
                         </figcaption>
                     </figure>
 
                     <figure class="rounded-3xl overflow-hidden border border-brand-border bg-brand-surface shadow-sm flex flex-col">
-                        <div class="aspect-[4/3] w-full bg-brand-cardbg flex items-center justify-center overflow-hidden">
-                            <img
-                                src="/images/clinic-reception.webp"
-                                alt="Patient reception and waiting lounge at Infinora Dental Care, Kandivali West"
-                                width="640"
-                                height="480"
-                                loading="lazy"
-                                decoding="async"
-                                class="w-full h-full object-cover"
-                                onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
-                            />
-                            <div class="hidden p-6 text-center space-y-1">
-                                <div class="text-xs font-extrabold text-brand-navy">Reception &amp; Lounge</div>
-                                <div class="text-[11px] text-brand-grey-muted">Upload <span class="font-mono">/images/clinic-reception.webp</span></div>
-                            </div>
+                        <div class="aspect-[4/3] w-full bg-brand-cardbg overflow-hidden">
+                            <picture class="w-full h-full block">
+                                <source srcset="/images/clinic-reception.avif" type="image/avif" />
+                                <source srcset="/images/clinic-reception.webp" type="image/webp" />
+                                <img
+                                    src="/images/clinic-reception.webp"
+                                    alt="Patient reception area at Infinora Dental Care, Kandivali West, Mumbai"
+                                    width="640"
+                                    height="480"
+                                    loading="lazy"
+                                    decoding="async"
+                                    class="w-full h-full object-cover"
+                                />
+                            </picture>
                         </div>
                         <figcaption class="p-4 text-xs text-brand-grey-text font-medium">
-                            Patient Reception &amp; Accessible Ground-Level Lounge
+                            Patient Reception &amp; Welcome Desk
+                        </figcaption>
+                    </figure>
+
+                    <figure class="rounded-3xl overflow-hidden border border-brand-border bg-brand-surface shadow-sm flex flex-col">
+                        <div class="aspect-[4/3] w-full bg-brand-cardbg overflow-hidden">
+                            <picture class="w-full h-full block">
+                                <source srcset="/images/clinic_shopfront.avif" type="image/avif" />
+                                <source srcset="/images/clinic_shopfront.webp" type="image/webp" />
+                                <img
+                                    src="/images/clinic_shopfront.webp"
+                                    alt="Shopfront of Infinora Dental Care at Sai Elegance, Iraniwadi Road No. 3, Kandivali West"
+                                    width="640"
+                                    height="480"
+                                    loading="lazy"
+                                    decoding="async"
+                                    class="w-full h-full object-cover"
+                                />
+                            </picture>
+                        </div>
+                        <figcaption class="p-4 text-xs text-brand-grey-text font-medium">
+                            Iraniwadi Road No. 3 Shopfront
                         </figcaption>
                     </figure>
                 </div>
             </div>
         </section>
 
-        <!-- CLINIC AMENITIES -->
+        <!-- CLINIC FACILITIES (Wheelchair Friendly Removed) -->
         <section id="facilities" class="py-14 bg-brand-surface w-full border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
                 <div class="text-center max-w-2xl mx-auto space-y-2">
@@ -609,22 +627,18 @@ import Layout from '../layouts/Layout.astro';
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy whitespace-normal break-words">Designed for Comfort &amp; Accessibility</h2>
                 </div>
 
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1 text-center">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <h3 class="font-bold text-sm text-brand-navy">Free Street Parking</h3>
-                        <p class="text-[11px] text-brand-grey-muted">Near Iraniwadi Road No. 3, Kandivali West.</p>
+                        <p class="text-xs text-brand-grey-muted">Near Iraniwadi Road No. 3, Kandivali West.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1 text-center">
-                        <h3 class="font-bold text-sm text-brand-navy">Wheelchair Friendly</h3>
-                        <p class="text-[11px] text-brand-grey-muted">Ground-level access at Shop No. 5, Sai Elegance.</p>
-                    </div>
-                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <h3 class="font-bold text-sm text-brand-navy">Flexible Payments</h3>
-                        <p class="text-[11px] text-brand-grey-muted">Cash, UPI, Cards, Mobile NFC &amp; payment plans.</p>
+                        <p class="text-xs text-brand-grey-muted">Cash, UPI, Cards, Mobile NFC &amp; payment plans.</p>
                     </div>
-                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1 text-center">
+                    <div class="p-5 rounded-2xl bg-brand-offwhite border border-brand-border space-y-1.5 text-center">
                         <h3 class="font-bold text-sm text-brand-navy">Inclusive &amp; Women-Owned</h3>
-                        <p class="text-[11px] text-brand-grey-muted">Welcoming care for individuals and families.</p>
+                        <p class="text-xs text-brand-grey-muted">Led by Dr. Riddhi Patel Shah; welcoming women, men, children, and families with calm, clear consultations.</p>
                     </div>
                 </div>
             </div>
@@ -1086,12 +1100,14 @@ import Layout from '../layouts/Layout.astro';
                         </div>
 
                         <div class="p-4 rounded-2xl bg-brand-midnavy border border-brand-lightnavy space-y-1.5">
-                            <div class="font-extrabold text-brand-gold uppercase text-[11px]">Metro Line 2A &amp; Railway</div>
+                            <div class="font-extrabold text-brand-gold uppercase text-[11px]">Railway &amp; Metro Connectivity</div>
                             <p class="leading-relaxed">
+                                • Kandivali Railway Station (West): <strong>1.3 kms</strong><br/>
+                                • 3 kms from <strong>Malad Railway Station</strong><br/>
+                                • 4 kms from <strong>Borivali Railway Station</strong><br/>
                                 • Dahanukarwadi Metro Station: <strong>1.0 km</strong><br/>
                                 • Valnai - Meeth Chowky Metro Station: <strong>1.4 kms</strong><br/>
-                                • Kandivali West Metro Station (Mahavir Nagar): <strong>1.6 kms</strong><br/>
-                                • Kandivali Railway Station (West): <strong>1.3 kms</strong>
+                                • Kandivali West Metro Station (Mahavir Nagar): <strong>1.6 kms</strong>
                             </p>
                         </div>
 
