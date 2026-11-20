@@ -22,6 +22,9 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
     <title>{title}</title>
     <meta name="description" content={description} />
 
+    <!-- Browser Tab SVG Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+
     <link rel="canonical" href={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -52,10 +55,10 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
         };
     </script>
 
-    <!-- Fonts -->
+    <!-- Fonts: Cinzel (matches INFINORA engraved serif wordmark) + Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Tailwind Play CDN & Brand Palette (#011f39) -->
     <script is:inline data-cfasync="false" src="https://cdn.tailwindcss.com"></script>
@@ -63,6 +66,10 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
       tailwind.config = {
         theme: {
           extend: {
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'sans-serif'],
+              brand: ['Cinzel', 'Georgia', 'serif']
+            },
             colors: {
               brand: {
                 navy: '#011f39',
@@ -76,7 +83,6 @@ const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
                 offwhite: '#FFFFFF',
                 border: '#D5E0EA',
                 gold: '#C59B27',
-                golddark: '#856404',
                 grey: {
                   text: '#1E293B',
                   muted: '#475569',
