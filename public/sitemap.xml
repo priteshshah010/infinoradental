@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://infinoradental.com/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
 
@@ -61,5 +61,12 @@
       <image:title>Infinora Dental Care Signboard &amp; Shopfront</image:title>
       <image:caption>Signboard and entrance of Infinora Dental Care at Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai.</image:caption>
     </image:image>
+  </url>
+
+  <url>
+    <loc>https://infinoradental.com/privacy-policy</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
