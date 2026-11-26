@@ -1,0 +1,447 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Privacy Policy & Data Protection | Infinora Dental Care, Kandivali West";
+const pageDescription = "Official Privacy Policy, Patient Data Protection Notice, and WhatsApp/Meta Data Deletion instructions for Infinora Dental Care, Kandivali West, Mumbai. Compliant with India's DPDP Act 2023, DPDP Rules 2025, DCI Ethics, GDPR, and HIPAA benchmarks.";
+const effectiveDate = "November 26, 2026";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Sticky Header -->
+  <header class="sticky top-0 z-40 bg-brand-offwhite/95 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+      <a href="/" class="flex items-center gap-2.5 group min-w-0">
+        <img src="/logo.svg" alt="Infinora Dental Care Logo" class="w-8 h-8 object-contain shrink-0" />
+        <div class="leading-tight truncate">
+          <span class="block font-extrabold tracking-wider text-brand-darkbrown text-sm sm:text-base">INFINORA</span>
+          <span class="block text-[10px] tracking-[0.2em] uppercase text-brand-brown font-bold">Dental Care</span>
+        </div>
+      </a>
+
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <!-- Language Switcher (Hooks into Layout.astro Google Translate) -->
+        <div class="hidden sm:flex items-center bg-brand-beige rounded-lg p-0.5 border border-brand-border text-[11px] font-bold">
+          <button type="button" onclick="changeLanguage('en')" data-lang="en" class="lang-btn bg-brand-brown text-white px-2 py-1 rounded-md transition-colors cursor-pointer">EN</button>
+          <button type="button" onclick="changeLanguage('hi')" data-lang="hi" class="lang-btn text-brand-grey-muted hover:text-brand-darkbrown px-2 py-1 rounded-md transition-colors cursor-pointer">हि</button>
+          <button type="button" onclick="changeLanguage('mr')" data-lang="mr" class="lang-btn text-brand-grey-muted hover:text-brand-darkbrown px-2 py-1 rounded-md transition-colors cursor-pointer">मरा</button>
+          <button type="button" onclick="changeLanguage('gu')" data-lang="gu" class="lang-btn text-brand-grey-muted hover:text-brand-darkbrown px-2 py-1 rounded-md transition-colors cursor-pointer">ગુજ</button>
+        </div>
+
+        <a href="/" class="text-xs sm:text-sm font-bold text-brand-midbrown hover:text-brand-brown transition-colors px-2 py-1.5">
+          ← Back to Home
+        </a>
+        <a href="/#book" class="bg-brand-brown hover:bg-brand-hoverbrown text-white text-xs sm:text-sm font-bold px-3.5 py-2 rounded-xl transition-colors shadow-sm">
+          Book Visit
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14 space-y-10">
+    <!-- Hero / Document Header -->
+    <section class="bg-brand-offwhite rounded-3xl p-6 sm:p-10 border border-brand-border shadow-sm space-y-5">
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="text-[11px] font-extrabold tracking-widest uppercase bg-brand-beige text-brand-brown border border-brand-brown/20 px-3 py-1 rounded-full">
+          Legal &amp; Patient Privacy
+        </span>
+        <span class="text-xs font-semibold text-brand-grey-muted">
+          Effective Date: {effectiveDate} · Last Updated: {effectiveDate}
+        </span>
+      </div>
+
+      <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-brand-darkbrown">
+        Privacy Policy &amp; Patient Data Protection Notice
+      </h1>
+
+      <p class="text-sm sm:text-base text-brand-grey-text leading-relaxed max-w-3xl">
+        At <strong>Infinora Dental Care</strong>, protecting your personal and dental health information is an extension of our clinical duty of care. This policy explains how we collect, use, store, share, and safeguard your data in compliance with India's <strong>Digital Personal Data Protection (DPDP) Act, 2023</strong>, <strong>DPDP Rules, 2025</strong>, <strong>IT (SPDI) Rules, 2011</strong>, and <strong>Dental Council of India (DCI)</strong> ethics—aligned with international <strong>EU/UK GDPR</strong> and <strong>US HIPAA/CCPA</strong> healthcare privacy benchmarks.
+      </p>
+
+      <!-- Clinic & Data Fiduciary Metadata Card -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-brand-border text-xs sm:text-sm">
+        <div class="bg-brand-lightbeige rounded-2xl p-4 border border-brand-border/80 space-y-1.5">
+          <h2 class="font-extrabold text-brand-darkbrown text-xs uppercase tracking-wider">Data Fiduciary &amp; Statutory Details</h2>
+          <p><strong>Practice Name:</strong> Infinora Dental Care (Sole Proprietorship)</p>
+          <p><strong>Proprietor &amp; Lead Dentist:</strong> Dr. Riddhi Patel Shah (Dr. Riddhi Kantilal Patel), BDS, MDS (Orthodontics &amp; Dentofacial Orthopedics)</p>
+          <p><strong>MSDC Reg. No.:</strong> <span class="font-mono text-brand-brown font-bold">A-45674</span> · <strong>MSME Udyam:</strong> <span class="font-mono text-brand-brown font-bold">UDYAM-MH-18-0575707</span></p>
+          <p><strong>ABDM HFR ID:</strong> <span class="font-mono text-brand-brown font-bold">IN2710085962</span> · <strong>HPR ID:</strong> <span class="font-mono text-brand-brown font-bold">71-8554-8443-4346</span></p>
+        </div>
+
+        <div class="bg-brand-lightbeige rounded-2xl p-4 border border-brand-border/80 space-y-1.5">
+          <h2 class="font-extrabold text-brand-darkbrown text-xs uppercase tracking-wider">Clinic Location &amp; Grievance Contact</h2>
+          <p><strong>Address:</strong> Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai, Maharashtra – 400067, India</p>
+          <p><strong>Grievance Officer:</strong> Dr. Riddhi Patel Shah (Founder &amp; Grievance Officer)</p>
+          <p><strong>Email:</strong> <a href="mailto:hello@infinoradental.com" class="text-brand-brown font-semibold underline">hello@infinoradental.com</a></p>
+          <p><strong>Phone / WhatsApp:</strong> <a href="tel:+917304432681" class="text-brand-brown font-semibold underline">+91 73044 32681</a> · <strong>EMR:</strong> Jio KiViHealth</p>
+        </div>
+      </div>
+
+      <!-- Quick Jump Navigation -->
+      <nav aria-label="Privacy Policy Sections" class="pt-2 flex flex-wrap gap-2 text-xs font-bold">
+        <a href="#scope" class="px-3 py-1.5 rounded-lg bg-brand-beige hover:bg-brand-cardbeige text-brand-midbrown transition-colors">1. Scope</a>
+        <a href="#data-collected" class="px-3 py-1.5 rounded-lg bg-brand-beige hover:bg-brand-cardbeige text-brand-midbrown transition-colors">2. Data Collected</a>
+        <a href="#lawful-basis" class="px-3 py-1.5 rounded-lg bg-brand-beige hover:bg-brand-cardbeige text-brand-midbrown transition-colors">3. Lawful Basis &amp; AI</a>
+        <a href="#consent" class="px-3 py-1.5 rounded-lg bg-brand-beige hover:bg-brand-cardbeige text-brand-midbrown transition-colors">4. Consent</a>
+        <a href="#sharing" class="px-3 py-1.5 rounded-lg bg-brand-beige hover:bg-brand-cardbeige text-brand-midbrown transition-colors">5. Sharing &amp; Transfers</a>
+        <a href="#security" class="px-3 py-1.5 rounded-lg bg-brand-beige hover:bg-brand-cardbeige text-brand-midbrown transition-colors">6. Security</a>
+        <a href="#retention" class="px-3 py-1.5 rounded-lg bg-brand-beige hover:bg-brand-cardbeige text-brand-midbrown transition-colors">7. Retention</a>
+        <a href="#rights" class="px-3 py-1.5 rounded-lg bg-brand-beige hover:bg-brand-cardbeige text-brand-midbrown transition-colors">8. Your Rights</a>
+        <a href="#data-deletion" class="px-3 py-1.5 rounded-lg bg-brand-brown text-white hover:bg-brand-hoverbrown transition-colors">Data Deletion Instructions</a>
+        <a href="#cookies" class="px-3 py-1.5 rounded-lg bg-brand-beige hover:bg-brand-cardbeige text-brand-midbrown transition-colors">9. Cookies</a>
+        <a href="#breach" class="px-3 py-1.5 rounded-lg bg-brand-beige hover:bg-brand-cardbeige text-brand-midbrown transition-colors">10. Breach Protocol</a>
+        <a href="#grievance" class="px-3 py-1.5 rounded-lg bg-brand-beige hover:bg-brand-cardbeige text-brand-midbrown transition-colors">11. Grievance Officer</a>
+      </nav>
+    </section>
+
+    <!-- Main Policy Body -->
+    <article class="bg-brand-offwhite rounded-3xl p-6 sm:p-10 border border-brand-border shadow-sm space-y-10 text-sm sm:text-[15px] leading-relaxed text-brand-grey-text">
+
+      <!-- Section 1 -->
+      <section id="scope" class="scroll-mt-24 space-y-4">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-brand-darkbrown">1. Policy Overview, Scope &amp; Global Commitment</h2>
+        <div class="bg-brand-lightbeige border-l-4 border-brand-brown rounded-r-xl p-4 text-xs sm:text-sm">
+          <strong class="text-brand-darkbrown">At a Glance:</strong> Your dental and personal health information is strictly confidential. We never sell your data, we never use your medical information for targeted advertising, and we protect your records using India's DPDP Act alongside GDPR and HIPAA benchmarks.
+        </div>
+        <p>This Privacy Policy governs all personal data and Sensitive Personal Health Information (PHI) collected or processed by Infinora Dental Care when you:</p>
+        <ul class="list-disc pl-5 space-y-1.5">
+          <li>Visit or submit a consultation request via <strong>https://infinoradental.com</strong>;</li>
+          <li>Communicate with us over <strong>WhatsApp Business (+91 73044 32681)</strong>, Facebook, Instagram (<strong>@orthodontist.riddhi</strong>), email (<strong>hello@infinoradental.com</strong>), SMS, or telephone;</li>
+          <li>Visit our outpatient dental clinic in Kandivali West, Mumbai for diagnostics, preventive care, orthodontics, or multispeciality dental treatments;</li>
+          <li>Use our tele-dentistry or video consultation services (including domestic, NRI, and international inquiries); or</li>
+          <li>Act as a parent or lawful guardian seeking care for a child under 18 years of age or a person with a disability.</li>
+        </ul>
+        <p><strong>Regulatory Frameworks Harmonized:</strong></p>
+        <ul class="list-disc pl-5 space-y-1.5">
+          <li><strong>Indian Law:</strong> Digital Personal Data Protection (DPDP) Act, 2023 &amp; DPDP Rules, 2025; Information Technology Act, 2000 &amp; IT (SPDI) Rules, 2011; Dental Council of India (DCI) Revised Dentists (Code of Ethics) Regulations; Telemedicine Practice Guidelines; Ayushman Bharat Digital Mission (ABDM) Health Data Management Policy; and CERT-In Cyber Security Directions, 2022.</li>
+          <li><strong>European Benchmark:</strong> EU &amp; UK General Data Protection Regulation (GDPR — Articles 6, 9, and 22) and EU AI Act transparency standards.</li>
+          <li><strong>North American Benchmark:</strong> US HIPAA Privacy and Security Rules (Notice of Privacy Practices clarity, Minimum Necessary Standard, and Business Associate safeguards), CCPA/CPRA, US state health privacy laws (such as the Washington My Health My Data Act), and FTC Health Breach Notification transparency principles.</li>
+        </ul>
+      </section>
+
+      <hr class="border-brand-border" />
+
+      <!-- Section 2 -->
+      <section id="data-collected" class="scroll-mt-24 space-y-4">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-brand-darkbrown">2. Categories of Data We Collect</h2>
+        <div class="bg-brand-lightbeige border-l-4 border-brand-brown rounded-r-xl p-4 text-xs sm:text-sm">
+          <strong class="text-brand-darkbrown">At a Glance:</strong> We follow strict <strong>Data Minimization</strong>—collecting only what is clinically necessary to treat you safely, coordinate appointments, and meet statutory requirements.
+        </div>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong>Identity &amp; Contact Data:</strong> Full name, date of birth, gender, mobile/WhatsApp number, email address, residential address, emergency contact details, and optional ABHA ID or government ID verification (where required for ABDM health record linking or insurance documentation).</li>
+          <li><strong>Clinical, Diagnostic &amp; Sensitive Health Data (PHI / Special Category Data):</strong> Chief dental complaints, medical and surgical history, drug allergies, current medications, vitals, clinical examination notes, treatment plans, digital radiographs (RVG/OPG), CBCT scans, 3D intraoral optical scans, intraoral/extraoral clinical photographs, orthodontic study models, and e-prescriptions.</li>
+          <li><strong>Minors &amp; Guardianship Data:</strong> For patients under 18 years of age or persons with disabilities requiring guardianship, we collect verifiable identity and consent records of the parent or lawful guardian prior to processing digital personal data.</li>
+          <li><strong>Financial, Billing &amp; Payment Plan Data:</strong> Invoices, receipts, UPI/card/NFC/bank transfer transaction references, insurance reimbursement letters, and stage-wise EMI/payment schedule records. <em>We never store full credit/debit card numbers or CVV codes on clinic systems.</em></li>
+          <li><strong>Website, Communication &amp; Technical Data:</strong> Appointment booking form details (<code>#book</code>), WhatsApp/chat transcripts, language selection (English, Hindi, Marathi, Gujarati), anonymized IP address, browser/device type, and aggregated site engagement metrics.</li>
+        </ul>
+      </section>
+
+      <hr class="border-brand-border" />
+
+      <!-- Section 3 -->
+      <section id="lawful-basis" class="scroll-mt-24 space-y-4">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-brand-darkbrown">3. Purposes &amp; Lawful Bases for Processing</h2>
+        <p>We map each processing activity to an explicit lawful basis under the <strong>DPDP Act, 2023</strong> and <strong>EU/UK GDPR (Articles 6 &amp; 9)</strong>, clearly separating core <strong>Treatment, Payment, and Healthcare Operations (TPO)</strong> from optional uses.</p>
+
+        <div class="overflow-x-auto rounded-2xl border border-brand-border">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-brand-cardbeige text-brand-darkbrown border-b border-brand-border">
+                <th class="p-3.5 font-extrabold">Processing Purpose</th>
+                <th class="p-3.5 font-extrabold">Data Used</th>
+                <th class="p-3.5 font-extrabold">DPDP Act, 2023</th>
+                <th class="p-3.5 font-extrabold">EU/UK GDPR</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brand-border">
+              <tr>
+                <td class="p-3.5 font-semibold text-brand-darkbrown">Clinical Diagnosis, Treatment &amp; Specialist Care</td>
+                <td class="p-3.5">Identity, Contact, Clinical &amp; Diagnostic Records</td>
+                <td class="p-3.5">Explicit Consent (Sec. 6) &amp; Health Services (Sec. 7)</td>
+                <td class="p-3.5">Contract (Art. 6(1)(b)) &amp; Health Care (Art. 9(2)(h))</td>
+              </tr>
+              <tr class="bg-brand-lightbeige/50">
+                <td class="p-3.5 font-semibold text-brand-darkbrown">Appointment Scheduling &amp; WhatsApp Triage</td>
+                <td class="p-3.5">Identity, Contact, Slot &amp; Consultation Type</td>
+                <td class="p-3.5">Explicit Consent (Sec. 6) &amp; Voluntary Provision (Sec. 7(a))</td>
+                <td class="p-3.5">Contract (Art. 6(1)(b)) / Consent (Art. 6(1)(a))</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-semibold text-brand-darkbrown">Tele-Dentistry &amp; NRI / International Inquiries</td>
+                <td class="p-3.5">Identity, Contact, Shared Scans/X-rays, Notes</td>
+                <td class="p-3.5">Explicit Consent (Sec. 6)</td>
+                <td class="p-3.5">Explicit Consent (Art. 6(1)(a) &amp; Art. 9(2)(a))</td>
+              </tr>
+              <tr class="bg-brand-lightbeige/50">
+                <td class="p-3.5 font-semibold text-brand-darkbrown">Billing, Tax Compliance &amp; Stage-Wise EMIs</td>
+                <td class="p-3.5">Identity, Contact, Invoices &amp; Payment References</td>
+                <td class="p-3.5">Legal Obligation (Sec. 7(c))</td>
+                <td class="p-3.5">Legal Obligation (Art. 6(1)(c)) &amp; Contract</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-semibold text-brand-darkbrown">ABDM / ABHA Record Linking <em>(Optional)</em></td>
+                <td class="p-3.5">Identity, ABHA ID, Clinical Summaries</td>
+                <td class="p-3.5">Purpose-Specific Consent (Sec. 6 &amp; ABDM Policy)</td>
+                <td class="p-3.5">Explicit Consent (Art. 6(1)(a) &amp; Art. 9(2)(a))</td>
+              </tr>
+              <tr class="bg-brand-lightbeige/50">
+                <td class="p-3.5 font-semibold text-brand-darkbrown">Emergency Dental Care &amp; Patient Safety</td>
+                <td class="p-3.5">Contact, Allergies, Medical History, Emergency Contact</td>
+                <td class="p-3.5">Medical Emergency (Sec. 7(f))</td>
+                <td class="p-3.5">Vital Interests (Art. 6(1)(d) &amp; Art. 9(2)(c))</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-semibold text-brand-darkbrown">Clinical Photos &amp; Testimonials <em>(Strictly Optional)</em></td>
+                <td class="p-3.5">Anonymized or Identifiable Media, Reviews</td>
+                <td class="p-3.5">Unbundled Written Consent (Sec. 6 &amp; DCI Ethics)</td>
+                <td class="p-3.5">Explicit Consent (Art. 6(1)(a) &amp; Art. 9(2)(a))</td>
+              </tr>
+              <tr class="bg-brand-lightbeige/50">
+                <td class="p-3.5 font-semibold text-brand-darkbrown">Website Security &amp; Aggregated Analytics</td>
+                <td class="p-3.5">Anonymized IP, Device Type, Page Interactions</td>
+                <td class="p-3.5">Operational Security / Consent (Sec. 6)</td>
+                <td class="p-3.5">Consent (Art. 6(1)(a)) / Security Interest (Art. 6(1)(f))</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-brand-beige/70 rounded-2xl p-5 border border-brand-border space-y-2">
+          <h3 class="font-extrabold text-brand-darkbrown text-base">Automated Tools &amp; AI Transparency (GDPR Art. 22 &amp; EU AI Act)</h3>
+          <p>Infinora Dental Care may deploy automated chat assistants on WhatsApp/website for appointment scheduling, clinic FAQs, and administrative triage, as well as AI-assisted 3D orthodontic/aligner simulation software:</p>
+          <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm">
+            <li>You will always be clearly informed when interacting with an automated assistant.</li>
+            <li><strong>Strict Human Clinical Oversight:</strong> Automated systems never diagnose conditions, prescribe medications, or make autonomous clinical decisions. Every diagnosis, radiograph, and treatment plan is personally reviewed and approved by Dr. Riddhi Patel Shah or a qualified MDS specialist.</li>
+            <li>You may connect directly with our human front desk at any time by calling <strong>+91 73044 32681</strong> or messaging <strong>"Human"</strong> / <strong>"Front Desk"</strong> on WhatsApp.</li>
+          </ul>
+        </div>
+      </section>
+
+      <hr class="border-brand-border" />
+
+      <!-- Section 4 -->
+      <section id="consent" class="scroll-mt-24 space-y-4">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-brand-darkbrown">4. Granular Consent Architecture</h2>
+        <div class="bg-brand-lightbeige border-l-4 border-brand-brown rounded-r-xl p-4 text-xs sm:text-sm">
+          <strong class="text-brand-darkbrown">At a Glance:</strong> We never use bundled checkboxes or dark patterns. Declining optional communications or clinical photography will <strong>never</strong> affect your access to or quality of dental care.
+        </div>
+        <ol class="list-decimal pl-5 space-y-2">
+          <li><strong>Clinical Treatment Consent:</strong> Obtained separately in writing (or via verified clinic intake) before examinations, anesthesia, surgery, orthodontics, or restorative procedures, following a transparent explanation of risks, alternatives, and fees.</li>
+          <li><strong>Digital EMR, ABHA &amp; WhatsApp Communication Consent:</strong> Separate opt-in consent to maintain your digital chart in <strong>Jio KiViHealth</strong>, optionally link records with your ABHA ID, and send appointment confirmations, reminders, or post-procedure care instructions via WhatsApp/SMS.</li>
+          <li><strong>Clinical Photography &amp; Testimonial Consent (DCI Ethics Compliant):</strong> Diagnostic photos remain strictly confidential inside your medical record. We never publish before-and-after photos, case studies, or testimonials on our website, Instagram, or educational channels without a separate, explicit written media release. You may revoke this consent at any time.</li>
+          <li><strong>Website Cookies &amp; Analytics Consent:</strong> Non-essential cookies are governed by clear, non-deceptive controls with no pre-ticked marketing consent boxes.</li>
+          <li><strong>Children &amp; Persons with Disabilities:</strong> For patients under <strong>18 years of age</strong>, verifiable parental or lawful guardian consent is required prior to processing digital personal data. We strictly prohibit behavioral profiling or targeted advertising directed at children.</li>
+        </ol>
+      </section>
+
+      <hr class="border-brand-border" />
+
+      <!-- Section 5 -->
+      <section id="sharing" class="scroll-mt-24 space-y-4">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-brand-darkbrown">5. Data Sharing, Processors &amp; Cross-Border Transfers</h2>
+        <div class="bg-brand-lightbeige border-l-4 border-brand-brown rounded-r-xl p-4 text-xs sm:text-sm">
+          <strong class="text-brand-darkbrown">Do Not Sell or Share Commitment:</strong> In full alignment with CCPA/CPRA and US health privacy standards, Infinora Dental Care <strong>does not sell, rent, trade, or monetize</strong> your personal or health data to any third party, data broker, or advertiser.
+        </div>
+        <p>We share personal and clinical data strictly on a <strong>Minimum Necessary / Need-to-Know</strong> basis with vetted partners bound by confidentiality obligations, Data Processing Agreements (DPAs), or HIPAA-aligned Business Associate Agreements (BAAs):</p>
+        <ul class="list-disc pl-5 space-y-1.5">
+          <li><strong>Visiting MDS Specialists &amp; Clinical Team:</strong> Board-certified MDS specialists (Endodontics, Oral Surgery, Prosthodontics, Periodontics, Pedodontics) directly participating in your treatment under Dr. Riddhi Patel Shah's clinical supervision.</li>
+          <li><strong>Accredited Dental Labs &amp; Aligner Partners:</strong> Prosthetic crown/implant labs and clear aligner providers (including Invisalign / Align Technology and accredited dental laboratories) receive only the 3D scans, impressions, and clinical prescriptions required to fabricate your appliance.</li>
+          <li><strong>Diagnostic &amp; Radiology Centers:</strong> External OPG/CBCT imaging centers when referred by our doctors.</li>
+          <li><strong>Technology, EMR &amp; Communication Processors:</strong> <strong>Jio KiViHealth</strong> (Electronic Medical Records &amp; billing), <strong>Meta Platforms</strong> (WhatsApp Business Cloud API for patient messaging), <strong>Cloudflare</strong> (website hosting, DNS, and edge security), and clinic email infrastructure.</li>
+          <li><strong>Payment Processors:</strong> Regulated Indian UPI, card POS, and banking partners strictly for payment settlement.</li>
+          <li><strong>Legal &amp; Regulatory Authorities:</strong> Only when mandated by Indian law, a valid court order, public health directive, or statutory dental council inquiry.</li>
+        </ul>
+        <p><strong>Cross-Border Data Transfers:</strong> While primary clinic EMR records are hosted in India, certain global infrastructure or diagnostic partners (such as Cloudflare, Google Analytics, Meta WhatsApp Cloud API, or international clear aligner portals) may process limited technical or diagnostic data on secure servers outside India. All cross-border transfers comply with <strong>Section 16 and Rule 15 of India's DPDP Rules, 2025</strong> (excluding any government-restricted territories) and are safeguarded by <strong>Standard Contractual Clauses (SCCs)</strong> and end-to-end encryption.</p>
+      </section>
+
+      <hr class="border-brand-border" />
+
+      <!-- Section 6 -->
+      <section id="security" class="scroll-mt-24 space-y-4">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-brand-darkbrown">6. Information Security Safeguards (HIPAA &amp; ISO 27001 Aligned)</h2>
+        <p>We implement technical, administrative, and physical safeguards aligned with <strong>ISO/IEC 27001</strong>, <strong>IT (SPDI) Rules, 2011</strong>, <strong>DPDP Rules, 2025 (Rule 6)</strong>, and the <strong>HIPAA Security Rule</strong>:</p>
+        <ul class="list-disc pl-5 space-y-1.5">
+          <li><strong>Encryption:</strong> All traffic on <code>infinoradental.com</code> is protected via <strong>HTTPS/TLS 1.3</strong> encryption in transit; digital patient charts and cloud backups are encrypted at rest (<strong>AES-256</strong>).</li>
+          <li><strong>Role-Based Access Control (RBAC):</strong> Front-desk personnel access only appointment scheduling and billing workflows; full clinical charts, medical histories, and radiographs are restricted to authorized treating doctors via password-protected, multi-factor authenticated (MFA) accounts.</li>
+          <li><strong>Device &amp; Physical Safeguards:</strong> Clinic devices operate with encrypted storage, automatic screen locks, and dedicated clinical profiles. Physical consent forms are stored in locked, access-controlled cabinets inside the clinic.</li>
+          <li><strong>Audit Logging:</strong> System access and security logs are maintained for at least <strong>1 year</strong> (meeting DPDP Rules, 2025 Rule 6 and exceeding CERT-In's 180-day requirement) to detect and investigate unauthorized activity.</li>
+          <li><strong>Vendor Restrictions:</strong> Third-party processors are contractually prohibited from using clinic patient data for independent marketing or public AI model training.</li>
+        </ul>
+      </section>
+
+      <hr class="border-brand-border" />
+
+      <!-- Section 7 -->
+      <section id="retention" class="scroll-mt-24 space-y-4">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-brand-darkbrown">7. Data Retention &amp; Disposal Schedule</h2>
+        <p>We retain data strictly for clinical continuity, statutory retention laws, and legal protection, after which records are securely destroyed or irreversibly anonymized:</p>
+        <div class="overflow-x-auto rounded-2xl border border-brand-border">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-brand-cardbeige text-brand-darkbrown border-b border-brand-border">
+                <th class="p-3.5 font-extrabold">Record Category</th>
+                <th class="p-3.5 font-extrabold">Retention Period</th>
+                <th class="p-3.5 font-extrabold">Statutory / Clinical Basis</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brand-border">
+              <tr>
+                <td class="p-3.5 font-semibold text-brand-darkbrown">Adult Clinical Records, Prescriptions &amp; X-Rays</td>
+                <td class="p-3.5">Minimum <strong>3 years</strong> (Clinic standard: <strong>5–7 years</strong> from last visit; <strong>10 years</strong> for implants &amp; orthodontics)</td>
+                <td class="p-3.5">DCI Code of Ethics &amp; Clinical Continuity</td>
+              </tr>
+              <tr class="bg-brand-lightbeige/50">
+                <td class="p-3.5 font-semibold text-brand-darkbrown">Pediatric / Minor Clinical Records (&lt;18 yrs)</td>
+                <td class="p-3.5">Until patient turns <strong>21 years old</strong> (age 18 + 3 years) or 5 years post-treatment, whichever is later</td>
+                <td class="p-3.5">Indian Majority Act &amp; Medico-Legal Standard</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-semibold text-brand-darkbrown">Medico-Legal / Disputed Case Files</td>
+                <td class="p-3.5">Retained until final legal resolution</td>
+                <td class="p-3.5">Statutory Legal Hold</td>
+              </tr>
+              <tr class="bg-brand-lightbeige/50">
+                <td class="p-3.5 font-semibold text-brand-darkbrown">Billing Invoices, Receipts &amp; Tax Records</td>
+                <td class="p-3.5"><strong>8 financial years</strong> from the relevant assessment year</td>
+                <td class="p-3.5">Indian Income Tax Act, 1961</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-semibold text-brand-darkbrown">Website Inquiries &amp; Non-Patient WhatsApp Chats</td>
+                <td class="p-3.5"><strong>12 months</strong> from last interaction (or immediately upon erasure request)</td>
+                <td class="p-3.5">DPDP Storage Limitation</td>
+              </tr>
+              <tr class="bg-brand-lightbeige/50">
+                <td class="p-3.5 font-semibold text-brand-darkbrown">Security &amp; Access Logs</td>
+                <td class="p-3.5"><strong>1 year</strong> (rolling)</td>
+                <td class="p-3.5">DPDP Rules, 2025 (Rule 6) &amp; CERT-In 2022</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs sm:text-sm text-brand-grey-muted">Upon expiry, paper forms are cross-cut shredded and digital records (including backups) are cryptographically wiped or permanently anonymized.</p>
+      </section>
+
+      <hr class="border-brand-border" />
+
+      <!-- Section 8 & Meta Data Deletion Instructions -->
+      <section id="rights" class="scroll-mt-24 space-y-4">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-brand-darkbrown">8. Your Privacy Rights &amp; Data Deletion Instructions</h2>
+        <div class="bg-brand-lightbeige border-l-4 border-brand-brown rounded-r-xl p-4 text-xs sm:text-sm">
+          <strong class="text-brand-darkbrown">At a Glance:</strong> You own your health data. You may access your records, correct errors, withdraw consent, request deletion, or nominate a family member to manage your rights—at <strong>no cost</strong>.
+        </div>
+        <ul class="list-disc pl-5 space-y-1.5">
+          <li><strong>Right to Access &amp; Copies:</strong> Obtain a summary of your personal data and readable copies of clinical charts/radiographs (clinical records provided within <strong>72 hours</strong> per DCI norms; full data summaries within <strong>15 business days</strong>).</li>
+          <li><strong>Right to Correction &amp; Updating:</strong> Request correction of inaccurate, incomplete, or outdated personal details.</li>
+          <li><strong>Right to Erasure:</strong> Request deletion of website inquiries, WhatsApp chat histories, or non-statutory personal data once the purpose is fulfilled. <em>(Mandatory medical and tax records are locked from active use until statutory Indian retention periods expire.)</em></li>
+          <li><strong>Right to Withdraw Consent:</strong> Opt out of WhatsApp reminders, ABHA linking, testimonials, or cookies at any time.</li>
+          <li><strong>Right to Nominate (DPDP Act, Sec. 14):</strong> Nominate a trusted individual to exercise your data rights on your behalf in case of death or incapacity.</li>
+          <li><strong>Right to Data Portability &amp; Objection:</strong> Receive digital clinical summaries and radiographs in standard machine-readable formats (PDF/DICOM/ABDM) and object to non-essential processing.</li>
+        </ul>
+
+        <!-- Dedicated Anchor for Meta Developer App Review -->
+        <div id="data-deletion" class="scroll-mt-24 bg-brand-cardbeige/70 rounded-2xl p-5 sm:p-6 border border-brand-brown/25 space-y-3">
+          <h3 class="text-base sm:text-lg font-extrabold text-brand-darkbrown">How to Request Data Deletion (Website, Facebook, Instagram &amp; WhatsApp Business)</h3>
+          <p class="text-xs sm:text-sm">If you have communicated with Infinora Dental Care via <strong>infinoradental.com</strong>, our Facebook Page, Instagram (<code>@orthodontist.riddhi</code>), or our <strong>WhatsApp Business API (+91 73044 32681)</strong> and wish to delete your personal data (including your phone number, profile name, chat transcripts, or inquiry details):</p>
+          <ol class="list-decimal pl-5 space-y-1.5 text-xs sm:text-sm">
+            <li><strong>Email:</strong> Send an email to <a href="mailto:hello@infinoradental.com?subject=Data%20Deletion%20Request%20-%20Infinora%20Dental%20Care" class="text-brand-brown font-bold underline">hello@infinoradental.com</a> with the subject line <code>"Data Deletion Request"</code>, including your full name and registered WhatsApp/mobile number.</li>
+            <li><strong>WhatsApp / Phone:</strong> Message or call <strong>+91 73044 32681</strong> stating <code>"Request Data Deletion"</code>.</li>
+            <li><strong>In-Person:</strong> Submit a written request at our reception desk (Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai – 400067).</li>
+          </ol>
+          <p class="text-xs sm:text-sm"><strong>Verification &amp; Confirmation:</strong> To protect medical confidentiality, we verify your identity via registered mobile OTP or ID before processing. We acknowledge all requests within <strong>48 hours</strong>, complete deletion within <strong>15 business days</strong> (strictly within 30 days under GDPR / 90 days under DPDP Rules), and send written confirmation once completed.</p>
+        </div>
+      </section>
+
+      <hr class="border-brand-border" />
+
+      <!-- Section 9 -->
+      <section id="cookies" class="scroll-mt-24 space-y-4">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-brand-darkbrown">9. Cookies, Tracking Technologies &amp; Third-Party Links</h2>
+        <div class="bg-brand-lightbeige border-l-4 border-brand-brown rounded-r-xl p-4 text-xs sm:text-sm">
+          <strong class="text-brand-darkbrown">Zero Health-Data Ad Tracking:</strong> We strictly prohibit deploying advertising tracking pixels (such as Meta Pixel or Google Ads remarketing tags) on clinical treatment pages or appointment booking forms without explicit opt-in consent.
+        </div>
+        <div class="overflow-x-auto rounded-2xl border border-brand-border">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-brand-cardbeige text-brand-darkbrown border-b border-brand-border">
+                <th class="p-3.5 font-extrabold">Technology / Tool</th>
+                <th class="p-3.5 font-extrabold">Category</th>
+                <th class="p-3.5 font-extrabold">Purpose &amp; Privacy Safeguard</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brand-border">
+              <tr>
+                <td class="p-3.5 font-semibold text-brand-darkbrown">Cloudflare Edge Network</td>
+                <td class="p-3.5">Strictly Necessary</td>
+                <td class="p-3.5">DDoS protection, SSL/TLS encryption, and fast page delivery. Does not track you across websites.</td>
+              </tr>
+              <tr class="bg-brand-lightbeige/50">
+                <td class="p-3.5 font-semibold text-brand-darkbrown">Google Website Translator</td>
+                <td class="p-3.5">Functional</td>
+                <td class="p-3.5">Translates site content into English, Hindi, Marathi, or Gujarati only when you choose a language.</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-semibold text-brand-darkbrown">Google Analytics 4 (<code>G-Z41QK7SPBW</code>)</td>
+                <td class="p-3.5">Analytics</td>
+                <td class="p-3.5">Measures aggregated traffic and CTA clicks with <code>anonymize_ip: true</code>. No medical or form-input PII is sent to Google.</td>
+              </tr>
+              <tr class="bg-brand-lightbeige/50">
+                <td class="p-3.5 font-semibold text-brand-darkbrown">Ad / Retargeting Pixels</td>
+                <td class="p-3.5">Disabled</td>
+                <td class="p-3.5">Not deployed on clinical pages or appointment booking forms.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs sm:text-sm"><strong>Third-Party Links:</strong> Our website links to external services including Google Maps, Google Reviews, Instagram, LinkedIn, IDA Directory, MSDC Verification, and WhatsApp. Those services are governed by their respective privacy policies.</p>
+      </section>
+
+      <hr class="border-brand-border" />
+
+      <!-- Section 10 -->
+      <section id="breach" class="scroll-mt-24 space-y-4">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-brand-darkbrown">10. Data Breach Notification Protocol</h2>
+        <p>In alignment with <strong>DPDP Rules, 2025 (Rule 7)</strong>, <strong>CERT-In Directions, 2022</strong>, <strong>GDPR</strong>, and the <strong>FTC Health Breach Notification Rule</strong>:</p>
+        <ul class="list-disc pl-5 space-y-1.5">
+          <li><strong>Immediate Containment:</strong> Suspected security incidents are immediately isolated and investigated.</li>
+          <li><strong>Regulatory Reporting:</strong> Reportable cyber incidents are notified to <strong>CERT-In within 6 hours</strong> of detection. Personal data breaches are reported to the <strong>Data Protection Board of India (DPBI)</strong> via initial intimation without delay, followed by a detailed report within <strong>72 hours</strong>.</li>
+          <li><strong>Patient Notification:</strong> Every affected patient is notified without delay in plain, clear language via registered phone/WhatsApp/email, outlining the nature of the breach, potential consequences, mitigation measures taken, recommended protective steps, and Grievance Officer contact details.</li>
+        </ul>
+      </section>
+
+      <hr class="border-brand-border" />
+
+      <!-- Section 11 -->
+      <section id="grievance" class="scroll-mt-24 space-y-4">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-brand-darkbrown">11. Grievance Officer &amp; Escalation Matrix</h2>
+        <div class="bg-brand-lightbeige rounded-2xl p-5 border border-brand-border space-y-2 text-xs sm:text-sm">
+          <p><strong>Grievance Officer:</strong> Dr. Riddhi Patel Shah — Founder, Lead Dental Surgeon &amp; Grievance Officer</p>
+          <p><strong>Address:</strong> Infinora Dental Care, Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai, Maharashtra – 400067, India</p>
+          <p><strong>Email:</strong> <a href="mailto:hello@infinoradental.com" class="text-brand-brown font-bold underline">hello@infinoradental.com</a></p>
+          <p><strong>Phone / WhatsApp:</strong> <a href="tel:+917304432681" class="text-brand-brown font-bold underline">+91 73044 32681</a> (Mon–Sat, 09:00 AM – 09:00 PM IST; Sun 10:00 AM – 01:00 PM by appointment)</p>
+          <p><strong>Resolution SLA:</strong> Acknowledgement within <strong>48 hours</strong> · Target resolution within <strong>7–15 business days</strong> (and never exceeding statutory limits under IT Rules and DPDP Rules, 2025).</p>
+        </div>
+        <p class="text-xs sm:text-sm"><strong>Right to Escalate:</strong> If your grievance is not resolved satisfactorily within the prescribed period, you have the right to escalate your complaint to the <strong>Data Protection Board of India (DPBI)</strong>, or—if you are an EU/UK resident—to your local Data Protection Authority.</p>
+      </section>
+
+      <hr class="border-brand-border" />
+
+      <!-- Section 12 -->
+      <section id="updates" class="scroll-mt-24 space-y-3">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-brand-darkbrown">12. Policy Updates &amp; Jurisdiction</h2>
+        <p>We review this Privacy Policy at least annually or whenever our clinical technology or applicable privacy laws change. Updates are posted at <code>https://infinoradental.com/privacy-policy</code> with an updated "Last Updated" date. Any disputes arising under this policy are subject to the exclusive jurisdiction of the competent courts in <strong>Mumbai, Maharashtra, India</strong>.</p>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-brand-darkbrown text-brand-beige/80 py-8 mt-8 border-t border-brand-midbrown">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+      <p>© 2026 Infinora Dental Care · Kandivali West, Mumbai. All rights reserved.</p>
+      <div class="flex items-center gap-4 font-semibold">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <a href="/#book" class="hover:text-white transition-colors">Book Consultation</a>
+        <a href="#data-deletion" class="hover:text-white transition-colors">Data Deletion</a>
+      </div>
+    </div>
+  </footer>
+</Layout>
