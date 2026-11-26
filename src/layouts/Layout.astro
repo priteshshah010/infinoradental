@@ -1,433 +1,486 @@
 ---
 export interface Props {
-    title: string;
-    description: string;
-    canonicalUrl?: string;
+  title?: string;
+  description?: string;
+  canonical?: string;
 }
 
 const {
-    title,
-    description,
-    canonicalUrl = "https://infinoradental.com/"
+  title = "Infinora Dental Care | Dr. Riddhi Patel Shah (MDS) | Kandivali West, Mumbai",
+  description = "Specialist-led dentistry thoughtfully delivered in Kandivali West, Mumbai. Precision braces, clear aligners, dental implants, painless root canals, and family dentistry by Dr. Riddhi Patel Shah (BDS Gold Medalist, MDS Orthodontics).",
+  canonical = `https://infinoradental.com${Astro.url.pathname === '/' ? '/' : Astro.url.pathname.replace(/\/$/, '')}`,
 } = Astro.props;
 
-const GA_MEASUREMENT_ID = "G-Z41QK7SPBW";
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Dentist", "MedicalBusiness"],
+      "@id": "https://infinoradental.com/#clinic",
+      "name": "Infinora Dental Care",
+      "alternateName": "Infinora Dental Care - Dr. Riddhi Patel Shah",
+      "url": "https://infinoradental.com/",
+      "logo": "https://infinoradental.com/logo.svg",
+      "image": [
+        "https://infinoradental.com/images/clinic_shopfront.webp",
+        "https://infinoradental.com/images/clinic-operatory.webp",
+        "https://infinoradental.com/images/clinic-reception.webp",
+        "https://infinoradental.com/images/dr-riddhi.webp"
+      ],
+      "description": "Specialist-led multispeciality dental and orthodontic clinic in Kandivali West, Mumbai headed by Dr. Riddhi Patel Shah (BDS University Gold Medalist, MDS Orthodontics & Dentofacial Orthopedics). Offering metal & ceramic braces, clear aligners, dental implants, rotary root canal therapy, smile design, and family dentistry.",
+      "telephone": "+91-73044-32681",
+      "email": "hello@infinoradental.com",
+      "priceRange": "₹₹",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": "Cash, UPI, Google Pay, Credit Card, Debit Card, Net Banking, EMI",
+      "medicalSpecialty": [
+        "Dentistry",
+        "Orthodontics",
+        "Endodontics",
+        "Prosthodontics",
+        "OralSurgery",
+        "PediatricDentistry"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "postalCode": "400067",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.2024118,
+        "longitude": 72.8371032
+      },
+      "hasMap": "https://maps.app.goo.gl/3sKwKPjG43PNeN6y7",
+      "areaServed": [
+        { "@type": "City", "name": "Mumbai" },
+        { "@type": "Place", "name": "Kandivali West" },
+        { "@type": "Place", "name": "Borivali West" },
+        { "@type": "Place", "name": "Malad West" },
+        { "@type": "Place", "name": "Charkop" },
+        { "@type": "Place", "name": "Mahavir Nagar" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "10:00",
+          "closes": "14:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "17:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "10:00",
+          "closes": "13:00"
+        }
+      ],
+      "sameAs": [
+        "https://instagram.com/orthodontist.riddhi",
+        "https://share.google/pcuutYXTurrftQRyt",
+        "https://dentist.ida.org.in/dentist/riddhi-kantilal-patel"
+      ],
+      "founder": {
+        "@id": "https://infinoradental.com/#dr-riddhi"
+      },
+      "employee": {
+        "@id": "https://infinoradental.com/#dr-riddhi"
+      },
+      "availableService": [
+        { "@type": "MedicalProcedure", "name": "Braces & Orthodontics (Metal, Ceramic, Self-Ligating)" },
+        { "@type": "MedicalProcedure", "name": "Clear Aligners & Invisalign Therapy" },
+        { "@type": "MedicalProcedure", "name": "Dental Implants & Full Mouth Rehabilitation" },
+        { "@type": "MedicalProcedure", "name": "Rotary Root Canal Treatment (RCT)" },
+        { "@type": "MedicalProcedure", "name": "Smile Design, Veneers & Teeth Whitening" },
+        { "@type": "MedicalProcedure", "name": "Crowns, Bridges & Tooth-Coloured Fillings" },
+        { "@type": "MedicalProcedure", "name": "Preventive Scaling, Polishing & Gum Care" },
+        { "@type": "MedicalProcedure", "name": "Pediatric & Senior Family Dentistry" },
+        { "@type": "MedicalProcedure", "name": "Wisdom Tooth Surgery & Emergency Dental Care" }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://infinoradental.com/#dr-riddhi",
+      "name": "Dr. Riddhi Patel Shah",
+      "alternateName": "Dr. Riddhi Kantilal Patel",
+      "jobTitle": "Founder & Chief Orthodontist (MDS)",
+      "honorificPrefix": "Dr.",
+      "description": "BDS University Gold Medalist and MDS in Orthodontics & Dentofacial Orthopedics. Maharashtra State Dental Council Registered (A-45674), Indian Orthodontic Society (IOS) and Indian Dental Association (IDA) Member.",
+      "image": "https://infinoradental.com/images/riddhi_headshot.webp",
+      "worksFor": { "@id": "https://infinoradental.com/#clinic" },
+      "sameAs": [
+        "https://instagram.com/orthodontist.riddhi",
+        "https://dentist.ida.org.in/dentist/riddhi-kantilal-patel"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://infinoradental.com/#website",
+      "url": "https://infinoradental.com/",
+      "name": "Infinora Dental Care",
+      "publisher": { "@id": "https://infinoradental.com/#clinic" },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://infinoradental.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://infinoradental.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Privacy Policy",
+          "item": "https://infinoradental.com/privacy-policy"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://infinoradental.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who leads Infinora Dental Care in Kandivali West?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Infinora Dental Care is led by Dr. Riddhi Patel Shah, a BDS University Gold Medalist and MDS Orthodontist registered with the Maharashtra State Dental Council (MSDC Reg: A-45674), ABDM verified (HFR: IN2710085962), and a member of both the Indian Orthodontic Society (IOS) and Indian Dental Association (IDA)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the clinic timings and booking slots at Infinora Dental Care?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The clinic is open Monday to Saturday in two convenient sessions: Morning (10:00 AM – 02:00 PM) and Evening (05:00 PM – 09:00 PM). On Sundays, consultations are available from 10:00 AM – 01:00 PM strictly by prior appointment only."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are root canal treatments painful?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Modern root canal therapy at Infinora Dental Care uses gentle local anesthesia, apex locators, and precision rotary instruments to keep the procedure comfortable and predictable. Depending on the tooth's condition, many cases can be completed in a single visit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do clear aligners compare to traditional braces, and are EMI plans available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both braces (metal, ceramic, self-ligating) and clear aligners are planned directly by Dr. Riddhi Patel Shah (MDS Orthodontics). Clear aligners are removable and discreet, while braces excel in complex bite corrections. Stage-wise payment plans and EMI options are available after your clinical assessment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What sterilization and hygiene standards does the clinic follow?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We follow strict multi-step instrument sterilization protocols including ultrasonic cleaning, sealed autoclaving pouches, surface disinfection between every patient, and single-use disposables wherever clinically indicated."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you treat children, senior citizens, and dental emergencies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Infinora Dental Care is a family dental practice serving children, teens, working adults, and senior citizens. For sudden toothaches, swelling, or broken teeth, call +91 73044 32681 for priority triage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I book an appointment and is my slot confirmed immediately?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can submit the online booking form at infinoradental.com/#book, message us on WhatsApp, or call +91 73044 32681. Submitting the form sends your preferred slot directly to our WhatsApp desk, and your appointment is confirmed once our clinic team replies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What payment methods are accepted and is parking available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We accept UPI, Google Pay, all major credit and debit cards, net banking, cash, and stage-wise EMI plans. Free street parking is available near Sai Elegance on Iraniwadi Road No. 3, and we are close to Kandivali West Metro (Line 2A) and Kandivali Railway Station."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
 
-    <!-- Brand SVG Browser Tab Favicon -->
+    <!-- Additional Metadata & Local Geo Directives -->
+    <meta name="author" content="Dr. Riddhi Patel Shah" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="geo.region" content="IN-MH" />
+    <meta name="geo.placename" content="Mumbai" />
+    <meta name="geo.position" content="19.2024118;72.8371032" />
+    <meta name="ICBM" content="19.2024118, 72.8371032" />
+    <meta name="theme-color" content="#011f39" />
+
+    <!-- Open Graph & Social Metadata -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://infinoradental.com/images/clinic_shopfront.webp" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="Infinora Dental Care" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://infinoradental.com/images/clinic_shopfront.webp" />
+
+    <!-- Real Brand Icon Favicon (/logo.svg) -->
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <link rel="alternate icon" href="/logo.svg" />
     <link rel="apple-touch-icon" href="/logo.svg" />
 
-    <link rel="canonical" href={canonicalUrl} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:locale" content="en_IN" />
-    <meta property="og:site_name" content="Infinora Dental Care" />
+    <!-- Google Fonts: Plus Jakarta Sans + Cinzel (Brand Wordmark) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Google Analytics 4 (G-Z41QK7SPBW) -->
-    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
-    <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', GA_MEASUREMENT_ID, {
-            send_page_view: true,
-            anonymize_ip: true
-        });
-
-        window.trackEvent = function(eventName, eventParams = {}) {
-            if (typeof window.gtag === 'function') {
-                window.gtag('event', eventName, {
-                    ...eventParams,
-                    clinic_name: 'Infinora Dental Care',
-                    location: 'Kandivali West'
-                });
-            }
-        };
-    </script>
-
-    <!-- Fonts: Cinzel (INFINORA wordmark) + Plus Jakarta Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Tailwind Play CDN & Brand Palette (#011f39) -->
-    <script is:inline data-cfasync="false" src="https://cdn.tailwindcss.com"></script>
-    <script is:inline data-cfasync="false">
+    <!-- Tailwind CSS CDN (data-cfasync="false" prevents Cloudflare Rocket Loader from breaking styles) -->
+    <script data-cfasync="false" src="https://cdn.tailwindcss.com"></script>
+    <script data-cfasync="false">
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Plus Jakarta Sans', 'sans-serif'],
-              brand: ['Cinzel', 'Georgia', 'serif']
+              sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+              serif: ['"Cinzel"', 'Georgia', 'serif'],
             },
             colors: {
               brand: {
                 navy: '#011f39',
-                darknavy: '#011526',
-                midnavy: '#072c4d',
-                hovernavy: '#022c52',
-                lightnavy: '#0d3b66',
-                surface: '#F4F7FA',
-                cardbg: '#EAF0F6',
-                lightbg: '#F9FBFD',
-                offwhite: '#FFFFFF',
-                border: '#D5E0EA',
+                'navy-light': '#0a3254',
+                teal: '#0f766e',
+                'teal-dark': '#115e59',
                 gold: '#C59B27',
-                grey: {
-                  text: '#1E293B',
-                  muted: '#475569',
-                  light: '#CBD5E1'
-                }
-              }
-            }
-          }
-        }
-      }
+                'gold-dark': '#8A6508',
+                surface: '#ffffff',
+                cardbg: '#f8fafc',
+                border: '#e2e8f0',
+                'grey-text': '#334155',
+                'grey-muted': '#64748b',
+                /* Compatible aliases for subpages like privacy-policy.astro */
+                brown: '#011f39',
+                darkbrown: '#011f39',
+                hoverbrown: '#0a3254',
+                midbrown: '#334155',
+                beige: '#f1f5f9',
+                lightbeige: '#f8fafc',
+                cardbeige: '#e2e8f0',
+                offwhite: '#ffffff',
+              },
+            },
+          },
+        },
+      };
     </script>
 
     <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": "https://infinoradental.com/#website",
-          "url": "https://infinoradental.com/",
-          "name": "Infinora Dental Care",
-          "inLanguage": "en-IN",
-          "publisher": {
-            "@id": "https://infinoradental.com/#clinic"
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+
+    <!-- Google Analytics 4 (G-Z41QK7SPBW) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z41QK7SPBW"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-Z41QK7SPBW', { anonymize_ip: true });
+
+      window.trackEvent = function (eventName, params) {
+        try {
+          if (typeof gtag === 'function') {
+            gtag('event', eventName, params || {});
           }
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://infinoradental.com/#breadcrumbs",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://infinoradental.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Treatments",
-              "item": "https://infinoradental.com/#catalogue"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Book Consultation",
-              "item": "https://infinoradental.com/#book"
-            }
-          ]
-        },
-        {
-          "@type": ["Dentist", "MedicalBusiness"],
-          "@id": "https://infinoradental.com/#clinic",
-          "name": "Infinora Dental Care - Dr. Riddhi Patel Shah (Dentist & Braces Clinic)",
-          "alternateName": ["Infinora Dental Care", "Infinora Dental Care Mumbai", "Infinora Dental Care Kandivali West"],
-          "url": "https://infinoradental.com/",
-          "logo": "https://infinoradental.com/logo.svg",
-          "telephone": "+91 73044 32681",
-          "email": "hello@infinoradental.com",
-          "priceRange": "₹₹",
-          "hasMap": "https://share.google/fYPKASkVLyZ0KXni9",
-          "identifier": [
-            {
-              "@type": "PropertyValue",
-              "propertyID": "Ayushman Bharat Digital Mission Health Facility Registry (HFR)",
-              "value": "IN2710085962"
-            }
-          ],
-          "sameAs": [
-            "https://www.instagram.com/orthodontist.riddhi",
-            "https://www.linkedin.com/in/riddhi-patel-shah-a956a731a/",
-            "https://dentist.ida.org.in/dentist/riddhi-kantilal-patel",
-            "https://msdcmumbai.in/QR_Verfy.aspx?auth=57d7f7fc-a30e-4fb8-95c1-1f4f163010bc",
-            "https://share.google/fYPKASkVLyZ0KXni9"
-          ],
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West",
-            "addressLocality": "Mumbai",
-            "addressRegion": "Maharashtra",
-            "postalCode": "400067",
-            "addressCountry": "IN"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 19.2024118,
-            "longitude": 72.8371032
-          },
-          "employee": {
-            "@type": "Person",
-            "@id": "https://infinoradental.com/#drriddhi",
-            "name": "Dr. Riddhi Patel Shah",
-            "jobTitle": "Lead Dental Surgeon & Orthodontist (MDS Orthodontics & Dentofacial Orthopedics)",
-            "alumniOf": "BDS, MDS (Orthodontics and Dentofacial Orthopedics)",
-            "award": [
-              "Student of the Year (BDS)",
-              "BDS University Medalist",
-              "MDS University Rank-Holder",
-              "Best Prosthodontist Award (IDA CCRP)"
-            ],
-            "identifier": [
-              {
-                "@type": "PropertyValue",
-                "propertyID": "Ayushman Bharat Digital Mission Healthcare Professional Registry (HPR)",
-                "value": "71-8554-8443-4346"
-              },
-              {
-                "@type": "PropertyValue",
-                "propertyID": "Maharashtra State Dental Council Registration No",
-                "value": "A-45674"
-              }
-            ],
-            "memberOf": [
-              { "@type": "Organization", "name": "Maharashtra State Dental Council" },
-              { "@type": "Organization", "name": "Indian Dental Association" },
-              { "@type": "Organization", "name": "Indian Orthodontic Society" }
-            ],
-            "sameAs": [
-              "https://www.instagram.com/orthodontist.riddhi",
-              "https://www.linkedin.com/in/riddhi-patel-shah-a956a731a/",
-              "https://dentist.ida.org.in/dentist/riddhi-kantilal-patel",
-              "https://msdcmumbai.in/QR_Verfy.aspx?auth=57d7f7fc-a30e-4fb8-95c1-1f4f163010bc"
-            ]
-          },
-          "availableService": [
-            { "@type": "MedicalProcedure", "name": "Orthodontics & Braces" },
-            { "@type": "MedicalProcedure", "name": "Clear Aligners" },
-            { "@type": "MedicalProcedure", "name": "Invisible Aligners" },
-            { "@type": "MedicalProcedure", "name": "Invisalign" },
-            { "@type": "MedicalProcedure", "name": "Root Canals" },
-            { "@type": "MedicalProcedure", "name": "Dental Implants" },
-            { "@type": "MedicalProcedure", "name": "Veneers & Crowns" },
-            { "@type": "MedicalProcedure", "name": "Full Mouth Rehabilitation" },
-            { "@type": "MedicalProcedure", "name": "Teeth Whitening" },
-            { "@type": "MedicalProcedure", "name": "Bonding" },
-            { "@type": "MedicalProcedure", "name": "Checkups" },
-            { "@type": "MedicalProcedure", "name": "Cosmetic Procedures" },
-            { "@type": "MedicalProcedure", "name": "Dentures & Bridges" },
-            { "@type": "MedicalProcedure", "name": "Emergency Care" },
-            { "@type": "MedicalProcedure", "name": "Extractions" },
-            { "@type": "MedicalProcedure", "name": "Fillings & Sealants" },
-            { "@type": "MedicalProcedure", "name": "Laser Dentistry" },
-            { "@type": "MedicalProcedure", "name": "Mouth Guards" },
-            { "@type": "MedicalProcedure", "name": "Online Dentist Booking" },
-            { "@type": "MedicalProcedure", "name": "Oral Surgery" },
-            { "@type": "MedicalProcedure", "name": "Pediatrics" },
-            { "@type": "MedicalProcedure", "name": "Teeth Cleaning" },
-            { "@type": "MedicalProcedure", "name": "Teeth Reshaping" },
-            { "@type": "MedicalProcedure", "name": "X-ray" },
-            { "@type": "MedicalProcedure", "name": "Gum Surgery / Periodontics" },
-            { "@type": "MedicalProcedure", "name": "Digital Smile Design" }
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://infinoradental.com/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "How do I find a trusted dentist near me in Kandivali West or Mumbai?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Infinora Dental Care is located at Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West, Mumbai 400067, led by Dr. Riddhi Patel Shah (BDS University Gold Medalist, MDS Orthodontics & Dentofacial Orthopedics; MSDC Reg: A-45674; ABDM HFR: IN2710085962; HPR: 71-8554-8443-4346) for families in Kandivali, Mumbai, and across India."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What orthodontic options are available for braces, clear aligners, Invisalign, or invisible aligners?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Consultations cover clear aligners, Invisalign, invisible aligners, metal braces, ceramic braces, self-ligating braces, early orthodontic evaluations, and smile improvement, with suitability assessed during your visit."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Are dental implants, veneers, root canals, and family dental care available in Kandivali and Mumbai?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Infinora Dental Care in Kandivali West, Mumbai offers consultations and care across general dentistry, root canal treatment, crowns, dental implants, veneers, and family checkups, tailored after clinical examination."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How are appointment slots scheduled at Infinora Dental Care?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Available slots update dynamically by selected date and time of day across Morning, Afternoon, and Evening options, with Sunday morning available until 12:00 PM (and moving to Monday after 12:00 PM on Sundays)."
-              }
-            }
-          ]
-        }
-      ]
-    }
+        } catch (err) {}
+      };
     </script>
 
-    <!-- Language & vCard Helpers -->
-    <script is:inline type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'en,gu,hi,mr',
-                autoDisplay: false
-            }, 'google_translate_hidden_element');
+    <style is:global>
+      html,
+      body {
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        color: #334155;
+        background-color: #ffffff;
+        overflow-x: clip; /* Keeps position: sticky working while blocking horizontal overflow */
+      }
+
+      /* Prevent iOS Safari auto-zoom on form fields */
+      input,
+      select,
+      textarea {
+        font-size: 16px !important;
+      }
+
+      @media (min-width: 640px) {
+        input,
+        select,
+        textarea {
+          font-size: 14px !important;
         }
+      }
 
-        window.changeLanguage = function(langCode) {
-            const selectEl = document.querySelector('.goog-te-combo');
-            if (selectEl) {
-                selectEl.value = langCode;
-                selectEl.dispatchEvent(new Event('change'));
-            }
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                if (btn.dataset.lang === langCode) {
-                    btn.classList.add('bg-brand-navy', 'text-white');
-                    btn.classList.remove('text-brand-border', 'hover:text-white');
-                } else {
-                    btn.classList.remove('bg-brand-navy', 'text-white');
-                    btn.classList.add('text-brand-border', 'hover:text-white');
-                }
-            });
-            if (window.trackEvent) {
-                window.trackEvent('change_language', { selected_language: langCode });
-            }
-        };
+      /* Hide Google Translate top banner & tooltips cleanly */
+      .goog-te-banner-frame.skiptranslate,
+      .goog-te-gadget-icon,
+      #goog-gt-tt,
+      .goog-tooltip {
+        display: none !important;
+      }
+      body {
+        top: 0 !important;
+      }
+      #google_translate_element {
+        display: none !important;
+      }
+    </style>
+  </head>
 
-        window.downloadVCard = function() {
-            if (window.trackEvent) {
-                window.trackEvent('download_vcard', { method: 'direct_button' });
-            }
-
-            const vcardData = [
-                'BEGIN:VCARD',
-                'VERSION:3.0',
-                'N:Shah;Dr. Riddhi;Patel;;',
-                'FN:Dr. Riddhi Patel Shah - Infinora Dental Care',
-                'ORG:Infinora Dental Care',
-                'TITLE:Lead Dental Surgeon & Orthodontist (MDS)',
-                'TEL;TYPE=WORK,VOICE:+91 73044 32681',
-                'TEL;TYPE=CELL,VOICE:+91 73044 32681',
-                'EMAIL;TYPE=PREF,INTERNET:hello@infinoradental.com',
-                'URL:https://infinoradental.com',
-                'ADR;TYPE=WORK,POSTAL,PARCEL:;;Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West;Mumbai;Maharashtra;400067;India',
-                'NOTE:Infinora Dental Care - Kandivali West, Mumbai. Member of Indian Dental Association. MSDC Reg: A-45674 | Health Facility ID: IN2710085962 | Professional ID: 71-8554-8443-4346',
-                'X-SOCIALPROFILE;type=instagram:https://www.instagram.com/orthodontist.riddhi',
-                'END:VCARD'
-            ].join('\r\n');
-
-            const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'Infinora_Dental_Care_Dr_Riddhi.vcf';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        };
-    </script>
-    <script is:inline defer type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <meta name="author" content="Dr. Riddhi Patel Shah" />
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="bingbot" content="index, follow" />
-    <meta name="geo.region" content="IN-MH" />
-    <meta name="geo.placename" content="Kandivali West, Mumbai" />
-    <meta name="geo.position" content="19.2024118;72.8371032" />
-    <meta name="ICBM" content="19.2024118, 72.8371032" />
-</head>
-<body class="bg-brand-surface text-brand-grey-text font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-brand-navy selection:text-white overflow-x-hidden w-full m-0 p-0 relative min-h-screen">
-    <div id="google_translate_hidden_element" class="hidden"></div>
+  <body class="antialiased selection:bg-brand-navy selection:text-white">
+    <div id="google_translate_element" aria-hidden="true"></div>
     <slot />
 
-    <!-- Global Automatic Click Event Tracker for GA4 -->
+    <!-- Google Website Translator (Lazy Init) -->
     <script is:inline>
-        document.addEventListener('DOMContentLoaded', () => {
-            document.addEventListener('click', (e) => {
-                const target = e.target.closest('a');
-                if (!target || !window.trackEvent) return;
+      function googleTranslateElementInit() {
+        if (window.google && window.google.translate) {
+          new google.translate.TranslateElement(
+            {
+              pageLanguage: 'en',
+              includedLanguages: 'en,hi,mr,gu',
+              autoDisplay: false,
+            },
+            'google_translate_element'
+          );
+        }
+      }
 
-                const href = target.getAttribute('href') || '';
+      window.changeLanguage = function (langCode) {
+        const setCookieAndReload = (code) => {
+          document.cookie = `googtrans=/en/${code}; path=/`;
+          document.cookie = `googtrans=/en/${code}; path=/; domain=${window.location.hostname}`;
+          const select = document.querySelector('.goog-te-combo');
+          if (select) {
+            select.value = code;
+            select.dispatchEvent(new Event('change'));
+          } else {
+            window.location.reload();
+          }
+        };
 
-                if (href.startsWith('tel:')) {
-                    window.trackEvent('click_phone_call', {
-                        phone_number: '+91 73044 32681',
-                        click_location: target.innerText.trim() || 'Header/Bar'
-                    });
-                }
-                else if (href.includes('wa.me')) {
-                    window.trackEvent('click_whatsapp_booking', {
-                        link_url: href,
-                        button_text: target.innerText.trim() || 'WhatsApp CTA'
-                    });
-                }
-                else if (href.includes('instagram.com')) {
-                    window.trackEvent('click_instagram', {
-                        profile: '@orthodontist.riddhi'
-                    });
-                }
-                else if (href.includes('g.page') || href.includes('share.google')) {
-                    window.trackEvent('click_google_review', {
-                        destination: 'Google My Business'
-                    });
-                }
-                else if (href.includes('maps.google.com') || href.includes('maps.app.goo.gl')) {
-                    window.trackEvent('click_google_maps', {
-                        destination: 'Directions to Clinic'
-                    });
-                }
-            });
+        document.querySelectorAll('.lang-btn').forEach((btn) => {
+          const isActive = btn.getAttribute('data-lang') === langCode;
+          btn.classList.toggle('bg-brand-navy', isActive);
+          btn.classList.toggle('text-white', isActive);
+          btn.classList.toggle('text-brand-grey-muted', !isActive);
         });
-    </script>
-</body>
-</html>
 
-<style is:global>
-    :root {
-        --brand-navy: #011f39;
-        --brand-navy-rgb: 1, 31, 57;
-        --brand-gold: #C59B27;
-    }
-    *, *::before, *::after {
-        box-sizing: border-box;
-    }
-    html, body {
-        width: 100%;
-        max-width: 100vw;
-        overflow-x: hidden;
-        margin: 0;
-        padding: 0;
-    }
-    input, select, textarea {
-        font-size: 16px !important;
-    }
-    svg {
-        display: inline-block;
-        vertical-align: middle;
-    }
-    .goog-te-banner-frame.skiptranslate {
-        display: none !important;
-    }
-    body {
-        top: 0px !important;
-    }
-</style>
+        if (window.trackEvent) {
+          window.trackEvent('change_language', { language: langCode });
+        }
+
+        if (!document.getElementById('gt-script')) {
+          const s = document.createElement('script');
+          s.id = 'gt-script';
+          s.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+          s.onload = () => setTimeout(() => setCookieAndReload(langCode), 400);
+          document.body.appendChild(s);
+        } else {
+          setCookieAndReload(langCode);
+        }
+      };
+
+      // Save Clinic vCard (.vcf)
+      window.downloadVCard = function () {
+        const vcard = [
+          'BEGIN:VCARD',
+          'VERSION:3.0',
+          'FN:Infinora Dental Care - Dr. Riddhi Patel Shah',
+          'ORG:Infinora Dental Care',
+          'TITLE:Chief Orthodontist (MDS) & Founder',
+          'TEL;TYPE=WORK,VOICE:+917304432681',
+          'EMAIL;TYPE=PREF,INTERNET:hello@infinoradental.com',
+          'URL:https://infinoradental.com',
+          'ADR;TYPE=WORK:;;Shop No. 5, Sai Elegance, Iraniwadi Road No. 3, Kandivali West;Mumbai;Maharashtra;400067;India',
+          'NOTE:Specialist Orthodontics, Braces, Clear Aligners, Implants & Family Dentistry. MSDC Reg: A-45674.',
+          'END:VCARD',
+        ].join('\r\n');
+
+        const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Infinora-Dental-Care-Kandivali-West.vcf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        if (window.trackEvent) {
+          window.trackEvent('download_vcard', { clinic: 'Infinora Dental Care' });
+        }
+      };
+
+      // Global Automatic Click Event Tracker for GA4
+      document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('click', (e) => {
+          const target = e.target.closest('a');
+          if (!target || !window.trackEvent) return;
+          const href = target.getAttribute('href') || '';
+
+          if (href.startsWith('tel:')) {
+            window.trackEvent('click_phone_call', {
+              phone_number: '+91 73044 32681',
+              click_location: target.innerText.trim() || 'Header/Bar',
+            });
+          } else if (href.includes('wa.me')) {
+            window.trackEvent('click_whatsapp_booking', {
+              link_url: href,
+              button_text: target.innerText.trim() || 'WhatsApp CTA',
+            });
+          } else if (href.includes('instagram.com')) {
+            window.trackEvent('click_instagram', {
+              profile: '@orthodontist.riddhi',
+            });
+          } else if (href.includes('g.page') || href.includes('share.google')) {
+            window.trackEvent('click_google_review', {
+              destination: 'Google Business Profile',
+            });
+          } else if (href.includes('maps.google.com') || href.includes('maps.app.goo.gl')) {
+            window.trackEvent('click_google_maps', {
+              destination: 'Directions to Clinic',
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
